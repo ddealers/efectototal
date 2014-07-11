@@ -16,31 +16,28 @@ angular.module('efectototal.controllers', [])
 			}
 		);
 	};
+
+	$scope.share = function(){
+		
+	}
 })
 
 .controller('LoginCtrl', function($scope, $location, OpenFB) {
+	function registerAndLogin(){
+		OpenFB.api({
+	        path: '/me',
+	        success: createUser,
+	        error: showError
+    	});
+		$location.path('/app/perfil');
+	}
+	function createUser(data){
+		console.log(data);
+	}
+	function showError() {
+		alert('OpenFB login failed');
+	}
 	$scope.facebookLogin = function () {
-		OpenFB.login('email,publish_stream').then(
-			function () {
-				$location.path('/app/perfil');
-			},
-			function () {
-				alert('OpenFB login failed');
-			}
-		);
+		OpenFB.login('email,publish_stream').then(registerAndLogin, showError);
 	};
-})
-
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-})
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
 })

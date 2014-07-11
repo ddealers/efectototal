@@ -16,17 +16,28 @@ angular.module('efectototal.controllers', [])
 			}
 		);
 	};
+
+	$scope.share = function(){
+		
+	}
 })
 
 .controller('LoginCtrl', function($scope, $location, OpenFB) {
+	function registerAndLogin(){
+		OpenFB.api({
+	        path: '/me',
+	        success: createUser,
+	        error: showError
+    	});
+		$location.path('/app/perfil');
+	}
+	function createUser(data){
+		console.log(data);
+	}
+	function showError() {
+		alert('OpenFB login failed');
+	}
 	$scope.facebookLogin = function () {
-		OpenFB.login('email,publish_stream').then(
-			function () {
-				$location.path('/app/perfil');
-			},
-			function () {
-				alert('OpenFB login failed');
-			}
-		);
+		OpenFB.login('email,publish_stream').then(registerAndLogin, showError);
 	};
 })
