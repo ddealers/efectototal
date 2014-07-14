@@ -22,7 +22,7 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
     	}
   	});
 
-  	$rootScope.$on('$stateChangeStart', function(event, toState) {
+  	/*$rootScope.$on('$stateChangeStart', function(event, toState) {
     	if (toState.name !== "app.login" && toState.name !== "app.logout" && !$window.sessionStorage['fbtoken']) {
       		$state.go('app.login');
         	event.preventDefault();
@@ -30,7 +30,7 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
     });
 	$rootScope.$on('OAuthException', function() {
     	$state.go('app.login');
-    });
+    });*/
 })
 
 .config(function($stateProvider, $urlRouterProvider) {

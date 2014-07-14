@@ -8,7 +8,7 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
 
 .run(function($rootScope, $state, $ionicPlatform, $window, OpenFB) {
  	//Init FB
- 	OpenFB.init('1510077562540064'); // Defaults to sessionStorage for storing the Facebook token
+ 	OpenFB.init('470325759780426'); // Defaults to sessionStorage for storing the Facebook token
 
  	$ionicPlatform.ready(function() {
     	// Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -22,7 +22,7 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
     	}
   	});
 
-  	$rootScope.$on('$stateChangeStart', function(event, toState) {
+  	/*$rootScope.$on('$stateChangeStart', function(event, toState) {
     	if (toState.name !== "app.login" && toState.name !== "app.logout" && !$window.sessionStorage['fbtoken']) {
       		$state.go('app.login');
         	event.preventDefault();
@@ -30,7 +30,7 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
     });
 	$rootScope.$on('OAuthException', function() {
     	$state.go('app.login');
-    });
+    });*/
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
