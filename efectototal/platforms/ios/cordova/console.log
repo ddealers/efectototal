@@ -139,3 +139,9 @@ Terminating in response to SpringBoard's termination.
 2014-07-14 17:22:51.420 Efecto Total[4177:70b] [CDVTimer][TotalPluginStartup] 947.788954ms
 2014-07-14 17:22:52.365 Efecto Total[4177:70b] Resetting plugins due to page load.
 2014-07-14 17:22:55.178 Efecto Total[4177:70b] Finished load of: file:///Users/ares/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2658F36D-1228-46C5-B82A-7506E422ADCA/Efecto%20Total.app/www/index.html#/app/login
+2014-07-15 12:00:52.759 Efecto Total[1664:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-15 12:00:53.016 Efecto Total[1664:70b] Unlimited access to network resources
+2014-07-15 12:00:56.451 Efecto Total[1664:70b] [CDVTimer][statusbar] 1210.251987ms
+2014-07-15 12:00:56.452 Efecto Total[1664:70b] [CDVTimer][TotalPluginStartup] 1210.951030ms
+2014-07-15 12:00:56.921 Efecto Total[1664:70b] Resetting plugins due to page load.
+2014-07-15 12:00:58.890 Efecto Total[1664:70b] Finished load of: file:///Users/ares/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2658F36D-1228-46C5-B82A-7506E422ADCA/Efecto%20Total.app/www/index.html#/app/perfil
