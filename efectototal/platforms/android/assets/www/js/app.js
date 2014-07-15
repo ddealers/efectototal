@@ -107,20 +107,29 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
       }
     })
 
-    .state('app.coach', {
-      url: "/coach",
+    .state('app.equipo', {
+      url: "/equipo",
       views: {
         'menuContent' :{
-          templateUrl: "templates/coach.html"
+          templateUrl: "templates/equipo.html"
         }
       }
     })
 
-    .state('app.legal', {
-      url: "/legal",
+    .state('app.newsfeed', {
+      url: "/newsfeed",
       views: {
         'menuContent' :{
-          templateUrl: "templates/legal.html"
+          templateUrl: "templates/newsfeed.html"
+        }
+      }
+    })
+
+    .state('app.vidxcategor', {
+      url: "/vidxcategor",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/vidxcategor.html"
         }
       }
     })
