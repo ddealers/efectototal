@@ -89,3 +89,11 @@ p.subtitulo{
 	margin: 9px 0px 0px 0px;
 	text-align: center;
 }
+/* ------------------------------------------------------------ BLOG */
+h1.encabezado{
+	color: #fff;
+	background: #1f2a84;
+	font-family: 'Advent Pro', sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+}
