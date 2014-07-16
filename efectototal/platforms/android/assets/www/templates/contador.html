@@ -1,29 +1,27 @@
-<ion-header-bar>
-	<h1 class="title-calorias">CONTADOR DE CALORÍAS</h1>
-</ion-header-bar>
-<ion-content>
-<div class="verde">
-  <h1 class="nombre">Robb Armstrong</h1>
-</div>
-<div>
-	<a class="item item-image" href="#">
-      <img src="./img/foto.png">
-  </div>
-  <div>
-  	<p class="progreso">05:22</p>
-  	<div class="list">
-      <img src="./img/lupa-verde.png" class="lupa">
-    <input type="range" name="volume" min="0" max="100" value="33">
-  </div>
-</div>
-<button class="button button-positive">
-  button-positive
-</button>
-  </div>
- <div>
- 	<ul>Historial
- 		<li>Has quemado 2,000 kalorías. 08 Julio 2014</li>
- 		<li>Has quemado 2,000 kalorías. 08 Julio 2014</li>
- 	</ul>
- </div>
-</ion-content>
+<ion-view title="CONTADOR DE CALORÍAS">
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+	<ion-content class="has-header">
+		<div class="verde">
+			<h1 class="nombre">Robb Armstrong</h1>
+		</div>
+		<div>
+			<a class="item item-image" href="#"><img src="./img/foto.png"></a>
+		</div>
+		<div>
+			<p class="progreso">05:22</p>
+			<div class="list">
+				<img src="./img/lupa-verde.png" class="lupa">
+				<input type="range" name="volume" min="0" max="100" value="33" disabled>
+			</div>
+		</div>
+		<button class="button button-positive">button-positive</button>
+		<div>
+			<ul>Historial
+				<li>Has quemado 2,000 kalorías. 08 Julio 2014</li>
+				<li>Has quemado 2,000 kalorías. 08 Julio 2014</li>
+			</ul>
+	 	</div>
+	</ion-content>
+</ion-view>

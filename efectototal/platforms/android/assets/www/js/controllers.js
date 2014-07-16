@@ -41,3 +41,38 @@ angular.module('efectototal.controllers', [])
 		OpenFB.login('email,publish_stream').then(registerAndLogin, showError);
 	};
 })
+
+.controller('CounterCtrl', function($scope, $interval) {
+	var rawData = [];
+	var threshold = 0,
+		watch = null;
+
+	function logValue(acceleration){
+		rawData.push(acceleration);
+	}
+	function onStart(acceleration){
+		var maxValues, total = 0;
+		$interval(function(){
+			navigator.accelerometer.getCurrentAcceleration(logValue, onError);
+		}, 100, 80).then(function(){
+			maxValues = rawData.sort(function(a,b){
+				return a.y < b.y;
+			});
+			for(var i = 0; i < 15; i++){
+				total += maxValues[i].y;
+			}
+			threshold = total/15;
+			initWatch();
+		});
+	}
+	function onSuccess(acceleration){
+		if(acceleration.y > threshold) console.log("step");
+	}
+	function onError(error){
+		console.log(error);
+	}
+	function initWatch(){
+		watch = navigator.accelerometer.watchAcceleration(onSuccess, onError, {frequency: 500});
+	}
+	onStart();
+})

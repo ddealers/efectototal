@@ -3,8 +3,24 @@
 *{
 	margin: 0;
 	padding: 0;
+	font-family: 'Dosis', sans-serif;
 }
+a{
+	font-family: 'Dosis', sans-serif;
+	text-decoration: none;	
+}
+/*--------------------------------------------------------------------------- CONTENIDO GENERAL */
+.bar .title{
+	font-size: 24px;
+	text-align: right;
+	font-family: 'Dosis', sans-serif;
+}
+.scroll-content{
+	background: #eee;
+}
+
 /* ----------------------------------------------------------------------- CONECTATE CON FACEBOOK */
+/*
 img.inicio{
 	width: 100%;
 }
@@ -45,17 +61,42 @@ img.efectoTotal{
 	left: 81px;
 	top: 372px;
 }
-/*--------------------------------------------------------------------------- CONTENIDO GENERAL */
+*/
+
 /*--------------------------------------------------------------------------- PROFILE */
-.contenidoPerefil{
+/*
+.contenidoPerfil{
 	top: 44px;
 	width: 250px;
 	margin: auto;
 	text-align: center;
 }
-.item-image img.perfil:first-child, .item-image .list-img {
+*/
+.contenidoPerfil{
+	width: 90%;
+	background-color: #ddd;
+	border: #aaa;
+	margin: 5px auto;
+}
+.contenidoPerfil .list-inset{
+	margin: 10px 0;
+}
+.contenidoPerfil .item-image img.perfil:first-child, .item-image .list-img {
 	width: 55%;
 }
+.contenidoPerfil .item{
+	border: #ddd 1px solid;
+	background-color: #f0f0f0;
+	color: #919191;
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+}
+.contenidoPerfil .miPerfil{
+	background: #e01026;
+	color: #FFF;	
+}
+/*
 .opcionPerfil {
 	border-color: #ddd;
 	background-color: #fff;
@@ -73,13 +114,19 @@ img.efectoTotal{
 	font-family: 'Dosis', sans-serif;
 	font-weight: 500;
 }
+*/
+/*
 span.perfil{
 	background: #e01026;
 	color: #fff;
 	padding: 15px 83px 15px 78px;
 	font-family: 'Dosis', sans-serif;
 }
+*/
+
+
 /* -------------------------------------------------------------------------- PROFILE_ACTIVIDAD */
+/*
 h1.encabezado{
 	color: #fff;
 	background: #1f2a84 url(../img/flecha.png)no-repeat 10px 15px;
@@ -110,12 +157,14 @@ h1.encabezado{
 div.contenedor{
 	background: #f0f0f0;
 }
+/*
 a.item {
 	background: #f5f3f3;
 	color: #919191;
 	font-family: advent pro;
 	font-weight: 500;
 }
+
 p.subtitulo{
 	text-align: center;
 	color: #e01026;
@@ -139,7 +188,9 @@ article{
 .item-button-right{
 	background: #f0f0f0 !important;
 }
+*/
 /* -------------------------------------------------------------------------- BLOG */
+/*
 p.fecha{
 	width: 38px;
 	border: solid #b1b1b1 1px;
@@ -205,7 +256,9 @@ div.botonMas{
 	border: none;
 	color: #4a87ee;
 }
+*/
 /* -------------------------------------------------------------------------- CONTADOR DE CALORIAS*/
+/*
 .button:after {
 	position: absolute;
 	top: -6px;
@@ -273,3 +326,4 @@ background-size: 99% 4px;
 background-repeat: no-repeat;
 -webkit-appearance: none;
 }
+*/

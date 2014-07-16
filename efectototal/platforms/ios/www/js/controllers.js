@@ -54,7 +54,7 @@ angular.module('efectototal.controllers', [])
 		var maxValues, total = 0;
 		$interval(function(){
 			navigator.accelerometer.getCurrentAcceleration(logValue, onError);
-		}, 100, 70).then(function(){
+		}, 100, 80).then(function(){
 			maxValues = rawData.sort(function(a,b){
 				return a.y < b.y;
 			});

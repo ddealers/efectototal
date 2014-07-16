@@ -102,7 +102,8 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
       url: "/contador",
       views: {
         'menuContent' :{
-          templateUrl: "templates/contador.html"
+          templateUrl: "templates/contador.html",
+          controller: 'CounterCtrl'
         }
       }
     })
