@@ -145,3 +145,11 @@ Terminating in response to SpringBoard's termination.
 2014-07-15 12:00:56.452 Efecto Total[1664:70b] [CDVTimer][TotalPluginStartup] 1210.951030ms
 2014-07-15 12:00:56.921 Efecto Total[1664:70b] Resetting plugins due to page load.
 2014-07-15 12:00:58.890 Efecto Total[1664:70b] Finished load of: file:///Users/ares/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2658F36D-1228-46C5-B82A-7506E422ADCA/Efecto%20Total.app/www/index.html#/app/perfil
+2014-07-16 11:06:11.581 Efecto Total[692:70b] Multi-tasking -> Device: YES, App: YES
+2014-07-16 11:06:12.926 Efecto Total[692:70b] Unlimited access to network resources
+2014-07-16 11:06:25.021 Efecto Total[692:70b] [CDVTimer][statusbar] 2027.159989ms
+2014-07-16 11:06:25.089 Efecto Total[692:70b] [CDVTimer][TotalPluginStartup] 2094.789982ms
+2014-07-16 11:06:26.447 Efecto Total[692:70b] Resetting plugins due to page load.
+2014-07-16 11:06:35.787 Efecto Total[692:70b] Finished load of: file:///Users/ares/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2658F36D-1228-46C5-B82A-7506E422ADCA/Efecto%20Total.app/www/index.html#/app/perfil
+2014-07-16 11:06:36.047 Efecto Total[692:70b] THREAD WARNING: ['Device'] took '84.670166' ms. Plugin should use a background thread.
+2014-07-16 11:06:36.307 Efecto Total[692:70b] deviceready has not fired after 5 seconds.

@@ -15,9 +15,9 @@ a{
 	text-align: right;
 	font-family: 'Dosis', sans-serif;
 }
-.scroll-content{
+/*.scroll-content{
 	background: #eee;
-}
+}*/
 
 /* ----------------------------------------------------------------------- CONECTATE CON FACEBOOK */
 /*
@@ -73,13 +73,16 @@ img.efectoTotal{
 }
 */
 .contenidoPerfil{
-	width: 90%;
-	background-color: #ddd;
-	border: #aaa;
+	width: 95%;
+	background-color: #eee;
+	border: #aaa 1px solid;
 	margin: 5px auto;
+	padding: 20px;
+	height: 425px;
 }
 .contenidoPerfil .list-inset{
-	margin: 10px 0;
+	margin: 10px auto;
+	width: 75%;
 }
 .contenidoPerfil .item-image img.perfil:first-child, .item-image .list-img {
 	width: 55%;
@@ -91,10 +94,14 @@ img.efectoTotal{
 	font-size: 16px;
 	font-weight: 500;
 	text-align: center;
+	border: solid 1px #aaa;
 }
 .contenidoPerfil .miPerfil{
 	background: #e01026;
 	color: #FFF;	
+}
+.contenidoPerfil .card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
+	background: #e5e5e5;
 }
 /*
 .opcionPerfil {
