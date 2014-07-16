@@ -23,6 +23,10 @@
                         {
                             "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Accelerometer\"><param name=\"android-package\" value=\"org.apache.cordova.devicemotion.AccelListener\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -54,6 +58,9 @@
         },
         "nl.x-services.plugins.socialsharing": {
             "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "org.apache.cordova.device-motion": {
+            "PACKAGE_NAME": "com.efectototal.main"
         }
     },
     "dependent_plugins": {}

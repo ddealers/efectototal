@@ -45,6 +45,8 @@
 		C5C73D89A7674A0D904ADA83 /* SocialSharing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0153B7FEE5C24294B8F55B69 /* SocialSharing.m */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		DCF1080D15CB41079D25D7C7 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6ABA5E48D407AA56D23FE /* CDVInAppBrowser.m */; };
+		D20AF0713ED84428837C4064 /* CDVAccelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = D618582AF5B8424AA2BA7515 /* CDVAccelerometer.m */; };
+		581916883E3C47369EE1A862 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F68B4324BB1470EADDB750D /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,9 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F28EDAF737EE4C85A2E1666B /* CDVDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVDevice.h; path = org.apache.cordova.device/CDVDevice.h; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "Efecto Total/config.xml"; sourceTree = "<group>"; };
+		D618582AF5B8424AA2BA7515 /* CDVAccelerometer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVAccelerometer.m"; path = "org.apache.cordova.device-motion/CDVAccelerometer.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		69DBCBC2C14947FDA3775ED1 /* CDVAccelerometer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVAccelerometer.h"; path = "org.apache.cordova.device-motion/CDVAccelerometer.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		7F68B4324BB1470EADDB750D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreMotion.framework"; path = "System/Library/Frameworks/CoreMotion.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +140,7 @@
 				5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */,
 				0C13055A1A5A44D99BAABE3E /* Social.framework in Frameworks */,
 				2CD45E7D5EB849FF856F0A58 /* MessageUI.framework in Frameworks */,
+				581916883E3C47369EE1A862 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +236,7 @@
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
 				D71CE35384FA4E42BE3F9B0D /* Social.framework */,
 				A0299B86876E4A979CCB9D5A /* MessageUI.framework */,
+				7F68B4324BB1470EADDB750D /* CoreMotion.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -255,6 +262,8 @@
 				5745E95B85264F6D8740DA45 /* CDVInAppBrowser.h */,
 				0153B7FEE5C24294B8F55B69 /* SocialSharing.m */,
 				DDC89DB5DDA54BF2B602473B /* SocialSharing.h */,
+				D618582AF5B8424AA2BA7515 /* CDVAccelerometer.m */,
+				69DBCBC2C14947FDA3775ED1 /* CDVAccelerometer.h */,
 			);
 			name = Plugins;
 			path = "Efecto Total/Plugins";
@@ -459,6 +468,7 @@
 				68526AEC0EF84040B580C9D2 /* CDVStatusBar.m in Sources */,
 				DCF1080D15CB41079D25D7C7 /* CDVInAppBrowser.m in Sources */,
 				C5C73D89A7674A0D904ADA83 /* SocialSharing.m in Sources */,
+				D20AF0713ED84428837C4064 /* CDVAccelerometer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

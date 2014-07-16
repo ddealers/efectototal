@@ -39,6 +39,10 @@
                         {
                             "xml": "<feature name=\"SocialSharing\"><param name=\"ios-package\" value=\"SocialSharing\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Accelerometer\"><param name=\"ios-package\" value=\"CDVAccelerometer\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -62,6 +66,12 @@
                             "xml": "true",
                             "count": 1
                         }
+                    ],
+                    "CoreMotion.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
                     ]
                 }
             }
@@ -82,6 +92,9 @@
         },
         "nl.x-services.plugins.socialsharing": {
             "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "org.apache.cordova.device-motion": {
+            "PACKAGE_NAME": "com.efectototal.main"
         }
     },
     "dependent_plugins": {}
