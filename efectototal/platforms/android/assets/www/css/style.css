@@ -19,7 +19,7 @@ div.boton{
 button.facebook{
 	position: absolute;
 	color: #fff;
-	background: #2A719D url(./img/iconF.png)no-repeat 5px;
+	background: #2A719D url(../img/iconF.png)no-repeat 5px;
 	left: 25px;
 	top: 4px;
 	border: none;
@@ -35,7 +35,7 @@ span{
 	font-weight: bold;
 }
 p.cargando{
-	font-family: 'Advent Pro', sans-serif;
+	font-family: 'Dosis', sans-serif;
 	color: #DA3231;
 	padding: 85px 0px 0px 120px;
 }
@@ -46,54 +46,230 @@ img.efectoTotal{
 	top: 372px;
 }
 /*--------------------------------------------------------------------------- CONTENIDO GENERAL */
-section.contenido{
-	width: 300px;
-	height: 28%;
-	border: #b4b4b4 solid 1px;
-	margin-left: 10px;
-}
-h1{
-	font-family: 'Advent Pro', sans-serif;
-	color: #4B4B4B;
-	font-size: 25px;
-	font-weight: normal;
-	left: 210px;
-	padding: 10px 0px 7px 0px;
-	position: relative;
-}
-div.encabezado{
-	color: #fff;
-	background: #1f2a84;
-	font-family: 'Advent Pro', sans-serif;
-	font-weight: bold;
-	font-size: 16px;
-}
-p.titulo{
-	padding: 10px;
-	text-align: right;
-	background: url(./img/flecha.png) no-repeat 14px 15px;
-}
-img.fotoPerfil{
-	width: 30%;
-	margin: 5px 0px 0px 100px;
-}
-article.head{
-	background: #e4e4e4;
-	height: 100px;
-}
-p.subtitulo{
-	font-family: 'Advent Pro', sans-serif;
-	font-size: 25px;
-	font-weight: bold;
-	color: #e01026;
-	margin: 9px 0px 0px 0px;
+/*--------------------------------------------------------------------------- PROFILE */
+.contenidoPerefil{
+	top: 44px;
+	width: 250px;
+	margin: auto;
 	text-align: center;
 }
-/* ------------------------------------------------------------ BLOG */
+.item-image img.perfil:first-child, .item-image .list-img {
+	width: 55%;
+}
+.opcionPerfil {
+	border-color: #ddd;
+	background-color: #fff;
+	color: #919191;
+	position: relative;
+	z-index: 2;
+	display: block;
+	margin: -1px;
+	padding: 25px 0px 25px 0px;
+	border-width: 1px;
+	border-style: solid;
+	font-size: 16px;
+	background: #f0f0f0;
+	text-decoration: none;
+	font-family: 'Dosis', sans-serif;
+	font-weight: 500;
+}
+span.perfil{
+	background: #e01026;
+	color: #fff;
+	padding: 15px 83px 15px 78px;
+	font-family: 'Dosis', sans-serif;
+}
+/* -------------------------------------------------------------------------- PROFILE_ACTIVIDAD */
 h1.encabezado{
 	color: #fff;
-	background: #1f2a84;
-	font-family: 'Advent Pro', sans-serif;
+	background: #1f2a84 url(../img/flecha.png)no-repeat 10px 15px;
+	font-family: 'Dosis', sans-serif;
 	font-weight: bold;
 	font-size: 16px;
+	padding: 10px 0px 10px 195px;
+	width: 300px;
+	margin: 0px 0px 0px 10px;
+} 
+.bar.bar-stable .title {
+    color: #444;
+    font-size: 25px;
+    margin: 0px 0px 0px 110px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: normal;
+}
+.item-image img:first-child, .item-image .list-img {
+	vertical-align: middle;
+	width: 25%;
+}
+.list.card .item:first-child, .list .list-inset .item:first-child, .padding {
+	background: #e4e4e4;
+}
+.card, .list-inset {
+	margin: 10px 10px;
+}
+div.contenedor{
+	background: #f0f0f0;
+}
+a.item {
+	background: #f5f3f3;
+	color: #919191;
+	font-family: advent pro;
+	font-weight: 500;
+}
+p.subtitulo{
+	text-align: center;
+	color: #e01026;
+	font-family: 'Dosis', sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	padding: 5px 0px 0px 0px;	
+	margin: 0;
+}
+p{
+	color: #5177c8;
+	font-family: 'Dosis', sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	padding: 0px 0px 0px 12px;
+}
+article{
+	border: solid #ddd 1px;
+	background: #f0f0f0;
+}
+.item-button-right{
+	background: #f0f0f0 !important;
+}
+/* -------------------------------------------------------------------------- BLOG */
+p.fecha{
+	width: 38px;
+	border: solid #b1b1b1 1px;
+	height: 38px;
+	margin: 4px 0px 0px -50px;
+	font-size: 16px;
+	padding: 2px 8px 5px;
+	color: #919191;
+	overflow: hidden;
+	position: absolute;
+}
+p.fecha span{
+	font-size: 11px;
+	font-weight: bold;
+	color: #606060;
+	display: block;
+	line-height: 8px;
+}
+.item-2{
+	background: #f0f0f0 !important;
+	border:none; 
+	padding-left: 50px !important;
+}
+.fondoImg{
+	padding: 20px;
+	background: #f0f0f0;
+	border: solid 1px #b1b1b1;
+}
+h2.name {
+	font-size: 20px;
+	font-family: sans-serif;
+	color: #606060;
+	margin-bottom: 5px;
+	font-size: 20px;
+	margin-top: 0px;
+}
+p.dia{
+	color: #41b296;
+	padding: 0;
+	font-size: 13px;
+}
+p.parrafo{
+	color: #9d9d9d;
+	font-family: sans-serif;
+	font-size: 15px;
+	margin: -15px 0px 20px -12px;
+}a.subdued {
+	padding-right: 20px;
+	color: #41b296;
+	font-size: 15px;
+	margin: 0px 0px 0px -12px;
+}
+div.botonMas{
+	background: #f0f0f0;
+	border: #b1b1b1 solid 1px;
+	border-top: none;
+	padding: 20px 0px 45px 0px;
+	text-align: center;
+}
+.button-Plus.button-positive {
+	font-size: 47px;
+	background: none;
+	border: none;
+	color: #4a87ee;
+}
+/* -------------------------------------------------------------------------- CONTADOR DE CALORIAS*/
+.button:after {
+	position: absolute;
+	top: -6px;
+	right: -8px;
+	bottom: -6px;
+	left: -8px;
+	content: ' ';
+}
+.bar-stable .button.button-icon {
+	border-color: transparent;
+	background: none;
+}
+h1.title-calorias{
+	color: #444;
+	font-size: 25px;
+	margin: 0px 0px 0px 65px;
+	font-family: 'Dosis', sans-serif;
+	font-weight: normal;
+}
+.bar.bar-balanced {
+	background-color: #41b296;
+}
+.title-name{
+	color: #fff;
+	font-size: 20px;
+	font-family: 'Dosis', sans-serif;
+	margin: auto;
+	padding: 5px 0px 0px 0px;
+}
+div.verde{
+	background: #41b296;
+}
+h1.nombre{
+	font-size: 20px;
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
+	color: #fff;
+	padding: 10px 0px 10px 0px;
+	margin: 0;
+}
+p.progreso{
+	font-size: 45px;
+	color: #e0032a;
+	font-family: sans-serif;
+	font-weight: bold;
+	padding: 17px 0px 17px 0px;
+}
+img.lupa{
+	width: 30px !important;
+	margin: -21px 0px 63px -30px;
+}
+input[type="range"] {
+display: inline-block;
+overflow: hidden;
+margin-top: 79px;
+margin-bottom: -4px;
+padding-left: 1px;
+width: auto;
+height: 35px;
+outline: none;
+background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ccc), color-stop(100%, #ccc));
+background: linear-gradient(to right, #ccc 0%, #ccc 100%);
+background-position: center;
+background-size: 99% 4px;
+background-repeat: no-repeat;
+-webkit-appearance: none;
 }
