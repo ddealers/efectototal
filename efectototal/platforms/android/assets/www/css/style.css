@@ -15,6 +15,9 @@ a{
 	text-align: right;
 	font-family: 'Dosis', sans-serif;
 }
+.scroll-content{
+	background: #EEE;
+}
 .no-scroll .scroll{
 	height: 98%;
 }
@@ -23,19 +26,18 @@ a{
 }*/
 
 /* ----------------------------------------------------------------------- CONECTATE CON FACEBOOK */
-/*
-img.inicio{
+.login img.inicio{
 	width: 100%;
 }
-div.boton{
-	border-top: 1px solid #AAB8BE;
-	margin: 4px 0px 0px 15px;
+.login div.boton-container{
+	border-top: 1px solid #DDD;
+	margin: -2px 0px 0px 15px;
 	width: 288px;
-	border-bottom: 1px solid #AAB8BE;
+	border-bottom: 1px solid #DDD;
 	position: relative;
 	height: 49px;
 }
-button.facebook{
+.login button.facebook{
 	position: absolute;
 	color: #fff;
 	background: #2A719D url(../img/iconF.png)no-repeat 5px;
@@ -50,21 +52,23 @@ button.facebook{
 	text-shadow: 0 0.5px 0px rgba(0,0,0,1);
 	font-size: 16px;
 }
-span{
+.login span{
 	font-weight: bold;
 }
-p.cargando{
+.login p.cargando{
 	font-family: 'Dosis', sans-serif;
 	color: #DA3231;
-	padding: 85px 0px 0px 120px;
+	font-size: 25px;
+	text-align: center;
+	padding-top: 20px;
 }
-img.efectoTotal{
+.login img.efectoTotal{
 	width: 50%;
-	position: absolute;
-	left: 81px;
-	top: 372px;
+	margin: 0 auto;
+	display: block;
+	border-top: 1px #FEF solid;
+	padding-top: 10px;
 }
-*/
 
 /*--------------------------------------------------------------------------- PROFILE */
 /*
