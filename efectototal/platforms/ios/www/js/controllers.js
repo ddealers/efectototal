@@ -24,21 +24,17 @@ angular.module('efectototal.controllers', [])
 
 .controller('LoginCtrl', function($scope, $location, OpenFB) {
 	function registerAndLogin(){
-		OpenFB.api({
-	        path: '/me',
-	        success: createUser,
-	        error: showError
-    	});
+            OpenFB.get('/me').success(onSuccess);
+	}
+	function onSuccess(data){
+		//user.create();
 		$location.path('/app/perfil');
 	}
-	function createUser(data){
-		console.log(data);
-	}
-	function showError() {
+	function onError() {
 		alert('OpenFB login failed');
 	}
 	$scope.facebookLogin = function () {
-		OpenFB.login('email,publish_stream').then(registerAndLogin, showError);
+		OpenFB.login('email,user_birthday,publish_stream').then(registerAndLogin, onError);
 	};
 })
 

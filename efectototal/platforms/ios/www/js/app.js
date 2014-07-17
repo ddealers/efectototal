@@ -9,7 +9,7 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
 .run(function($rootScope, $state, $ionicPlatform, $window, OpenFB) {
  	//Init FB
  	OpenFB.init('470325759780426'); // Defaults to sessionStorage for storing the Facebook token
-
+  
  	$ionicPlatform.ready(function() {
     	// Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     	// for form inputs)

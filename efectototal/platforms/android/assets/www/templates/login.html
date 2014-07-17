@@ -1,11 +1,10 @@
 <ion-content>
-<div class="contenidoLogin">
-    <div>
+    <div class="login">
 		<img src="./img/inicio.jpg" class="inicio">
-	</div>
-	<div class="boton">
-		<button class="facebook"> <img src="">Conéctate con <span>Facebook</span></button>
-	</div>
+		<div class="boton-container">
+			<button class="facebook" ng-click="facebookLogin()">Conéctate con <span>Facebook</span></button>
+		</div>
 		<img src="./img/efectoTotal.png" class="efectoTotal">
-		<p class="cargando">CARGANDO...</p>
+		<p ng-show="loading" class="cargando">CARGANDO...</p>
+	</div>
 </ion-content>
