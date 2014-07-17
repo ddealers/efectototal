@@ -24,7 +24,6 @@ a{
 /*.scroll-content{
 	background: #eee;
 }*/
-
 /* ----------------------------------------------------------------------- CONECTATE CON FACEBOOK */
 .login img.inicio{
 	width: 100%;
@@ -69,16 +68,7 @@ a{
 	border-top: 1px #FEF solid;
 	padding-top: 10px;
 }
-
 /*--------------------------------------------------------------------------- PROFILE */
-/*
-.contenidoPerfil{
-	top: 44px;
-	width: 250px;
-	margin: auto;
-	text-align: center;
-}
-*/
 .contenidoPerfil{
 	width: 95%;
 	background-color: #eee;
@@ -110,102 +100,62 @@ a{
 .contenidoPerfil .card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
 	background: #e5e5e5;
 }
-/*
-.opcionPerfil {
-	border-color: #ddd;
-	background-color: #fff;
-	color: #919191;
-	position: relative;
-	z-index: 2;
-	display: block;
-	margin: -1px;
-	padding: 25px 0px 25px 0px;
-	border-width: 1px;
-	border-style: solid;
-	font-size: 16px;
-	background: #f0f0f0;
-	text-decoration: none;
-	font-family: 'Dosis', sans-serif;
-	font-weight: 500;
-}
-*/
-/*
-span.perfil{
-	background: #e01026;
-	color: #fff;
-	padding: 15px 83px 15px 78px;
-	font-family: 'Dosis', sans-serif;
-}
-*/
-
-
 /* -------------------------------------------------------------------------- PROFILE_ACTIVIDAD */
-/*
-h1.encabezado{
+.contenidoPerfil_actividad h1.encabezado{
 	color: #fff;
 	background: #1f2a84 url(../img/flecha.png)no-repeat 10px 15px;
-	font-family: 'Dosis', sans-serif;
 	font-weight: bold;
 	font-size: 16px;
 	padding: 10px 0px 10px 195px;
 	width: 300px;
 	margin: 0px 0px 0px 10px;
+	font-family: 'Dosis';
 } 
-.bar.bar-stable .title {
-    color: #444;
-    font-size: 25px;
-    margin: 0px 0px 0px 110px;
-    font-family: 'Dosis', sans-serif;
-    font-weight: normal;
-}
-.item-image img:first-child, .item-image .list-img {
+.contenidoPerfil_actividad .item-image img:first-child, .item-image .list-img {
 	vertical-align: middle;
 	width: 25%;
 }
-.list.card .item:first-child, .list .list-inset .item:first-child, .padding {
-	background: #e4e4e4;
-}
-.card, .list-inset {
-	margin: 10px 10px;
-}
-div.contenedor{
-	background: #f0f0f0;
-}
-/*
-a.item {
-	background: #f5f3f3;
-	color: #919191;
-	font-family: advent pro;
-	font-weight: 500;
-}
-
-p.subtitulo{
+.contenidoPerfil_actividad p.subtitulo{
 	text-align: center;
 	color: #e01026;
-	font-family: 'Dosis', sans-serif;
 	font-weight: 500;
 	font-size: 20px;
 	padding: 5px 0px 0px 0px;	
 	margin: 0;
 }
-p{
+.contenidoPerfil_actividad p{
 	color: #5177c8;
-	font-family: 'Dosis', sans-serif;
 	font-weight: 500;
 	font-size: 20px;
 	padding: 0px 0px 0px 12px;
 }
-article{
-	border: solid #ddd 1px;
+.contenidoPerfil_actividad article{
+	background: #f0f0f0;
+	height: 55px;
+	border-right: 1px solid #aaa;
+	border-left: 1px solid #aaa;
+}
+.contenidoPerfil_actividad .item-image{
+	background: #e5e5e5;
+	border: solid 1px #aaa; 
+}
+.contenidoPerfil_actividad .item{
+	border: solid 1px #aaa;
+	background: #f0f0f0;
+	font-size: 15px; 
+}
+.contenidoPerfil_actividad .card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
+	background: #d4d3d3; 
+}
+.contenidoPerfil_actividad .card .historial .item:first-child{
 	background: #f0f0f0;
 }
-.item-button-right{
-	background: #f0f0f0 !important;
-}
-*/
 /* -------------------------------------------------------------------------- BLOG */
-/*
-p.fecha{
+.contenidoBlog .full-image {
+	width: 87%;
+	margin: 15px 17px;
+}
+.contenidoBlog p.fecha{
 	width: 38px;
 	border: solid #b1b1b1 1px;
 	height: 38px;
@@ -216,96 +166,86 @@ p.fecha{
 	overflow: hidden;
 	position: absolute;
 }
-p.fecha span{
+.contenidoBlog p.fecha span{
 	font-size: 11px;
 	font-weight: bold;
 	color: #606060;
 	display: block;
 	line-height: 8px;
 }
-.item-2{
-	background: #f0f0f0 !important;
-	border:none; 
-	padding-left: 50px !important;
-}
-.fondoImg{
+.contenidoBlog .fondoImg{
 	padding: 20px;
 	background: #f0f0f0;
-	border: solid 1px #b1b1b1;
+	border: solid 1px #aaa;
 }
-h2.name {
+.contenidoBlog div.borde{
+	border-bottom: solid 1px #aaa;
+	padding: 38px 0px 0px 
+}
+.contenidoBlog p.fecha{
+	width: 38px;
+	border: solid #aaa 1px;
+	height: 38px;
+	margin: 6px 0px 0px -53px;
+	font-size: 16px;
+	padding: 2px 8px 5px;
+	color: #919191;
+	overflow: hidden;
+	position: absolute;
+}
+.contenidoBlog p.fecha span{
+	font-size: 11px;
+	font-weight: bold;
+	color: #606060;
+	display: block;
+	line-height: 8px;
+}
+.contenidoBlog h2.name {
 	font-size: 20px;
-	font-family: sans-serif;
 	color: #606060;
 	margin-bottom: 5px;
 	font-size: 20px;
 	margin-top: 0px;
 }
-p.dia{
-	color: #41b296;
-	padding: 0;
-	font-size: 13px;
-}
-p.parrafo{
-	color: #9d9d9d;
-	font-family: sans-serif;
+.contenidoBlog p.parrafo{
+	color: #444;
 	font-size: 15px;
-	margin: -15px 0px 20px -12px;
-}a.subdued {
-	padding-right: 20px;
-	color: #41b296;
-	font-size: 15px;
-	margin: 0px 0px 0px -12px;
+	margin: -15px 0px 20px 14px;
 }
-div.botonMas{
+.contenidoBlog p.dia{
+	color: #41b296;
+	font-weight: bold;
+	font-family: 'Dosis', sans-serif;
+}
+.contenidoBlog a.subdued {
+	padding-right: 10px;
+	color: #41b296;
+	text-decoration: none;
+	margin: 0px 0px 0px 15px;
+	font-weight: bold;
+}
+.contenidoBlog div.botonMas{
 	background: #f0f0f0;
 	border: #b1b1b1 solid 1px;
 	border-top: none;
 	padding: 20px 0px 45px 0px;
 	text-align: center;
 }
-.button-Plus.button-positive {
+.contenidoBlog .button-Plus.button-positive {
 	font-size: 47px;
 	background: none;
 	border: none;
 	color: #4a87ee;
 }
-*/
 /* -------------------------------------------------------------------------- CONTADOR DE CALORIAS*/
-/*
-.button:after {
-	position: absolute;
-	top: -6px;
-	right: -8px;
-	bottom: -6px;
-	left: -8px;
-	content: ' ';
+.contenidoContador{
+	width: 95%;
+	background-color: #eee;
+	border: #aaa 1px solid;
+	margin: 5px auto;
+	padding: 20px;
 }
-.bar-stable .button.button-icon {
-	border-color: transparent;
-	background: none;
-}
-h1.title-calorias{
-	color: #444;
-	font-size: 25px;
-	margin: 0px 0px 0px 65px;
-	font-family: 'Dosis', sans-serif;
-	font-weight: normal;
-}
-.bar.bar-balanced {
-	background-color: #41b296;
-}
-.title-name{
-	color: #fff;
-	font-size: 20px;
-	font-family: 'Dosis', sans-serif;
-	margin: auto;
-	padding: 5px 0px 0px 0px;
-}
-div.verde{
-	background: #41b296;
-}
-h1.nombre{
+.contenidoContador h1{
 	font-size: 20px;
 	font-family: 'Dosis', sans-serif;
 	text-align: center;
@@ -313,31 +253,301 @@ h1.nombre{
 	padding: 10px 0px 10px 0px;
 	margin: 0;
 }
-p.progreso{
-	font-size: 45px;
+.contenidoContador .card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-ch ild {
+	background: #d4d3d3; 
+}
+.contenidoContador .item-image img:first-child, .item-image .list-img {
+	vertical-align: middle;
+	width: 25%;
+}
+.contenidoContador h1.encabezado{
+	color: #fff;
+	background: #41b296;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px 0px 10px 6px;
+	width: 264px;
+	margin: 0px 0px 0px -1px;
+} 
+.contenidoContador .item-image {
+	background: #d4d3d3 url(../img/barras.png) no-repeat 0px -22px;
+	border: #aaa solid 1px;
+}
+.contenidoContador p.progreso{
+	font-size: 50px;
 	color: #e0032a;
 	font-family: sans-serif;
 	font-weight: bold;
-	padding: 17px 0px 17px 0px;
+	padding: 17px 0px 17px 65px;
 }
-img.lupa{
-	width: 30px !important;
-	margin: -21px 0px 63px -30px;
+.contenidoContador p.caloriasMenos{
+	color: #5880d6;
+	display: inline-block;
+	width: 165px;
+	margin: 0px 0px 0px 5px;
+}
+.contenidoContador p.caloriasTotales{
+	color: #e0032a;
+	display: inline-block;
+}
+.contenidoContador div.contenidoCal{
+	border: solid 1px #aaa;
+	background: #f0f0f0;
+	width: 264px;
+	margin: 0px 0px 0px -1px;
 }
 input[type="range"] {
-display: inline-block;
-overflow: hidden;
-margin-top: 79px;
-margin-bottom: -4px;
-padding-left: 1px;
-width: auto;
-height: 35px;
-outline: none;
-background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ccc), color-stop(100%, #ccc));
-background: linear-gradient(to right, #ccc 0%, #ccc 100%);
-background-position: center;
-background-size: 99% 4px;
-background-repeat: no-repeat;
--webkit-appearance: none;
+	margin: 0px 0px 21px 43px;
+	padding: 0px 0px 0px 45px;
 }
-*/
+.contenidoContador img.lupa-verde{
+	margin: 0px 0px 0px 35px;
+}
+.contenidoContador img.lupa-rojo{
+	padding: 24px 0px 0px 117px;
+}
+.contenidoContador .button.button-positive {
+	position: relative;
+	margin: 0px 0px 11px 182px;
+	font-size: 14px;
+	padding: 0px 5px 0px 5px;
+	-webkit-transform: skew(-10deg);
+}
+.contenidoContador p.inicioContador{
+	color: #444;
+	font-size: 26px;
+	display: inline-block;
+	padding: 0px 0px 0px 42px
+}
+.contenidoContador p.finContador{
+	color: #e0032a;
+	font-size: 26px;
+	display: inline-block;
+	padding: 0px 0px 0px 123px;
+}
+.contenidoContador .list:last-child {
+	margin: -24px 0px 0px 0px;
+}
+.contenidoContador ul{
+	text-align: center;
+	color: #e0032a;
+	border: solid 1px #aaa;
+	background: #f0f0f0;
+	border-top: none;
+	width: 264px;
+	margin: 0px 0px 5px -1px;
+	font-weight: bold;
+	padding: 5px 0px 5px 0px;
+} 
+.contenidoContador li{
+	color: #444;
+	font-weight: normal;
+}
+/*---------------------------------------------------------------- VIDEOS*/
+.contenidoVideos{
+	width: 95%;
+	background-color: #eee;
+	border: #aaa 1px solid;
+	margin: 5px auto;
+}
+.contenidoVideos .bar.bar-energized{
+	color: #fff;
+	background: #fccd4f;
+	font-weight: bold;
+	width: 302px;
+	margin: 0px 0px 0px 9px;
+}
+.contenidoVideos .bar .title {
+	font-size: 16px;
+	text-align: left;
+	font-weight: bold;
+}
+.contenidoVideos div.videoEjercicio{
+
+}
+.contenidoVideos video{
+	width: 302px;
+	margin: 44px 0px 0px 0px;
+}
+.contenidoVideos .col-50{
+	margin: -11px 0px 0px 0px;
+}
+.contenidoVideos p.text-1{
+	font-size: 16px;
+	color: #444;
+}
+.contenidoVideos .button.button-positive {
+	position: relative;
+	margin: -3px 11px 11px 10px;
+	font-size: 12px;
+	padding: 0px 5px 0px 5px;
+	-webkit-transform: skew(-10deg);
+	line-height: 13px;
+}
+.contenidoVideos a.masInfo{
+	color: #5880d6;
+	font-size: 13px;
+	background: url(../img/flech-azul.png) no-repeat 0px 3px;
+	padding: 0px 0px 0px 20px;
+}
+.contenidoVideos div.col{
+	margin: 6px 1px -7px 0px;
+	border-bottom: solid 1px #aaa;}
+.contenidoVideos p.minutes{
+	color: #444;
+	font-size: 17px;
+	line-height: 30px;
+}
+.contenidoVideos p.minutes span.tiempo{
+	font-size: 50px;
+	color: #e0032a;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+.contenidoVideos img.redest{
+	padding: 0px 20px 0px 22px;
+}
+.contenidoVideos p.entrene{
+	font-size: 13px;
+	color: #444;
+}
+.contenidoVideos p.parraFo{
+	color: #000;
+	font-size: 13px;
+	line-height: 16px;
+}
+.contenidoVideos p.parrafo0{
+	color: #000;
+	font-size: 13px;
+	margin: 0px 0px 0px 10px;
+	font-weight: bold;
+}
+.contenidoVideos p.parrafo1{
+	color: #444;
+	font-size: 13px;
+	padding: 4px 10px 0px 10px;
+}
+.contenidoVideos div.coment{
+	background: #fff;
+	padding: 11px 0px 11px 0px;
+}
+/* --------------------------------------------------------------- LOREM IPSUM "EL EQUIPO"*/
+.contenidoEQUIPO{
+	width: 95%;
+	background-color: #eee;
+	border: #aaa 1px solid;
+	margin: 5px auto;
+}
+.contenidoEquipo h1.encabezado{
+	color: #fff;
+	background: #000 url(../img/flecha.png)no-repeat 10px 15px;
+	font-weight: bold;
+	font-size: 16px;
+	width: 300px;
+	margin: 0px 0px 0px 10px;
+	font-family: 'Dosis';
+	padding: 10px 0px 10px 197px;
+} 
+.contenidoEquipo .item-image {
+	background: #d4d3d3;
+	border: #aaa solid 1px;
+}
+.contenidoEquipo .item-image img:first-child, .item-image .list-img {
+	vertical-align: middle;
+	width: 25%;
+}
+.contenidoEquipo div.list{
+	margin: 0px 10px 0px 10px;
+}
+.contenidoEquipo div.item img{
+	width: 90%;
+}
+.contenidoEquipo p.textAvatar{
+	width: 151px;
+	float: right;
+	background-color: rgba(0,0,0,0.6);
+	padding: 11px;
+	margin-top: 25px;
+	color: #fff;
+}
+.contenidoEquipo .item{
+	padding: 0px;
+	background: #d4d3d3;
+	border: solid 1px #aaa;
+}
+.contenidoEquipo div.imageFondo{
+	background: url(../img/foto-1.png)no-repeat;
+	height: 400px;
+	background-size: cover;
+	border: solid 1px #aaa;
+	margin: 0px 10px 0px 10px;
+	border-top: none;
+	padding: 0px 8px 0px 0px;
+}
+.contenidoEquipo p.p1{
+	font-size: 13px;
+	color: #444;
+	padding: 3px 0px 0px 7px;
+}
+.contenidoEquipo p.p2{
+	overflow: visible;
+	white-space: normal;
+	font-size: 11px;
+	line-height: 16px;
+	padding: 15px 0px 0px 0px;
+}
+.contenidoEquipo p.p2 span{
+	font-weight: bold;
+}
+.contenidoEquipo .row{
+	padding: 0px;
+}
+.contenidoEquipo a img.icon{
+	width: 20%;
+}
+/* --------------------------------------------------------------------------- MI PERFIL "INFORMACION" */
+.contenidoIformacion{
+	width: 95%;
+	background-color: #eee;
+	border: #aaa 1px solid;
+	margin: 5px auto;
+}
+.contenidoIformacion h1.encabezado{
+	color: #fff;
+	background: #919191url(../img/flecha.png)no-repeat 10px 15px;
+	font-weight: bold;
+	font-size: 16px;
+	width: 302px;
+	font-family: 'Dosis';
+	padding: 10px 0px 10px 178px;
+} 
+.contenidoIformacion .item-image {
+	background: #d4d3d3;
+	border-bottom: #aaa solid 1px;
+	border-top: #aaa solid 1px;
+}
+.contenidoIformacion .item-image img:first-child, .item-image .list-img {
+	vertical-align: middle;
+	width: 25%;
+}
+.contenidoIformacion .card, .list-inset {
+	margin: 0px;
+}.contenidoIformacion .button.button-positive {
+	position: relative;
+	margin: -3px 11px 11px 10px;
+	font-size: 12px;
+	padding: 0px 5px 0px 5px;
+	-webkit-transform: skew(-10deg);
+	line-height: 13px;
+}
+.contenidoIformacion .button.button-positive {
+	border-color: #145fd7;
+	background-color: #4a87ee;
+	color: #fff;
+	font-size: 16px;
+	margin: 28px 0px 25px 14px;
+}
+.contenidoIformacion .card .item:last-child, .list-inset .item:last-child {
+	margin-bottom: -1px;
+	margin: 14px 10px 10px 10px;
+}

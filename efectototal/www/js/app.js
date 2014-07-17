@@ -81,6 +81,15 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
       }
     })
 
+        .state('app.perfil_informacion', {
+      url: "/perfil_informacion",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/profile_informacion.html"
+        }
+      }
+    })
+
     .state('app.videos', {
       url: "/videos",
       views: {
