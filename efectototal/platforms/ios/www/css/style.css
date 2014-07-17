@@ -15,6 +15,12 @@ a{
 	text-align: right;
 	font-family: 'Dosis', sans-serif;
 }
+.no-scroll .scroll{
+	height: 98%;
+}
+/*.scroll-content{
+	background: #eee;
+}*/
 /* ----------------------------------------------------------------------- CONECTATE CON FACEBOOK */
 .contenidoLogin img.inicio{
 	width: 100%;
@@ -62,7 +68,7 @@ a{
 	border: #aaa 1px solid;
 	margin: 5px auto;
 	padding: 20px;
-	height: 425px;
+	height: 100%;
 }
 .contenidoPerfil .list-inset{
 	margin: 10px auto;
