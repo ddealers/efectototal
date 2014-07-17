@@ -135,6 +135,15 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
       }
     })
 
+    .state('app.te_reto', {
+      url: "/te_reto",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/te_reto.html"
+        }
+      }
+    })
+
     .state('app.newsfeed', {
       url: "/newsfeed",
       views: {

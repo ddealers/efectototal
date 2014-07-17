@@ -20,7 +20,7 @@ a{
 }
 /*.scroll-content{
 	background: #eee;
-}*/
+}*/				
 /* ----------------------------------------------------------------------- CONECTATE CON FACEBOOK */
 .contenidoLogin img.inicio{
 	width: 100%;
@@ -543,4 +543,187 @@ input[type="range"] {
 .contenidoIformacion .card .item:last-child, .list-inset .item:last-child {
 	margin-bottom: -1px;
 	margin: 14px 10px 10px 10px;
+}
+/*--------------------------------------------------------------------------------- VIDXCATEGOR*/
+.contenidoVideosCatego{
+	width: 95%;
+	background-color: #eee;
+	border: #aaa 1px solid;
+	margin: 5px auto;
+}
+.contenidoVideosCatego .bar.bar-energized {
+	background-color: #fff;
+	width: 95%;
+	margin: 0px 0px 0px 8px;
+	border: solid 1px #aaa;
+	border-top: none;
+}
+.contenidoVideosCatego .bar.bar-energized .title {
+	color: #444;
+}
+.contenidoVideosCatego div.row.rowFirst{
+	padding: 0px;
+	margin: 56px 0px 0px 0px;
+}
+.contenidoVideosCatego div.row{
+	padding: 0px;
+}
+.contenidoVideosCatego video.videos1{
+	height: 70px;
+}
+.contenidoVideosCatego p.titulo{
+	color: #000;
+	font-size: 13px;
+	margin: 0px;
+}
+.contenidoVideosCatego p.subtitulo{
+	color: #5880d6;
+	font-size: 16px;
+}
+.contenidoVideosCatego video.videos2{
+	height: 141px;
+}
+.contenidoVideosCatego .button.button-positive {
+	position: relative;
+	margin: -3px 11px 11px 10px;
+	font-size: 12px;
+	padding: 0px 5px 0px 5px;
+	-webkit-transform: skew(-10deg);
+	line-height: 13px;
+}
+.contenidoVideosCatego .button.button-positive {
+	border-color: #145fd7;
+	background-color: #4a87ee;
+	color: #fff;
+	margin: 25px 0px 0px 15px;
+}
+.contenidoVideosCatego p.text{
+	font-size: 20px;
+	color:#444;
+	padding: 15px 0px 0px 25px;
+}
+.contenidoVideosCatego p.minutes{
+	font-size: 20px;
+	padding: 5px 0px 0px 25px
+}
+.contenidoVideosCatego p.time{
+	color: #e0032a;
+	font-size: 53px;
+	padding: 15px 0px 0px 25px;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+.contenidoVideosCatego div.col{
+	border-bottom: solid 1px #aaa;
+}
+.contenidoVideosCatego div.col.col-67{
+	border-bottom: solid 1px #aaa;
+}
+.contenidoVideosCatego div.col.informacionNutri{
+
+}
+.contenidoVideosCatego p.info{
+	font-size: 20px;
+	color: #5880d6;
+	background: url(../img/flech-azul.png) no-repeat -2px 19px;
+	padding: 14px 0px 0px 17px;
+}
+.contenidoVideosCatego div.col.redes{
+	padding: 15px 0px 0px 25px;
+}
+.contenidoVideosCatego p.dificultad{
+	display: inline-block;
+	color: #444;
+	font-size: 14px;
+	margin: 0px 10px 0px -6px;
+}
+.contenidoVideosCatego .videosBanner{
+	width: 135px;
+	margin: 7px 0px 0px 6px;
+}
+.contenidoVideosCatego div.col.col-50{
+	margin: 5px -5px 0px 0px;
+}
+.contenidoVideosCatego div.row.banner {
+	background: #fff;
+	margin: 0px;
+}
+.contenidoVideosCatego div.col.footer {
+	border: none;
+}
+/* ---------------------------------------------------------------- TE RETO*/
+.contenidoTe_reto{
+	width: 95%;
+	background-color: #eee;
+	border: #aaa 1px solid;
+	margin: 5px auto;
+}
+.contenidoTe_reto h1.encabezado{
+	color: #fff;
+	background: #1f2a84 url(../img/flecha.png)no-repeat 10px 15px;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px 0px 10px 195px;
+	width: 100%;
+	font-family: 'Dosis';
+} 
+.contenidoTe_reto .item-image img:first-child, .item-image .list-img {
+	vertical-align: middle;
+	width: 25%;
+}
+.contenidoTe_reto p.subtitulo{
+	text-align: center;
+	color: #e01026;
+	font-weight: 500;
+	font-size: 20px;
+	padding: 15px 0px 5px 0px;
+	margin: 0;
+	font-weight: bold;
+}
+.contenidoTe_reto p.iniciar{
+	color: #5177c8;
+	font-size: 17px;
+	padding: 0px 0px 0px 55px;
+}
+.contenidoTe_reto .item-image{
+	background: #e5e5e5;
+	border: solid 1px #aaa; 
+}
+.contenidoTe_reto .item{
+	border: solid 1px #aaa;
+	background: #f0f0f0;
+	font-size: 15px; 
+}
+.contenidoTe_reto label.item.item-input{
+	background: #f0f0f0;
+	margin: 0px 9px 0px 9px;
+}
+.contenidoTe_reto div.list.card{
+	margin: 0px;
+}
+.contenidoTe_reto div.item.item-image{
+	border-right: none;
+	border-left: none;
+}
+.contenidoTe_reto input[type="text"]{
+	font-size: 13px;
+	padding: 0px 0px 0px 70px;
+}
+.contenidoTe_reto label.item.item-input.item-select{
+	width: 94%;
+	margin-left: 9px;
+	margin: 12px 0px 0px 9px;
+}
+.contenidoTe_reto button.seleccionar{
+	font-family: 'Dosis';
+	color: #444;
+	padding: 10px;
+	font-weight: bold;
+	margin: 9px 0px 9px 9px;
+	width: 94%;
+}
+.contenidoTe_reto p.iniciar.enviar{
+	font-size: 20px;
+	color: #444;
+	padding: 10px 55px 0px 70px;
 }
