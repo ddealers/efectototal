@@ -151,47 +151,42 @@ a{
 	background: #f0f0f0;
 }
 /* -------------------------------------------------------------------------- BLOG */
-.contenidoBlog .full-image {
-	width: 87%;
-	margin: 15px 17px;
+.contenidoBlog{
+	padding: 0 0 10px;
 }
-.contenidoBlog p.fecha{
-	width: 38px;
-	border: solid #b1b1b1 1px;
-	height: 38px;
-	margin: 4px 0px 0px -50px;
-	font-size: 16px;
-	padding: 2px 8px 5px;
-	color: #919191;
-	overflow: hidden;
-	position: absolute;
-}
-.contenidoBlog p.fecha span{
-	font-size: 11px;
-	font-weight: bold;
-	color: #606060;
-	display: block;
-	line-height: 8px;
+.contenidoBlog .card{
+	margin: 12px;
+	border: #aaa 1px solid;
+	padding: 2px;
+	background: #f0f0f0;
 }
 .contenidoBlog .fondoImg{
-	padding: 20px;
-	background: #f0f0f0;
-	border: solid 1px #aaa;
+	margin-top: 38px;
+	/* background: #f0f0f0; */
+	border-top: solid 1px #aaa;
+	padding: 0 30px;
 }
-.contenidoBlog div.borde{
-	border-bottom: solid 1px #aaa;
-	padding: 38px 0px 0px 
+.contenidoBlog .full-image {
+	width: 100%;
+	margin: 15px auto 0px;
+}
+.contenidoBlog .item-avatar{
+	padding-left: 50px;
+	min-height: 43px;
+	position: relative;
 }
 .contenidoBlog p.fecha{
 	width: 38px;
 	border: solid #aaa 1px;
 	height: 38px;
-	margin: 6px 0px 0px -53px;
+	/* margin: 6px 0px 0px -53px; */
 	font-size: 16px;
 	padding: 2px 8px 5px;
 	color: #919191;
 	overflow: hidden;
 	position: absolute;
+	top: 0;
+	left: 0;
 }
 .contenidoBlog p.fecha span{
 	font-size: 11px;
@@ -201,34 +196,50 @@ a{
 	line-height: 8px;
 }
 .contenidoBlog h2.name {
-	font-size: 20px;
+	font-size: 13px;
 	color: #606060;
-	margin-bottom: 5px;
+	/* margin-bottom: 5px; */
 	font-size: 20px;
-	margin-top: 0px;
+	/* margin-top: 0px; */
+	font-size: 13px;
+	position: absolute;
+	top: 0;
+	/* left: 10px; */
+	margin: 0;
 }
-.contenidoBlog p.parrafo{
-	color: #444;
-	font-size: 15px;
-	margin: -15px 0px 20px 14px;
+.contenidoBlog .row, .contenidoBlog .col{
+	padding: 5px 0;
 }
-.contenidoBlog p.dia{
+.contenidoBlog p.small{
 	color: #41b296;
 	font-weight: bold;
 	font-family: 'Dosis', sans-serif;
+	position: absolute;
+	top: 17px;
+	font-size: 10px;
+}
+.contenidoBlog div.content{
+	color: #444;
+	font-size: 15px;
+	line-height: auto;
+	margin-top: 10px;
 }
 .contenidoBlog a.subdued {
 	padding-right: 10px;
 	color: #41b296;
-	text-decoration: none;
-	margin: 0px 0px 0px 15px;
+	/* text-decoration: none; */
+	/* margin: 0px 0px 0px 15px; */
 	font-weight: bold;
+	font-size: 10px;
+	margin-top: 16px;
 }
 .contenidoBlog div.botonMas{
+	/*
 	background: #f0f0f0;
 	border: #b1b1b1 solid 1px;
 	border-top: none;
 	padding: 20px 0px 45px 0px;
+	*/
 	text-align: center;
 }
 .contenidoBlog .button-Plus.button-positive {
@@ -376,6 +387,23 @@ input[type="range"] {
 	font-size: 16px;
 	color: #444;
 }
+.contenidoVideos .info-title{
+	font-size: 10px;
+	padding: 5px 15px;
+	-webkit-transform: skew(-25deg);
+	background: linear-gradient(45deg, #3b679e 0%,#7db9e8 100%);
+	box-shadow: 0px 0px 5px #999;
+	color: white;
+	font-weight: bold;
+	width: 80%;
+	margin: 0 10px 10px;
+	text-align: center;
+	border: 1px #999 solid;
+}
+.contenidoVideos .info-title span{
+	-webkit-transform: skew(25deg);
+	display: block;
+}
 .contenidoVideos .button.button-positive {
 	position: relative;
 	margin: -3px 11px 11px 10px;
@@ -514,12 +542,13 @@ input[type="range"] {
 }
 .contenidoIformacion h1.encabezado{
 	color: #fff;
-	background: #919191url(../img/flecha.png)no-repeat 10px 15px;
+	background: #919191; /*url(../img/flecha.png) no-repeat 10px 15px*/
 	font-weight: bold;
 	font-size: 16px;
 	width: 302px;
 	font-family: 'Dosis';
 	padding: 10px 0px 10px 178px;
+	margin: 0;
 } 
 .contenidoIformacion .item-image {
 	background: #d4d3d3;
@@ -532,7 +561,25 @@ input[type="range"] {
 }
 .contenidoIformacion .card, .list-inset {
 	margin: 0px;
-}.contenidoIformacion .button.button-positive {
+}
+.contenidoIformacion .info-title{
+	font-size: 16px;
+	padding: 5px 15px;
+	-webkit-transform: skew(-25deg);
+	background: linear-gradient(45deg, #3b679e 0%,#7db9e8 100%);
+	box-shadow: 0px 0px 5px #999;
+	color: white;
+	font-weight: bold;
+	width: 50%;
+	margin: 10px auto;
+	text-align: center;
+	border: 1px #999 solid;
+}
+.contenidoIformacion .info-title span{
+	-webkit-transform: skew(25deg);
+	display: block;
+}
+.contenidoIformacion .button.button-positive {
 	position: relative;
 	margin: -3px 11px 11px 10px;
 	font-size: 12px;
@@ -547,7 +594,9 @@ input[type="range"] {
 	font-size: 16px;
 	margin: 28px 0px 25px 14px;
 }
+/*
 .contenidoIformacion .card .item:last-child, .list-inset .item:last-child {
 	margin-bottom: -1px;
 	margin: 14px 10px 10px 10px;
 }
+*/
