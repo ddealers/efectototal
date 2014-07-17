@@ -492,3 +492,49 @@ input[type="range"] {
 .contenidoEquipo a img.icon{
 	width: 20%;
 }
+/* --------------------------------------------------------------------------- MI PERFIL "INFORMACION" */
+.contenidoIformacion{
+	width: 95%;
+	background-color: #eee;
+	border: #aaa 1px solid;
+	margin: 5px auto;
+}
+.contenidoIformacion h1.encabezado{
+	color: #fff;
+	background: #919191url(../img/flecha.png)no-repeat 10px 15px;
+	font-weight: bold;
+	font-size: 16px;
+	width: 302px;
+	font-family: 'Dosis';
+	padding: 10px 0px 10px 178px;
+} 
+.contenidoIformacion .item-image {
+	background: #d4d3d3;
+	border-bottom: #aaa solid 1px;
+	border-top: #aaa solid 1px;
+}
+.contenidoIformacion .item-image img:first-child, .item-image .list-img {
+	vertical-align: middle;
+	width: 25%;
+}
+.contenidoIformacion .card, .list-inset {
+	margin: 0px;
+}.contenidoIformacion .button.button-positive {
+	position: relative;
+	margin: -3px 11px 11px 10px;
+	font-size: 12px;
+	padding: 0px 5px 0px 5px;
+	-webkit-transform: skew(-10deg);
+	line-height: 13px;
+}
+.contenidoIformacion .button.button-positive {
+	border-color: #145fd7;
+	background-color: #4a87ee;
+	color: #fff;
+	font-size: 16px;
+	margin: 28px 0px 25px 14px;
+}
+.contenidoIformacion .card .item:last-child, .list-inset .item:last-child {
+	margin-bottom: -1px;
+	margin: 14px 10px 10px 10px;
+}
