@@ -924,3 +924,95 @@ margin: 0px;
 	border-top: 1px solid #aaa;
 	height: 60px;
 }
+/* ------------------------------------------------------------- RESULTADOS RETOS*/
+.contenidoResultados_retos div.item.item-image {
+	border-bottom: solid 1px #aaa;
+	border-top: solid 1px #aaa;
+	height: 56px;
+	background: #d4d3d3;
+}
+.contenidoResultados_retos{
+	width: 95%;
+	background-color: #eee;
+	border: #aaa 1px solid;
+	margin: 5px auto;
+}
+.contenidoResultados_retos h1.encabezado{
+	color: #fff;
+	background: #1f2a84 url(../img/flecha.png)no-repeat 10px 15px;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px 0px 10px 195px;
+	width: 100%;
+	font-family: 'Dosis';
+} 
+.contenidoResultados_retos p.subtitulo{
+	text-align: center;
+	color: #e01026;
+	font-weight: 500;
+	font-size: 20px;
+	padding: 5px 0px 5px 0px;
+	margin: 0;
+	font-weight: bold;
+}
+.contenidoResultados_retos p.iniciar{
+	color: #5177c8;
+	font-size: 24px;
+	padding: 10px 0px 0px 82px;
+}
+.contenidoResultados_retos .card {
+	margin: 0px;
+}
+.contenidoResultados_retos img.avatar{
+	margin: 0px 0px 0px -65px;
+}
+.contenidoResultados_retos img.avatarRetador{
+	margin: 0px 0px 0px -50px;
+}
+.contenidoResultados_retos p.versus{
+	margin: 50px 0px 0px -30px;
+	font-size: 44px;
+	color: #444;
+}
+.contenidoResultados_retos p.jugador{
+	font-size: 20px;
+	color: #41b296;
+	margin: 7px 0px 0px -35px;
+}
+.contenidoResultados_retos p.jugador2{
+	margin: 0px 0px 0px -15px;
+	font-size: 20px;
+	color: #444;
+}
+.contenidoResultados_retos div.col.espacio{
+	margin: 0px -39px 0px -33px;
+}
+.contenidoResultados_retos article {
+	background: #f0f0f0;
+	height: 67px;
+}
+.contenidoResultados_retos p.calorias{
+	margin: 10px 0px 0px -31px;
+	color: #41b296;
+	font-size: 16px;
+	font-weight: bold;
+}
+.contenidoResultados_retos p.quemadas{
+	margin: 10px 0px 0px -70px;
+	font-size: 16px;
+	color: #41b296;
+}
+.contenidoResultados_retos p.calorias2{
+	margin: 10px 0px 0px -5px;
+	font-size: 16px;
+}
+.contenidoResultados_retos p.quemadas2{
+	margin: 10px 0px 0px -50px;
+	font-size: 16px;
+}
+.contenidoResultados_retos p.winner{
+	padding: 22px;
+	color: #e0032a;
+	font-size: 23px;
+	border-top: solid 1px #aaa;
+}
