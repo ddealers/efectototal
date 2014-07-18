@@ -254,7 +254,6 @@ a{
 	background-color: #eee;
 	border: #aaa 1px solid;
 	margin: 5px auto;
-	padding: 20px;
 }
 .contenidoContador h1{
 	font-size: 20px;
@@ -277,11 +276,11 @@ a{
 	font-weight: bold;
 	font-size: 16px;
 	padding: 10px 0px 10px 6px;
-	width: 264px;
+	width: 304px;
 	margin: 0px 0px 0px -1px;
 } 
 .contenidoContador .item-image {
-	background: #d4d3d3 url(../img/barras.png) no-repeat 0px -22px;
+	background: #d4d3d3 url(../img/barras.png) no-repeat 0px -11px;
 	border: #aaa solid 1px;
 }
 .contenidoContador p.progreso{
@@ -289,13 +288,13 @@ a{
 	color: #e0032a;
 	font-family: sans-serif;
 	font-weight: bold;
-	padding: 17px 0px 17px 65px;
+	padding: 17px 0px 17px 90px;
 }
 .contenidoContador p.caloriasMenos{
 	color: #5880d6;
 	display: inline-block;
 	width: 165px;
-	margin: 0px 0px 0px 5px;
+	margin: 0px 0px 0px 25px;
 }
 .contenidoContador p.caloriasTotales{
 	color: #e0032a;
@@ -304,31 +303,41 @@ a{
 .contenidoContador div.contenidoCal{
 	border: solid 1px #aaa;
 	background: #f0f0f0;
-	width: 264px;
+	width: 304px;
 	margin: 0px 0px 0px -1px;
 }
-input[type="range"] {
-	margin: 0px 0px 21px 43px;
-	padding: 0px 0px 0px 45px;
+.contenidoContador input[type="range"] {
+	margin: 0px 0px 0px 65px;
+	padding: 0px 0px 0px 40px;
 }
 .contenidoContador img.lupa-verde{
-	margin: 0px 0px 0px 35px;
+	margin: 0px 0px 0px 55px;
 }
 .contenidoContador img.lupa-rojo{
 	padding: 24px 0px 0px 117px;
 }
-.contenidoContador .button.button-positive {
-	position: relative;
-	margin: 0px 0px 11px 182px;
-	font-size: 14px;
-	padding: 0px 5px 0px 5px;
-	-webkit-transform: skew(-10deg);
+.contenidoContador button.info-title {
+	font-size: 16px;
+	padding: 5px 15px;
+	-webkit-transform: skew(-25deg);
+	background: linear-gradient(45deg, #3b679e 0%,#7db9e8 100%);
+	box-shadow: 0px 0px 5px #999;
+	color: white;
+	font-weight: bold;
+	width: 80%;
+	margin: 0 30px 10px;
+	text-align: center;
+	border: 1px #999 solid;
+}
+.contenidoContador .info-title span {
+	-webkit-transform: skew(25deg);
+	display: block;
 }
 .contenidoContador p.inicioContador{
 	color: #444;
 	font-size: 26px;
 	display: inline-block;
-	padding: 0px 0px 0px 42px
+	padding: 0px 0px 0px 65px
 }
 .contenidoContador p.finContador{
 	color: #e0032a;
@@ -345,7 +354,7 @@ input[type="range"] {
 	border: solid 1px #aaa;
 	background: #f0f0f0;
 	border-top: none;
-	width: 264px;
+	width: 304px;
 	margin: 0px 0px 5px -1px;
 	font-weight: bold;
 	padding: 5px 0px 5px 0px;
@@ -881,7 +890,7 @@ margin: 0px;
 	margin: 0px -39px 0px 0px;
 }
 .contenidoMis_retos button.aceptar {
-	font-size: 13px;
+	font-size: 16px;
 	padding: 5px 15px;
 	-webkit-transform: skew(-25deg);
 	background: linear-gradient(45deg, #3b679e 0%,#7db9e8 100%);
@@ -899,7 +908,7 @@ margin: 0px;
 	display: block;
 }
 .contenidoMis_retos button.declinar {
-	font-size: 13px;
+	font-size: 16px;
 	padding: 5px 15px;
 	-webkit-transform: skew(-25deg);
 	background: linear-gradient(45deg, #9d0000 0%,#c00101 100%);
