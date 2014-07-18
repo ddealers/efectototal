@@ -944,7 +944,7 @@ margin: 0px;
 	width: 95%;
 	background-color: #eee;
 	border: #aaa 1px solid;
-	margin: 5px auto;
+	margin: 5px auto;   
 }
 .contenidoResultados_retos h1.encabezado{
 	color: #fff;
@@ -1024,4 +1024,211 @@ margin: 0px;
 	color: #e0032a;
 	font-size: 23px;
 	border-top: solid 1px #aaa;
+}
+/* ------------------------------------------------------ NEWSFEED*/
+.contenidoNewsfeed h1.encabezado{
+	color: #fff;
+	background: #e01026;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px 0px 10px 13px;
+	width: 300px;
+	margin: 0px 0px 0px 10px;
+	font-family: 'Dosis';
+} 
+.contenidoNewsfeed div.item.item-image{
+	background: #d4d3d3;
+	border-bottom: solid 1px #aaa;
+}
+.contenidoNewsfeed .item-image img:first-child, .item-image .list-img {
+	vertical-align: middle;
+	width: 25%;
+}
+.contenidoNewsfeed p.subtitulo{
+	text-align: center;
+	color: #e01026;
+	font-weight: 500;
+	font-size: 20px;
+	padding: 5px 0px 0px 0px;	
+	margin: 0;
+}
+.contenidoNewsfeed p{
+	color: #5177c8;
+	font-weight: 500;
+	font-size: 20px;
+	padding: 0px 0px 0px 12px;
+}
+
+.contenidoNewsfeed article{
+	background: #f0f0f0;
+	height: 55px;
+}
+.contenidoNewsfeed div.list.card{
+	margin: 0px 0px 0px 10px;
+	width: 94%;
+	border: 1px solid #aaa;
+}
+.contenidoNewsfeed a.item.item-avatar{
+	background: #f0f0f0;
+}  
+.contenidoNewsfeed p.avatars{
+	color: #444;
+	font-size: 13px;
+	padding: 10px 0px 0px 0px;
+}
+.contenidoNewsfeed .ion-arrow-right-b:before {
+	margin: -25px 0px -2px 0px;
+	float: right;
+}
+.contenidoNewsfeed .ion-arrow-left-b:before{
+	padding: 0px 195px 0px 0px;
+}
+/* ------------------------------------------------------ MIS RUTINAS*/
+.contenidoRutinas h1.encabezado{
+	color: #fff;
+	background: #e01026;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px 0px 10px 10px;
+	width: 300px;
+	margin: 0px 0px 0px 10px;
+	font-family: 'Dosis';
+} 
+.contenidoRutinas div.item.item-image{
+	background: #d4d3d3;
+	border-bottom: solid 1px #aaa;
+}
+.contenidoRutinas .item-image img:first-child, .item-image .list-img {
+	vertical-align: middle;
+	width: 25%;
+}
+.contenidoRutinas p.subtitulo{
+	text-align: center;
+	color: #e01026;
+	font-weight: 500;
+	font-size: 20px;
+	padding: 20px 0px 0px 0px;	
+	margin: 0;
+}
+.contenidoRutinasp{
+	color: #5177c8;
+	font-weight: 500;
+	font-size: 20px;
+	padding: 0px 0px 0px 12px;
+}
+
+.contenidoRutinas article{
+	background: #f0f0f0;
+	height: 55px;
+}
+.contenidoRutinas .ion-arrow-right-b:before {
+	margin: -25px 0px -2px 0px;
+	float: right;
+}
+.contenidoRutinas .ion-arrow-left-b:before{
+	padding: 0px 188px 0px 0px;
+}
+.contenidoRutinas div.list.card{
+	margin: 0px 0px 0px 10px;
+	width: 94%;
+	border: 1px solid #aaa;
+}
+.contenidoRutinas div.list{
+	margin: 5px 10px 0px 10px;
+	background: #f0f0f0;
+}
+.contenidoRutinas a.item.item-avatar{
+	margin-bottom: 5px;
+	padding: 25px 0px 0px 62px;
+	background: #f0f0f0;
+	border: #aaa solid 1px;
+
+}
+.contenidoRutinas p.coach{
+	font-size: 20px;
+	text-align: center;
+	color: #5880d6;
+	padding-top: 10px;
+}
+.contenidoRutinas p.estadisticas{
+	text-align: center;
+	font-size: 19px;
+	color: #e0032a;
+}
+.contenidoRutinas  div.entrenador{
+	border-top: solid 1px #aaa;
+}
+.contenidoRutinas p.fecha {
+	width: 40px;
+	border: solid #aaa 1px;
+	height: 38px;
+	font-size: 16px;
+	padding: 2px 8px 5px;
+	color: #919191;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 15px 0px 0px 16px;
+}
+.contenidoRutinas p.fecha span {
+	font-size: 11px;
+	font-weight: bold;
+	color: #606060;
+	display: block;
+	line-height: 8px;
+}
+.contenidoRutinas p.entrenamientos{
+	border-left: 1px solid #aaa;
+	padding-left: 5px;
+}
+.contenidoRutinas .ion-arrow-right-b:before {
+	margin: -28px 22px -2px 0px;
+}
+/* ----------------------------------------------------------------------------- CALENDARIO RETOS*/
+.contenidoCalendario_retos{
+	width: 95%;
+	background-color: #eee;
+	border: #aaa 1px solid;
+	margin: 5px auto;
+}
+.contenidoCalendario_retos h1.encabezado{
+	color: #fff;
+	background: #1f2a84 url(../img/flecha.png)no-repeat 10px 15px;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px 0px 10px 195px;
+	width: 100%;
+	font-family: 'Dosis';
+} 
+.contenidoCalendario_retos .card {
+	margin: 0px;
+}
+.contenidoCalendario_retos img.avatar{
+	margin: 0px 0px 0px -62px;
+}
+.contenidoCalendario_retos img.avatarRetador{
+	margin: 0px 0px 0px -21px;
+}
+.contenidoCalendario_retos p.versus{
+	margin: 50px 0px 0px -10px;
+	font-size: 44px;
+	color: #1f2a84;
+	font-weight: bold;
+}
+.contenidoCalendario_retos p.jugador{
+	font-size: 20px;
+	color: #41b296;
+	margin: 0px 0px 0px -38px;
+}
+.contenidoCalendario_retos p.jugador2{
+	margin: 0px 0px 0px 14px;
+	font-size: 20px;
+	color: #444;
+}
+.contenidoCalendario_retos div.col.espacio{
+	margin: 0px -39px 0px 0px;
+}
+.contenidoCalendario_retos div.row{
+	background: #f0f0f0;
 }

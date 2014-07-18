@@ -162,6 +162,23 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
       }
     })
 
+   .state('app.calendario_retos', {
+      url: "/calendario_retos",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/calendario_retos.html"
+        }
+      }
+    })
+
+   .state('app.mis_rutinas', {
+      url: "/mis_rutinas",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/mis_rutinas.html"
+        }
+      }
+    })
 
     .state('app.newsfeed', {
       url: "/newsfeed",
