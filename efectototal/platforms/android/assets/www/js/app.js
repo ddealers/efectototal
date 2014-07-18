@@ -81,7 +81,7 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
       }
     })
 
-        .state('app.perfil_informacion', {
+    .state('app.perfil_informacion', {
       url: "/perfil_informacion",
       views: {
         'menuContent' :{
@@ -143,6 +143,25 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
         }
       }
     })
+
+    .state('app.mis_retos', {
+      url: "/mis_retos",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/mis_retos.html"
+        }
+      }
+    })
+
+   .state('app.resultados_retos', {
+      url: "/resultados_retos",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/resultados_retos.html"
+        }
+      }
+    })
+
 
     .state('app.newsfeed', {
       url: "/newsfeed",

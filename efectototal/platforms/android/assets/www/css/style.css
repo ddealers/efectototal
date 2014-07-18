@@ -817,4 +817,110 @@ input[type="range"] {
 	-webkit-transform: skew(25deg);
 	display: block;
 }
-
+/* ------------------------------------- MIS RETOS*/
+.contenidoMis_retos div.item.item-image {
+	border-bottom: solid 1px #aaa;
+	border-top: solid 1px #aaa;
+	height: 56px;
+	background: #d4d3d3;
+}
+.contenidoMis_retos{
+	width: 95%;
+	background-color: #eee;
+	border: #aaa 1px solid;
+	margin: 5px auto;
+}
+.contenidoMis_retos h1.encabezado{
+	color: #fff;
+	background: #1f2a84 url(../img/flecha.png)no-repeat 10px 15px;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px 0px 10px 195px;
+	width: 100%;
+	font-family: 'Dosis';
+} 
+.contenidoMis_retos p.subtitulo{
+	text-align: center;
+	color: #e01026;
+	font-weight: 500;
+	font-size: 20px;
+	padding: 5px 0px 5px 0px;
+	margin: 0;
+	font-weight: bold;
+}
+.contenidoMis_retos p.iniciar{
+	color: #5177c8;
+	font-size: 24px;
+	padding: 10px 0px 0px 55px;
+}
+.contenidoMis_retos .card {
+margin: 0px;
+}
+.contenidoMis_retos img.avatar{
+	margin: 0px 0px 0px -62px;
+}
+.contenidoMis_retos img.avatarRetador{
+	margin: 0px 0px 0px -21px;
+}
+.contenidoMis_retos p.versus{
+	margin: 50px 0px 0px -10px;
+	font-size: 44px;
+	color: #444;
+}
+.contenidoMis_retos p.jugador{
+	font-size: 20px;
+	color: #444;
+	margin: 0px 0px 0px -28px;
+}
+.contenidoMis_retos p.jugador2{
+	margin: 0px 0px 0px 14px;
+	font-size: 20px;
+	color: #444;
+}
+.contenidoMis_retos div.col.espacio{
+	margin: 0px -39px 0px 0px;
+}
+.contenidoMis_retos button.aceptar {
+	font-size: 13px;
+	padding: 5px 15px;
+	-webkit-transform: skew(-25deg);
+	background: linear-gradient(45deg, #3b679e 0%,#7db9e8 100%);
+	box-shadow: 0px 0px 5px #999;
+	color: white;
+	font-weight: bold;
+	width: 80%;
+	margin: 25px 28px 6px;
+	text-align: center;
+	border: 1px #999 solid;
+	font-family: 'Dosis';
+}
+.contenidoMis_retos .aceptar span {
+	-webkit-transform: skew(25deg);
+	display: block;
+}
+.contenidoMis_retos button.declinar {
+	font-size: 13px;
+	padding: 5px 15px;
+	-webkit-transform: skew(-25deg);
+	background: linear-gradient(45deg, #9d0000 0%,#c00101 100%);
+	box-shadow: 0px 0px 5px #999;
+	color: white;
+	font-weight: bold;
+	width: 80%;
+	margin: 25px 0px 6px;
+	text-align: center;
+	border: 1px #999 solid;
+	font-family: 'Dosis';
+}
+.contenidoMis_retos .declinar span {
+	-webkit-transform: skew(25deg);
+	display: block;
+}
+.contenidoMis_retos article{
+	background: #f0f0f0;
+	height: 67px;
+}
+.contenidoMis_retos div.borde{
+	border-top: 1px solid #aaa;
+	height: 60px;
+}
