@@ -1202,7 +1202,7 @@ margin: 0px;
 	font-family: 'Dosis';
 } 
 .contenidoCalendario_retos .card {
-margin: 0px;
+	margin: 0px;
 }
 .contenidoCalendario_retos img.avatar{
 	margin: 0px 0px 0px -62px;
@@ -1213,12 +1213,13 @@ margin: 0px;
 .contenidoCalendario_retos p.versus{
 	margin: 50px 0px 0px -10px;
 	font-size: 44px;
-	color: #444;
+	color: #1f2a84;
+	font-weight: bold;
 }
 .contenidoCalendario_retos p.jugador{
 	font-size: 20px;
-	color: #444;
-	margin: 0px 0px 0px -28px;
+	color: #41b296;
+	margin: 0px 0px 0px -38px;
 }
 .contenidoCalendario_retos p.jugador2{
 	margin: 0px 0px 0px 14px;
@@ -1228,4 +1229,84 @@ margin: 0px;
 .contenidoCalendario_retos div.col.espacio{
 	margin: 0px -39px 0px 0px;
 }
+.contenidoCalendario_retos div.row{
+	background: #f0f0f0;
+}
+.contenidoCalendario_retos p.totales{ 
+	position: absolute;
+	right: 18px;
+	font-size: 16px;
+	color: #e01026;
+	margin-top: 5px;
+}
+.contenidoCalendario_retos p.quemadas{
+	margin-top: 5px;
+	color: #5177c8;
+	font-size: 16px;
+	position: relative;
+	padding-left: 24px;
+}
+.contenidoCalendario_retos div.row.text{
+	border-top: solid 1px #aaa;
+}
+.contenidoCalendario_retos div.grises{
+	position: relative;
+	float: left;
+	margin: 0px 16px 0px 110px;
+}
+.contenidoCalendario_retos div.grises{
+	position: relative;
+	float: left;
+	margin: 0px 16px 0px 110px;
+}
+.contenidoCalendario_retos div.rojos{
+	position: absolute;
+	right: 15px;
+	top: 201px;
+}
+.contenidoCalendario_retos p.uno{
+	padding: 0px 0px 0px 3px;
+	color: #444;
+	font-size: 20px;
+}
+.contenidoCalendario_retos p.dos{
+	font-size: 20px;
+	color: #41b296;
+}
+.contenidoCalendario_retos p.tres{
+	font-size: 20px;
+	color: #e01026;
+	padding-right: 7px;
+}
+.contenidoCalendario_retos div.fondo{
+	background: #f0f0f0;
+}
 
+.contenidoCalendario_retos div.progress{
+	background: linear-gradient(45deg, #3b679e 0%,#7db9e8 100%);
+	width: 85%;
+	margin: 0px 0px 0px 22px;
+	-webkit-transform: skew(-25deg);
+	box-shadow: 0px 0px 5px #999;
+	position: relative;
+	height: 43px;
+}
+.contenidoCalendario_retos progress{
+	position: absolute;
+}
+.contenidoCalendario_retos progress::-webkit-progress-value {
+	background: #41b296;
+}
+.contenidoCalendario_retos td{
+	border: solid 1px #aaa;
+	padding: 10px;
+}
+.contenidoCalendario_retos table{
+	margin: 20px 0px 20px 28px;
+}
+.contenidoCalendario_retos  div.list.card{
+	background: #f0f0f0;
+}
+.contenidoCalendario_retos td.background{
+	background: #D1D1D1;
+}
