@@ -81,7 +81,7 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
       }
     })
 
-        .state('app.perfil_informacion', {
+    .state('app.perfil_informacion', {
       url: "/perfil_informacion",
       views: {
         'menuContent' :{
@@ -131,6 +131,51 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
       views: {
         'menuContent' :{
           templateUrl: "templates/equipo.html"
+        }
+      }
+    })
+
+    .state('app.te_reto', {
+      url: "/te_reto",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/te_reto.html"
+        }
+      }
+    })
+
+    .state('app.mis_retos', {
+      url: "/mis_retos",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/mis_retos.html"
+        }
+      }
+    })
+
+   .state('app.resultados_retos', {
+      url: "/resultados_retos",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/resultados_retos.html"
+        }
+      }
+    })
+
+   .state('app.calendario_retos', {
+      url: "/calendario_retos",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/calendario_retos.html"
+        }
+      }
+    })
+
+   .state('app.mis_rutinas', {
+      url: "/mis_rutinas",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/mis_rutinas.html"
         }
       }
     })
