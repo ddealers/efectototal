@@ -1110,13 +1110,6 @@ margin: 0px;
 	padding: 20px 0px 0px 0px;	
 	margin: 0;
 }
-.contenidoRutinasp{
-	color: #5177c8;
-	font-weight: 500;
-	font-size: 20px;
-	padding: 0px 0px 0px 12px;
-}
-
 .contenidoRutinas article{
 	background: #f0f0f0;
 	height: 55px;
@@ -1364,6 +1357,6 @@ margin: 0px;
 	padding: 5px;
 }
 .contenidoSumate i.ion-arrow-left-b{
-	margin: 0px 0px 0px -185px;
+	margin: 0px 221px 0px -186px;
 }
 
