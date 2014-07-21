@@ -1319,7 +1319,7 @@ margin: 0px;
 }
 .contenidoSumate h1.encabezado{
 	color: #fff;
-	background: #1f2a84 url(../img/flecha.png)no-repeat 10px 15px;
+	background: #1f2a84;
 	font-weight: bold;
 	font-size: 16px;
 	padding: 10px 0px 10px 195px;
@@ -1363,5 +1363,7 @@ margin: 0px;
 	border-top: 1px #FEF solid;
 	padding: 5px;
 }
-
+.contenidoSumate i.ion-arrow-left-b{
+	margin: 0px 0px 0px -185px;
+}
 
