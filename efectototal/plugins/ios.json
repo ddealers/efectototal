@@ -43,6 +43,18 @@
                         {
                             "xml": "<feature name=\"Accelerometer\"><param name=\"ios-package\" value=\"CDVAccelerometer\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Vibration\"><param name=\"ios-package\" value=\"CDVVibration\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"IonicKeyboard\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -72,6 +84,12 @@
                             "xml": "false",
                             "count": 1
                         }
+                    ],
+                    "AudioToolbox.framework": [
+                        {
+                            "xml": "true",
+                            "count": 2
+                        }
                     ]
                 }
             }
@@ -94,6 +112,15 @@
             "PACKAGE_NAME": "com.ionicframework.starter"
         },
         "org.apache.cordova.device-motion": {
+            "PACKAGE_NAME": "com.efectototal.main"
+        },
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "com.efectototal.main"
+        },
+        "org.apache.cordova.vibration": {
+            "PACKAGE_NAME": "com.efectototal.main"
+        },
+        "com.ionic.keyboard": {
             "PACKAGE_NAME": "com.efectototal.main"
         }
     },

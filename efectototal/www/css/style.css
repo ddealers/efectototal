@@ -9,6 +9,9 @@ a{
 	font-family: 'Dosis', sans-serif;
 	text-decoration: none;	
 }
+h1{
+	font-size: 16px;
+}
 /*--------------------------------------------------------------------------- CONTENIDO GENERAL */
 .bar .title{
 	font-size: 24px;
@@ -101,16 +104,27 @@ a{
 	background: #e5e5e5;
 }
 /* -------------------------------------------------------------------------- PROFILE_ACTIVIDAD */
+.contenidoPerfil_actividad{
+	width: 95%;
+	background-color: #eee;
+	border: #aaa 1px solid;
+	margin: 5px auto;
+}
 .contenidoPerfil_actividad h1.encabezado{
 	color: #fff;
-	background: #1f2a84 url(../img/flecha.png)no-repeat 10px 15px;
+	background: #1f2a84; 
+	/*url(../img/flecha.png)no-repeat 10px 15px;*/
 	font-weight: bold;
-	font-size: 16px;
-	padding: 10px 0px 10px 195px;
-	width: 300px;
-	margin: 0px 0px 0px 10px;
+	/*font-size: 16px;*/
+	padding: 10px;
+	text-align: right;
+	/*width: 300px;*/
+	/*margin: 0px 10px;*/
 	font-family: 'Dosis';
 } 
+.contenidoPerfil_actividad h1.encabezado i{
+	float: left;
+}
 .contenidoPerfil_actividad .item-image img:first-child, .item-image .list-img {
 	vertical-align: middle;
 	width: 25%;
@@ -370,6 +384,7 @@ a{
 	border: #aaa 1px solid;
 	margin: 5px auto;
 }
+/*
 .contenidoVideos .bar.bar-energized{
 	color: #fff;
 	background: #fccd4f;
@@ -377,17 +392,23 @@ a{
 	width: 302px;
 	margin: 0px 0px 0px 9px;
 }
+*/
+.contenidoVideos .bar{
+	position: relative;
+}
 .contenidoVideos .bar .title {
 	font-size: 16px;
-	text-align: left;
+	text-align: right;
 	font-weight: bold;
+}
+.contenidoVideos .bar .title i{
+	float: left;
 }
 .contenidoVideos div.videoEjercicio{
 
 }
 .contenidoVideos video{
-	width: 302px;
-	margin: 44px 0px 0px 0px;
+	width: 100%;
 }
 .contenidoVideos .col-50{
 	margin: -11px 0px 0px 0px;
@@ -469,7 +490,7 @@ a{
 	padding: 11px 0px 11px 0px;
 }
 /* --------------------------------------------------------------- LOREM IPSUM "EL EQUIPO"*/
-.contenidoEQUIPO{
+.contenidoEquipo{
 	width: 95%;
 	background-color: #eee;
 	border: #aaa 1px solid;
@@ -477,7 +498,8 @@ a{
 }
 .contenidoEquipo h1.encabezado{
 	color: #fff;
-	background: #000 url(../img/flecha.png)no-repeat 10px 15px;
+	background: #000;
+	/*url(../img/flecha.png)no-repeat 10px 15px;*/
 	font-weight: bold;
 	font-size: 16px;
 	width: 300px;
@@ -551,14 +573,18 @@ a{
 }
 .contenidoIformacion h1.encabezado{
 	color: #fff;
-	background: #919191; /*url(../img/flecha.png) no-repeat 10px 15px*/
+	background: #919191;
 	font-weight: bold;
-	font-size: 16px;
-	width: 302px;
+	/*font-size: 16px;*/
+	/* width: 302px; */
 	font-family: 'Dosis';
-	padding: 10px 0px 10px 178px;
+	padding: 10px;
 	margin: 0;
-} 
+	text-align: right;
+}
+.contenidoIformacion h1.encabezado i{
+	float: left;
+}
 .contenidoIformacion .item-image {
 	background: #d4d3d3;
 	border-bottom: #aaa solid 1px;
@@ -603,6 +629,22 @@ a{
 	font-size: 16px;
 	margin: 28px 0px 25px 14px;
 }
+.contenidoIformacion .item-input p{
+	color: #000;
+	font-weight: bold;
+}
+.contenidoIformacion .item-input p.low{
+	color: yellowgreen;
+}
+.contenidoIformacion .item-input p.normal{
+	color: green;
+}
+.contenidoIformacion .item-input p.over{
+	color: orange;
+}
+.contenidoIformacion .item-input p.oversize{
+	color: red;
+}
 /*
 .contenidoIformacion .card .item:last-child, .list-inset .item:last-child {
 	margin-bottom: -1px;
@@ -615,6 +657,69 @@ a{
 	border: #aaa 1px solid;
 	margin: 5px auto;
 }
+.contenidoVideosCatego h1{
+	background-color: #f0b840;
+	color: #FFF;
+	font-weight: bold;
+	/*font-size: 16px;*/
+	/* width: 302px; */
+	font-family: 'Dosis';
+	padding: 10px;
+	margin: 0;
+	text-align: right;
+}
+.contenidoVideosCatego .firstRow .col .poster{
+	width: 40%;
+	display: block;
+	margin: 0 auto;
+}
+.contenidoVideosCatego .firstRow .col .video{
+	width: 100%;
+}
+.contenidoVideosCatego .btn-info{
+	font-size: 12px;
+	padding: 5px 15px;
+	-webkit-transform: skew(-25deg);
+	background: linear-gradient(45deg, #3b679e 0%,#7db9e8 100%);
+	box-shadow: 0px 0px 5px #999;
+	color: white;
+	font-weight: bold;
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px #999 solid;
+	display: block;
+}
+.contenidoVideosCatego .info-title span{
+	-webkit-transform: skew(25deg);
+	display: block;
+}
+.contenidoVideosCatego p.titulo{
+	color: #000;
+	font-size: 13px;
+	margin: 0px;
+}
+.contenidoVideosCatego p.subtitulo{
+	color: #5880d6;
+	font-size: 16px;
+}
+.contenidoVideosCatego p.text{
+	font-size: 20px;
+	color:#444;
+	padding: 15px 0px 0px 25px;
+}
+.contenidoVideosCatego p.minutes{
+	font-size: 20px;
+	padding: 5px 0px 0px 25px
+}
+.contenidoVideosCatego p.time{
+	color: #e0032a;
+	font-size: 53px;
+	padding: 15px 0px 0px 25px;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+/*
 .contenidoVideosCatego .bar.bar-energized {
 	background-color: #fff;
 	width: 95%;
@@ -623,7 +728,7 @@ a{
 	border-top: none;
 }
 .contenidoVideosCatego .bar.bar-energized .title {
-	color: #444;
+	color: #FFF;
 }
 .contenidoVideosCatego div.row.rowFirst{
 	padding: 0px;
@@ -715,6 +820,7 @@ a{
 .contenidoVideosCatego div.col.footer {
 	border: none;
 }
+*/
 /* ---------------------------------------------------------------- TE RETO*/
 .contenidoTe_reto{
 	width: 95%;
@@ -841,13 +947,18 @@ a{
 }
 .contenidoMis_retos h1.encabezado{
 	color: #fff;
-	background: #1f2a84 url(../img/flecha.png)no-repeat 10px 15px;
+	background: #1f2a84;
+	/*url(../img/flecha.png)no-repeat 10px 15px;*/
 	font-weight: bold;
-	font-size: 16px;
-	padding: 10px 0px 10px 195px;
-	width: 100%;
+	/*font-size: 16px;*/
+	padding: 10px;
+	text-align: right;
+	/*width: 100%;*/
 	font-family: 'Dosis';
 } 
+.contenidoMis_retos h1.encabezado i{
+	float: left;
+}
 .contenidoMis_retos p.subtitulo{
 	text-align: center;
 	color: #e01026;
@@ -1084,20 +1195,32 @@ margin: 0px;
 	padding: 0px 195px 0px 0px;
 }
 /* ------------------------------------------------------ MIS RUTINAS*/
+.contenidoRutinas{
+	width: 95%;
+	background-color: #eee;
+	border: #aaa 1px solid;
+	margin: 5px auto;
+}
 .contenidoRutinas h1.encabezado{
 	color: #fff;
 	background: #e01026;
 	font-weight: bold;
-	font-size: 16px;
-	padding: 10px 0px 10px 10px;
-	width: 300px;
-	margin: 0px 0px 0px 10px;
+	/*font-size: 16px;*/
+	padding: 10px;
+	/*width: 300px;*/
+	text-align: right;
+	/*margin: 0px 0px 0px 10px;*/
 	font-family: 'Dosis';
 } 
+.contenidoRutinas h1.encabezado i{
+	float: left;
+}
+/*
 .contenidoRutinas div.item.item-image{
 	background: #d4d3d3;
 	border-bottom: solid 1px #aaa;
 }
+*/
 .contenidoRutinas .item-image img:first-child, .item-image .list-img {
 	vertical-align: middle;
 	width: 25%;
@@ -1107,10 +1230,10 @@ margin: 0px;
 	color: #e01026;
 	font-weight: 500;
 	font-size: 20px;
-	padding: 20px 0px 0px 0px;	
+	padding: 5px 0px 0px 0px;
 	margin: 0;
 }
-.contenidoRutinasp{
+.contenidoRutinas p{
 	color: #5177c8;
 	font-weight: 500;
 	font-size: 20px;
@@ -1120,22 +1243,38 @@ margin: 0px;
 .contenidoRutinas article{
 	background: #f0f0f0;
 	height: 55px;
+	border-right: 1px solid #aaa;
+	border-left: 1px solid #aaa;
 }
 .contenidoRutinas .ion-arrow-right-b:before {
-	margin: -25px 0px -2px 0px;
+	/*margin: -25px 0px -2px 0px;*/
+	margin: -30px 20px 0px 0px;
 	float: right;
 }
 .contenidoRutinas .ion-arrow-left-b:before{
-	padding: 0px 188px 0px 0px;
+	/*padding: 0px 188px 0px 0px;*/
 }
 .contenidoRutinas div.list.card{
+	background: #f0f0f0;
+	/*
 	margin: 0px 0px 0px 10px;
 	width: 94%;
 	border: 1px solid #aaa;
+	*/
 }
+.contenidoRutinas .card .item-image:first-child, .list-inset .item-image:first-child, .padding > .list .item-image:first-child{
+	background: #d4d3d3;
+}
+/*
 .contenidoRutinas div.list{
 	margin: 5px 10px 0px 10px;
 	background: #f0f0f0;
+}
+*/
+.contenidoRutinas .item {
+	border: solid 1px #aaa;
+	background: #f0f0f0;
+	font-size: 15px;
 }
 .contenidoRutinas a.item.item-avatar{
 	margin-bottom: 5px;
@@ -1182,9 +1321,11 @@ margin: 0px;
 	border-left: 1px solid #aaa;
 	padding-left: 5px;
 }
+/*
 .contenidoRutinas .ion-arrow-right-b:before {
 	margin: -28px 22px -2px 0px;
 }
+*/
 /* ----------------------------------------------------------------------------- CALENDARIO RETOS*/
 .contenidoCalendario_retos{
 	width: 95%;

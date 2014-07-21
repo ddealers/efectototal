@@ -12,35 +12,35 @@
     </header>
     <ion-content class="has-header">
       <ion-list>
-      <ion-item nav-clear menu-close href="#/app/equipo">
+      <ion-item nav-clear menu-close ng-href="#/app/equipo">
           El Equipo
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/videos">
-          Videos
+        <ion-item nav-clear menu-close ng-href="#/app/vidxcat">
+          Videos <!-- Acordeón con categorías dinámicas -->
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/perfil">
+        <ion-item nav-clear menu-close ng-href="#/app/perfil">
          Mi perfil
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/contador">
+        <ion-item nav-clear menu-close ng-href="#/app/contador">
           Contador de calorías
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/sumate">
+        <ion-item nav-clear menu-close ng-href="#/app/sumate">
           Súmate
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/invita">
+        <ion-item nav-clear menu-close ng-href="#/app/invita">
           Invitar amigos
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/invita">
+        <ion-item nav-clear menu-close ng-href="#/app/newsfeed">
           Newsfeed
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/blog">
+        <ion-item nav-clear menu-close ng-href="#/app/blog">
           Blog
         </ion-item>
-        <ion-item nav-clear menu-close ng-click="share()">
+        <ion-item nav-clear menu-close ng-href="#/app/config">
           Configuración
         </ion-item>
-        <ion-item nav-clear menu-close>
-          <a ng-click="logout()">Logout</a>
+        <ion-item nav-clear menu-close ng-click="logout()">
+          Logout
         </ion-item>
       </ion-list>
     </ion-content>
