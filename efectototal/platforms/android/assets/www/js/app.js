@@ -4,33 +4,34 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
+angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers', 'efectototal.services'])
 
 .run(function($rootScope, $state, $ionicPlatform, $window, OpenFB) {
  	//Init FB
  	OpenFB.init('470325759780426'); // Defaults to sessionStorage for storing the Facebook token
   
  	$ionicPlatform.ready(function() {
-    	// Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    	// for form inputs)
-    	if(window.cordova && window.cordova.plugins.Keyboard) {
-      		cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-    	}
-    	if(window.StatusBar) {
-      		// org.apache.cordova.statusbar required
-      		StatusBar.styleDefault();
-    	}
-  	});
-
-  	/*$rootScope.$on('$stateChangeStart', function(event, toState) {
-    	if (toState.name !== "app.login" && toState.name !== "app.logout" && !$window.sessionStorage['fbtoken']) {
-      		$state.go('app.login');
-        	event.preventDefault();
-    	}
-    });
-	$rootScope.$on('OAuthException', function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      // org.apache.cordova.statusbar required
+      StatusBar.styleDefault();
+    }
+  });
+  /*
+  $rootScope.$on('$stateChangeStart', function(event, toState) {
+    if (toState.name !== "app.login" && toState.name !== "app.logout" && !$window.sessionStorage['fbtoken']) {
     	$state.go('app.login');
-    });*/
+      event.preventDefault();
+    }
+  });
+  $rootScope.$on('OAuthException', function() {
+  	$state.go('app.login');
+  });
+  */
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -49,16 +50,6 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
         'menuContent' :{
           templateUrl: "templates/login.html",
           controller: 'LoginCtrl'
-        }
-      }
-    })
-
-    .state('app.logout', {
-      url: "/logout",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/logout.html",
-          controller: 'LogoutCtrl'
         }
       }
     })
@@ -85,19 +76,30 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
       url: "/perfil_informacion",
       views: {
         'menuContent' :{
-          templateUrl: "templates/profile_informacion.html"
+          templateUrl: "templates/profile_informacion.html",
+          controller: "ProfileInfoCtrl"
         }
       }
     })
 
     .state('app.videos', {
-      url: "/videos",
+      url: "/videos/:video",
       views: {
         'menuContent' :{
           templateUrl: "templates/videos.html"
         }
       }
     })
+
+    .state('app.vidxcat', {
+      url: "/vidxcat",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/vidxcategor.html"
+        }
+      }
+    })
+
     .state('app.sumate', {
       url: "/sumate",
       views: {
@@ -117,11 +119,22 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
       }
     })
 
+    .state('app.invita', {
+      url: "/invita",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/invita.html",
+          controller: 'InviteCtrl'
+        }
+      }
+    })
+
     .state('app.blog', {
       url: "/blog",
       views: {
         'menuContent' :{
-          templateUrl: "templates/blog.html"
+          templateUrl: "templates/blog.html",
+          controller: "BlogCtrl"
         }
       }
     })
@@ -189,11 +202,11 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers'])
       }
     })
 
-    .state('app.vidxcategor', {
-      url: "/vidxcategor",
+    .state('app.config', {
+      url: "/config",
       views: {
         'menuContent' :{
-          templateUrl: "templates/vidxcategor.html"
+          templateUrl: "templates/configuracion.html"
         }
       }
     })
