@@ -131,22 +131,11 @@ h1{
 }
 .contenidoPerfil_actividad h1.encabezado{
 	color: #fff;
-<<<<<<< HEAD
 	background: #1f2a84;
 	font-weight: bold;
 	font-size: 16px;
 	padding: 10px 10px 10px 190px;
 	margin: 0px 10px 0px 10px;
-=======
-	background: #1f2a84; 
-	/*url(../img/flecha.png)no-repeat 10px 15px;*/
-	font-weight: bold;
-	/*font-size: 16px;*/
-	padding: 10px;
-	text-align: right;
-	/*width: 300px;*/
-	/*margin: 0px 10px;*/
->>>>>>> 9c6db263656a89fa1cc235af487adb9f85e4367a
 	font-family: 'Dosis';
 	text-align: right;
 } 
@@ -433,10 +422,6 @@ h1{
 }
 .contenidoVideos video{
 	width: 100%;
-<<<<<<< HEAD
-	margin: 44px 0px 0px 0px;
-=======
->>>>>>> 9c6db263656a89fa1cc235af487adb9f85e4367a
 }
 .contenidoVideos .col-50{
 	margin: -11px 0px 0px 0px;
@@ -517,10 +502,6 @@ h1{
 .contenidoEquipo h1.encabezado{
 	color: #fff;
 	background: #000;
-<<<<<<< HEAD
-=======
-	/*url(../img/flecha.png)no-repeat 10px 15px;*/
->>>>>>> 9c6db263656a89fa1cc235af487adb9f85e4367a
 	font-weight: bold;
 	font-size: 16px;
 	margin: 0px 10px 0px 10px;
@@ -594,7 +575,6 @@ h1{
 	color: #fff;
 	background: #919191;
 	font-weight: bold;
-<<<<<<< HEAD
 	font-size: 16px;
 	font-family: 'Dosis';
 	padding: 10px 10px 10px 160px;
@@ -604,17 +584,9 @@ h1{
 .contenidoIformacion .ion-arrow-left-b:before {
 	position: absolute;
 	left: 30px;
-=======
-	/*font-size: 16px;*/
-	/* width: 302px; */
-	font-family: 'Dosis';
-	padding: 10px;
-	margin: 0;
-	text-align: right;
 }
 .contenidoIformacion h1.encabezado i{
 	float: left;
->>>>>>> 9c6db263656a89fa1cc235af487adb9f85e4367a
 }
 .contenidoIformacion .item-image {
 	background: #d4d3d3;
@@ -698,6 +670,12 @@ h1{
 .contenidoVideosCatego .firstRow .col .video{
 	width: 100%;
 }
+.contenidoVideosCatego img.poster{
+	width: 100%;
+}
+.contenidoVideosCatego video.videos2{
+	width: 100%;
+}
 .contenidoVideosCatego .btn-info{
 	font-size: 12px;
 	padding: 5px 15px;
@@ -741,7 +719,21 @@ h1{
 	font-family: sans-serif;
 	font-weight: bold;
 }
-/*
+.contenidoVideosCatego .info-title{
+	margin: 10px 0px 0px 15px
+}
+.contenidoVideosCatego .row.rowFirst{
+	margin: 50px 0px 0px 0px
+}
+.contenidoVideosCatego h1.title{
+	font-size: 16px;
+	text-align: right;
+}
+.contenidoVideosCatego .ion-arrow-left-b{
+	position: absolute;
+	left: 30px;
+}
+
 .contenidoVideosCatego .bar.bar-energized {
 	background-color: #fff;
 	margin: 0px 0px 0px 8px;
@@ -751,12 +743,10 @@ h1{
 	margin: 0px 0px -46px 0px;
 }
 .contenidoVideosCatego .bar.bar-energized .title {
-<<<<<<< HEAD
-	color: #444;
+	color: #fff;
 	font-size: 16px;
-=======
-	color: #FFF;
->>>>>>> 9c6db263656a89fa1cc235af487adb9f85e4367a
+	margin: 0px;
+	padding: 0px 10px 0px 0px;
 }
 .contenidoVideosCatego div.row.rowFirst{
 	padding: 0px;
@@ -851,7 +841,7 @@ h1{
 .contenidoVideosCatego div.col.footer {
 	border: none;
 }
-*/
+
 /* ---------------------------------------------------------------- TE RETO*/
 .contenidoTe_reto{
 	width: 95%;
@@ -974,29 +964,15 @@ h1{
 .contenidoMis_retos h1.encabezado{
 	color: #fff;
 	background: #1f2a84;
-<<<<<<< HEAD
 	font-weight: bold;
 	font-size: 16px;
 	padding: 10px 10px 10px 195px;
-=======
-	/*url(../img/flecha.png)no-repeat 10px 15px;*/
-	font-weight: bold;
-	/*font-size: 16px;*/
-	padding: 10px;
-	text-align: right;
-	/*width: 100%;*/
->>>>>>> 9c6db263656a89fa1cc235af487adb9f85e4367a
 	font-family: 'Dosis';
 	text-align: right;
 } 
-<<<<<<< HEAD
 .contenidoMis_retos .ion-arrow-left-b:before {
 	position: absolute;
 	left: 30px;
-=======
-.contenidoMis_retos h1.encabezado i{
-	float: left;
->>>>>>> 9c6db263656a89fa1cc235af487adb9f85e4367a
 }
 .contenidoMis_retos p.subtitulo{
 	text-align: center;
@@ -1238,17 +1214,9 @@ margin: 0px;
 	color: #fff;
 	background: #e01026;
 	font-weight: bold;
-<<<<<<< HEAD
 	font-size: 16px;
 	padding: 10px;
 	margin: 0px 8px 0px 10px;
-=======
-	/*font-size: 16px;*/
-	padding: 10px;
-	/*width: 300px;*/
-	text-align: right;
-	/*margin: 0px 0px 0px 10px;*/
->>>>>>> 9c6db263656a89fa1cc235af487adb9f85e4367a
 	font-family: 'Dosis';
 	text-align: right;
 } 
@@ -1282,15 +1250,10 @@ margin: 0px;
 .contenidoRutinas article{
 	background: #f0f0f0;
 	height: 55px;
-<<<<<<< HEAD
 	border-right: solid 1px #aaa;
 	margin: 0px 9px 0px 10px;
 	border-left: solid 1px #aaa;
 	border-bottom: 1px solid #aaa;
-=======
-	border-right: 1px solid #aaa;
-	border-left: 1px solid #aaa;
->>>>>>> 9c6db263656a89fa1cc235af487adb9f85e4367a
 }
 .contenidoRutinas .ion-arrow-right-b:before {
 	/*margin: -25px 0px -2px 0px;*/
@@ -1298,13 +1261,11 @@ margin: 0px;
 	float: right;
 }
 .contenidoRutinas .ion-arrow-left-b:before{
-<<<<<<< HEAD
 	position: absolute;
 	left: 30px;
 }
 .contenidoRutinas div.list.card{
 	margin: 0px 8px 0px 10px;
-=======
 	/*padding: 0px 188px 0px 0px;*/
 }
 .contenidoRutinas div.list.card{
