@@ -216,7 +216,9 @@ angular.module('efectototal.controllers', [])
 	*/
 })
 .controller('InviteCtrl', function($scope, $state, OpenFB) {
-	OpenFB.get('/me/invitable_friends').success(function(data){
+	console.log('request');
+	OpenFB.get('/me/friends').success(function(data){
+		console.log('ready');
 		trace(data);
 	});
 });

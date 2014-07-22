@@ -1239,7 +1239,6 @@ margin: 0px;
 	font-size: 20px;
 	padding: 0px 0px 0px 12px;
 }
-
 .contenidoRutinas article{
 	background: #f0f0f0;
 	height: 55px;
@@ -1451,3 +1450,60 @@ margin: 0px;
 .contenidoCalendario_retos td.background{
 	background: #D1D1D1;
 }
+/*------------------------------------------- SUMATE */
+.contenidoSumate{
+	width: 95%;
+	background-color: #eee;
+	border: #aaa 1px solid;
+	margin: 5px auto;
+}
+.contenidoSumate h1.encabezado{
+	color: #fff;
+	background: #1f2a84;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px 0px 10px 195px;
+	width: 100%;
+	font-family: 'Dosis';
+} 
+.contenidoSumate .card {
+	margin: 0px;
+	background: #f0f0f0;
+}
+.contenidoSumate p.titulo{
+	font-size: 35px;
+	color: #5177c8;
+	width: 241px;
+	margin: auto;
+	line-height: 44px;
+	text-align: center;
+	padding: 10px 0px 10px 0px;
+}
+.contenidoSumate div.sumarte{
+	border-top: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+}
+.contenidoSumate p.sincronizando{
+	text-align: center;
+	color: #e01026;
+}
+.contenidoSumate img.suma{
+	width: 35%;
+	margin: 10px 0px 0px 95px;
+}
+.contenidoSumate div.efecto{
+	background: url(../img/barras.png) no-repeat 0px 62px;
+	height: 158px;
+	background-size: 46%;
+}
+.contenidoSumate img.logo{
+	width: 40%;
+	margin: 0 auto;
+	display: block;
+	border-top: 1px #FEF solid;
+	padding: 5px;
+}
+.contenidoSumate i.ion-arrow-left-b{
+	margin: 0px 221px 0px -186px;
+}
+
