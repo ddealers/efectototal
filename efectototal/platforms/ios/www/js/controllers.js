@@ -1,30 +1,26 @@
 angular.module('efectototal.controllers', [])
 
-.controller('AppCtrl', function($scope, $state, OpenFB) {
+.controller('AppCtrl', function($scope, $state) {
 	$scope.logout = function () {
-		OpenFB.logout();
+		facebookConnectPlugin.logout();
 		$state.go('app.login');
 	};
 
-	$scope.revokePermissions = function () {
-		OpenFB.revokePermissions().then(
-			function () {
-				$state.go('app.login');
-			},
-			function () {
-				alert('Revoke permissions failed');
-			}
-		);
-	};
-
 	$scope.share = function(){
-
+		facebookConnectPlugin.showDialog({method:'apprequests',message:'Te invito a usar Efecto Total'}, onSuccess, errorCallback);
+		//facebookConnectPlugin.api('me?fields=invitable_friends', renderFriends, errorCallback);
+		function errorCallback(error){
+			console.log(error);
+		}
+		function onSuccess(data){
+			console.log(data);
+		}
 	}
 })
-.controller('LoginCtrl', function($scope, $location, OpenFB, User) {
+.controller('LoginCtrl', function($scope, $location, User) {
 	$scope.loading = false;
 	function registerAndLogin(){
-            OpenFB.get('/me').success(onSuccess);
+		facebookConnectPlugin.api('/me', null, onSuccess, onError);
 	}
 	function onSuccess(data){
 		User.create(data).then(function(data){
@@ -32,20 +28,25 @@ angular.module('efectototal.controllers', [])
 			localStorage.setItem('name', data.scope.name);
 			localStorage.setItem('email', data.scope.email);
 			localStorage.setItem('birthday', birthday);
+			localStorage.setItem('fbid', data.fbid);
 			localStorage.setItem('id', data.id);
 			$scope.loading = false;
 			$location.path('/app/perfil');
 		}, function(error){
 			$scope.loading = false;
-			navigator.notification.alert(error, onError);
+			navigator.notification.alert(error, errorCallback);
 		});
 	}
-	function onError() {
-		console.log('Error en el login');
+	function onError(error) {
+		navigator.notification.alert(error, errorCallback);
+	}
+	function errorCallback(error){
+		console.log(error);
 	}
 	$scope.facebookLogin = function () {
 		$scope.loading = true;
-		OpenFB.login('email,user_birthday,publish_stream').then(registerAndLogin, onError);
+		facebookConnectPlugin.login(
+			['email','user_birthday','user_friends'],registerAndLogin,onError);
 	};
 })
 
@@ -215,13 +216,6 @@ angular.module('efectototal.controllers', [])
 	onStart();
 	*/
 })
-.controller('InviteCtrl', function($scope, $state, OpenFB) {
-	console.log('request');
-	OpenFB.get('/me/friends').success(function(data){
-		console.log('ready');
-		trace(data);
-	});
-});
 
 function trace(obj){
 	for(var a in obj){

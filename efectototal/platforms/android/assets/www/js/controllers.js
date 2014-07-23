@@ -1,30 +1,30 @@
 angular.module('efectototal.controllers', [])
 
-.controller('AppCtrl', function($scope, $state, OpenFB) {
+.controller('AppCtrl', function($scope, $state) {
 	$scope.logout = function () {
-		OpenFB.logout();
+		//OpenFB.logout();
 		$state.go('app.login');
 	};
 
 	$scope.revokePermissions = function () {
-		OpenFB.revokePermissions().then(
+		/*OpenFB.revokePermissions().then(
 			function () {
 				$state.go('app.login');
 			},
 			function () {
 				alert('Revoke permissions failed');
 			}
-		);
+		);*/
 	};
 
 	$scope.share = function(){
 
 	}
 })
-.controller('LoginCtrl', function($scope, $location, OpenFB, User) {
+.controller('LoginCtrl', function($scope, $location, CCFB, User) {
 	$scope.loading = false;
 	function registerAndLogin(){
-            OpenFB.get('/me').success(onSuccess);
+		console.log('login');
 	}
 	function onSuccess(data){
 		User.create(data).then(function(data){
@@ -45,7 +45,8 @@ angular.module('efectototal.controllers', [])
 	}
 	$scope.facebookLogin = function () {
 		$scope.loading = true;
-		OpenFB.login('email,user_birthday,publish_stream').then(registerAndLogin, onError);
+		CCFB.init()
+		//OpenFB.login('email,user_birthday,user_friends,publish_stream').then(registerAndLogin, onError);
 	};
 })
 
@@ -215,12 +216,13 @@ angular.module('efectototal.controllers', [])
 	onStart();
 	*/
 })
-.controller('InviteCtrl', function($scope, $state, OpenFB) {
+.controller('InviteCtrl', function($scope, $state) {
 	console.log('request');
+	/*
 	OpenFB.get('/me/friends').success(function(data){
-		console.log('ready');
-		trace(data);
+		console.log('ready', angular.toJson(data));
 	});
+*/
 });
 
 function trace(obj){
