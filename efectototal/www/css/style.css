@@ -546,8 +546,10 @@ h1{
 .contenidoEquipo p.textAvatar{
 	background-color: rgba(0,0,0,0.6);
 	padding: 11px;
-	margin: 0px 10px 10px 10px;
+	margin: 0px 10px 10px 14px;
 	color: #fff;
+	width: 252px;
+	white-space: normal;
 }
 .contenidoEquipo .item{
 	padding: 0px;
@@ -556,7 +558,7 @@ h1{
 }
 .contenidoEquipo img.imageFondo{
 	border: solid 1px #aaa;
-	margin: 5px 10px 0px;
+	margin: 5px 14px 0px;
 	width: 94%;
 }
 .contenidoEquipo p.p1{

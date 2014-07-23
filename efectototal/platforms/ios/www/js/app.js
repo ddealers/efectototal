@@ -18,8 +18,7 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers', 'ef
 		  StatusBar.styleDefault();
 		}
   	});
-  	/*
-	$rootScope.$on('$stateChangeStart', function(event, toState) {
+  	$rootScope.$on('$stateChangeStart', function(event, toState) {
 		if (toState.name !== "app.login" && toState.name !== "app.logout" && !localStorage['id']) {
 			$state.go('app.login');
 		  event.preventDefault();

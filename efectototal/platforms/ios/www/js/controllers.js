@@ -143,7 +143,6 @@ angular.module('efectototal.controllers', [])
 	var id = localStorage.getItem('id');
 	$scope.fbid = localStorage.getItem('fbid');
 	
-	var id = localStorage.getItem('id');
 	User.routines(id).then(function(data){
 		$scope.routines = data;
 	});
