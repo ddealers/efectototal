@@ -24,6 +24,24 @@ h1{
 .no-scroll .scroll{
 	height: 98%;
 }
+.info-title{
+	font-size: 16px;
+	padding: 5px 15px;
+	-webkit-transform: skew(-25deg);
+	background: linear-gradient(45deg, #3b679e 0%,#7db9e8 100%);
+	box-shadow: 0px 0px 5px #999;
+	color: white;
+	font-weight: bold;
+	width: 80%;
+	margin: 10px 0px 10px 0px;
+	text-align: center;
+	border: 1px #999 solid;
+	font-family: 'Dosis', sans-serif;
+}
+.info-title span{
+	-webkit-transform: skew(25deg);
+	display: block;
+}
 /*.scroll-content{
 	background: #eee;
 }*/				
@@ -80,6 +98,10 @@ h1{
 	padding: 20px;
 	height: 100%;
 }
+.contenidoPerfil a.item.miPerfil{
+	background: #e01026;
+	color: #FFF;
+}
 .contenidoPerfil .list-inset{
 	margin: 10px auto;
 	width: 75%;
@@ -95,10 +117,7 @@ h1{
 	font-weight: 500;
 	text-align: center;
 	border: solid 1px #aaa;
-}
-.contenidoPerfil .miPerfil{
-	background: #e01026;
-	color: #FFF;	
+	padding: 17px 0px 18px 0px;
 }
 .contenidoPerfil .card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
 	background: #e5e5e5;
@@ -112,15 +131,13 @@ h1{
 }
 .contenidoPerfil_actividad h1.encabezado{
 	color: #fff;
-	background: #1f2a84; 
-	/*url(../img/flecha.png)no-repeat 10px 15px;*/
+	background: #1f2a84;
 	font-weight: bold;
-	/*font-size: 16px;*/
-	padding: 10px;
-	text-align: right;
-	/*width: 300px;*/
-	/*margin: 0px 10px;*/
+	font-size: 16px;
+	padding: 10px 10px 10px 190px;
+	margin: 0px 10px 0px 10px;
 	font-family: 'Dosis';
+	text-align: right;
 } 
 .contenidoPerfil_actividad h1.encabezado i{
 	float: left;
@@ -128,6 +145,16 @@ h1{
 .contenidoPerfil_actividad .item-image img:first-child, .item-image .list-img {
 	vertical-align: middle;
 	width: 25%;
+}
+.contenidoPerfil_actividad div.list.card{
+	margin: 0px 10px 0px 10px;
+}
+.contenidoPerfil_actividad div.list.historial{
+	margin: 0px 10px 0px 10px;
+}
+.contenidoPerfil_actividad .ion-arrow-left-b:before {
+	position: absolute;
+	left: 30px;
 }
 .contenidoPerfil_actividad p.subtitulo{
 	text-align: center;
@@ -148,6 +175,7 @@ h1{
 	height: 55px;
 	border-right: 1px solid #aaa;
 	border-left: 1px solid #aaa;
+	margin: 0px 9px 0px 9px;
 }
 .contenidoPerfil_actividad .item-image{
 	background: #e5e5e5;
@@ -175,10 +203,10 @@ h1{
 	background: #f0f0f0;
 }
 .contenidoBlog .fondoImg{
-	margin-top: 38px;
-	/* background: #f0f0f0; */
+	margin: 38px 0px 0px 0px;
 	border-top: solid 1px #aaa;
-	padding: 0 30px;
+	padding: 0px 30px 10px 30px;
+	border-bottom: 1px solid #aaa;
 }
 .contenidoBlog .full-image {
 	width: 100%;
@@ -290,58 +318,42 @@ h1{
 	font-weight: bold;
 	font-size: 16px;
 	padding: 10px 0px 10px 6px;
-	width: 304px;
 	margin: 0px 0px 0px -1px;
 } 
 .contenidoContador .item-image {
 	background: #d4d3d3 url(../img/barras.png) no-repeat 0px -11px;
 	border: #aaa solid 1px;
+	background-size: 41%;
 }
 .contenidoContador p.progreso{
 	font-size: 50px;
 	color: #e0032a;
 	font-family: sans-serif;
 	font-weight: bold;
-	padding: 17px 0px 17px 90px;
+	padding: 17px 0px 17px 0px;
+	text-align: center;
 }
 .contenidoContador p.caloriasMenos{
 	color: #5880d6;
 	display: inline-block;
 	width: 165px;
-	margin: 0px 0px 0px 25px;
+	text-align: center;
 }
 .contenidoContador p.caloriasTotales{
 	color: #e0032a;
 	display: inline-block;
 }
 .contenidoContador div.contenidoCal{
-	border: solid 1px #aaa;
-	background: #f0f0f0;
-	width: 304px;
-	margin: 0px 0px 0px -1px;
+	border-bottom: solid 1px #aaa;
 }
 .contenidoContador input[type="range"] {
-	margin: 0px 0px 0px 65px;
 	padding: 0px 0px 0px 40px;
-}
-.contenidoContador img.lupa-verde{
-	margin: 0px 0px 0px 55px;
 }
 .contenidoContador img.lupa-rojo{
 	padding: 24px 0px 0px 117px;
 }
-.contenidoContador button.info-title {
-	font-size: 16px;
-	padding: 5px 15px;
-	-webkit-transform: skew(-25deg);
-	background: linear-gradient(45deg, #3b679e 0%,#7db9e8 100%);
-	box-shadow: 0px 0px 5px #999;
-	color: white;
-	font-weight: bold;
-	width: 80%;
-	margin: 0 30px 10px;
-	text-align: center;
-	border: 1px #999 solid;
+.contenidoContador button.info-title{
+
 }
 .contenidoContador .info-title span {
 	-webkit-transform: skew(25deg);
@@ -361,6 +373,7 @@ h1{
 }
 .contenidoContador .list:last-child {
 	margin: -24px 0px 0px 0px;
+	text-align: center;
 }
 .contenidoContador ul{
 	text-align: center;
@@ -368,10 +381,10 @@ h1{
 	border: solid 1px #aaa;
 	background: #f0f0f0;
 	border-top: none;
-	width: 304px;
 	margin: 0px 0px 5px -1px;
 	font-weight: bold;
 	padding: 5px 0px 5px 0px;
+	border-right: none;
 } 
 .contenidoContador li{
 	color: #444;
@@ -389,8 +402,8 @@ h1{
 	color: #fff;
 	background: #fccd4f;
 	font-weight: bold;
-	width: 302px;
-	margin: 0px 0px 0px 9px;
+	position: relative;
+	margin: 0px 0px -45px 0px;
 }
 */
 .contenidoVideos .bar{
@@ -418,21 +431,11 @@ h1{
 	color: #444;
 }
 .contenidoVideos .info-title{
-	font-size: 10px;
-	padding: 5px 15px;
-	-webkit-transform: skew(-25deg);
-	background: linear-gradient(45deg, #3b679e 0%,#7db9e8 100%);
-	box-shadow: 0px 0px 5px #999;
-	color: white;
-	font-weight: bold;
-	width: 80%;
-	margin: 0 10px 10px;
-	text-align: center;
-	border: 1px #999 solid;
+	font-size: 13px;
+	margin: 0px 0px 15px 12px;
 }
 .contenidoVideos .info-title span{
-	-webkit-transform: skew(25deg);
-	display: block;
+
 }
 .contenidoVideos .button.button-positive {
 	position: relative;
@@ -499,14 +502,17 @@ h1{
 .contenidoEquipo h1.encabezado{
 	color: #fff;
 	background: #000;
-	/*url(../img/flecha.png)no-repeat 10px 15px;*/
 	font-weight: bold;
 	font-size: 16px;
-	width: 300px;
-	margin: 0px 0px 0px 10px;
+	margin: 0px 10px 0px 10px;
 	font-family: 'Dosis';
-	padding: 10px 0px 10px 197px;
+	padding: 10px 10px 10px 197px;
+	text-align: right;
 } 
+.contenidoEquipo .ion-arrow-left-b:before {
+	position: absolute;
+	left: 30px;
+}
 .contenidoEquipo .item-image {
 	background: #d4d3d3;
 	border: #aaa solid 1px;
@@ -522,11 +528,9 @@ h1{
 	width: 90%;
 }
 .contenidoEquipo p.textAvatar{
-	width: 151px;
-	float: right;
 	background-color: rgba(0,0,0,0.6);
 	padding: 11px;
-	margin-top: 25px;
+	margin: 0px 10px 10px 10px;
 	color: #fff;
 }
 .contenidoEquipo .item{
@@ -534,14 +538,10 @@ h1{
 	background: #d4d3d3;
 	border: solid 1px #aaa;
 }
-.contenidoEquipo div.imageFondo{
-	background: url(../img/foto-1.png)no-repeat;
-	height: 400px;
-	background-size: cover;
+.contenidoEquipo img.imageFondo{
 	border: solid 1px #aaa;
-	margin: 0px 10px 0px 10px;
-	border-top: none;
-	padding: 0px 8px 0px 0px;
+	margin: 5px 10px 0px;
+	width: 94%;
 }
 .contenidoEquipo p.p1{
 	font-size: 13px;
@@ -575,12 +575,15 @@ h1{
 	color: #fff;
 	background: #919191;
 	font-weight: bold;
-	/*font-size: 16px;*/
-	/* width: 302px; */
+	font-size: 16px;
 	font-family: 'Dosis';
-	padding: 10px;
+	padding: 10px 10px 10px 160px;
 	margin: 0;
 	text-align: right;
+} 
+.contenidoIformacion .ion-arrow-left-b:before {
+	position: absolute;
+	left: 30px;
 }
 .contenidoIformacion h1.encabezado i{
 	float: left;
@@ -596,19 +599,10 @@ h1{
 }
 .contenidoIformacion .card, .list-inset {
 	margin: 0px;
+	background: #f0f0f0;
 }
 .contenidoIformacion .info-title{
-	font-size: 16px;
-	padding: 5px 15px;
-	-webkit-transform: skew(-25deg);
-	background: linear-gradient(45deg, #3b679e 0%,#7db9e8 100%);
-	box-shadow: 0px 0px 5px #999;
-	color: white;
-	font-weight: bold;
-	width: 50%;
-	margin: 10px auto;
-	text-align: center;
-	border: 1px #999 solid;
+	margin-left: 30px;
 }
 .contenidoIformacion .info-title span{
 	-webkit-transform: skew(25deg);
@@ -676,6 +670,12 @@ h1{
 .contenidoVideosCatego .firstRow .col .video{
 	width: 100%;
 }
+.contenidoVideosCatego img.poster{
+	width: 100%;
+}
+.contenidoVideosCatego video.videos2{
+	width: 100%;
+}
 .contenidoVideosCatego .btn-info{
 	font-size: 12px;
 	padding: 5px 15px;
@@ -719,16 +719,34 @@ h1{
 	font-family: sans-serif;
 	font-weight: bold;
 }
-/*
+.contenidoVideosCatego .info-title{
+	margin: 10px 0px 0px 15px
+}
+.contenidoVideosCatego .row.rowFirst{
+	margin: 50px 0px 0px 0px
+}
+.contenidoVideosCatego h1.title{
+	font-size: 16px;
+	text-align: right;
+}
+.contenidoVideosCatego .ion-arrow-left-b{
+	position: absolute;
+	left: 30px;
+}
+
 .contenidoVideosCatego .bar.bar-energized {
 	background-color: #fff;
-	width: 95%;
 	margin: 0px 0px 0px 8px;
-	border: solid 1px #aaa;
+	border-bottom: solid 1px #aaa;
 	border-top: none;
+	position: relative;
+	margin: 0px 0px -46px 0px;
 }
 .contenidoVideosCatego .bar.bar-energized .title {
-	color: #FFF;
+	color: #fff;
+	font-size: 16px;
+	margin: 0px;
+	padding: 0px 10px 0px 0px;
 }
 .contenidoVideosCatego div.row.rowFirst{
 	padding: 0px;
@@ -736,6 +754,10 @@ h1{
 }
 .contenidoVideosCatego div.row{
 	padding: 0px;
+}
+.contenidoVideosCatego .ion-arrow-left-b{
+	position: absolute;
+	left: 10px;
 }
 .contenidoVideosCatego video.videos1{
 	height: 70px;
@@ -750,15 +772,17 @@ h1{
 	font-size: 16px;
 }
 .contenidoVideosCatego video.videos2{
-	height: 141px;
+	width: 98%;
 }
-.contenidoVideosCatego .button.button-positive {
-	position: relative;
-	margin: -3px 11px 11px 10px;
-	font-size: 12px;
-	padding: 0px 5px 0px 5px;
-	-webkit-transform: skew(-10deg);
-	line-height: 13px;
+.contenidoVideosCatego .info-title {
+	font-size: 13px;
+	font-family: 'Dosis';
+	margin: 10px 0px 10px 18px;
+}
+}
+.contenidoVideosCatego .info-title span{
+	-webkit-transform: skew(25deg);
+	display: block;
 }
 .contenidoVideosCatego .button.button-positive {
 	border-color: #145fd7;
@@ -788,9 +812,6 @@ h1{
 .contenidoVideosCatego div.col.col-67{
 	border-bottom: solid 1px #aaa;
 }
-.contenidoVideosCatego div.col.informacionNutri{
-
-}
 .contenidoVideosCatego p.info{
 	font-size: 20px;
 	color: #5880d6;
@@ -806,7 +827,7 @@ h1{
 	font-size: 14px;
 	margin: 0px 10px 0px -6px;
 }
-.contenidoVideosCatego .videosBanner{
+.contenidoVideosCatego img.ImgBanner{
 	width: 135px;
 	margin: 7px 0px 0px 6px;
 }
@@ -820,7 +841,7 @@ h1{
 .contenidoVideosCatego div.col.footer {
 	border: none;
 }
-*/
+
 /* ---------------------------------------------------------------- TE RETO*/
 .contenidoTe_reto{
 	width: 95%;
@@ -830,12 +851,13 @@ h1{
 }
 .contenidoTe_reto h1.encabezado{
 	color: #fff;
-	background: #1f2a84 url(../img/flecha.png)no-repeat 10px 15px;
+	background: #1f2a84;
 	font-weight: bold;
 	font-size: 16px;
-	padding: 10px 0px 10px 195px;
-	width: 100%;
+	padding: 10px 10px 10px 195px;
 	font-family: 'Dosis';
+	margin: 0px;
+	text-align: right;
 } 
 .contenidoTe_reto .item-image img:first-child, .item-image .list-img {
 	vertical-align: middle;
@@ -849,6 +871,10 @@ h1{
 	padding: 15px 0px 5px 0px;
 	margin: 0;
 	font-weight: bold;
+}
+.contenidoTe_reto .ion-arrow-left-b:before {
+	position: absolute;
+	left: 30px;
 }
 .contenidoTe_reto p.iniciar{
 	color: #5177c8;
@@ -870,10 +896,12 @@ h1{
 }
 .contenidoTe_reto div.list.card{
 	margin: 0px;
+	background: #f0f0f0;
 }
 .contenidoTe_reto div.item.item-image{
 	border-right: none;
 	border-left: none;
+	background: #d4d3d3;
 }
 .contenidoTe_reto input[type="text"]{
 	font-size: 13px;
@@ -898,7 +926,7 @@ h1{
 	padding: 10px 55px 0px 70px;
 	border-top: solid 1px #aaa;
 }
-.contenidoTe_reto button.enviar{
+.contenidoTe_reto .info-title{
 	font-size: 13px;
 	padding: 5px 15px;
 	-webkit-transform: skew(-25deg);
@@ -911,24 +939,12 @@ h1{
 	text-align: center;
 	border: 1px #999 solid;
 }
-.contenidoTe_reto button.crear{
-	font-size: 13px;
-	padding: 5px 15px;
+.contenidoTe_reto .info-title.crear{
+
 	-webkit-transform: skew(-25deg);
 	background: linear-gradient(45deg, #3b679e 0%,#7db9e8 100%);
-	box-shadow: 0px 0px 5px #999;
-	color: white;
-	font-weight: bold;
-	width: 80%;
-	margin: 0px 28px 6px;
-	text-align: center;
-	border: 1px #999 solid;
 }
-.contenidoTe_reto .crear span {
-	-webkit-transform: skew(25deg);
-	display: block;
-}
-.contenidoTe_reto .enviar span {
+.contenidoTe_reto .info-title span {
 	-webkit-transform: skew(25deg);
 	display: block;
 }
@@ -948,16 +964,15 @@ h1{
 .contenidoMis_retos h1.encabezado{
 	color: #fff;
 	background: #1f2a84;
-	/*url(../img/flecha.png)no-repeat 10px 15px;*/
 	font-weight: bold;
-	/*font-size: 16px;*/
-	padding: 10px;
-	text-align: right;
-	/*width: 100%;*/
+	font-size: 16px;
+	padding: 10px 10px 10px 195px;
 	font-family: 'Dosis';
+	text-align: right;
 } 
-.contenidoMis_retos h1.encabezado i{
-	float: left;
+.contenidoMis_retos .ion-arrow-left-b:before {
+	position: absolute;
+	left: 30px;
 }
 .contenidoMis_retos p.subtitulo{
 	text-align: center;
@@ -1000,7 +1015,7 @@ margin: 0px;
 .contenidoMis_retos div.col.espacio{
 	margin: 0px -39px 0px 0px;
 }
-.contenidoMis_retos button.aceptar {
+.contenidoMis_retos .info-title {
 	font-size: 16px;
 	padding: 5px 15px;
 	-webkit-transform: skew(-25deg);
@@ -1014,27 +1029,13 @@ margin: 0px;
 	border: 1px #999 solid;
 	font-family: 'Dosis';
 }
-.contenidoMis_retos .aceptar span {
+.contenidoMis_retos .info-title span {
 	-webkit-transform: skew(25deg);
 	display: block;
 }
-.contenidoMis_retos button.declinar {
-	font-size: 16px;
-	padding: 5px 15px;
-	-webkit-transform: skew(-25deg);
+.contenidoMis_retos .info-title.declinar {
+	margin: 25px 0px 0px 0px;
 	background: linear-gradient(45deg, #9d0000 0%,#c00101 100%);
-	box-shadow: 0px 0px 5px #999;
-	color: white;
-	font-weight: bold;
-	width: 80%;
-	margin: 25px 0px 6px;
-	text-align: center;
-	border: 1px #999 solid;
-	font-family: 'Dosis';
-}
-.contenidoMis_retos .declinar span {
-	-webkit-transform: skew(25deg);
-	display: block;
 }
 .contenidoMis_retos article{
 	background: #f0f0f0;
@@ -1059,12 +1060,14 @@ margin: 0px;
 }
 .contenidoResultados_retos h1.encabezado{
 	color: #fff;
-	background: #1f2a84 url(../img/flecha.png)no-repeat 10px 15px;
+	background: #1f2a84;
 	font-weight: bold;
 	font-size: 16px;
-	padding: 10px 0px 10px 195px;
+	padding: 10px 10px 10px 195px;
 	width: 100%;
 	font-family: 'Dosis';
+	text-align: right;
+	margin: 0px;
 } 
 .contenidoResultados_retos p.subtitulo{
 	text-align: center;
@@ -1079,6 +1082,10 @@ margin: 0px;
 	color: #5177c8;
 	font-size: 24px;
 	padding: 10px 0px 0px 82px;
+}
+.contenidoResultados_retos .ion-arrow-left-b:before {
+	position: absolute;
+	left: 30px;
 }
 .contenidoResultados_retos .card {
 	margin: 0px;
@@ -1142,10 +1149,10 @@ margin: 0px;
 	background: #e01026;
 	font-weight: bold;
 	font-size: 16px;
-	padding: 10px 0px 10px 13px;
-	width: 300px;
-	margin: 0px 0px 0px 10px;
+	padding: 10px 10px 10px 13px;
+	margin: 0px 10px 0px 10px;
 	font-family: 'Dosis';
+	text-align: right;
 } 
 .contenidoNewsfeed div.item.item-image{
 	background: #d4d3d3;
@@ -1169,14 +1176,15 @@ margin: 0px;
 	font-size: 20px;
 	padding: 0px 0px 0px 12px;
 }
-
+.contenidoNewsfeed{
+	margin: 0px 0px 10px 0px;
+}
 .contenidoNewsfeed article{
 	background: #f0f0f0;
 	height: 55px;
 }
 .contenidoNewsfeed div.list.card{
-	margin: 0px 0px 0px 10px;
-	width: 94%;
+	margin: 0px 10px 0px 10px;
 	border: 1px solid #aaa;
 }
 .contenidoNewsfeed a.item.item-avatar{
@@ -1192,7 +1200,8 @@ margin: 0px;
 	float: right;
 }
 .contenidoNewsfeed .ion-arrow-left-b:before{
-	padding: 0px 195px 0px 0px;
+	position: absolute;
+	left: 30px;
 }
 /* ------------------------------------------------------ MIS RUTINAS*/
 .contenidoRutinas{
@@ -1205,12 +1214,11 @@ margin: 0px;
 	color: #fff;
 	background: #e01026;
 	font-weight: bold;
-	/*font-size: 16px;*/
+	font-size: 16px;
 	padding: 10px;
-	/*width: 300px;*/
-	text-align: right;
-	/*margin: 0px 0px 0px 10px;*/
+	margin: 0px 8px 0px 10px;
 	font-family: 'Dosis';
+	text-align: right;
 } 
 .contenidoRutinas h1.encabezado i{
 	float: left;
@@ -1242,8 +1250,10 @@ margin: 0px;
 .contenidoRutinas article{
 	background: #f0f0f0;
 	height: 55px;
-	border-right: 1px solid #aaa;
-	border-left: 1px solid #aaa;
+	border-right: solid 1px #aaa;
+	margin: 0px 9px 0px 10px;
+	border-left: solid 1px #aaa;
+	border-bottom: 1px solid #aaa;
 }
 .contenidoRutinas .ion-arrow-right-b:before {
 	/*margin: -25px 0px -2px 0px;*/
@@ -1251,6 +1261,11 @@ margin: 0px;
 	float: right;
 }
 .contenidoRutinas .ion-arrow-left-b:before{
+	position: absolute;
+	left: 30px;
+}
+.contenidoRutinas div.list.card{
+	margin: 0px 8px 0px 10px;
 	/*padding: 0px 188px 0px 0px;*/
 }
 .contenidoRutinas div.list.card{
@@ -1258,6 +1273,7 @@ margin: 0px;
 	/*
 	margin: 0px 0px 0px 10px;
 	width: 94%;
+>>>>>>> 9c6db263656a89fa1cc235af487adb9f85e4367a
 	border: 1px solid #aaa;
 	*/
 }
@@ -1294,7 +1310,8 @@ margin: 0px;
 	color: #e0032a;
 }
 .contenidoRutinas  div.entrenador{
-	border-top: solid 1px #aaa;
+	border: solid 1px #aaa;
+	margin: 0px 9px 0px 9px;
 }
 .contenidoRutinas p.fecha {
 	width: 40px;
@@ -1334,12 +1351,13 @@ margin: 0px;
 }
 .contenidoCalendario_retos h1.encabezado{
 	color: #fff;
-	background: #1f2a84 url(../img/flecha.png)no-repeat 10px 15px;
+	background: #1f2a84;
 	font-weight: bold;
 	font-size: 16px;
-	padding: 10px 0px 10px 195px;
+	padding: 10px 10px 10px 195px;
 	width: 100%;
 	font-family: 'Dosis';
+	text-align: right;
 } 
 .contenidoCalendario_retos .card {
 	margin: 0px;
@@ -1355,6 +1373,10 @@ margin: 0px;
 	font-size: 44px;
 	color: #1f2a84;
 	font-weight: bold;
+}
+.contenidoCalendario_retos .ion-arrow-left-b:before {
+	position: absolute;
+	left: 30px;
 }
 .contenidoCalendario_retos p.jugador{
 	font-size: 20px;
@@ -1442,7 +1464,8 @@ margin: 0px;
 	padding: 10px;
 }
 .contenidoCalendario_retos table{
-	margin: 20px 0px 20px 28px;
+	margin: 20px 20px 20px 28px;
+	width: 80%;
 }
 .contenidoCalendario_retos  div.list.card{
 	background: #f0f0f0;
