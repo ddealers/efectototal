@@ -18,6 +18,7 @@ angular.module('efectototal', ['ionic', 'efectototal.controllers', 'efectototal.
 		  StatusBar.styleDefault();
 		}
   	});
+  	/*
 	$rootScope.$on('$stateChangeStart', function(event, toState) {
 		if (toState.name !== "app.login" && toState.name !== "app.logout" && !localStorage['id']) {
 			$state.go('app.login');
@@ -55,44 +56,63 @@ angular.module('efectototal', ['ionic', 'efectototal.controllers', 'efectototal.
 	  url: "/perfil",
 	  views: {
 		'menuContent' :{
-		  templateUrl: "templates/profile.html"
+		  templateUrl: "templates/profile.html",
+		  controller: 'ProfileCtrl'
 		}
 	  }
 	})
-
-	.state('app.perfil_actividad', {
-	  url: "/perfil_actividad",
+	.state('app.actividad', {
+	  url: "/actividad",
 	  views: {
 		'menuContent' :{
-		  templateUrl: "templates/profile_actividad.html"
+		  templateUrl: "templates/profile.actividad.html",
+		  controller: "MiActividadCtrl"
 		}
 	  }
 	})
-
-	.state('app.perfil_informacion', {
-	  url: "/perfil_informacion",
+	.state('app.informacion', {
+	  url: "/informacion",
 	  views: {
 		'menuContent' :{
-		  templateUrl: "templates/profile_informacion.html",
+		  templateUrl: "templates/profile.informacion.html",
 		  controller: "ProfileInfoCtrl"
 		}
 	  }
 	})
-
-	.state('app.videos', {
-	  url: "/videos/:video",
+	.state('app.rutinas', {
+	  url: "/rutinas",
 	  views: {
 		'menuContent' :{
-		  templateUrl: "templates/videos.html"
+		  templateUrl: "templates/rutinas.html",
+		  controller: "MisRutinasCtrl"
+		}
+	  }
+	})
+	.state('app.retos', {
+	  url: "/retos",
+	  views: {
+		'menuContent' :{
+		  templateUrl: "templates/retos.html",
+		  controller: "MisRetosCtrl"
 		}
 	  }
 	})
 
-	.state('app.vidxcat', {
-	  url: "/vidxcat",
+	.state('app.categorias', {
+	  url: "/categorias/:cat",
 	  views: {
 		'menuContent' :{
-		  templateUrl: "templates/vidxcategor.html"
+		  templateUrl: "templates/videos.categoria.html",
+		  controller: 'CategoriesCtrl'
+		}
+	  }
+	})
+	.state('app.videos', {
+	  url: "/videos/:video",
+	  views: {
+		'menuContent' :{
+		  templateUrl: "templates/videos.id.html",
+		  controller: 'VideoCtrl'
 		}
 	  }
 	})
@@ -144,15 +164,6 @@ angular.module('efectototal', ['ionic', 'efectototal.controllers', 'efectototal.
 	  }
 	})
 
-	.state('app.mis_retos', {
-	  url: "/mis_retos",
-	  views: {
-		'menuContent' :{
-		  templateUrl: "templates/mis_retos.html"
-		}
-	  }
-	})
-
    .state('app.resultados_retos', {
 	  url: "/resultados_retos",
 	  views: {
@@ -171,20 +182,12 @@ angular.module('efectototal', ['ionic', 'efectototal.controllers', 'efectototal.
 	  }
 	})
 
-   .state('app.mis_rutinas', {
-	  url: "/mis_rutinas",
-	  views: {
-		'menuContent' :{
-		  templateUrl: "templates/mis_rutinas.html"
-		}
-	  }
-	})
-
 	.state('app.newsfeed', {
 	  url: "/newsfeed",
 	  views: {
 		'menuContent' :{
-		  templateUrl: "templates/newsfeed.html"
+		  templateUrl: "templates/newsfeed.html",
+		  controller: "NewsfeedCtrl"
 		}
 	  }
 	})

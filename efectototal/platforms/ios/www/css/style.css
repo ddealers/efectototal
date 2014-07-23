@@ -42,6 +42,16 @@ h1{
 	-webkit-transform: skew(25deg);
 	display: block;
 }
+.info-title.negative{
+	background: linear-gradient(45deg, #888440 0%,#f0b840 100%);
+}
+.perfil{
+	border-radius: 50%;
+	margin: 5px auto;
+}
+.submenu .item-content{
+	background: #eee;
+}
 /*.scroll-content{
 	background: #eee;
 }*/				
@@ -196,6 +206,11 @@ h1{
 .contenidoBlog{
 	padding: 0 0 10px;
 }
+.contenidoBlog .loading{
+	text-align: center;
+	padding: 10px;
+	font-size: 25px;
+}
 .contenidoBlog .card{
 	margin: 12px;
 	border: #aaa 1px solid;
@@ -203,10 +218,11 @@ h1{
 	background: #f0f0f0;
 }
 .contenidoBlog .fondoImg{
-	margin: 38px 0px 0px 0px;
+	margin: 25px 0px 65px;
 	border-top: solid 1px #aaa;
 	padding: 0px 30px 10px 30px;
 	border-bottom: 1px solid #aaa;
+	position: relative;
 }
 .contenidoBlog .full-image {
 	width: 100%;
@@ -221,9 +237,8 @@ h1{
 	width: 38px;
 	border: solid #aaa 1px;
 	height: 38px;
-	/* margin: 6px 0px 0px -53px; */
 	font-size: 16px;
-	padding: 2px 8px 5px;
+	text-align: center;
 	color: #919191;
 	overflow: hidden;
 	position: absolute;
@@ -276,12 +291,12 @@ h1{
 	margin-top: 16px;
 }
 .contenidoBlog div.botonMas{
-	/*
-	background: #f0f0f0;
-	border: #b1b1b1 solid 1px;
-	border-top: none;
-	padding: 20px 0px 45px 0px;
-	*/
+	text-align: center;
+	width: 100%;
+	border-top: 1px #aaa solid;
+	position: absolute;
+	bottom: -68px;
+	left: 0;
 	text-align: center;
 }
 .contenidoBlog .button-Plus.button-positive {
@@ -289,6 +304,7 @@ h1{
 	background: none;
 	border: none;
 	color: #4a87ee;
+	width: 100%;
 }
 /* -------------------------------------------------------------------------- CONTADOR DE CALORIAS*/
 .contenidoContador{

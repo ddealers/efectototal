@@ -1,6 +1,11 @@
 angular.module('efectototal.controllers', [])
 
-.controller('AppCtrl', function($scope, $state) {
+.controller('AppCtrl', function($scope, $state, Videos) {
+	$scope.categorias = false;
+
+	$scope.toggleSubmenu = function(vars){
+		$scope[vars] = !$scope[vars];
+	}
 	$scope.logout = function () {
 		facebookConnectPlugin.logout();
 		$state.go('app.login');
@@ -8,14 +13,17 @@ angular.module('efectototal.controllers', [])
 
 	$scope.share = function(){
 		facebookConnectPlugin.showDialog({method:'apprequests',message:'Te invito a usar Efecto Total'}, onSuccess, errorCallback);
-		//facebookConnectPlugin.api('me?fields=invitable_friends', renderFriends, errorCallback);
-		function errorCallback(error){
-			console.log(error);
-		}
-		function onSuccess(data){
-			console.log(data);
-		}
 	}
+	function errorCallback(error){
+		console.log(error);
+	}
+	function onSuccess(data){
+		console.log(data);
+	}
+	Videos.categories().then(function(categories){
+		$scope.categories = categories;
+		console.log($scope.categories);
+	});
 })
 .controller('LoginCtrl', function($scope, $location, User) {
 	$scope.loading = false;
@@ -28,7 +36,7 @@ angular.module('efectototal.controllers', [])
 			localStorage.setItem('name', data.scope.name);
 			localStorage.setItem('email', data.scope.email);
 			localStorage.setItem('birthday', birthday);
-			localStorage.setItem('fbid', data.fbid);
+			localStorage.setItem('fbid', data.scope.fbid);
 			localStorage.setItem('id', data.id);
 			$scope.loading = false;
 			$location.path('/app/perfil');
@@ -50,6 +58,10 @@ angular.module('efectototal.controllers', [])
 	};
 })
 
+.controller('ProfileCtrl', function($scope){
+	$scope.fbid = localStorage.getItem('fbid');
+})
+
 .controller('ProfileInfoCtrl', function($scope){
 	$scope.data = {
 		name: localStorage.getItem('name'),
@@ -58,7 +70,7 @@ angular.module('efectototal.controllers', [])
 		height: localStorage.getItem('height'),
 		weight: localStorage.getItem('weight')
 	};
-
+	$scope.fbid = localStorage.getItem('fbid');
 	$scope.$watch('data.height',function(newValue, oldValue){
 		$scope.getIMC();
 		$scope.getIdealWeight();
@@ -84,9 +96,111 @@ angular.module('efectototal.controllers', [])
 	$scope.getIMC();
 	$scope.getIdealWeight();
 })
-.controller('BlogCtrl', function($scope, $state, Blog) {
+.controller('CategoriesCtrl', function($scope, $state, $stateParams, Videos, User){
+	var id = localStorage.getItem('id');
+	$scope.videos = [];
+	$scope.onroutine = false;
+	
+	$scope.toggleVideo = function(video){
+		User.toggle(id, video).then(function(data){
+			$scope.onroutine = data;
+		});
+	}
+	
+	Videos.byCategory($stateParams.cat).then(function(data){
+		$scope.videos = data;
+	});
+	$scope.$watch('videos', function(){
+		if($scope.videos.length > 0){
+			Videos.status(id, $scope.videos[0].id_video).then(function(data){
+				$scope.onroutine = (data.estatus == "0") ? false : true;
+			});
+		}
+	});
+})
+.controller('VideoCtrl', function($scope, $state, $stateParams, Videos, User){
+	var id = localStorage.getItem('id');
+	$scope.toggleVideo = function(video){
+		User.toggle(id, video).then(function(data){
+			$scope.onroutine = data;
+		});
+	}
+	Videos.byId($stateParams.video).then(function(data){
+		$scope.video = data;
+	});
+})
+.controller('MisRutinasCtrl', function($scope, $state){
+	$scope.fbid = localStorage.getItem('fbid');
+})
+.controller('MiActividadCtrl', function($scope, $state){
+	$scope.fbid = localStorage.getItem('fbid');
+})
+.controller('MisRetosCtrl', function($scope, $state){
+	$scope.fbid = localStorage.getItem('fbid');
+})
+.controller('NewsfeedCtrl', function($scope, $state){
+	$scope.fbid = localStorage.getItem('fbid');
+})
+.controller('BlogCtrl', function($scope, $state, $sce, $ionicLoading, Blog) {
+	$scope.posts = [];
+	$scope.renderTitle = function(title){
+		if(title) return title.replace(/&#8220;/,'"').replace(/&#8221;/,'"').replace(/&#8230;/,'...');
+	}
+	$scope.renderHTML = function(htmlCode){
+		return $sce.trustAsHtml(htmlCode);
+	};
+	$scope.parseDate = function(dateStr){
+		var dateArr = dateStr.split(/[- ]/);
+		var month = "";
+		switch(dateArr[1]){
+			case "01":
+			month = "ENE";
+			break;
+			case "02":
+			month = "FEB";
+			break;
+			case "03":
+			month = "MAR";
+			break;
+			case "04":
+			month = "ABR";
+			break;
+			case "05":
+			month = "MAY";
+			break;
+			case "06":
+			month = "JUN";
+			break;
+			case "07":
+			month = "JUL";
+			break;
+			case "08":
+			month = "AGO";
+			break;
+			case "09":
+			month = "SEP";
+			break;
+			case "10":
+			month = "OCT";
+			break;
+			case "11":
+			month = "NOV";
+			break;
+			case "12":
+			month = "DIC";
+			break;
+		}
+		return $sce.trustAsHtml(dateArr[2] + '<span>' + month + '</span>');
+	};
+	$scope.open = function(url){
+		window.open(url, '_system', 'location=no');
+	}
+	$ionicLoading.show({
+      template: 'CARGANDO...'
+    });
 	Blog.posts().then(function(data){
-		console.log(data);
+		$ionicLoading.hide();
+		$scope.posts = data;
 	});
 })
 .controller('CounterCtrl', function($scope, $state, $interval) {
