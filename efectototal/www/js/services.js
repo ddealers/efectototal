@@ -31,6 +31,20 @@ angular.module('efectototal.services', [])
 		});
 		return deferred.promise;
 	}
+	var routines = function(user){
+		var deferred = $q.defer();
+		api('/user/routines', {user: user},
+		function(response){
+			if(response.success){
+				deferred.resolve(response.data);
+			}else{
+				deferred.reject(response.error);
+			}
+		},function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;
+	}
 	var toggleVideo = function(user, video){
 		var deferred = $q.defer();
 		api('/user/toggle_video', {user: user, video: video},

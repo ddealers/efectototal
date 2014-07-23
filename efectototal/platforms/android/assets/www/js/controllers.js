@@ -120,6 +120,8 @@ angular.module('efectototal.controllers', [])
 })
 .controller('VideoCtrl', function($scope, $state, $stateParams, Videos, User){
 	var id = localStorage.getItem('id');
+	$scope.onroutine = false;
+
 	$scope.toggleVideo = function(video){
 		User.toggle(id, video).then(function(data){
 			$scope.onroutine = data;
@@ -128,9 +130,22 @@ angular.module('efectototal.controllers', [])
 	Videos.byId($stateParams.video).then(function(data){
 		$scope.video = data;
 	});
+	$scope.$watch('video', function(){
+		if($scope.video.id_video){
+			Videos.status(id, $scope.video.id_video).then(function(data){
+				$scope.onroutine = (data.estatus == "0") ? false : true;
+			});
+		}
+	});
 })
 .controller('MisRutinasCtrl', function($scope, $state){
+	var id = localStorage.getItem('id');
 	$scope.fbid = localStorage.getItem('fbid');
+	
+	var id = localStorage.getItem('id');
+	User.routines(id).then(function(data){
+		$scope.routines = data;
+	});
 })
 .controller('MiActividadCtrl', function($scope, $state){
 	$scope.fbid = localStorage.getItem('fbid');

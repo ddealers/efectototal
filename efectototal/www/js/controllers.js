@@ -25,10 +25,12 @@ angular.module('efectototal.controllers', [])
 		console.log($scope.categories);
 	});
 })
-.controller('LoginCtrl', function($scope, $location, User) {
+.controller('LoginCtrl', function($scope, $state, OpenFB, User) {
 	$scope.loading = false;
-	function registerAndLogin(){
-		facebookConnectPlugin.api('/me', null, onSuccess, onError);
+	function registerAndLogin(data){
+		sessionStorage.setItem('fbtoken', data.authResponse.accessToken);
+		console.log(data.authResponse.accessToken, sessionStorage.getItem('fbtoken'));
+		OpenFB.get('/me').success(onSuccess);
 	}
 	function onSuccess(data){
 		User.create(data).then(function(data){
@@ -39,7 +41,7 @@ angular.module('efectototal.controllers', [])
 			localStorage.setItem('fbid', data.scope.fbid);
 			localStorage.setItem('id', data.id);
 			$scope.loading = false;
-			$location.path('/app/perfil');
+			$state.go('app.perfil');
 		}, function(error){
 			$scope.loading = false;
 			navigator.notification.alert(error, errorCallback);
@@ -48,13 +50,12 @@ angular.module('efectototal.controllers', [])
 	function onError(error) {
 		navigator.notification.alert(error, errorCallback);
 	}
-	function errorCallback(error){
-		console.log(error);
+	function errorCallback(data){
+		console.log(data);
 	}
 	$scope.facebookLogin = function () {
 		$scope.loading = true;
-		facebookConnectPlugin.login(
-			['email','user_birthday','user_friends'],registerAndLogin,onError);
+		facebookConnectPlugin.login(['email','user_birthday','user_friends'],registerAndLogin,onError);
 	};
 })
 
@@ -121,7 +122,7 @@ angular.module('efectototal.controllers', [])
 .controller('VideoCtrl', function($scope, $state, $stateParams, Videos, User){
 	var id = localStorage.getItem('id');
 	$scope.onroutine = false;
-	
+
 	$scope.toggleVideo = function(video){
 		User.toggle(id, video).then(function(data){
 			$scope.onroutine = data;
@@ -139,7 +140,12 @@ angular.module('efectototal.controllers', [])
 	});
 })
 .controller('MisRutinasCtrl', function($scope, $state){
+	var id = localStorage.getItem('id');
 	$scope.fbid = localStorage.getItem('fbid');
+	
+	User.routines(id).then(function(data){
+		$scope.routines = data;
+	});
 })
 .controller('MiActividadCtrl', function($scope, $state){
 	$scope.fbid = localStorage.getItem('fbid');

@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('efectototal', ['ionic', 'efectototal.controllers', 'efectototal.services'])
+angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers', 'efectototal.services'])
 
 .run(function($rootScope, $state, $ionicPlatform, $window) {
 	$ionicPlatform.ready(function() {
@@ -18,8 +18,7 @@ angular.module('efectototal', ['ionic', 'efectototal.controllers', 'efectototal.
 		  StatusBar.styleDefault();
 		}
   	});
-  	/*
-	$rootScope.$on('$stateChangeStart', function(event, toState) {
+  	$rootScope.$on('$stateChangeStart', function(event, toState) {
 		if (toState.name !== "app.login" && toState.name !== "app.logout" && !localStorage['id']) {
 			$state.go('app.login');
 		  event.preventDefault();

@@ -12,7 +12,7 @@
 					<ul>
 						<li ng-repeat="video in videos">
 							<a href="#/app/videos/{{video.id_video}}">
-								<img class="poster" ng-src="{{video.thumb1}}">
+								<img class="poster" ng-src="http://efectototal.com/media/{{video.thumb1}}">
 								<p class="titulo">{{video.name}}</p>
 								<p class="subtitulo">Minutos {{video.duration}}</p>
 							</a>
@@ -20,7 +20,7 @@
 					</ul>
 				</div>
 				<div class="col col-67">
-					<video class="videos2" src="{{videos[0].video}}"></video>
+					<video class="videos2" src="http://efectototal.com/media/{{videos[0].video}}"></video>
 					<button ng-show="!onroutine" class="info-title" ng-click="toggleVideo(videos[0].id_video)"><span> AGREGAR A MIS RUTINAS</span></button>
 					<button ng-show="onroutine" class="info-title negative" ng-click="toggleVideo(videos[0].id_video)"><span> QUITAR DE MIS RUTINAS</span></button>
 					<p class="text">{{videos[0].name}}</p>
@@ -30,8 +30,8 @@
 			</div>
 			<div class="row informacionNutri">
 				<div class="col redes">
-					<a><img src="./img/facebook.png" class="redesf"></a>
-					<a><img src="./img/twitter.png" class="redest"></a>
+					<a><img src="./img/share_facebook.png" class="redesf"></a>
+					<a><img src="./img/share_twitter.png" class="redest"></a>
 				</div>	
 				<div class="col col-75">
 					<!--<p class="info">Información nutricional</p>-->
