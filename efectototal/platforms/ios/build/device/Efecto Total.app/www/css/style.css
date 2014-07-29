@@ -1,0 +1,99 @@
+/* Empty. Add your own CSS if you like */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+/* ----------------------------------------------------------------------- CONECTATE CON FACEBOOK */
+img.inicio{
+	width: 100%;
+}
+div.boton{
+	border-top: 1px solid #AAB8BE;
+	margin: 4px 0px 0px 15px;
+	width: 288px;
+	border-bottom: 1px solid #AAB8BE;
+	position: relative;
+	height: 49px;
+}
+button.facebook{
+	position: absolute;
+	color: #fff;
+	background: #2A719D url(./img/iconF.png)no-repeat 5px;
+	left: 25px;
+	top: 4px;
+	border: none;
+	padding: 7px 7px 7px 40px;
+	border-radius: 5px;
+	border-top: solid #5C789D 1px; 
+	border-bottom: solid #116A9D 1px;
+	border-right: solid #116A9D 1px;
+	text-shadow: 0 0.5px 0px rgba(0,0,0,1);
+	font-size: 16px;
+}
+span{
+	font-weight: bold;
+}
+p.cargando{
+	font-family: 'Advent Pro', sans-serif;
+	color: #DA3231;
+	padding: 85px 0px 0px 120px;
+}
+img.efectoTotal{
+	width: 50%;
+	position: absolute;
+	left: 81px;
+	top: 372px;
+}
+/*--------------------------------------------------------------------------- CONTENIDO GENERAL */
+section.contenido{
+	width: 300px;
+	height: 28%;
+	border: #b4b4b4 solid 1px;
+	margin-left: 10px;
+}
+h1{
+	font-family: 'Advent Pro', sans-serif;
+	color: #4B4B4B;
+	font-size: 25px;
+	font-weight: normal;
+	left: 210px;
+	padding: 10px 0px 7px 0px;
+	position: relative;
+}
+div.encabezado{
+	color: #fff;
+	background: #1f2a84;
+	font-family: 'Advent Pro', sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+}
+p.titulo{
+	padding: 10px;
+	text-align: right;
+	background: url(./img/flecha.png) no-repeat 14px 15px;
+}
+img.fotoPerfil{
+	width: 30%;
+	margin: 5px 0px 0px 100px;
+}
+article.head{
+	background: #e4e4e4;
+	height: 100px;
+}
+p.subtitulo{
+	font-family: 'Advent Pro', sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	color: #e01026;
+	margin: 9px 0px 0px 0px;
+	text-align: center;
+}
+/* ------------------------------------------------------------ BLOG */
+h1.encabezado{
+	color: #fff;
+	background: #1f2a84;
+	font-family: 'Advent Pro', sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+}
