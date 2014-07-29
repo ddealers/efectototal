@@ -453,7 +453,11 @@ h1.title{
 .contenidoContador .info-title{
 	margin: 10px auto;
 	display: block;
-	min-height: 40px;
+	min-height: 20px;
+}
+.contenidoContador button.info-title{
+	width: 40%;
+	margin-left: 138px;
 }
 .contenidoContador .info-title span {
 	-webkit-transform: skew(25deg);

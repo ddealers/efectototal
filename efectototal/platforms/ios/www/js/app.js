@@ -18,7 +18,7 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers', 'ef
 		  StatusBar.styleDefault();
 		}
   	});
-  	$rootScope.$on('$stateChangeStart', function(event, toState) {
+  	/*$rootScope.$on('$stateChangeStart', function(event, toState) {
 		if (toState.name !== "login" && !localStorage['id']) {
 			$state.go('login');
 		  event.preventDefault();
@@ -195,6 +195,16 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers', 'ef
 	  views: {
 		'menuContent' :{
 		  templateUrl: "templates/newsfeed.html",
+		  controller: "NewsfeedCtrl"
+		}
+	  }
+	})
+
+	.state('app.tour', {
+	  url: "/tour",
+	  views: {
+		'menuContent' :{
+		  templateUrl: "templates/tour.html",
 		  controller: "NewsfeedCtrl"
 		}
 	  }

@@ -27,7 +27,12 @@ angular.module('efectototal.controllers', [])
 	}
 	function onSuccess(data){
 		User.create(data).then(function(data){
-			var birthday = new Date(data.scope.birthday).toISOString().substring(0, 10);
+			var birthday;
+			if(data.scope.birthday){
+				birthday = new Date(data.scope.birthday).toISOString().substring(0, 10);
+			}else{
+				birthday = null;
+			}
 			localStorage.setItem('name', data.scope.name);
 			localStorage.setItem('email', data.scope.email);
 			localStorage.setItem('birthday', birthday);
@@ -304,8 +309,6 @@ angular.module('efectototal.controllers', [])
 	$scope.selectFriends = function(){
 		facebookConnectPlugin.api('/me/?fields=friends',[],function(data){
 			$scope.friends = data.friends.data;
-			//$scope.friends.push({name:'Sergio', id:'10203304531788306'});
-			//$scope.friends.push({name:'Ximena', id:'10152145515047051'})
 			$scope.modal.show();
 		});
 	}
@@ -322,6 +325,7 @@ angular.module('efectototal.controllers', [])
 			_results.push(_friend.id);
 		}
 		$scope.challenge.friends = _results.toString();
+
 		Challenge.create($scope.challenge).then(onSuccess, onError);
 	}
 	function onSuccess(){
