@@ -35,7 +35,6 @@
 		581916883E3C47369EE1A862 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F68B4324BB1470EADDB750D /* CoreMotion.framework */; };
 		5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEE5B34173C68D80009041E /* CoreLocation.framework */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
-		5F9230A9FE42472897F9D3CA /* FacebookConnectPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FB80DFA2A2ED4A689124363B /* FacebookConnectPlugin.m */; };
 		66EC676F935B4288BEBE2570 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7103FE6A22F64EE8AB4B08B4 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		68526AEC0EF84040B580C9D2 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 614477ED88F240E8B4786A77 /* CDVStatusBar.m */; };
 		742A0597E1624743A4B9A3E6 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CB1B9672E2E54FE5BD928C3D /* CDVNotification.bundle */; };
@@ -138,7 +137,6 @@
 		7E7966DC1810823500FA85AD /* icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small.png"; sourceTree = "<group>"; };
 		7E7966DD1810823500FA85AD /* icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small@2x.png"; sourceTree = "<group>"; };
 		7F68B4324BB1470EADDB750D /* CoreMotion.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		8AFBB152FF0F4ADF8835BEA0 /* FacebookConnectPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookConnectPlugin.h; path = com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Efecto Total-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Efecto Total-Info.plist"; path = "../Efecto Total-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		A0299B86876E4A979CCB9D5A /* MessageUI.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		AE57C0745A304ECCA8209675 /* CDVVibration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVVibration.m; path = org.apache.cordova.vibration/CDVVibration.m; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 		F28EDAF737EE4C85A2E1666B /* CDVDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVDevice.h; path = org.apache.cordova.device/CDVDevice.h; sourceTree = "<group>"; };
 		F29A2A10C04F4857B1BB0CA6 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "Efecto Total/config.xml"; sourceTree = "<group>"; };
-		FB80DFA2A2ED4A689124363B /* FacebookConnectPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookConnectPlugin.m; path = com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

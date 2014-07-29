@@ -13,6 +13,12 @@ h1{
 	font-size: 16px;
 }
 /*--------------------------------------------------------------------------- CONTENIDO GENERAL */
+.encabezado{
+	position: relative;
+}
+h1.title{
+	text-transform: uppercase;
+}
 .bar .title{
 	font-size: 24px;
 	text-align: right;
@@ -144,8 +150,8 @@ h1{
 	background: #1f2a84;
 	font-weight: bold;
 	font-size: 16px;
-	padding: 10px 10px 10px 190px;
-	margin: 0px 10px 0px 10px;
+	padding: 10px;
+	margin: 0;
 	font-family: 'Dosis';
 	text-align: right;
 } 
@@ -157,10 +163,10 @@ h1{
 	width: 25%;
 }
 .contenidoPerfil_actividad div.list.card{
-	margin: 0px 10px 0px 10px;
+	margin: 0px;
 }
 .contenidoPerfil_actividad div.list.historial{
-	margin: 0px 10px 0px 10px;
+	margin: 0px;
 }
 .contenidoPerfil_actividad .ion-arrow-left-b:before {
 	position: absolute;
@@ -183,9 +189,7 @@ h1{
 .contenidoPerfil_actividad article{
 	background: #f0f0f0;
 	height: 55px;
-	border-right: 1px solid #aaa;
-	border-left: 1px solid #aaa;
-	margin: 0px 9px 0px 9px;
+	margin: 0px;
 }
 .contenidoPerfil_actividad .item-image{
 	background: #e5e5e5;
@@ -201,7 +205,79 @@ h1{
 }
 .contenidoPerfil_actividad .card .historial .item:first-child{
 	background: #f0f0f0;
+	border: none;
 }
+
+/* -------------------------------------------------------------------------- CONTENIDO RETOS */
+.contenidoRetos{
+	width: 95%;
+	background-color: #eee;
+	border: #aaa 1px solid;
+	margin: 5px auto;
+}
+.contenidoRetos h1.encabezado{
+	color: #fff;
+	background: #1f2a84;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px;
+	margin: 0;
+	font-family: 'Dosis';
+	text-align: right;
+} 
+.contenidoRetos h1.encabezado i{
+	float: left;
+}
+.contenidoRetos .item-image img:first-child, .item-image .list-img {
+	vertical-align: middle;
+	width: 25%;
+}
+.contenidoRetos div.list.card{
+	margin: 0px;
+}
+.contenidoRetos div.list.historial{
+	margin: 0px;
+}
+.contenidoRetos .ion-arrow-left-b:before {
+	position: absolute;
+	left: 30px;
+}
+.contenidoRetos p.subtitulo{
+	text-align: center;
+	color: #e01026;
+	font-weight: 500;
+	font-size: 20px;
+	padding: 5px 0px 0px 0px;	
+	margin: 0;
+}
+.contenidoRetos p{
+	color: #5177c8;
+	font-weight: 500;
+	font-size: 20px;
+	padding: 0px 0px 0px 12px;
+}
+.contenidoRetos article{
+	background: #f0f0f0;
+	height: 55px;
+	margin: 0px;
+}
+.contenidoRetos .item-image{
+	background: #e5e5e5;
+	border: solid 1px #aaa; 
+}
+.contenidoRetos .item{
+	border: solid 1px #aaa;
+	background: #f0f0f0;
+	font-size: 15px; 
+}
+.contenidoRetos .card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
+	background: #d4d3d3; 
+}
+.contenidoRetos .card .historial .item:first-child{
+	background: #f0f0f0;
+	border: none;
+}
+
 /* -------------------------------------------------------------------------- BLOG */
 .contenidoBlog{
 	padding: 0 0 10px;
@@ -349,15 +425,24 @@ h1{
 	padding: 17px 0px 17px 0px;
 	text-align: center;
 }
+.contenidoContador progress-bar{
+	display: block;
+	background: #41b296;
+	height: 80%;
+	/*width: 95%;*/
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 2%;
+	bottom: 0;
+}
 .contenidoContador p.caloriasMenos{
 	color: #5880d6;
-	display: inline-block;
-	width: 165px;
 	text-align: center;
 }
 .contenidoContador p.caloriasTotales{
 	color: #e0032a;
-	display: inline-block;
+	text-align: center;
 }
 .contenidoContador div.contenidoCal{
 	border-bottom: solid 1px #aaa;
@@ -365,11 +450,10 @@ h1{
 .contenidoContador input[type="range"] {
 	padding: 0px 0px 0px 40px;
 }
-.contenidoContador img.lupa-rojo{
-	padding: 24px 0px 0px 117px;
-}
-.contenidoContador button.info-title{
-
+.contenidoContador .info-title{
+	margin: 10px auto;
+	display: block;
+	min-height: 40px;
 }
 .contenidoContador .info-title span {
 	-webkit-transform: skew(25deg);
@@ -378,19 +462,40 @@ h1{
 .contenidoContador p.inicioContador{
 	color: #444;
 	font-size: 26px;
-	display: inline-block;
-	padding: 0px 0px 0px 65px
+	display: block;
+	text-align: center;
+}
+.contenidoContador .left img{
+	display: block;
+	margin: 0 auto;
+}
+.contenidoContador .right img{
+	display: block;
+	margin: 0 auto;
 }
 .contenidoContador p.finContador{
 	color: #e0032a;
 	font-size: 26px;
-	display: inline-block;
-	padding: 0px 0px 0px 123px;
+	display: block;
+	text-align: center;
 }
+/*
 .contenidoContador .list:last-child {
 	margin: -24px 0px 0px 0px;
 	text-align: center;
 }
+.contenidoContador .list{
+	margin: 5px auto;
+}
+*/
+.contenidoContador .item{
+	background: #f0f0f0;
+	border: solid 1px #aaa;	
+}
+.contenidoContador .item-divider{
+	color: #e0032a;
+}
+/*
 .contenidoContador ul{
 	text-align: center;
 	color: #e0032a;
@@ -406,6 +511,7 @@ h1{
 	color: #444;
 	font-weight: normal;
 }
+*/
 /*---------------------------------------------------------------- VIDEOS*/
 .contenidoVideos{
 	width: 95%;
@@ -910,7 +1016,7 @@ h1{
 }
 .contenidoTe_reto label.item.item-input{
 	background: #f0f0f0;
-	margin: 0px 9px 0px 9px;
+	margin: 10px 9px 0;
 }
 .contenidoTe_reto div.list.card{
 	margin: 0px;
@@ -923,12 +1029,16 @@ h1{
 }
 .contenidoTe_reto input[type="text"]{
 	font-size: 13px;
-	padding: 0px 0px 0px 70px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.contenidoTe_reto input[type="date"]{
+	text-align: center;
 }
 .contenidoTe_reto label.item.item-input.item-select{
 	width: 94%;
 	margin-left: 9px;
-	margin: 12px 0px 0px 9px;
+	/*margin: 12px 0px 0px 9px;*/
 }
 .contenidoTe_reto button.seleccionar{
 	font-family: 'Dosis';
@@ -953,7 +1063,7 @@ h1{
 	color: white;
 	font-weight: bold;
 	width: 80%;
-	margin: 0px 28px 9px;
+	margin: 9px 28px;
 	text-align: center;
 	border: 1px #999 solid;
 }
@@ -970,8 +1080,10 @@ h1{
 .contenidoMis_retos div.item.item-image {
 	border-bottom: solid 1px #aaa;
 	border-top: solid 1px #aaa;
-	height: 56px;
 	background: #d4d3d3;
+}
+.contenidoMis_retos .item-image img:first-child{
+	width: 25%;
 }
 .contenidoMis_retos{
 	width: 95%;
@@ -984,13 +1096,13 @@ h1{
 	background: #1f2a84;
 	font-weight: bold;
 	font-size: 16px;
-	padding: 10px 10px 10px 195px;
+	padding: 10px;
+	margin: 0;
 	font-family: 'Dosis';
 	text-align: right;
 } 
-.contenidoMis_retos .ion-arrow-left-b:before {
-	position: absolute;
-	left: 30px;
+.contenidoMis_retos h1.encabezado i{
+	float: left;
 }
 .contenidoMis_retos p.subtitulo{
 	text-align: center;
@@ -1004,7 +1116,19 @@ h1{
 .contenidoMis_retos p.iniciar{
 	color: #5177c8;
 	font-size: 24px;
-	padding: 10px 0px 0px 55px;
+	text-align: center;
+}
+.contenidoMis_retos p.versus{
+	margin: 50px 0px 0px -10px;
+	font-size: 44px;
+	color: #1f2a84;
+	font-weight: bold;
+}
+.contenidoMis_retos div.row{
+	background: #f0f0f0;
+}
+.contenidoMis_retos div.col{
+	text-align: center;
 }
 .contenidoMis_retos .card {
 margin: 0px;
@@ -1014,11 +1138,6 @@ margin: 0px;
 }
 .contenidoMis_retos img.avatarRetador{
 	margin: 0px 0px 0px -21px;
-}
-.contenidoMis_retos p.versus{
-	margin: 50px 0px 0px -10px;
-	font-size: 44px;
-	color: #444;
 }
 .contenidoMis_retos p.jugador{
 	font-size: 20px;
@@ -1122,10 +1241,10 @@ margin: 0px;
 .contenidoResultados_retos p.jugador{
 	font-size: 20px;
 	color: #41b296;
-	margin: 7px 0px 0px -35px;
+	/*margin: 7px 0px 0px -35px;*/
 }
 .contenidoResultados_retos p.jugador2{
-	margin: 0px 0px 0px -15px;
+	/*margin: 0px 0px 0px -15px;*/
 	font-size: 20px;
 	color: #444;
 }
@@ -1136,8 +1255,14 @@ margin: 0px;
 	background: #f0f0f0;
 	height: 67px;
 }
+.contenidoResultados_retos div.row{
+	background: #f0f0f0;
+}
+.contenidoResultados_retos div.col{
+	text-align: center;
+}
 .contenidoResultados_retos p.calorias{
-	margin: 10px 0px 0px -31px;
+	/*margin: 10px 0px 0px -31px;*/
 	color: #41b296;
 	font-size: 16px;
 	font-weight: bold;
@@ -1148,7 +1273,7 @@ margin: 0px;
 	color: #41b296;
 }
 .contenidoResultados_retos p.calorias2{
-	margin: 10px 0px 0px -5px;
+	/*margin: 10px 0px 0px -5px;*/
 	font-size: 16px;
 }
 .contenidoResultados_retos p.quemadas2{
@@ -1234,7 +1359,7 @@ margin: 0px;
 	font-weight: bold;
 	font-size: 16px;
 	padding: 10px;
-	margin: 0px 8px 0px 10px;
+	margin: 0;
 	font-family: 'Dosis';
 	text-align: right;
 } 
@@ -1268,10 +1393,8 @@ margin: 0px;
 .contenidoRutinas article{
 	background: #f0f0f0;
 	height: 55px;
-	border-right: solid 1px #aaa;
-	margin: 0px 9px 0px 10px;
-	border-left: solid 1px #aaa;
-	border-bottom: 1px solid #aaa;
+	border-top: solid 1px #aaa;
+	margin: 0px;
 }
 .contenidoRutinas .ion-arrow-right-b:before {
 	/*margin: -25px 0px -2px 0px;*/
@@ -1283,17 +1406,9 @@ margin: 0px;
 	left: 30px;
 }
 .contenidoRutinas div.list.card{
-	margin: 0px 8px 0px 10px;
-	/*padding: 0px 188px 0px 0px;*/
-}
-.contenidoRutinas div.list.card{
 	background: #f0f0f0;
-	/*
-	margin: 0px 0px 0px 10px;
-	width: 94%;
->>>>>>> 9c6db263656a89fa1cc235af487adb9f85e4367a
-	border: 1px solid #aaa;
-	*/
+	margin: 0px;
+	padding: 0px;
 }
 .contenidoRutinas .card .item-image:first-child, .list-inset .item-image:first-child, .padding > .list .item-image:first-child{
 	background: #d4d3d3;
@@ -1377,6 +1492,9 @@ margin: 0px;
 	font-family: 'Dosis';
 	text-align: right;
 } 
+.contenidoCalendario_retos .perfil{
+	width: 50%;
+}
 .contenidoCalendario_retos .card {
 	margin: 0px;
 }
@@ -1399,18 +1517,21 @@ margin: 0px;
 .contenidoCalendario_retos p.jugador{
 	font-size: 20px;
 	color: #41b296;
-	margin: 0px 0px 0px -38px;
+	text-align: center;
 }
 .contenidoCalendario_retos p.jugador2{
-	margin: 0px 0px 0px 14px;
 	font-size: 20px;
 	color: #444;
+	text-align: center;
 }
 .contenidoCalendario_retos div.col.espacio{
 	margin: 0px -39px 0px 0px;
 }
 .contenidoCalendario_retos div.row{
 	background: #f0f0f0;
+}
+.contenidoCalendario_retos div.col{
+	text-align: center;
 }
 .contenidoCalendario_retos p.totales{ 
 	position: absolute;
@@ -1465,11 +1586,28 @@ margin: 0px;
 .contenidoCalendario_retos div.progress{
 	background: linear-gradient(45deg, #3b679e 0%,#7db9e8 100%);
 	width: 85%;
-	margin: 0px 0px 0px 22px;
+	margin: 20px auto;
 	-webkit-transform: skew(-25deg);
 	box-shadow: 0px 0px 5px #999;
 	position: relative;
 	height: 43px;
+}
+.contenidoCalendario_retos progress-bar{
+	display: block;
+	background: #41b296;
+	height: 80%;
+	/*width: 95%;*/
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 2%;
+	bottom: 0;
+}
+.contenidoCalendario_retos progress-bar.curr{
+	z-index: 1;
+}
+.contenidoCalendario_retos progress-bar.cont{
+	background: #e01026;
 }
 .contenidoCalendario_retos progress{
 	position: absolute;
@@ -1482,7 +1620,7 @@ margin: 0px;
 	padding: 10px;
 }
 .contenidoCalendario_retos table{
-	margin: 20px 20px 20px 28px;
+	margin: 20px auto;
 	width: 80%;
 }
 .contenidoCalendario_retos  div.list.card{
@@ -1490,6 +1628,15 @@ margin: 0px;
 }
 .contenidoCalendario_retos td.background{
 	background: #D1D1D1;
+}
+.contenidoCalendario_retos td.draw{
+	background: #EEE;
+}
+.contenidoCalendario_retos td.contender{
+	background: #e01026;
+}
+.contenidoCalendario_retos td.current{
+	background: #41b296;
 }
 /*------------------------------------------- SUMATE */
 .contenidoSumate{

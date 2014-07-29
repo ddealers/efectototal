@@ -20,7 +20,7 @@
 					</ul>
 				</div>
 				<div class="col col-67">
-					<video class="videos2" src="http://efectototal.com/media/{{videos[0].video}}"></video>
+					<video controls id="front-video" class="videos2"></video>
 					<button ng-show="!onroutine" class="info-title" ng-click="toggleVideo(videos[0].id_video)"><span> AGREGAR A MIS RUTINAS</span></button>
 					<button ng-show="onroutine" class="info-title negative" ng-click="toggleVideo(videos[0].id_video)"><span> QUITAR DE MIS RUTINAS</span></button>
 					<p class="text">{{videos[0].name}}</p>

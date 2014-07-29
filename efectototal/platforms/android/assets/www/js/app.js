@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('efectototal', ['ionic', 'efectototal.controllers', 'efectototal.services'])
+angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers', 'efectototal.services', 'efectototal.directives'])
 
 .run(function($rootScope, $state, $ionicPlatform, $window) {
 	$ionicPlatform.ready(function() {
@@ -18,10 +18,9 @@ angular.module('efectototal', ['ionic', 'efectototal.controllers', 'efectototal.
 		  StatusBar.styleDefault();
 		}
   	});
-  	/*
-	$rootScope.$on('$stateChangeStart', function(event, toState) {
-		if (toState.name !== "app.login" && toState.name !== "app.logout" && !localStorage['id']) {
-			$state.go('app.login');
+  	$rootScope.$on('$stateChangeStart', function(event, toState) {
+		if (toState.name !== "login" && !localStorage['id']) {
+			$state.go('login');
 		  event.preventDefault();
 		}
 	});
@@ -42,14 +41,10 @@ angular.module('efectototal', ['ionic', 'efectototal.controllers', 'efectototal.
 	  controller: 'AppCtrl'
 	})
 
-	.state('app.login', {
-	  url: "/login",
-	  views: {
-		'menuContent' :{
-		  templateUrl: "templates/login.html",
-		  controller: 'LoginCtrl'
-		}
-	  }
+	.state('login', {
+		url: "/login",
+		templateUrl: "templates/login.html",
+		controller: 'LoginCtrl'
 	})
 
 	.state('app.perfil', {
@@ -94,6 +89,46 @@ angular.module('efectototal', ['ionic', 'efectototal.controllers', 'efectototal.
 		'menuContent' :{
 		  templateUrl: "templates/retos.html",
 		  controller: "MisRetosCtrl"
+		}
+	  }
+	})
+
+	.state('app.retos-iniciar', {
+	  url: "/retos-iniciar",
+	  views: {
+		'menuContent' :{
+		  templateUrl: "templates/retos.iniciar.html",
+		  controller: "ChallengeInitCtrl"
+		}
+	  }
+	})
+
+	.state('app.retos-invitacion', {
+	  url: "/retos-invitacion/:reto",
+	  views: {
+		'menuContent' :{
+		  templateUrl: "templates/retos.invitacion.html",
+		  controller: "ChallengeInviteCtrl"
+		}
+	  }
+	})
+
+   .state('app.retos-resultados', {
+	  url: "/retos-resultados/:reto",
+	  views: {
+		'menuContent' :{
+		  templateUrl: "templates/retos.resultados.html",
+		  controller: "ChallengeResultsCtrl"
+		}
+	  }
+	})
+
+   .state('app.retos-calendario', {
+	  url: "/retos-calendario/:reto",
+	  views: {
+		'menuContent' :{
+		  templateUrl: "templates/retos.calendario.html",
+		  controller: "ChallengeCalCtrl"
 		}
 	  }
 	})
@@ -155,33 +190,6 @@ angular.module('efectototal', ['ionic', 'efectototal.controllers', 'efectototal.
 	  }
 	})
 
-	.state('app.te_reto', {
-	  url: "/te_reto",
-	  views: {
-		'menuContent' :{
-		  templateUrl: "templates/te_reto.html"
-		}
-	  }
-	})
-
-   .state('app.resultados_retos', {
-	  url: "/resultados_retos",
-	  views: {
-		'menuContent' :{
-		  templateUrl: "templates/resultados_retos.html"
-		}
-	  }
-	})
-
-   .state('app.calendario_retos', {
-	  url: "/calendario_retos",
-	  views: {
-		'menuContent' :{
-		  templateUrl: "templates/calendario_retos.html"
-		}
-	  }
-	})
-
 	.state('app.newsfeed', {
 	  url: "/newsfeed",
 	  views: {
@@ -196,7 +204,8 @@ angular.module('efectototal', ['ionic', 'efectototal.controllers', 'efectototal.
 	  url: "/config",
 	  views: {
 		'menuContent' :{
-		  templateUrl: "templates/configuracion.html"
+		  templateUrl: "templates/configuracion.html",
+		  controller: "ConfigCtrl"
 		}
 	  }
 	})
