@@ -205,7 +205,6 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers', 'ef
 	  views: {
 		'menuContent' :{
 		  templateUrl: "templates/tour.html",
-		  controller: "NewsfeedCtrl"
 		}
 	  }
 	})
