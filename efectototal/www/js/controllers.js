@@ -7,7 +7,7 @@ angular.module('efectototal.controllers', [])
 		$scope[vars] = !$scope[vars];
 	}
 	$scope.share = function(){
-		facebookConnectPlugin.showDialog({method:'apprequests',message:'Te invito a usar Efecto Total'}, onSuccess, errorCallback);
+		facebookConnectPlugin.showDialog({method:'apprequests',message:'¡Ejercítate de una forma divertida sintiendo el Efecto Total!'}, onSuccess, errorCallback);
 	}
 	function errorCallback(error){
 		console.log(error);
@@ -16,6 +16,14 @@ angular.module('efectototal.controllers', [])
 		console.log(data);
 	}
 	Videos.categories().then(function(categories){
+		/*
+		for(var cat in categories){
+			category = categories[cat];
+			if(category.id_category == 3){
+				category.name = "Arma tu rutina";
+			}
+		}
+		*/
 		$scope.categories = categories;
 	});
 })
@@ -62,8 +70,13 @@ angular.module('efectototal.controllers', [])
 	};
 })
 
-.controller('ProfileCtrl', function($scope){
-	$scope.fbid = localStorage.getItem('fbid');
+.controller('ProfileCtrl', function($scope, $stateParams){
+	if(!$stateParams.id){
+		$scope.fbid = localStorage.getItem('fbid');
+	}else{
+		console.log('another user');
+		//User.get()
+	}
 })
 
 .controller('ProfileInfoCtrl', function($scope, $filter){
@@ -94,8 +107,8 @@ angular.module('efectototal.controllers', [])
 		var today = new Date();
 		$scope.birth = new Date($scope.data.birthday);
 		$scope.age = today.getFullYear() - $scope.birth.getFullYear();
-		if(today.getMonth() >= $scope.birth.getMonth() && today.getDate() >= $scope.birth.getDate()){
-			$scope.age++;
+		if(today.getMonth() <= $scope.birth.getMonth() && today.getDate() < $scope.birth.getDate()){
+			$scope.age--;
 		}
 	}
 	$scope.getIMC = function(){
@@ -115,6 +128,23 @@ angular.module('efectototal.controllers', [])
 	$scope.videos = [];
 	$scope.onroutine = false;
 	
+	$scope.share = function(sm){
+		console.log(sm);
+		switch(sm){
+			case 'fb':
+			window.plugins.socialsharing.shareViaFacebook(
+				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img */, 'http://efectototal.com/videos/cat/'+$stateParams.cat, 
+				function() {console.log('share ok')}, 
+				function(errormsg){alert(errormsg)}
+			);
+			break;
+			case 'tw':
+			window.plugins.socialsharing.shareViaTwitter(
+				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img */, 'http://efectototal.com/videos/cat/'+$stateParams.cat
+			);
+			break;
+		}
+	}
 	$scope.toggleVideo = function(video){
 		User.toggle(id, video).then(function(data){
 			$scope.onroutine = data;
@@ -165,9 +195,29 @@ angular.module('efectototal.controllers', [])
 	
 	$scope.onroutine = false;
 
+	$scope.share = function(sm){
+		console.log(sm);
+		switch(sm){
+			case 'fb':
+			window.plugins.socialsharing.shareViaFacebook(
+				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img */, 'http://efectototal.com/videos/cat/'+$stateParams.cat, 
+				function() {console.log('share ok')}, 
+				function(errormsg){alert(errormsg)}
+			);
+			break;
+			case 'tw':
+			window.plugins.socialsharing.shareViaTwitter(
+				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img */, 'http://efectototal.com/videos/cat/'+$stateParams.cat
+			);
+			break;
+		}
+	}
 	$scope.toggleVideo = function(video){
 		User.toggle(id, video).then(function(data){
 			$scope.onroutine = data;
+			if($scope.onroutine){
+				navigator.notification.alert('Esta rutina fue agregada a tus  rutinas exitosamente.', null);
+			}
 		});
 	}
 	$scope.$watch('video', function(){
@@ -186,6 +236,7 @@ angular.module('efectototal.controllers', [])
 		video[0].pause();
 		video[0].removeEventListener('play', onPlay);
 		navigator.notification.alert('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm);
+		History.save({uid: id, text: 'Has visto la rutina '+$scope.video.name, link: '#/app/video/'+$scope.video.id_video, type: 1});
 	}
 	function onConfirm(){
 		CaloricCounter.init($scope);
@@ -319,6 +370,9 @@ angular.module('efectototal.controllers', [])
 	}).then(function(modal) {
 		$scope.modal = modal;
 	});
+	$scope.selectChange = function(){
+		console.log();
+	}
 	$scope.selectFriends = function(){
 		facebookConnectPlugin.api('/me/?fields=friends',[],function(data){
 			$scope.friends = data.friends.data;
@@ -349,7 +403,7 @@ angular.module('efectototal.controllers', [])
 		$scope.challenge.friends = _results.toString();
 		facebookConnectPlugin.showDialog({
 			method:'apprequests',
-			message:'Veamos quién gana este reto.',
+			message:'Te ha retado a quemar calorías. ¿Te atreves?',
 			to: _results.toString()
 		},
 		function (data){

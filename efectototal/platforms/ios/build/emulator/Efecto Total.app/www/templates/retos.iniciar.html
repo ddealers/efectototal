@@ -21,7 +21,7 @@
 				    	<div class="input-label">
 				      		CALORÌAS
 				    	</div>
-				    	<select ng-model="challenge.calories">
+				    	<select ng-change="selectChange()" ng-model="challenge.calories">
 				      		<option>100</option>
 				      		<option>200</option>
 				      		<option>300</option>
@@ -47,7 +47,7 @@
 				    	<div class="input-label">
 				      		DURACIÓN(DÍAS)
 				    	</div>
-				    	<select ng-model="challenge.duration">
+				    	<select ng-change="selectChange()" ng-model="challenge.duration">
 				      		<option>1</option>
 				      		<option>2</option>
 				      		<option>3</option>

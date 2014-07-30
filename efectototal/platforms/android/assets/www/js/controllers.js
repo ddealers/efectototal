@@ -16,6 +16,14 @@ angular.module('efectototal.controllers', [])
 		console.log(data);
 	}
 	Videos.categories().then(function(categories){
+		/*
+		for(var cat in categories){
+			category = categories[cat];
+			if(category.id_category == 3){
+				category.name = "Arma tu rutina";
+			}
+		}
+		*/
 		$scope.categories = categories;
 	});
 })
@@ -62,8 +70,13 @@ angular.module('efectototal.controllers', [])
 	};
 })
 
-.controller('ProfileCtrl', function($scope){
-	$scope.fbid = localStorage.getItem('fbid');
+.controller('ProfileCtrl', function($scope, $stateParams){
+	if(!$stateParams.id){
+		$scope.fbid = localStorage.getItem('fbid');
+	}else{
+		console.log('another user');
+		//User.get()
+	}
 })
 
 .controller('ProfileInfoCtrl', function($scope, $filter){
@@ -94,8 +107,8 @@ angular.module('efectototal.controllers', [])
 		var today = new Date();
 		$scope.birth = new Date($scope.data.birthday);
 		$scope.age = today.getFullYear() - $scope.birth.getFullYear();
-		if(today.getMonth() >= $scope.birth.getMonth() && today.getDate() >= $scope.birth.getDate()){
-			$scope.age++;
+		if(today.getMonth() <= $scope.birth.getMonth() && today.getDate() < $scope.birth.getDate()){
+			$scope.age--;
 		}
 	}
 	$scope.getIMC = function(){
@@ -319,6 +332,9 @@ angular.module('efectototal.controllers', [])
 	}).then(function(modal) {
 		$scope.modal = modal;
 	});
+	$scope.selectChange = function(){
+		console.log();
+	}
 	$scope.selectFriends = function(){
 		facebookConnectPlugin.api('/me/?fields=friends',[],function(data){
 			$scope.friends = data.friends.data;
