@@ -490,7 +490,7 @@ s3242496
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciese08446ce0687b941^040291d00687b941^---0#1#1#--18"Check dependencies36"56AFBC11-CAFD-4F38-BB3B-D8257BCD49C9-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesc006985cdd88b941^425b165edd88b941^---0#1#1#--18"Check dependencies36"A5143A79-FAF0-4804-A702-D930716BAA2A-
 
 CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s427844272.372064

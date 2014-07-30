@@ -4,36 +4,93 @@ angular.module('efectototal.services', [])
 	var id = localStorage.getItem('id'), 
 		weight = localStorage.getItem('weight'),
 		active = false;
+	var _acceleration, 
+		change = false;
+	var counter, secs, mins, zero_secs, zero_mins;
+	var weight, calories = 0;
+
+	function onConfirm(){
+		$state.go('app.informacion');
+	}
+	function setMinSecs(){
+		if(secs >= 60){
+			mins++;
+			secs = 0;
+		}
+		zero_secs = zero(secs);
+		zero_mins = zero(mins);
+	}
+	function zero(num){
+		if(num.toString().length < 2){
+			return '0'+num;
+		}else{
+			return num.toString();
+		}
+	}
+	function getCurrentAcceleration(){
+		navigator.accelerometer.getCurrentAcceleration(setCaloricCount, onError);
+	}
+	function setCaloricCount(acceleration){
+		var currAcc, prevAcc;
+		if(!_acceleration){
+			_acceleration = acceleration;
+		}
+		currAcc = Math.sqrt(Math.pow(acceleration.x,2)+Math.pow(acceleration.y,2)+Math.pow(acceleration.z,2));
+		prevAcc = Math.sqrt(Math.pow(_acceleration.x,2)+Math.pow(_acceleration.y,2)+Math.pow(_acceleration.z,2));
+		if(currAcc > prevAcc + 1 || currAcc < prevAcc - 1){
+			change = true;
+			_acceleration = acceleration;
+		}
+		if(change){
+			calories += 0.023 * weight * 2.2 / 60;
+			change = false;
+		}
+	}
+	function onError(error){
+		console.log(error);
+	}
+	var init = function(scope){
+		weight = localStorage.getItem('weight');
+		if(!weight || weight <= 0){
+			navigator.notification.alert('Necesitas introducir tu peso correcto antes de comenzar a utilizar el contador de calorías', onConfirm);
+		}else{
+			counter = $interval(function(){
+				secs++;
+				setMinSecs();
+				getCurrentAcceleration();
+				scope.$emit('CaloricCounter.COUNT', calories, zero_secs, zero_mins);
+			},1000);
+			secs = 0;
+			mins = 0;
+		}
+	}
+	var stop = function(scope){
+		if (angular.isDefined(counter)) {
+			$interval.cancel(counter);
+			counter = undefined;
+			User.setCalories(id, calories).then(function(data){
+				scope.$emit('CaloricCounter.REFRESH', data);
+			});
+		}
+	}
+	return {
+		active: active,
+		init: init,
+		stop: stop
+	}
+})
+/*
+.factory('CaloricCounter', function($rootScope, $state, $interval, User){
+	var id = localStorage.getItem('id'), 
+		weight = localStorage.getItem('weight'),
+		active = false;
 	var counter, secs, mins, zero_secs, zero_mins;
 	var weight, calories;
 
 	function onConfirm(){
-		console.log('Error', 'No peso');
-		$state.go('app.perfil_informacion');
+		$state.go('app.informacion');
 	}
 	function setCaloricCount(){
-		/*
-		var sum;
-		if(steps < 60){
-			steps++;
-			rawData.push(acceleration);
-		}else{
-			maxValues = rawData.sort(function(a,b){
-				return a.y < b.y;
-			});
-			for(var i = 0; i < 15; i++){
-				sum += maxValues[i].y;
-			}
-			threshold = sum/15;
-		}
-		if(threshold && acceleration.y < threshold){
-			loss.secs++;
-			if(loss.secs == 60){
-				loss.secs = 0;
-				loss.mins++;
-			}
-		}
-		*/
 		calories = 0.023 * weight * 2.2 * mins + 0.023 * weight * 2.2 * secs/60;
 	}
 	function setMinSecs(){
@@ -51,40 +108,8 @@ angular.module('efectototal.services', [])
 			return num.toString();
 		}
 	}
-	/*
-	var rawData = [];
-	var threshold = 0,
-		watch = null;
-	function logValue(acceleration){
-		rawData.push(acceleration);
-	}
-	function onStart(acceleration){
-		var maxValues, total = 0;
-		$interval(function(){
-			navigator.accelerometer.getCurrentAcceleration(logValue, onError);
-		}, 100, 80).then(function(){
-			maxValues = rawData.sort(function(a,b){
-				return a.y < b.y;
-			});
-			for(var i = 0; i < 15; i++){
-				total += maxValues[i].y;
-			}
-			threshold = total/15;
-			initWatch();
-		});
-	}
-	function onSuccess(acceleration){
-		if(acceleration.y > threshold) console.log("step");
-	}
-	function onError(error){
-		console.log(error);
-	}
-	function initWatch(){
-		watch = navigator.accelerometer.watchAcceleration(onSuccess, onError, {frequency: 500});
-	}
-	onStart();
-	*/
 	var init = function(scope){
+		weight = localStorage.getItem('weight');
 		if(!weight || weight <= 0){
 			navigator.notification.alert('Necesitas introducir tu peso correcto antes de comenzar a utilizar el contador de calorías', onConfirm);
 		}else{
@@ -98,11 +123,13 @@ angular.module('efectototal.services', [])
 			mins = 0;
 		}
 	}
-	var stop = function(){
+	var stop = function(scope){
 		if (angular.isDefined(counter)) {
 			$interval.cancel(counter);
 			counter = undefined;
-			User.setCalories(id, calories);
+			User.setCalories(id, calories).then(function(data){
+				scope.$emit('CaloricCounter.REFRESH', data);
+			});
 		}
 	}
 	return {
@@ -110,8 +137,8 @@ angular.module('efectototal.services', [])
 		init: init,
 		stop: stop
 	}
-
 })
+*/
 .factory('Challenge', function($rootScope, $http, $q){
 	var api = function(request, params, onSuccess, onError, method){
 		var url = 'http://efectototal.com/app/index.php';
@@ -228,7 +255,7 @@ angular.module('efectototal.services', [])
 		api('/user/set_calories', {user: user, calories: calories},
 		function(response){
 			if(response.success){
-				deferred.resolve(response.status);
+				deferred.resolve(response.data);
 			}else{
 				deferred.reject(response.error);
 			}

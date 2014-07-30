@@ -21,7 +21,7 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers', 'ef
   	$rootScope.$on('$stateChangeStart', function(event, toState) {
 		if (toState.name !== "login" && !localStorage['id']) {
 			$state.go('login');
-		  event.preventDefault();
+		 	event.preventDefault();
 		}
 	});
 	/*
@@ -45,6 +45,15 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers', 'ef
 		url: "/login",
 		templateUrl: "templates/login.html",
 		controller: 'LoginCtrl'
+	})
+
+	.state('app.tour', {
+	  url: "/tour",
+	  views: {
+		'menuContent' :{
+		  templateUrl: "templates/tour.html",
+		}
+	  }
 	})
 
 	.state('app.perfil', {
@@ -196,15 +205,6 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers', 'ef
 		'menuContent' :{
 		  templateUrl: "templates/newsfeed.html",
 		  controller: "NewsfeedCtrl"
-		}
-	  }
-	})
-
-	.state('app.tour', {
-	  url: "/tour",
-	  views: {
-		'menuContent' :{
-		  templateUrl: "templates/tour.html",
 		}
 	  }
 	})

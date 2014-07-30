@@ -1290,6 +1290,9 @@ margin: 0px;
 	font-size: 23px;
 	border-top: solid 1px #aaa;
 }
+.contenidoResultados_retos .perfil{
+	width: 50%;
+}
 /* ------------------------------------------------------ NEWSFEED*/
 .contenidoNewsfeed h1.encabezado{
 	color: #fff;

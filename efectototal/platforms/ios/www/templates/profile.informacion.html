@@ -16,16 +16,16 @@
 						<input ng-model="data.name" type="text">
 					</label>
 					<label class="item item-input">
-						<span class="input-label">Edad</span>
-						<input ng-model="data.age" type="text">
-					</label>
-					<label class="item item-input">
 						<span class="input-label">Email</span>
 						<input ng-model="data.email" type="email">
 					</label>
 					<label class="item item-input">
 						<span class="input-label">Nacimiento</span>
 						<input ng-model="data.birthday" type="date">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">Edad</span>
+						<p>{{age}}</p>
 					</label>
 					<label class="item item-input">
 						<span class="input-label" >Altura</span>
@@ -37,11 +37,11 @@
 					</label>
 					<label class="item item-input">
 						<span class="input-label" >IMC</span>
-						<p ng-class="{low: IMC < 18.5, normal: IMC >= 18.5 && IMC <= 24.99, over: IMC >= 25 && IMC < 30, oversize: IMC >= 30}">{{IMC}}</p>
+						<p ng-class="{low: IMC < 18.5, normal: IMC >= 18.5 && IMC <= 24.99, over: IMC >= 25 && IMC < 30, oversize: IMC >= 30}">{{IMC | number:2}}</p>
 					</label>
 					<label class="item item-input">
 						<span class="input-label" >Peso Ideal</span>
-						<p>{{idealIMC}}</p>
+						<p>{{idealIMC | number:2}}</p>
 					</label>
 				</div>
 			</div>

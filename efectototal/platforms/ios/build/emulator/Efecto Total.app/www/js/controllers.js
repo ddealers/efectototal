@@ -29,7 +29,8 @@ angular.module('efectototal.controllers', [])
 		User.create(data).then(function(data){
 			var birthday;
 			if(data.scope.birthday){
-				birthday = new Date(data.scope.birthday).toISOString().substring(0, 10);
+				//birthday = new Date(data.scope.birthday).toISOString().substring(0, 10);
+				birthday = data.scope.birthday;
 			}else{
 				birthday = null;
 			}
@@ -39,7 +40,11 @@ angular.module('efectototal.controllers', [])
 			localStorage.setItem('fbid', data.scope.fbid);
 			localStorage.setItem('id', data.id);
 			$scope.loading = false;
-			$state.go('app.perfil');
+			//if(localStorage.getItem('tour')){
+				$state.go('app.perfil');
+			//}else{
+			//	$state.go('app.tour');
+			//}
 		}, function(error){
 			$scope.loading = false;
 			navigator.notification.alert(error, errorCallback);
@@ -61,15 +66,20 @@ angular.module('efectototal.controllers', [])
 	$scope.fbid = localStorage.getItem('fbid');
 })
 
-.controller('ProfileInfoCtrl', function($scope){
+.controller('ProfileInfoCtrl', function($scope, $filter){
+	var date = new Date(localStorage.getItem('birthday'));
+	var birthday = $filter('date')(date, 'yyyy-MM-dd');
 	$scope.data = {
 		name: localStorage.getItem('name'),
 		email: localStorage.getItem('email'),
-		birthday: localStorage.getItem('birthday'),
+		birthday: birthday,
 		height: localStorage.getItem('height') || 0,
 		weight: localStorage.getItem('weight') || 0
 	};
 	$scope.fbid = localStorage.getItem('fbid');
+	$scope.$watch('data.birthday', function(newValue, oldValue){
+		$scope.getAge();
+	});
 	$scope.$watch('data.height',function(newValue, oldValue){
 		$scope.getIMC();
 		$scope.getIdealWeight();
@@ -80,16 +90,19 @@ angular.module('efectototal.controllers', [])
 		$scope.getIdealWeight();
 		localStorage.setItem('weight', newValue);
 	});
+	$scope.getAge = function(){
+		var today = new Date();
+		$scope.birth = new Date($scope.data.birthday);
+		$scope.age = today.getFullYear() - $scope.birth.getFullYear();
+		if(today.getMonth() >= $scope.birth.getMonth() && today.getDate() >= $scope.birth.getDate()){
+			$scope.age++;
+		}
+	}
 	$scope.getIMC = function(){
-		$scope.IMC = ($scope.data.weight / Math.pow($scope.data.height / 100,2)).toFixed(2);
+		$scope.IMC = $scope.data.weight / Math.pow($scope.data.height / 100,2);
 	}
 	$scope.getIdealWeight = function(){
-		/*
-		var baseWeight = $scope.data.height-100;
-		idealWeight = baseWeight*0.9;
-		$scope.idealIMC = (idealWeight/Math.pow($scope.data.height / 100, 2)).toFixed(2);
-		*/
-		$scope.idealIMC = (21 * Math.pow($scope.data.height / 100,2)).toFixed(2);
+		$scope.idealIMC = 21 * Math.pow($scope.data.height / 100,2);
 	}
 
 	$scope.getIMC();
@@ -313,6 +326,15 @@ angular.module('efectototal.controllers', [])
 		});
 	}
 	$scope.selectedFriends = function(){
+		var _selectedFriends;
+		_selectedFriends = $scope.friends.filter(function(value, index, arr){
+			return value.selected;
+		});
+		if(_selectedFriends.length > 0){
+			$scope.createChallenge();
+		}else{
+			navigator.notification.alert('Necesitas seleccionar al menos un amigo para comenzar el reto.',alertCallback);
+		}
 		$scope.modal.hide();
 	}
 	$scope.createChallenge = function(){
@@ -325,17 +347,26 @@ angular.module('efectototal.controllers', [])
 			_results.push(_friend.id);
 		}
 		$scope.challenge.friends = _results.toString();
-
+		facebookConnectPlugin.showDialog({
+			method:'apprequests',
+			message:'Veamos quién gana este reto.',
+			to: _results.toString()
+		},
+		function (data){
+			console.log(data);
+		}, function (error){
+			console.log(error);
+		});
 		Challenge.create($scope.challenge).then(onSuccess, onError);
 	}
 	function onSuccess(){
-		navigator.notification.alert('Tú reto ha sido creado', errorCallback);
+		navigator.notification.alert('Tú reto ha sido creado.', alertCallback);
 		$state.go('app.retos');
 	}
 	function onError(error) {
-		navigator.notification.alert(error, errorCallback);
+		navigator.notification.alert(error, alertCallback);
 	}
-	function errorCallback(data){
+	function alertCallback(data){
 		console.log(data);
 	}
 })
@@ -489,10 +520,13 @@ angular.module('efectototal.controllers', [])
 			$scope.max = $scope.calories;
 		}
 	});
+	$scope.$on('CaloricCounter.REFRESH', function(e, data){
+		$scope.historial = data;
+	});
 	$scope.toggleCounter = function(){
 		if(CaloricCounter.active){
 			CaloricCounter.active = false;
-			CaloricCounter.stop();
+			CaloricCounter.stop($scope);
 			if($scope.calories > max){
 				localStorage.setItem('maxCal', $scope.calories);
 			}

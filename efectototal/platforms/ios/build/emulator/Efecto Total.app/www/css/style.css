@@ -453,7 +453,11 @@ h1.title{
 .contenidoContador .info-title{
 	margin: 10px auto;
 	display: block;
-	min-height: 40px;
+	min-height: 20px;
+}
+.contenidoContador button.info-title{
+	width: 40%;
+	margin-left: 138px;
 }
 .contenidoContador .info-title span {
 	-webkit-transform: skew(25deg);
@@ -1286,6 +1290,9 @@ margin: 0px;
 	font-size: 23px;
 	border-top: solid 1px #aaa;
 }
+.contenidoResultados_retos .perfil{
+	width: 50%;
+}
 /* ------------------------------------------------------ NEWSFEED*/
 .contenidoNewsfeed h1.encabezado{
 	color: #fff;
@@ -1694,4 +1701,36 @@ margin: 0px;
 .contenidoSumate i.ion-arrow-left-b{
 	margin: 0px 221px 0px -186px;
 }
-
+/*------------------------------------------- TOUR */
+.contenidoTour{
+	width: 95%;
+	background-color: #eee;
+	border: #aaa 1px solid;
+	margin: 5px auto;
+}
+.contenidoTour h1.encabezado{
+	color: #fff;
+	background: #1f2a84;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px;
+	margin: 0;
+	font-family: 'Dosis';
+	text-align: right;
+} 
+.contenidoTour h1.encabezado i{
+	float: left;
+}
+.contenidoTour img{
+	width: 90%;
+	margin: 0px 0px 10px 15px;
+}
+.contenidoTour div.slider-pager{
+	bottom: 5px;
+}
+.contenidoTour span.slider-pager-page.active{
+	color: #1f2a84;
+}
+.contenidoTour ion-slide.slider-slide{
+	margin-bottom: 6px;
+}
