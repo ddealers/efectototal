@@ -1,5 +1,39 @@
 angular.module('efectototal.services', [])
 
+.factory('History', function($rootScope, $state){
+	var api = function(request, params, onSuccess, onError, method){
+		var url = 'http://efectototal.com/app/index.php';
+		var theparams = params || {};
+		theparams.q = request;
+		if(!method){
+			$http.get(url, {params: theparams})
+			.success(onSuccess)
+			.error(onError);
+		}else{
+			$http[method](url+request, theparams)
+			.success(onSuccess)
+			.error(onError);
+		}
+	}
+	var save = function(userData){
+		var deferred = $q.defer();
+		userData.created_by = userData.id;
+		api('/history/save', userData,
+		function(response){
+			if(response.success){
+				deferred.resolve(response.data);
+			}else{
+				deferred.reject(response.error);
+			}
+		},function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;
+	}
+	return {
+		save: save
+	}
+})
 .factory('CaloricCounter', function($rootScope, $state, $interval, User){
 	var id = localStorage.getItem('id'), 
 		weight = localStorage.getItem('weight'),
