@@ -937,17 +937,23 @@ h1.title{
 }
 .contenidoVideosCatego p.minutes{
 	font-size: 20px;
-	padding: 5px 0px 0px 25px
+	padding: 5px 40px 0px 0px
 }
 .contenidoVideosCatego p.time{
 	color: #e0032a;
 	font-size: 53px;
-	padding: 15px 0px 0px 25px;
+	padding: 0px 0px 15px 25px;
 	font-family: sans-serif;
 	font-weight: bold;
 }
 .contenidoVideosCatego div.col{
 	text-align: center;
+}
+.contenidoVideosCatego img.redest{
+	margin: 0px 0px 0px 65px;
+}
+.contenidoVideosCatego img.redesf{
+	margin: 0px 20px 0px 0px;
 }
 .contenidoVideosCatego p.info{
 	font-size: 20px;
