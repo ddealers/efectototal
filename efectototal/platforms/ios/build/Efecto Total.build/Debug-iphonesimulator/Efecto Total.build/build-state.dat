@@ -79,9 +79,9 @@ t1404748312
 s5977
 
 N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Efecto Total-Info.plist
-c0000000053D968B4000000000000F90E
-t1406757044
-s63758
+c0000000053D96C23000000000000F99D
+t1406757923
+s63901
 
 N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Efecto Total-Prefix.pch
 c0000000053BAC21800000000000003C9
@@ -410,11 +410,11 @@ t1404975792
 s45
 
 N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app
-t1406757056
+t1406757945
 s1054
 
 N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app.dSYM
-t1406756909
+t1406757058
 s102
 
 N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/CDVNotification.bundle
@@ -454,8 +454,8 @@ t1406158744
 s2075192
 
 N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/Info.plist
-t1406757054
-s16896
+t1406757944
+s16932
 
 N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/MainViewController.nib
 t1404975887
@@ -1232,7 +1232,7 @@ s5377644
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies99d3d53da089b941^36903a3ea089b941^---0#1#1#--18"Check dependencies36"1370F208-C255-47E2-9189-2FF354FE50CC-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies959ea1b4a389b941^282782b8a389b941^---0#1#1#--18"Check dependencies36"DE85E059-4680-4798-B54B-C86C4D14847A-
 
 CCompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/AppDelegate.o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s427851533.643495
@@ -1977,14 +1977,14 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy bu
 bB427904E-410C-4F93-95A3-1742B5FDF97E
 
 CGenerateDSYMFile /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app.dSYM /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/Efecto\ Total
-s428449856.817678
-e428449858.501740
+s428450746.030275
+e428450750.470998
 r1
 xGenerateDSYMFile
 x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app.dSYM
 x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/Efecto Total
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection128"Generate /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app.dSYM101"GenerateDSYMFile build/emulator/Efecto\ Total.app.dSYM build/emulator/Efecto\ Total.app/Efecto\ Total7b6ad140a089b941^f6798042a089b941^---0#0#1#-19%DVTDocumentLocation2@138"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app.dSYM/0000000000000000^970"GenerateDSYMFile build/emulator/Efecto\ Total.app.dSYM build/emulator/Efecto\ Total.app/Efecto\ Total    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Applications/Android/platform-tools:/Applications/Android/tools:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/Efecto\ Total -o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app.dSYM36"5463479A-69B1-4E70-A5CC-43587863B916-
-b02FC6667-8D84-43DD-9B72-AD838814B7E0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection128"Generate /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app.dSYM101"GenerateDSYMFile build/emulator/Efecto\ Total.app.dSYM build/emulator/Efecto\ Total.app/Efecto\ Total0fed07baa389b941^259678bea389b941^---0#0#1#-19%DVTDocumentLocation2@138"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app.dSYM/0000000000000000^970"GenerateDSYMFile build/emulator/Efecto\ Total.app.dSYM build/emulator/Efecto\ Total.app/Efecto\ Total    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Applications/Android/platform-tools:/Applications/Android/tools:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/Efecto\ Total -o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app.dSYM36"4986B769-5B7A-4BE5-B5F7-C946D406BE2A-
+b019CC31E-4BD9-426B-92F4-F4A191B4B3C0
 
 CLd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/Efecto\ Total normal i386
 s427851537.654896
@@ -2085,28 +2085,28 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection132"Link /
 bF620339D-4AA5-4614-BF4F-123E5D5E14B4
 
 CPhaseScriptExecution Copy\ www\ directory /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Script-304B58A110DAC018002A0835.sh
-s428449854.268865
-e428449856.791479
+s428450744.538438
+e428450745.510827
 r1
 xPhaseScriptExecution
 xCopy www directory
 x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Script-304B58A110DAC018002A0835.sh
 o
-oreal	0m2.021s
-ouser	0m0.256s
-osys	0m0.309s
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Run custom shell script 'Copy www directory'144"PhaseScriptExecution Copy\ www\ directory build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Script-304B58A110DAC018002A0835.sh7782453ea089b941^01bfca40a089b941^-42"real	0m2.021suser	0m0.256ssys	0m0.309s3(21%IDEActivityLogMessage2@14"real	0m2.021s-428449856#1#14#-0#-----2@14"user	0m0.256s-428449856#15#14#-0#-----2@13"sys	0m0.309s-428449856#29#13#-0#-----0#0#1#--440"PhaseScriptExecution Copy\ www\ directory build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Script-304B58A110DAC018002A0835.sh    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    /bin/sh -c \"/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Script-304B58A110DAC018002A0835.sh\"36"24E45BBE-D734-42C0-BE2F-9EE205C8B8D6-
-b02FC6667-8D84-43DD-9B72-AD838814B7E0
+oreal	0m0.906s
+ouser	0m0.246s
+osys	0m0.290s
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Run custom shell script 'Copy www directory'144"PhaseScriptExecution Copy\ www\ directory build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Script-304B58A110DAC018002A0835.shd95f8ab8a389b941^a1d882b9a389b941^-42"real	0m0.906suser	0m0.246ssys	0m0.290s3(21%IDEActivityLogMessage2@14"real	0m0.906s-428450745#1#14#-0#-----2@14"user	0m0.246s-428450745#15#14#-0#-----2@13"sys	0m0.290s-428450745#29#13#-0#-----0#0#1#--440"PhaseScriptExecution Copy\ www\ directory build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Script-304B58A110DAC018002A0835.sh    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    /bin/sh -c \"/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Script-304B58A110DAC018002A0835.sh\"36"68F82CB0-9FB4-4856-926E-3379614F3FCB-
+b019CC31E-4BD9-426B-92F4-F4A191B4B3C0
 
 CProcessInfoPlistFile /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/Info.plist /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Efecto\ Total-Info.plist
-s428449854.230890
-e428449854.258277
+s428450744.511251
+e428450744.528623
 r1
 xProcessInfoPlistFile
 x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/Info.plist
 x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Efecto Total-Info.plist
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"Process /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Efecto Total-Info.plist103"ProcessInfoPlistFile build/emulator/Efecto\ Total.app/Info.plist Efecto\ Total/Efecto\ Total-Info.plist1b483b3ea089b941^5e64423ea089b941^---0#0#1#-19%DVTDocumentLocation2@139"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto%20Total/Efecto%20Total-Info.plist0000000000000000^1097"ProcessInfoPlistFile build/emulator/Efecto\ Total.app/Info.plist Efecto\ Total/Efecto\ Total-Info.plist    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Applications/Android/platform-tools:/Applications/Android/tools:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin"    builtin-infoPlistUtility /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Efecto\ Total-Info.plist -genpkginfo /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/Info.plist36"DEDB9D32-AB27-4B73-9924-C331B10268E4-
-b02FC6667-8D84-43DD-9B72-AD838814B7E0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"Process /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Efecto Total-Info.plist103"ProcessInfoPlistFile build/emulator/Efecto\ Total.app/Info.plist Efecto\ Total/Efecto\ Total-Info.plist4e0e83b8a389b941^c89487b8a389b941^---0#0#1#-19%DVTDocumentLocation2@139"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto%20Total/Efecto%20Total-Info.plist0000000000000000^1097"ProcessInfoPlistFile build/emulator/Efecto\ Total.app/Info.plist Efecto\ Total/Efecto\ Total-Info.plist    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Applications/Android/platform-tools:/Applications/Android/tools:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin"    builtin-infoPlistUtility /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Efecto\ Total-Info.plist -genpkginfo /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/Info.plist36"C04D7910-98B9-44D2-8446-CD033EBAAB20-
+b019CC31E-4BD9-426B-92F4-F4A191B4B3C0
 
 CProcessPCH /var/folders/l3/4jz04cgx6ss23l8ymz5qqhlc0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Efecto\ Total-Prefix-bglqosduvuguwsbjhffjtujzxtuu/Efecto\ Total-Prefix.pch.pch Efecto\ Total/Efecto\ Total-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s426668687.578655
@@ -2169,11 +2169,11 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Precomp
 b8D8118AC-2A56-4907-8B6A-8F3C5E6A43C2
 
 CTouch /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app
-s428449858.510901
-e428449858.606949
+s428450750.480180
+e428450750.485948
 r1
 xTouch
 x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Touch /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app38"Touch build/emulator/Efecto\ Total.appeaea8242a089b941^46619b42a089b941^---0#0#1#--691"Touch build/emulator/Efecto\ Total.app    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Applications/Android/platform-tools:/Applications/Android/tools:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin"    /usr/bin/touch -c /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"01EC49B4-6922-45E4-8226-ED32CD69B1AC-
-b02FC6667-8D84-43DD-9B72-AD838814B7E0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Touch /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app38"Touch build/emulator/Efecto\ Total.appce007bbea389b941^5a677cbea389b941^---0#0#1#--691"Touch build/emulator/Efecto\ Total.app    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Applications/Android/platform-tools:/Applications/Android/tools:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin"    /usr/bin/touch -c /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"9DAE552E-DCFF-4460-A75C-4286792EB594-
+b019CC31E-4BD9-426B-92F4-F4A191B4B3C0
 
