@@ -254,11 +254,26 @@ angular.module('efectototal.controllers', [])
 		video[0].addEventListener('ended', onEnd, false);
 	});
 })
-.controller('MisRutinasCtrl', function($scope, $state, User){
+.controller('MisRutinasCtrl', function($scope, $state, User, Playlist){
 	var id = localStorage.getItem('id');
 	$scope.fbid = localStorage.getItem('fbid');
 	$scope.goto = function(video){
 		$state.go('app.videos',{video:video});
+	}
+	$scope.create = function(){
+		navigator.notification.prompt("Nombre de la rutina", function(data){
+			if(data.buttonIndex == 1){
+				Playlist.create(id, data.input1).then(function(data){
+					$scope.routines = data;
+				},function(error){
+					navigator.notification.alert(error, onConfirm)
+				});
+			}
+			console.log(data.buttonIndex, data.input1);
+		},"Mis Rutinas",['Crear','Cancelar']);
+	}
+	function onConfirm(data){
+		console.log(data);
 	}
 	User.routines(id).then(function(data){
 		$scope.routines = data;

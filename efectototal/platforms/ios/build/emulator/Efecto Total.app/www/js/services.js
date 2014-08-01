@@ -252,7 +252,36 @@ angular.module('efectototal.services', [])
 		byId: byId
 	}	
 })
-
+.factory('Playlist', function($rootScope, $http, $q){
+	var api = function(request, params, onSuccess, onError, method){
+		var url = 'http://efectototal.com/app/index.php';
+		var theparams = params || {};
+		theparams.q = request;
+		if(!method){
+			$http.get(url, {params: theparams})
+			.success(onSuccess)
+			.error(onError);
+		}else{
+			$http[method](url+request, theparams)
+			.success(onSuccess)
+			.error(onError);
+		}
+	}
+	var create = function(id, name){
+		var deferred = $q.defer();
+		api('/user/create', {id: id, name: name},
+		function(response){
+			if(response.success){
+				deferred.resolve(response.data);
+			}else{
+				deferred.reject(response.error);
+			}
+		},function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;
+	}
+})
 .factory('User', function($rootScope, $http, $q){
 	var api = function(request, params, onSuccess, onError, method){
 		var url = 'http://efectototal.com/app/index.php';

@@ -7,19 +7,24 @@
                <a href="#/app/perfil"><h1 class="encabezado"><i class="ion-arrow-left-b"></i>MIS RUTINAS</h1></a>
                <div class="list card">
          	    	<div class="item item-image">
-     		          	<img ng-src="http://graph.facebook.com/{{fbid}}/picture?height=200&width=200" class="perfil">
-                    </div>
+     		   <img ng-src="http://graph.facebook.com/{{fbid}}/picture?height=200&width=200" class="perfil">
                </div>
-               <article>
-                    <p class="subtitulo">EJERCICIOS REALIZADOS</p>
-               </article>      
-               <div class="list historial">
-               		<div class="item item-button-right" ng-repeat="routine in routines">
-               			{{routine.name}}
-               			<button ng-click="goto(routine.id_video)" class="button button-outline button-stable">
-               				<i class="ion-chevron-right"></i>
-               			</button>
-               		</div>
+          </div>
+          <article>
+               <p class="subtitulo">EJERCICIOS REALIZADOS</p>
+          </article>      
+          <div class="list historial">
+               <div class="item item-button-right">
+                    Crear una nueva rutina
+                    <button ng-click="create()" class="button button-outline button-stable">
+                         <i class="ion-plus-circled"></i>
+                    </button>
+               </div> 
+               <div class="item item-button-right" ng-repeat="routine in routines">
+                    {{routine.name}}
+               	<button ng-click="goto(routine.id_video)" class="button button-outline button-stable">
+               	    <i class="ion-chevron-right"></i>
+               	</button>
                </div>
           </div>
      </ion-content>
