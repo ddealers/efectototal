@@ -347,7 +347,7 @@ h1.title{
 	position: absolute;
 	top: 0;
 	/* left: 10px; */
-	margin: 0;
+	margin: -12px 0px 0px 0px;
 }
 .contenidoBlog .row, .contenidoBlog .col{
 	padding: 5px 0;
@@ -507,6 +507,7 @@ h1.title{
 }
 .contenidoContador .item-divider{
 	color: #e0032a;
+	font-size: 13px;
 }
 /*
 .contenidoContador ul{

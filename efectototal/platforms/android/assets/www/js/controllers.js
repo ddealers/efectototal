@@ -142,7 +142,7 @@ angular.module('efectototal.controllers', [])
 			*/	
 			break;
 			case 'tw':
-			window.open('https://twitter.com/share?url='+'http://efectototal.com/videos/cat/'+$stateParams.cat, 'Compartir en Twitter');
+			window.open('https://twitter.com/share?url=¡Ejercítate de una forma divertida con esta rutina de Efecto Total! '+'http://efectototal.com/videos/cat/'+$stateParams.cat, 'Compartir en Twitter');
 			/*
 			window.plugins.socialsharing.shareViaTwitter(
 				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img , 'http://efectototal.com/videos/cat/'+$stateParams.cat
