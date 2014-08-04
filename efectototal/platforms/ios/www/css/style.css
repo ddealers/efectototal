@@ -183,8 +183,7 @@ h1.title{
 .contenidoPerfil_actividad p{
 	color: #5177c8;
 	font-weight: 500;
-	font-size: 20px;
-	padding: 0px 0px 0px 12px;
+	font-size: 15px;
 }
 .contenidoPerfil_actividad article{
 	background: #f0f0f0;
@@ -198,7 +197,7 @@ h1.title{
 .contenidoPerfil_actividad .item{
 	border: solid 1px #aaa;
 	background: #f0f0f0;
-	font-size: 15px; 
+	font-size: 12px; 
 }
 .contenidoPerfil_actividad .card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
 	background: #d4d3d3; 
@@ -1335,11 +1334,16 @@ margin: 0px;
 	padding: 5px 0px 0px 0px;	
 	margin: 0;
 }
+.contenidoNewsfeed .item-button-right img{
+	vertical-align: middle;
+	border-radius: 50%;
+	float: left;
+	margin-right: 5px;
+}
 .contenidoNewsfeed p{
 	color: #5177c8;
 	font-weight: 500;
-	font-size: 20px;
-	padding: 0px 0px 0px 12px;
+	font-size: 15px;
 }
 .contenidoNewsfeed{
 	margin: 0px 0px 10px 0px;

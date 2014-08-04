@@ -92,6 +92,15 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers', 'ef
 		}
 	  }
 	})
+	.state('app.rutinas-videos', {
+	  url: "/rutinas-videos/:routine",
+	  views: {
+		'menuContent' :{
+		  templateUrl: "templates/rutinas.videos.html",
+		  controller: "RutinasVideosCtrl"
+		}
+	  }
+	})
 	.state('app.retos', {
 	  url: "/retos",
 	  views: {

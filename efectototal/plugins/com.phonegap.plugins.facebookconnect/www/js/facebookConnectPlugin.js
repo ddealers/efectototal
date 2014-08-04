@@ -43,18 +43,11 @@ if (!window.cordova) {
             if (!options.picture) {
                 options.picture = "";
             }
-            if(!options.to) {
-                options.to = "";
-            }
-            if(!options.message) {
-                options.message = "";
-            }
+            
             // Try will catch errors when SDK has not been init
             try {
                 FB.ui({
                     method: options.method,
-                    to: options.to,
-                    message: options.message,
                     name: options.name,
                     caption: options.caption,
                     description: (

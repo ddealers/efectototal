@@ -11,18 +11,18 @@
                </div>
           </div>
           <article>
-               <p class="subtitulo">EJERCICIOS REALIZADOS</p>
+               <p class="subtitulo">LISTAS DE RUTINAS</p>
           </article>      
           <div class="list historial">
                <div class="item item-button-right">
-                    Crear una nueva rutina
-                    <button ng-click="goto(routine.id_video)" class="button button-outline button-stable">
+                    Crear una nueva lista
+                    <button ng-click="create()" class="button button-outline button-stable">
                          <i class="ion-plus-circled"></i>
                     </button>
                </div> 
                <div class="item item-button-right" ng-repeat="routine in routines">
                     {{routine.name}}
-               	<button ng-click="goto(routine.id_video)" class="button button-outline button-stable">
+               	<button ng-click="goto(routine.id_playlist)" class="button button-outline button-stable">
                	    <i class="ion-chevron-right"></i>
                	</button>
                </div>

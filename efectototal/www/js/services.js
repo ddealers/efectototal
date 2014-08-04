@@ -1,6 +1,6 @@
 angular.module('efectototal.services', [])
 
-.factory('History', function($rootScope, $state){
+.factory('History', function($rootScope, $http, $q){
 	var api = function(request, params, onSuccess, onError, method){
 		var url = 'http://efectototal.com/app/index.php';
 		var theparams = params || {};
@@ -17,7 +17,6 @@ angular.module('efectototal.services', [])
 	}
 	var save = function(userData){
 		var deferred = $q.defer();
-		userData.created_by = userData.id;
 		api('/history/save', userData,
 		function(response){
 			if(response.success){
@@ -30,8 +29,38 @@ angular.module('efectototal.services', [])
 		});
 		return deferred.promise;
 	}
+	var get = function(id){
+		var deferred = $q.defer();
+		api('/history/get', {uid: id},
+		function(response){
+			if(response.success){
+				deferred.resolve(response.data);
+			}else{
+				deferred.reject(response.error);
+			}
+		},function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;
+	}
+	var newsfeed = function(friends){
+		var deferred = $q.defer();
+		api('/history/newsfeed', {friends: friends},
+		function(response){
+			if(response.success){
+				deferred.resolve(response.data);
+			}else{
+				deferred.reject(response.error);
+			}
+		},function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;
+	}
 	return {
-		save: save
+		save: save,
+		get: get,
+		newsfeed: newsfeed
 	}
 })
 .factory('CaloricCounter', function($rootScope, $state, $interval, User){
@@ -94,6 +123,7 @@ angular.module('efectototal.services', [])
 				getCurrentAcceleration();
 				scope.$emit('CaloricCounter.COUNT', calories, zero_secs, zero_mins);
 			},1000);
+			calories = 0;
 			secs = 0;
 			mins = 0;
 		}
@@ -269,7 +299,49 @@ angular.module('efectototal.services', [])
 	}
 	var create = function(id, name){
 		var deferred = $q.defer();
-		api('/user/create', {id: id, name: name},
+		api('/playlist/create', {id: id, name: name},
+		function(response){
+			if(response.success){
+				deferred.resolve(response.data);
+			}else{
+				deferred.reject(response.error);
+			}
+		},function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;
+	}
+	var add = function(user, video, playlist){
+		var deferred = $q.defer();
+		api('/playlist/add', {user: user, video: video, playlist: playlist},
+		function(response){
+			if(response.success){
+				deferred.resolve(response.status);
+			}else{
+				deferred.reject(response.error);
+			}
+		},function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;
+	}
+	var remove = function(user, video, playlist){
+		var deferred = $q.defer();
+		api('/playlist/remove', {user: user, video: video, playlist: playlist},
+		function(response){
+			if(response.success){
+				deferred.resolve(response.status);
+			}else{
+				deferred.reject(response.error);
+			}
+		},function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;
+	}
+	var getVideos = function(id){
+		var deferred = $q.defer();
+		api('/playlist/getVideos', {id: id},
 		function(response){
 			if(response.success){
 				deferred.resolve(response.data);
@@ -282,7 +354,10 @@ angular.module('efectototal.services', [])
 		return deferred.promise;
 	}
 	return {
-		create: create
+		create: create,
+		add: add,
+		remove: remove,
+		videos: getVideos
 	}
 })
 .factory('User', function($rootScope, $http, $q){
@@ -344,9 +419,9 @@ angular.module('efectototal.services', [])
 		});
 		return deferred.promise;
 	}
-	var routines = function(user){
+	var routines = function(user, video){
 		var deferred = $q.defer();
-		api('/user/routines', {user: user},
+		api('/user/routines', {user: user, video: video},
 		function(response){
 			if(response.success){
 				deferred.resolve(response.data);

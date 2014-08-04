@@ -1,6 +1,9 @@
-# view AndroidManifest.xml #generated:5
--keep class com.efectototal.main.HelloCordova { <init>(...); }
+# view AndroidManifest.xml #generated:6
+-keep class com.efectototal.main.EfectoTotal { <init>(...); }
 
-# view AndroidManifest.xml #generated:12
+# view AndroidManifest.xml #generated:13
 -keep class com.facebook.LoginActivity { <init>(...); }
+
+# view res/layout/com_facebook_usersettingsfragment.xml #generated:48
+-keep class com.facebook.widget.LoginButton { <init>(...); }
 

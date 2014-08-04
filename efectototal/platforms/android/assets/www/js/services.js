@@ -17,7 +17,6 @@ angular.module('efectototal.services', [])
 	}
 	var save = function(userData){
 		var deferred = $q.defer();
-		userData.created_by = userData.id;
 		api('/history/save', userData,
 		function(response){
 			if(response.success){
@@ -252,7 +251,84 @@ angular.module('efectototal.services', [])
 		byId: byId
 	}	
 })
-
+.factory('Playlist', function($rootScope, $http, $q){
+	var api = function(request, params, onSuccess, onError, method){
+		var url = 'http://efectototal.com/app/index.php';
+		var theparams = params || {};
+		theparams.q = request;
+		if(!method){
+			$http.get(url, {params: theparams})
+			.success(onSuccess)
+			.error(onError);
+		}else{
+			$http[method](url+request, theparams)
+			.success(onSuccess)
+			.error(onError);
+		}
+	}
+	var create = function(id, name){
+		var deferred = $q.defer();
+		api('/playlist/create', {id: id, name: name},
+		function(response){
+			if(response.success){
+				deferred.resolve(response.data);
+			}else{
+				deferred.reject(response.error);
+			}
+		},function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;
+	}
+	var add = function(user, video, playlist){
+		var deferred = $q.defer();
+		api('/playlist/add', {user: user, video: video, playlist: playlist},
+		function(response){
+			if(response.success){
+				deferred.resolve(response.status);
+			}else{
+				deferred.reject(response.error);
+			}
+		},function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;
+	}
+	var remove = function(user, video, playlist){
+		var deferred = $q.defer();
+		api('/playlist/remove', {user: user, video: video, playlist: playlist},
+		function(response){
+			if(response.success){
+				deferred.resolve(response.status);
+			}else{
+				deferred.reject(response.error);
+			}
+		},function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;
+	}
+	var getVideos = function(id){
+		var deferred = $q.defer();
+		api('/playlist/getVideos', {id: id},
+		function(response){
+			if(response.success){
+				deferred.resolve(response.data);
+			}else{
+				deferred.reject(response.error);
+			}
+		},function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;
+	}
+	return {
+		create: create,
+		add: add,
+		remove: remove,
+		videos: getVideos
+	}
+})
 .factory('User', function($rootScope, $http, $q){
 	var api = function(request, params, onSuccess, onError, method){
 		var url = 'http://efectototal.com/app/index.php';
@@ -312,9 +388,9 @@ angular.module('efectototal.services', [])
 		});
 		return deferred.promise;
 	}
-	var routines = function(user){
+	var routines = function(user, video){
 		var deferred = $q.defer();
-		api('/user/routines', {user: user},
+		api('/user/routines', {user: user, video: video},
 		function(response){
 			if(response.success){
 				deferred.resolve(response.data);

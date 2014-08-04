@@ -1,5 +1,16 @@
 angular.module('efectototal.directives', [])
-
+.directive('external', function(){
+	return {
+		restrict: 'C',
+		link: function(scope, elem, attrs){ 
+			elem.on('click', function(e){
+				e.preventDefault();
+				console.log(attrs);
+				window.open(attrs.href, "_system");
+			});
+		}
+	}
+})
 .directive('progressBar', function(){
 	return {
 		restrict: 'E',

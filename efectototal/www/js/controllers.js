@@ -16,14 +16,6 @@ angular.module('efectototal.controllers', [])
 		console.log(data);
 	}
 	Videos.categories().then(function(categories){
-		/*
-		for(var cat in categories){
-			category = categories[cat];
-			if(category.id_category == 3){
-				category.name = "Arma tu rutina";
-			}
-		}
-		*/
 		$scope.categories = categories;
 	});
 })
@@ -48,11 +40,12 @@ angular.module('efectototal.controllers', [])
 			localStorage.setItem('fbid', data.scope.fbid);
 			localStorage.setItem('id', data.id);
 			$scope.loading = false;
-			//if(localStorage.getItem('tour')){
+			if(localStorage.getItem('tour')){
 				$state.go('app.perfil');
-			//}else{
-			//	$state.go('app.tour');
-			//}
+			}else{
+				localStorage.setItem('tour', true);
+				$state.go('app.tour');
+			}
 		}, function(error){
 			$scope.loading = false;
 			navigator.notification.alert(error, errorCallback);
@@ -121,35 +114,81 @@ angular.module('efectototal.controllers', [])
 	$scope.getIMC();
 	$scope.getIdealWeight();
 })
-.controller('CategoriesCtrl', function($scope, $state, $stateParams, CaloricCounter, Videos, User){
+.controller('CategoriesCtrl', function($scope, $state, $stateParams, $ionicModal, History, Playlist, CaloricCounter, Videos, User){
 	var id = localStorage.getItem('id');
 	var video = angular.element(document.querySelector('#front-video'));
-	
+	var selectedVideo = 0;
+
 	$scope.videos = [];
-	$scope.onroutine = false;
+	$scope.onlist = false;
+
+	$ionicModal.fromTemplateUrl('templates/select-playlist.html', {
+		scope: $scope,
+		animation: 'slide-in-up'
+	}).then(function(modal) {
+		$scope.modal = modal;
+	});
 	
 	$scope.share = function(sm){
-		console.log(sm);
 		switch(sm){
 			case 'fb':
+			window.open('http://www.facebook.com/sharer.php?u='+'http://efectototal.com/videos/cat/'+$stateParams.cat, 'Compartir en Facebook');
+			/*
 			window.plugins.socialsharing.shareViaFacebook(
-				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img */, 'http://efectototal.com/videos/cat/'+$stateParams.cat, 
+				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img , 'http://efectototal.com/videos/cat/'+$stateParams.cat, 
 				function() {console.log('share ok')}, 
 				function(errormsg){alert(errormsg)}
 			);
+			*/	
 			break;
 			case 'tw':
+			window.open('https://twitter.com/share?url='+'http://efectototal.com/videos/cat/'+$stateParams.cat, 'Compartir en Twitter');
+			/*
 			window.plugins.socialsharing.shareViaTwitter(
-				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img */, 'http://efectototal.com/videos/cat/'+$stateParams.cat
+				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img , 'http://efectototal.com/videos/cat/'+$stateParams.cat
 			);
+			*/
 			break;
 		}
 	}
+	$scope.toggleLists = function(_video){
+		selectedVideo = _video;
+		User.routines(id, selectedVideo).then(function(data){
+			$scope.lists = data;
+			$scope.modal.show();
+			video.css({display:"none"});
+		});
+	};
+	$scope.cancel = function(){
+		$scope.modal.hide();
+		video.css({display:"block"});
+	}
+	$scope.selectedPlaylists = function(){
+		var onlist;
+		for(var l in $scope.lists){
+			var list = $scope.lists[l];
+			if(list.selected){
+				onlist = true;
+				Playlist.add(id, selectedVideo, list.id_playlist);
+				History.save({uid: id, data: $scope.videos[0].name, link: '#/app/categoria/'+$stateParams.cat, type: 2});
+			}else{
+				Playlist.remove(id, selectedVideo, list.id_playlist);
+			}
+		}
+		if(onlist){
+			$scope.onlist = true;
+			navigator.notification.alert('Esta rutina fue agregada a tus  rutinas exitosamente.', null);
+		}
+		$scope.modal.hide();
+		video.css({display:"block"});
+	}
+	/*
 	$scope.toggleVideo = function(video){
 		User.toggle(id, video).then(function(data){
 			$scope.onroutine = data;
 		});
 	}
+	*/
 	$scope.$watch('videos', function(){
 		if($scope.videos.length > 0){
 			Videos.status(id, $scope.videos[0].id_video).then(function(data){
@@ -166,6 +205,7 @@ angular.module('efectototal.controllers', [])
 		video[0].pause();
 		video[0].removeEventListener('play', onPlay);
 		navigator.notification.alert('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm);
+		History.save({uid: id, data: $scope.videos[0].name, link: '#/app/categoria/'+$stateParams.cat, type: 1});
 	}
 	function onConfirm(){
 		CaloricCounter.init($scope);
@@ -189,29 +229,78 @@ angular.module('efectototal.controllers', [])
 		});
 	});
 })
-.controller('VideoCtrl', function($scope, $state, $stateParams, $interval, CaloricCounter, Videos, User){
+.controller('VideoCtrl', function($scope, $state, $stateParams, $interval, $ionicModal, $ionicNavBarDelegate, History, Playlist, CaloricCounter, Videos, User){
 	var id = localStorage.getItem('id');
 	var video = angular.element(document.querySelector('#exercise-video'));
+	var selectedVideo = 0;
 	
-	$scope.onroutine = false;
+	$scope.onlist = false;
 
+	$ionicModal.fromTemplateUrl('templates/select-playlist.html', {
+		scope: $scope,
+		animation: 'slide-in-up'
+	}).then(function(modal) {
+		$scope.modal = modal;
+	});
+
+	$scope.goBack = function(){
+		$ionicNavBarDelegate.back();
+	}
 	$scope.share = function(sm){
-		console.log(sm);
 		switch(sm){
 			case 'fb':
+			window.open('http://www.facebook.com/sharer.php?u='+'http://efectototal.com/videos/showVideo/'+$stateParams.cat, 'Compartir en Facebook');
+			/*
 			window.plugins.socialsharing.shareViaFacebook(
-				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img */, 'http://efectototal.com/videos/cat/'+$stateParams.cat, 
+				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img , 'http://efectototal.com/videos/cat/'+$stateParams.cat, 
 				function() {console.log('share ok')}, 
 				function(errormsg){alert(errormsg)}
 			);
+			*/	
 			break;
 			case 'tw':
+			window.open('https://twitter.com/share?url='+'http://efectototal.com/videos/showVideo/'+$stateParams.cat, 'Compartir en Twitter');
+			/*
 			window.plugins.socialsharing.shareViaTwitter(
-				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img */, 'http://efectototal.com/videos/cat/'+$stateParams.cat
+				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img , 'http://efectototal.com/videos/cat/'+$stateParams.cat
 			);
+			*/
 			break;
 		}
 	}
+	$scope.toggleLists = function(_video){
+		selectedVideo = _video;
+		User.routines(id, selectedVideo).then(function(data){
+			console.log(data);
+			$scope.lists = data;
+			$scope.modal.show();
+			video.css({display:"none"});
+		});
+	};
+	$scope.cancel = function(){
+		$scope.modal.hide();
+		video.css({display:"block"});
+	}
+	$scope.selectedPlaylists = function(){
+		var onlist;
+		for(var l in $scope.lists){
+			var list = $scope.lists[l];
+			if(list.selected){
+				onlist = true;
+				Playlist.add(id, selectedVideo, list.id_playlist);
+				History.save({uid: id, data: $scope.video.name, link: '#/app/video/'+$scope.video.id_video, type: 2});
+			}else{
+				Playlist.remove(id, selectedVideo, list.id_playlist);
+			}
+		}
+		if(onlist){
+			$scope.onlist = true;
+			navigator.notification.alert('Esta rutina fue agregada a tus  rutinas exitosamente.', null);
+		}
+		$scope.modal.hide();
+		video.css({display:"block"});
+	}
+	/*
 	$scope.toggleVideo = function(video){
 		User.toggle(id, video).then(function(data){
 			$scope.onroutine = data;
@@ -220,10 +309,11 @@ angular.module('efectototal.controllers', [])
 			}
 		});
 	}
+	*/
 	$scope.$watch('video', function(){
 		if($scope.video){
 			Videos.status(id, $scope.video.id_video).then(function(data){
-				$scope.onroutine = (data.estatus == "0") ? false : true;
+				$scope.onlist = (data.estatus == "0") ? false : true;
 			});
 		}
 	});
@@ -236,7 +326,7 @@ angular.module('efectototal.controllers', [])
 		video[0].pause();
 		video[0].removeEventListener('play', onPlay);
 		navigator.notification.alert('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm);
-		History.save({uid: id, text: 'Has visto la rutina '+$scope.video.name, link: '#/app/video/'+$scope.video.id_video, type: 1});
+		History.save({uid: id, data: $scope.video.name, link: '#/app/video/'+$scope.video.id_video, type: 1});
 	}
 	function onConfirm(){
 		CaloricCounter.init($scope);
@@ -254,17 +344,19 @@ angular.module('efectototal.controllers', [])
 		video[0].addEventListener('ended', onEnd, false);
 	});
 })
-.controller('MisRutinasCtrl', function($scope, $state, User, Playlist){
+.controller('MisRutinasCtrl', function($scope, $state, User, Playlist, History){
 	var id = localStorage.getItem('id');
 	$scope.fbid = localStorage.getItem('fbid');
-	$scope.goto = function(video){
-		$state.go('app.videos',{video:video});
+	$scope.goto = function(routine){
+		$state.go('app.rutinas-videos',{routine:routine});
 	}
 	$scope.create = function(){
 		navigator.notification.prompt("Nombre de la rutina", function(data){
 			if(data.buttonIndex == 1){
 				Playlist.create(id, data.input1).then(function(data){
+					var length = data.length;
 					$scope.routines = data;
+					History.save({uid: id, data: $scope.routines[length - 1].name, link: "#app/rutinas-videos/"+$scope.routines[length - 1].id_playlist, type: 9});
 				},function(error){
 					navigator.notification.alert(error, onConfirm)
 				});
@@ -279,8 +371,61 @@ angular.module('efectototal.controllers', [])
 		$scope.routines = data;
 	});
 })
-.controller('MiActividadCtrl', function($scope, $state){
+.controller('RutinasVideosCtrl', function($scope, $state, $stateParams, CaloricCounter, User, Playlist){
+	var id = localStorage.getItem('id'),
+		rid = $stateParams.routine;
+	var video = angular.element(document.querySelector('#all-video')),
+		next = 0;
+	
 	$scope.fbid = localStorage.getItem('fbid');
+
+	$scope.gotoRoutines = function(){
+		$state.go('app.categorias',{cat:3});
+	}
+	$scope.goto = function(video){
+		$state.go('app.videos',{video:video});
+	}
+	$scope.playAll = function(){
+		video.css({display:"block"});
+		video.attr("src", "http://efectototal.com/media/" + $scope.videos[0].src);
+		video[0].addEventListener('ended', playNextVideo, false);
+		video[0].addEventListener('pause', onPause, false);
+		video[0].play();
+		CaloricCounter.init($scope);
+		//History.save({uid: id, text: 'Has visto la rutina '+$scope.video.name, link: '#/app/video/'+$scope.video.id_video, type: 1});
+	}
+	function playNextVideo(){
+		next++;
+		CaloricCounter.stop($scope);
+		if(next < $scope.videos.length){
+			video.attr("src", "http://efectototal.com/media/" + $scope.videos[next].src);
+			CaloricCounter.init($scope);
+			video[0].play();
+		}else{
+			video.css({display:"none"});
+		}
+	}
+	function onPause(){
+		CaloricCounter.stop();
+		video.css({display:"none"});
+	}
+	Playlist.videos(rid).then(function(data){
+		$scope.videos = data;
+	});
+	video.css({display:"none"});
+})
+.controller('MiActividadCtrl', function($scope, $state, History){
+	var id = localStorage.getItem('id');
+	$scope.fbid = localStorage.getItem('fbid');
+	History.get(id).then(function(data){
+		for(a in data){
+			var activity = data[a];
+			if(activity.data.indexOf(',') > -1){
+				activity.data = activity.data.split(",");
+			}
+		}
+		$scope.activities = data;
+	});
 })
 .controller('MisRetosCtrl', function($scope, $state, Challenge){
 	var id = localStorage.getItem('id');
@@ -289,8 +434,24 @@ angular.module('efectototal.controllers', [])
 		$scope.challenges = data;
 	});
 })
-.controller('NewsfeedCtrl', function($scope, $state){
+.controller('NewsfeedCtrl', function($scope, $state, History){
 	$scope.fbid = localStorage.getItem('fbid');
+	facebookConnectPlugin.api('/me/?fields=friends',[],function(data){
+		var _i = 0, _results = [];
+		for(_i = 0; _i < data.friends.data.length; _i++){
+			_friend = data.friends.data[_i];
+			_results.push(_friend.id);
+		}
+		History.newsfeed(_results.toString()).then(function(data){
+			for(a in data){
+				var activity = data[a];
+				if(activity.data.indexOf(',') > -1){
+					activity.data = activity.data.split(",");
+				}
+			}
+			$scope.activities = data;
+		});
+	});
 })
 .controller('ConfigCtrl', function($scope, $state){
 	$scope.openPrivacy = function(){
@@ -439,18 +600,20 @@ angular.module('efectototal.controllers', [])
 		console.log(data);
 	}
 })
-.controller('ChallengeInviteCtrl', function($scope, $state, $stateParams, Challenge){
+.controller('ChallengeInviteCtrl', function($scope, $state, $stateParams, Challenge, History){
 	var id = localStorage.getItem('id');
 	$scope.fbid = localStorage.getItem('fbid');
 	$scope.name = localStorage.getItem('name');
 	$scope.accept = function(){
 		Challenge.update(id, $stateParams.reto, 1).then(function(data){
 			$state.go('app.retos-calendario',{reto: $stateParams.reto});
+			History.save({uid: id, data: $scope.challenge.challenge.name+","+$scope.challenge.creator.first_name, link: null, type: 4});
 		});
 	}
 	$scope.decline = function(){
 		Challenge.update(id, $stateParams.reto, 0).then(function(data){
 			$state.go('app.retos');
+			History.save({uid: id, data: $scope.challenge.challenge.name+","+$scope.challenge.creator.first_name, link: null, type: 5});
 		});
 	}
 	Challenge.byId(id, $stateParams.reto).then(function(data){
@@ -544,7 +707,7 @@ angular.module('efectototal.controllers', [])
 	});
 
 })
-.controller('ChallengeResultsCtrl', function($scope, $state, $stateParams, Challenge){
+.controller('ChallengeResultsCtrl', function($scope, $state, $stateParams, Challenge, History){
 	var id = localStorage.getItem('id');
 	
 	$scope.fbid = localStorage.getItem('fbid');
@@ -554,12 +717,18 @@ angular.module('efectototal.controllers', [])
 		$scope.challenge = data;
 		$scope.winner = data.current;
 		for(var contender in data.contenders){
-			if(data.contenders[contender].total > $scope.winner.total) 
+			if(data.contenders[contender].total > $scope.winner.total) {
 				$scope.winner = data.contenders[contender];
+			}
+		}
+		if($scope.winner.first_name == data.current.first_name){
+			History.save({uid: id, data: $scope.challenge.challenge.name+","+$scope.challenge.contenders[0].first_name, link: null, type: 6});
+		}else{
+			History.save({uid: id, data: $scope.challenge.challenge.name+","+$scope.challenge.contenders[0].first_name, link: null, type: 7});
 		}
 	});
 })
-.controller('CounterCtrl', function($rootScope, $scope, $state, $interval, User, CaloricCounter) {
+.controller('CounterCtrl', function($rootScope, $scope, $state, $interval, User, CaloricCounter, History) {
 	var id = localStorage.getItem('id'),
 		max = localStorage.getItem('maxCal') || 0;
 
@@ -600,16 +769,11 @@ angular.module('efectototal.controllers', [])
 				localStorage.setItem('maxCal', $scope.calories);
 			}
 			$scope.action = "Iniciar";
+			History.save({uid: id, data: $scope.calories, link: null, type: 3});
 		}else{
 			CaloricCounter.active = true;
 			CaloricCounter.init($scope);
 			$scope.action = "Detener";
 		}
 	}
-})
-
-function trace(obj){
-	for(var a in obj){
-		if(obj.hasOwnProperty(a)) console.log(a, obj[a]);
-	}
-}
+});
