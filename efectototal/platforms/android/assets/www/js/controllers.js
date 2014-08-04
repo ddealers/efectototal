@@ -414,8 +414,18 @@ angular.module('efectototal.controllers', [])
 	});
 	video.css({display:"none"});
 })
-.controller('MiActividadCtrl', function($scope, $state){
+.controller('MiActividadCtrl', function($scope, $state, History){
+	var id = localStorage.getItem('id');
 	$scope.fbid = localStorage.getItem('fbid');
+	History.get(id).then(function(data){
+		for(a in data){
+			var activity = data[a];
+			if(activity.data.indexOf(',') > -1){
+				activity.data = activity.data.split(",");
+			}
+		}
+		$scope.activities = data;
+	});
 })
 .controller('MisRetosCtrl', function($scope, $state, Challenge){
 	var id = localStorage.getItem('id');
@@ -424,8 +434,24 @@ angular.module('efectototal.controllers', [])
 		$scope.challenges = data;
 	});
 })
-.controller('NewsfeedCtrl', function($scope, $state){
+.controller('NewsfeedCtrl', function($scope, $state, History){
 	$scope.fbid = localStorage.getItem('fbid');
+	facebookConnectPlugin.api('/me/?fields=friends',[],function(data){
+		var _i = 0, _results = [];
+		for(_i = 0; _i < data.friends.data.length; _i++){
+			_friend = data.friends.data[_i];
+			_results.push(_friend.id);
+		}
+		History.newsfeed(_results.toString()).then(function(data){
+			for(a in data){
+				var activity = data[a];
+				if(activity.data.indexOf(',') > -1){
+					activity.data = activity.data.split(",");
+				}
+			}
+			$scope.activities = data;
+		});
+	});
 })
 .controller('ConfigCtrl', function($scope, $state){
 	$scope.openPrivacy = function(){
@@ -553,7 +579,7 @@ angular.module('efectototal.controllers', [])
 		$scope.challenge.friends = _results.toString();
 		facebookConnectPlugin.showDialog({
 			method:'apprequests',
-			message:'Te ha retado a quemar calorías. ¿Te atreves?',
+			message:'Te he retado a ejercitarte. ¿Te atreves?',
 			to: _results.toString()
 		},
 		function (data){

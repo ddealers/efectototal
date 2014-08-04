@@ -579,7 +579,7 @@ angular.module('efectototal.controllers', [])
 		$scope.challenge.friends = _results.toString();
 		facebookConnectPlugin.showDialog({
 			method:'apprequests',
-			message:'Te ha retado a quemar calorías. ¿Te atreves?',
+			message:'Te he retado a ejercitarte. ¿Te atreves?',
 			to: _results.toString()
 		},
 		function (data){

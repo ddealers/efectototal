@@ -64,6 +64,7 @@ h1.title{
 /* ----------------------------------------------------------------------- CONECTATE CON FACEBOOK */
 .login img.inicio{
 	width: 100%;
+
 }
 .login div.boton-container{
 	border-top: 1px solid #DDD;
@@ -183,8 +184,7 @@ h1.title{
 .contenidoPerfil_actividad p{
 	color: #5177c8;
 	font-weight: 500;
-	font-size: 20px;
-	padding: 0px 0px 0px 12px;
+	font-size: 15px;
 }
 .contenidoPerfil_actividad article{
 	background: #f0f0f0;
@@ -198,7 +198,7 @@ h1.title{
 .contenidoPerfil_actividad .item{
 	border: solid 1px #aaa;
 	background: #f0f0f0;
-	font-size: 15px; 
+	font-size: 12px; 
 }
 .contenidoPerfil_actividad .card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
 	background: #d4d3d3; 
@@ -225,6 +225,15 @@ h1.title{
 	font-family: 'Dosis';
 	text-align: right;
 } 
+.contenidoRetos h2.ng-binding{
+	font-size: 16px;
+	font-family: "Dosis";
+	color: #444;
+	margin: 0px -88px 0px;
+}
+.contenidoRetos .item-thumbnail-left, .item-thumbnail-left .item-content {
+	min-height: 50px;
+}
 .contenidoRetos h1.encabezado i{
 	float: left;
 }
@@ -457,7 +466,7 @@ h1.title{
 }
 .contenidoContador button.info-title{
 	width: 40%;
-	margin-left: 138px;
+	margin-left: 85px;
 }
 .contenidoContador .info-title span {
 	-webkit-transform: skew(25deg);
@@ -708,6 +717,10 @@ h1.title{
 	padding: 10px 10px 10px 160px;
 	margin: 0;
 	text-align: right;
+}
+.contenidoIformacion p{
+	font-size: 16px;
+	color: #444;
 } 
 .contenidoIformacion .ion-arrow-left-b:before {
 	position: absolute;
@@ -1335,11 +1348,16 @@ margin: 0px;
 	padding: 5px 0px 0px 0px;	
 	margin: 0;
 }
+.contenidoNewsfeed .item-button-right img{
+	vertical-align: middle;
+	border-radius: 50%;
+	float: left;
+	margin-right: 5px;
+}
 .contenidoNewsfeed p{
 	color: #5177c8;
 	font-weight: 500;
-	font-size: 20px;
-	padding: 0px 0px 0px 12px;
+	font-size: 15px;
 }
 .contenidoNewsfeed{
 	margin: 0px 0px 10px 0px;
@@ -1739,6 +1757,10 @@ margin: 0px;
 .contenidoTour img{
 	width: 90%;
 	margin: 0px 0px 10px 15px;
+}
+.contenidoTour img.image3{
+	width: 81%;
+	margin: 0px 0px 10px 27px;
 }
 .contenidoTour div.slider-pager{
 	bottom: 5px;

@@ -9,11 +9,28 @@
 				<div class="item item-image">
 			 		<img ng-src="http://graph.facebook.com/{{fbid}}/picture?height=200&width=200" class="perfil">
 				</div>
+				<!--
 				<article>
 			 		<p class="subtitulo">JULIO 2014</p>
 			 		<p>JULIO 29</p>
 				</article>
+			-->
 				<div class="list">
+					<div class="item item-button-right" ng-switch="activity.type" ng-repeat="activity in activities">
+						<img ng-src="http://graph.facebook.com/{{activity.fbid}}/picture?height=30&width=30">
+                         <p ng-switch-when="1">{{activity.first_name}} vió la rutina {{activity.data}}.</p>
+                         <p ng-switch-when="2">{{activity.first_name }} agregó a sus rutinas {{activity.data}}</p>
+                         <p ng-switch-when="3">{{activity.first_name }} quemó {{activity.data | number:2}} calorías.</p>
+                         <p ng-switch-when="4">{{activity.first_name }} está en un reto de calorías con {{activity.data[1]}}.</p>
+                         <!--<p ng-switch-when="5">Rechazaste el reto {{activity.data[0]}} contra {{activity.data[1]}}.</p>-->
+                         <p ng-switch-when="6">{{activity.first_name }} es el ganador de un reto. ¡Felicidades!</p>
+                         <!--<p ng-switch-when="7">Has perdido el reto {{activity.data[0]}} contra {{activity.data[1]}}. ¡Suerte en tu próximo reto!</p>-->
+                         <p ng-switch-when="8">Tu amigo {{activity.data}} se ha unido a Efecto Total. ¡Rétalo a ejercitarse!</p>
+                         <p ng-switch-when="9">{{activity.first_name }} ha creado una nueva rutina.</p>
+                         <p ng-switch-when="10">{{activity.first_name }} compartió la noticia "{{activity.data}}" del blog de Efecto Total</p>
+                         <a href="{{activity.link}}" ng-show="activity.link" class="button button-icon icon ion-chevron-right"></a>
+                    </div>
+					<!--
 					<a class="item item-avatar" href="#">
 						<img src="./img/cara1.png">
 						<p class="avatars">Luis vio el video "Cardio paso a paso"</p>
@@ -39,30 +56,9 @@
 						<p class="avatars">Jesús venció en un reto</p>
 						<i class="ion-arrow-right-b"></i>
 					</a>
+				-->
 				</div>
 			</div>
 		</div>
 	</ion-content>
 </ion-view>
-<!--div class="list">
-
-		<a class="item item-avatar" href="#">
-			<img src="venkman.jpg">
-			<h2>Venkman</h2>
-			<p>Back off, man. I'm a scientist.</p>
-			<a class="button icon-left ion-chevron-left button-clear button-dark">Back</a>
-		</a>
-		<a class="item item-avatar" href="#">
-			<img src="venkman.jpg">
-			<h2>Venkman</h2>
-			<p>Back off, man. I'm a scientist.</p>
-			<a class="button icon-left ion-chevron-left button-clear button-dark">Back</a>
-		</a>
-		<a class="item item-avatar" href="#">
-			<img src="venkman.jpg">
-			<h2>Venkman</h2>
-			<p>Back off, man. I'm a scientist.</p>
-			<a class="button icon-left ion-chevron-left button-clear button-dark">Back</a>
-		</a>
-</div>
-</ion-content-->
