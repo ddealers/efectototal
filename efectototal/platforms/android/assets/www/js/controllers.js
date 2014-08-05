@@ -127,7 +127,8 @@ angular.module('efectototal.controllers', [])
 .controller('CategoriesCtrl', function($scope, $state, $stateParams, $ionicModal, History, Playlist, CaloricCounter, Videos, User){
 	var id = localStorage.getItem('id');
 	var video = angular.element(document.querySelector('#front-video'));
-	var selectedVideo = 0;
+	var selectedVideo = 0,
+		firstPlay = true;
 
 	$scope.videos = [];
 	$scope.onlist = false;
@@ -142,22 +143,25 @@ angular.module('efectototal.controllers', [])
 	$scope.share = function(sm){
 		switch(sm){
 			case 'fb':
-			window.open('http://www.facebook.com/sharer.php?u='+'http://efectototal.com/videos/cat/'+$stateParams.cat, 'Compartir en Facebook');
+			//window.open('http://www.facebook.com/sharer.php?u='+'http://efectototal.com/videos/cat/'+$stateParams.cat, 'Compartir en Facebook');
 			/*
 			window.plugins.socialsharing.shareViaFacebook(
 				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img , 'http://efectototal.com/videos/cat/'+$stateParams.cat, 
 				function() {console.log('share ok')}, 
-				function(errormsg){alert(errormsg)}
-			);
-			*/	
-			break;
-			case 'tw':
-			window.open('https://twitter.com/share?url=¡Ejercítate de una forma divertida con esta rutina de Efecto Total! '+'http://efectototal.com/videos/cat/'+$stateParams.cat, 'Compartir en Twitter');
-			/*
-			window.plugins.socialsharing.shareViaTwitter(
-				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img , 'http://efectototal.com/videos/cat/'+$stateParams.cat
+				function(errormsg){console.log(errormsg)}
 			);
 			*/
+			facebookConnectPlugin.showDialog({
+				method: 'feed',
+				link: 'http://efectototal.com/videos/cat/'+$stateParams.cat,
+				caption: '¡Ejercítate de una forma divertida con esta rutina de Efecto Total!'
+			}, function(){console.log('shared')}, function(error){console.log(error)});
+			break;
+			case 'tw':
+			//window.open('https://twitter.com/share?url=¡Ejercítate de una forma divertida con esta rutina de Efecto Total! '+'http://efectototal.com/videos/cat/'+$stateParams.cat, 'Compartir en Twitter');
+			window.plugins.socialsharing.shareViaTwitter(
+				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img */, 'http://efectototal.com/videos/cat/'+$stateParams.cat
+			);
 			break;
 		}
 	}
@@ -199,39 +203,47 @@ angular.module('efectototal.controllers', [])
 		});
 	}
 	*/
+	/*
 	$scope.$watch('videos', function(){
 		if($scope.videos.length > 0){
-			Videos.status(id, $scope.videos[0].id_video).then(function(data){
+			Videos.status(id, $scope.videos[0].id_video, ).then(function(data){
 				$scope.onroutine = (data.estatus == "0") ? false : true;
 			});
 		}
 	});
+	*/
 	function onPause(){
-		CaloricCounter.stop();
 		video[0].removeEventListener('pause', onPause);
 		video[0].addEventListener('play', onPlay, false);
+		CaloricCounter.stop();
 	}
 	function onPlay(){
-		video[0].pause();
-		video[0].removeEventListener('play', onPlay);
-		navigator.notification.alert('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm);
-		History.save({uid: id, data: $scope.videos[0].name, link: '#/app/categoria/'+$stateParams.cat, type: 1});
+		if(firstPlay){
+			video[0].removeEventListener('play', onPlay);
+			video[0].pause();
+			firstPlay = false;
+			navigator.notification.alert('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm);
+			History.save({uid: id, data: $scope.videos[0].name, link: '#/app/categoria/'+$stateParams.cat, type: 1});
+		}else{
+			video[0].addEventListener('pause', onPause, false);
+			CaloricCounter.init($scope);
+		}
 	}
 	function onConfirm(){
 		CaloricCounter.init($scope);
-		video[0].play();
 		video[0].addEventListener('pause', onPause, false);
+		video[0].play();
 	}
 	function onEnd(){
 		CaloricCounter.stop();
 	}
 	Videos.byCategory($stateParams.cat).then(
 		function(data){
+			video[0].addEventListener('play', onPlay, false);
+			video[0].addEventListener('ended', onEnd, false);
 			$scope.videos = data;
 			video.attr("src", "http://efectototal.com/media/" + data[0].src);
 			video.attr("poster", "http://efectototal.com/media/" + data[0].thumb2);
-			video[0].addEventListener('play', onPlay, false);
-			video[0].addEventListener('ended', onEnd, false);
 		},
 		function(){
 			navigator.notification.alert("No hay videos disponibles para esta categoría",function(){
@@ -242,7 +254,8 @@ angular.module('efectototal.controllers', [])
 .controller('VideoCtrl', function($scope, $state, $stateParams, $interval, $ionicModal, $ionicNavBarDelegate, History, Playlist, CaloricCounter, Videos, User){
 	var id = localStorage.getItem('id');
 	var video = angular.element(document.querySelector('#exercise-video'));
-	var selectedVideo = 0;
+	var selectedVideo = 0,
+		firstPlay = true;
 	
 	$scope.onlist = false;
 
@@ -259,22 +272,25 @@ angular.module('efectototal.controllers', [])
 	$scope.share = function(sm){
 		switch(sm){
 			case 'fb':
-			window.open('http://www.facebook.com/sharer.php?u='+'http://efectototal.com/videos/showVideo/'+$stateParams.cat, 'Compartir en Facebook');
+			//window.open('http://www.facebook.com/sharer.php?u='+'http://efectototal.com/videos/showVideo/'+$stateParams.cat, 'Compartir en Facebook');
 			/*
 			window.plugins.socialsharing.shareViaFacebook(
-				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img , 'http://efectototal.com/videos/cat/'+$stateParams.cat, 
+				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img , 'http://efectototal.com/videos/showVideo/'+$stateParams.video, 
 				function() {console.log('share ok')}, 
-				function(errormsg){alert(errormsg)}
-			);
-			*/	
-			break;
-			case 'tw':
-			window.open('https://twitter.com/share?url='+'http://efectototal.com/videos/showVideo/'+$stateParams.cat, 'Compartir en Twitter');
-			/*
-			window.plugins.socialsharing.shareViaTwitter(
-				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img , 'http://efectototal.com/videos/cat/'+$stateParams.cat
+				function(errormsg){console.log(errormsg)}
 			);
 			*/
+			facebookConnectPlugin.showDialog({
+				method: 'feed',
+				link: 'http://efectototal.com/videos/showVideo/'+$stateParams.video,
+				caption: '¡Ejercítate de una forma divertida con esta rutina de Efecto Total!'
+			}, function(){console.log('shared')}, function(error){console.log(error)});
+			break;
+			case 'tw':
+			//window.open('https://twitter.com/share?url='+'http://efectototal.com/videos/showVideo/'+$stateParams.cat, 'Compartir en Twitter');
+			window.plugins.socialsharing.shareViaTwitter(
+				'¡Ejercítate de una forma divertida con esta rutina de Efecto Total!', null /* img */, 'http://efectototal.com/videos/showVideo/'+$stateParams.video
+			);
 			break;
 		}
 	}
@@ -320,6 +336,7 @@ angular.module('efectototal.controllers', [])
 		});
 	}
 	*/
+	/*
 	$scope.$watch('video', function(){
 		if($scope.video){
 			Videos.status(id, $scope.video.id_video).then(function(data){
@@ -327,21 +344,28 @@ angular.module('efectototal.controllers', [])
 			});
 		}
 	});
+	*/
 	function onPause(){
-		CaloricCounter.stop();
 		video[0].removeEventListener('pause', onPause);
 		video[0].addEventListener('play', onPlay, false);
+		CaloricCounter.stop();
 	}
 	function onPlay(){
-		video[0].pause();
-		video[0].removeEventListener('play', onPlay);
-		navigator.notification.alert('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm);
-		History.save({uid: id, data: $scope.video.name, link: '#/app/video/'+$scope.video.id_video, type: 1});
+		if(firstPlay){
+			video[0].removeEventListener('play', onPlay);
+			video[0].pause();
+			firstPlay = false;
+			navigator.notification.alert('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm);
+			History.save({uid: id, data: $scope.videos[0].name, link: '#/app/categoria/'+$stateParams.cat, type: 1});
+		}else{
+			video[0].addEventListener('pause', onPause, false);
+			CaloricCounter.init($scope);
+		}
 	}
 	function onConfirm(){
 		CaloricCounter.init($scope);
-		video[0].play();
 		video[0].addEventListener('pause', onPause, false);
+		video[0].play();
 	}
 	function onEnd(){
 		CaloricCounter.stop();
@@ -371,7 +395,6 @@ angular.module('efectototal.controllers', [])
 					navigator.notification.alert(error, onConfirm)
 				});
 			}
-			console.log(data.buttonIndex, data.input1);
 		},"Mis Rutinas",['Crear','Cancelar']);
 	}
 	function onConfirm(data){

@@ -226,13 +226,15 @@ h1.title{
 	text-align: right;
 } 
 .contenidoRetos h2.ng-binding{
-	font-size: 16px;
+	font-size: 20px;
 	font-family: "Dosis";
 	color: #444;
-	margin: 0px -88px 0px;
+	position: absolute;
+	left: 10px;
+	top: 6px;
 }
 .contenidoRetos .item-thumbnail-left, .item-thumbnail-left .item-content {
-	min-height: 50px;
+	min-height: 55px;
 }
 .contenidoRetos h1.encabezado i{
 	float: left;
@@ -260,10 +262,17 @@ h1.title{
 	margin: 0;
 }
 .contenidoRetos p{
-	color: #5177c8;
-	font-weight: 500;
-	font-size: 20px;
-	padding: 0px 0px 0px 12px;
+	color: #444!important;
+	font-weight: normal!important;
+	font-size: 14px;
+	position: absolute;
+	left: 10px;
+	top: 30px;
+}
+.contenidoRetos a.button {
+	position: absolute;
+	left: 253px;
+	top: 7px;
 }
 .contenidoRetos article{
 	background: #f0f0f0;
