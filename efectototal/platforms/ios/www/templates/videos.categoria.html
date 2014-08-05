@@ -9,15 +9,27 @@
 			</div>
 			<div class="row rowFirst">
 				<div class="col">
-					<ul>
-						<li ng-repeat="video in videos">
-							<a href="#/app/videos/{{video.id_video}}">
-								<img class="poster" ng-src="http://efectototal.com/media/{{video.thumb1}}">
-								<p class="titulo">{{video.name}}</p>
-								<p class="subtitulo">Minutos {{video.duration}}</p>
-							</a>
-						</li>
-					</ul>
+					<!--
+					<ion-list>
+						<ion-item ng-repeat="video in videos" item="item" href="#/app/videos/{{video.id_video}}">
+							<img class="poster" ng-src="http://efectototal.com/media/{{video.thumb1}}">
+							<p class="titulo">{{video.name}}</p>
+							<p class="subtitulo">Minutos {{video.duration}}</p>
+						</ion-item>
+						<ion-scroll></ion-scroll>
+					</ion-list>
+					-->
+					<ion-scroll>
+						<ul>
+							<li ng-repeat="video in videos">
+								<a href="#/app/videos/{{video.id_video}}">
+									<img class="poster" ng-src="http://efectototal.com/media/{{video.thumb1}}">
+									<p class="titulo">{{video.name}}</p>
+									<p class="subtitulo">Minutos {{video.duration}}</p>
+								</a>
+							</li>
+						</ul>
+					</ion-scroll>
 				</div>
 				<div class="col col-67">
 					<video controls id="front-video" class="videos2"></video>

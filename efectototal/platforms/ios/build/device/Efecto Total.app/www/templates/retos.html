@@ -1,0 +1,45 @@
+<ion-view title="MIS RETOS">
+     <ion-nav-buttons side="left">
+         <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+     </ion-nav-buttons>
+     <ion-content class="has-header">
+          <div class="contenidoRetos">
+               <a href="#/app/perfil"><h1 class="encabezado"><i class="ion-arrow-left-b"></i>MIS RETOS</h1></a>
+               <div class="list card">
+         	          <div class="item item-image">
+     	              <img ng-src="http://graph.facebook.com/{{fbid}}/picture?height=200&width=200" class="perfil">
+                    </div>
+               </div>
+               <div class="list historial">
+                    <div class="item item-button-right">
+                         Comenzar un nuevo reto
+                         <a ui-sref="app.retos-iniciar" class="button button-icon icon ion-plus-circled"></a>
+                    </div> 
+                    <ion-list can-swipe="true">
+                         <ion-item ng-repeat="challenge in challenges"class="item-thumbnail-left">
+                              <img ng-src="{{item.img}}">
+                              <h2>{{challenge.name}}</h2>
+                              <!--p>{{item.description}}</p-->
+                              <ion-option-button class="button-positive"ng-click="share(item)">
+                                   Ver reto
+                              </ion-option-button>
+                              <ion-option-button class="button-info"ng-click="edit(item)">
+                                   Eliminar
+                              </ion-option-button>
+                              <ion-delete-button class="ion-minus-circled"ng-click="items.splice($index, 1)">
+                              </ion-delete-button>
+                              <ion-reorder-button class="ion-navicon"on-reorder="reorderItem(item, $fromIndex, $toIndex)">
+                              </ion-reorder-button>
+                         </ion-item>
+                    </ion-list>
+                    
+                    <!--div class="item item-button-right" ng-repeat="challenge in challenges" ng-switch on="challenge.status">
+                         {{challenge.name}}
+                         <a ui-sref="app.retos-resultados({reto: challenge.id})" ng-switch-when="3" class="button button-icon icon ion-chevron-right"></a>
+                         <a ui-sref="app.retos-invitacion({reto: challenge.id})" ng-switch-when="-1" class="button button-icon icon ion-chevron-right"></a>
+                         <a ui-sref="app.retos-calendario({reto: challenge.id})" ng-switch-when="1" class="button button-icon icon ion-chevron-right"></a>
+                    </div-->
+               </div>
+          </div>
+     </ion-content>
+</ion-view>

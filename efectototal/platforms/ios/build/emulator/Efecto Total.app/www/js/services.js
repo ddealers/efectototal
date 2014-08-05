@@ -391,6 +391,20 @@ angular.module('efectototal.services', [])
 		});
 		return deferred.promise;
 	}
+	var update = function(user, fields){
+		var deferred = $q.defer();
+		api('/user/update', {uid: user, fields: fields},
+		function(response){
+			if(response.success){
+				deferred.resolve(response.data);
+			}else{
+				deferred.reject(response.error);
+			}
+		},function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;
+	}
 	var setCalories = function(user, calories){
 		var deferred = $q.defer();
 		api('/user/set_calories', {user: user, calories: calories},
@@ -449,6 +463,7 @@ angular.module('efectototal.services', [])
 	}
 	return {
 		create: create,
+		update: update,
 		calories: getCalories,
 		setCalories: setCalories,
 		toggle: toggleVideo,

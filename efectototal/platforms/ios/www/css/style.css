@@ -963,6 +963,9 @@ h1.title{
 .contenidoVideosCatego div.col{
 	text-align: center;
 }
+.contenidoVideosCatego ion-scroll{
+	height: 345px;
+}
 .contenidoVideosCatego img.redest{
 	margin: 0px 0px 0px 65px;
 }

@@ -64,6 +64,7 @@ h1.title{
 /* ----------------------------------------------------------------------- CONECTATE CON FACEBOOK */
 .login img.inicio{
 	width: 100%;
+
 }
 .login div.boton-container{
 	border-top: 1px solid #DDD;
@@ -224,6 +225,15 @@ h1.title{
 	font-family: 'Dosis';
 	text-align: right;
 } 
+.contenidoRetos h2.ng-binding{
+	font-size: 16px;
+	font-family: "Dosis";
+	color: #444;
+	margin: 0px -88px 0px;
+}
+.contenidoRetos .item-thumbnail-left, .item-thumbnail-left .item-content {
+	min-height: 50px;
+}
 .contenidoRetos h1.encabezado i{
 	float: left;
 }
@@ -337,7 +347,7 @@ h1.title{
 	position: absolute;
 	top: 0;
 	/* left: 10px; */
-	margin: 0;
+	margin: -12px 0px 0px 0px;
 }
 .contenidoBlog .row, .contenidoBlog .col{
 	padding: 5px 0;
@@ -456,7 +466,7 @@ h1.title{
 }
 .contenidoContador button.info-title{
 	width: 40%;
-	margin-left: 138px;
+	margin-left: 85px;
 }
 .contenidoContador .info-title span {
 	-webkit-transform: skew(25deg);
@@ -497,6 +507,7 @@ h1.title{
 }
 .contenidoContador .item-divider{
 	color: #e0032a;
+	font-size: 13px;
 }
 /*
 .contenidoContador ul{
@@ -707,6 +718,10 @@ h1.title{
 	padding: 10px 10px 10px 160px;
 	margin: 0;
 	text-align: right;
+}
+.contenidoIformacion p{
+	font-size: 16px;
+	color: #444;
 } 
 .contenidoIformacion .ion-arrow-left-b:before {
 	position: absolute;
@@ -947,6 +962,9 @@ h1.title{
 }
 .contenidoVideosCatego div.col{
 	text-align: center;
+}
+.contenidoVideosCatego ion-scroll{
+	height: 345px;
 }
 .contenidoVideosCatego img.redest{
 	margin: 0px 0px 0px 65px;
@@ -1743,6 +1761,10 @@ margin: 0px;
 .contenidoTour img{
 	width: 90%;
 	margin: 0px 0px 10px 15px;
+}
+.contenidoTour img.image3{
+	width: 81%;
+	margin: 0px 0px 10px 27px;
 }
 .contenidoTour div.slider-pager{
 	bottom: 5px;

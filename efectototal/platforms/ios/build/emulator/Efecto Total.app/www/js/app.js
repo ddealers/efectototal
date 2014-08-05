@@ -11,14 +11,14 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers', 'ef
 		// Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
 		// for form inputs)
 		if(window.cordova && window.cordova.plugins.Keyboard) {
-		  cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+		  cordova.plugins.Keyboard.hideKeyboardAccessoryBar(false);
 		}
 		if(window.StatusBar) {
 		  // org.apache.cordova.statusbar required
 		  StatusBar.styleDefault();
 		}
   	});
-  	$rootScope.$on('$stateChangeStart', function(event, toState) {
+  	/*$rootScope.$on('$stateChangeStart', function(event, toState) {
 		if (toState.name !== "login" && !localStorage['id']) {
 			$state.go('login');
 		 	event.preventDefault();

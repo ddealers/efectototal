@@ -27,6 +27,7 @@ angular.module('efectototal.controllers', [])
 	}
 	function onSuccess(data){
 		User.create(data).then(function(data){
+			console.log('data:',data);
 			var birthday;
 			if(data.scope.birthday){
 				//birthday = new Date(data.scope.birthday).toISOString().substring(0, 10);
@@ -37,6 +38,8 @@ angular.module('efectototal.controllers', [])
 			localStorage.setItem('name', data.scope.name);
 			localStorage.setItem('email', data.scope.email);
 			localStorage.setItem('birthday', birthday);
+			localStorage.setItem('weight', data.scope.address);
+			localStorage.setItem('height', data.scope.phone);
 			localStorage.setItem('fbid', data.scope.fbid);
 			localStorage.setItem('id', data.id);
 			$scope.loading = false;
@@ -72,28 +75,35 @@ angular.module('efectototal.controllers', [])
 	}
 })
 
-.controller('ProfileInfoCtrl', function($scope, $filter){
-	var date = new Date(localStorage.getItem('birthday'));
-	var birthday = $filter('date')(date, 'yyyy-MM-dd');
+.controller('ProfileInfoCtrl', function($scope, $filter, User){
+	var id = localStorage.getItem('id');
+	//var date = new Date(localStorage.getItem('birthday'));
+	//var birthday = $filter('date')(date, 'yyyy-MM-dd');
+	//console.log(localStorage.getItem('birthday'), birthday);
 	$scope.data = {
 		name: localStorage.getItem('name'),
 		email: localStorage.getItem('email'),
-		birthday: birthday,
+		birthday: localStorage.getItem('birthday'),
 		height: localStorage.getItem('height') || 0,
 		weight: localStorage.getItem('weight') || 0
 	};
 	$scope.fbid = localStorage.getItem('fbid');
 	$scope.$watch('data.birthday', function(newValue, oldValue){
+		birthday = new Date(newValue).toISOString().substring(0, 10);
 		$scope.getAge();
+		User.update(id, {birthday: $scope.data.birthday, age: $scope.age});
+		localStorage.setItem('birthday', birthday);
 	});
 	$scope.$watch('data.height',function(newValue, oldValue){
 		$scope.getIMC();
 		$scope.getIdealWeight();
+		User.update(id, {phone: $scope.data.height});
 		localStorage.setItem('height', newValue);
 	});
 	$scope.$watch('data.weight',function(newValue, oldValue){
 		$scope.getIMC();
 		$scope.getIdealWeight();
+		User.update(id, {address: $scope.data.weight});
 		localStorage.setItem('weight', newValue);
 	});
 	$scope.getAge = function(){
@@ -546,8 +556,9 @@ angular.module('efectototal.controllers', [])
 	}).then(function(modal) {
 		$scope.modal = modal;
 	});
-	$scope.selectChange = function(){
-		console.log();
+	$scope.cancel = function(){
+		$scope.modal.hide();
+		video.css({display:"block"});
 	}
 	$scope.selectFriends = function(){
 		facebookConnectPlugin.api('/me/?fields=friends',[],function(data){
@@ -583,11 +594,10 @@ angular.module('efectototal.controllers', [])
 			to: _results.toString()
 		},
 		function (data){
-			console.log(data);
+			Challenge.create($scope.challenge).then(onSuccess, onError);
 		}, function (error){
-			console.log(error);
+			Challenge.create($scope.challenge).then(onSuccess, onError);
 		});
-		Challenge.create($scope.challenge).then(onSuccess, onError);
 	}
 	function onSuccess(){
 		navigator.notification.alert('Tú reto ha sido creado.', alertCallback);
