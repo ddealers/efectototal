@@ -464,6 +464,9 @@ angular.module('efectototal.controllers', [])
 	var id = localStorage.getItem('id');
 	$scope.fbid = localStorage.getItem('fbid');
 	Challenge.user(id).then(function(data){
+		for(item in data){
+			data[item].start_at = new Date(data[item].start_at);
+		}
 		$scope.challenges = data;
 	});
 })

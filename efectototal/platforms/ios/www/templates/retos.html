@@ -15,20 +15,17 @@
                          Comenzar un nuevo reto
                          <a ui-sref="app.retos-iniciar" class="button button-icon icon ion-plus-circled"></a>
                     </div> 
-                    <ion-list can-swipe="true">
+                    <ion-list can-swipe="true" show-delete="true">
                          <ion-item ng-repeat="challenge in challenges" ng-switch on="challenge.status" class="item-thumbnail-left">
                               <img ng-src="{{item.img}}">
                               <h2>{{challenge.name}}</h2>
-                              <p>{{challenge.start_at | date:'dd/mm/yyyy'}}</p>
-                              <a ui-sref="app.retos-resultados({reto: challenge.id_challenge})" ng-switch-when="3" class="button button-icon icon ion-chevron-right"></a>
-                              <a ui-sref="app.retos-invitacion({reto: challenge.id_challenge})" ng-switch-when="-1" class="button button-icon icon ion-chevron-right"></a>
-                              <a ui-sref="app.retos-calendario({reto: challenge.id_challenge})" ng-switch-when="1" class="button button-icon icon ion-chevron-right"></a>
-                              <ion-option-button class="button-positive"ng-click="share(item)">
-                                   + Info
-                              </ion-option-button>
-                              <ion-delete-button class="ion-minus-circled"ng-click="items.splice($index, 1)">
+                              <p>{{challenge.start_at | date : 'mediumDate' }}</p>
+                              <a ng-class="{button-balanced:challenge.status==1,button-positive:challenge.status==3,button-assertive:challenge.status==-1}" ui-sref="app.retos-resultados({reto: challenge.id_challenge})" ng-switch-when="3" class="button button-icon icon ion-chevron-right"></a>
+                              <a ng-class="{button-balanced:challenge.status==1,button-positive:challenge.status==3,button-assertive:challenge.status==-1}" ui-sref="app.retos-invitacion({reto: challenge.id_challenge})" ng-switch-when="-1" class="button button-icon icon ion-chevron-right"></a>
+                              <a ng-class="{button-balanced:challenge.status==1,button-positive:challenge.status==3,button-assertive:challenge.status==-1}" ui-sref="app.retos-calendario({reto: challenge.id_challenge})" ng-switch-when="1" class="button button-icon icon ion-chevron-right"></a>
+                              <ion-option-button class="ion-minus-circled" ng-click="items.splice($index, 1)">
                                    Eliminar
-                              </ion-delete-button>
+                              </ion-option-button>
                          </ion-item>
                     </ion-list>
                     <!--
