@@ -16,7 +16,7 @@
                     <p>HOY</p>
                </article> 
                -->    
-               <div class="list historial">
+               <ion-list class="historial">
                     <div class="item item-button-right" ng-switch="activity.type" ng-repeat="activity in activities">
                          <p ng-switch-when="1">Has visto la rutina {{activity.data}}.</p>
                          <p ng-switch-when="2">Agregaste la rutina {{activity.data}} a tus rutinas.</p>
@@ -30,7 +30,8 @@
                          <p ng-switch-when="10">Compartiste la noticia "{{activity.data}}" del blog de Efecto Total</p>
                          <a href="{{activity.link}}" ng-show="activity.link" class="button button-icon icon ion-chevron-right"></a>
                     </div>
-               </div>
+               </ion-list>
+               <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="10%"></ion-infinite-scroll>
           </div>
      </ion-content>
 </ion-view>

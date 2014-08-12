@@ -17,7 +17,7 @@
 				<div class="col" >
 					<img ng-src="http://graph.facebook.com/{{challenge.current.fbid}}/picture?height=200&width=200" class="perfil">
 					<p class="jugador">{{challenge.current.first_name}}</p>
-					<p class="calorias">{{challenge.current.total}} Calorías quemadas</p>
+					<p class="calorias">{{challenge.current.total | number:2}} Calorías quemadas</p>
 				</div>
 			</div> 
 			<div class="row">
@@ -29,7 +29,7 @@
 				<div ng-repeat="contender in challenge.contenders" class="col">
 					<img ng-src="http://graph.facebook.com/{{contender.fbid}}/picture?height=200&width=200" class="perfil">
 					<p class="jugador2">{{contender.first_name}}</p>
-					<p class="calorias2">{{contender.total}} Calorías quemadas</p>
+					<p class="calorias2">{{contender.total | number:2}} Calorías quemadas</p>
 				</div>
 			</div>
 			<!--
@@ -60,7 +60,7 @@
 					<div class="col" >
 						<img ng-src="http://graph.facebook.com/{{winner.fbid}}/picture?height=200&width=200" class="perfil">
 						<p class="jugador">{{winner.first_name}}</p>
-						<p class="calorias">{{winner.total}} Calorías quemadas</p>
+						<p class="calorias">{{winner.total | number:2}} Calorías quemadas</p>
 					</div>
 				</div> 
 			</div> 

@@ -19,18 +19,14 @@
                          <ion-item ng-repeat="challenge in challenges" ng-switch on="challenge.status" class="item-thumbnail-left">
                               <img ng-src="{{item.img}}">
                               <h2>{{challenge.name}}</h2>
-                              <p>{{challenge.start_at | date:'dd/mm/yyyy'}}</p>
-                              <a ui-sref="app.retos-resultados({reto: challenge.id_challenge})" ng-switch-when="3" class="button button-icon icon ion-chevron-right"></a>
-                              <a ui-sref="app.retos-invitacion({reto: challenge.id_challenge})" ng-switch-when="-1" class="button button-icon icon ion-chevron-right"></a>
-                              <a ui-sref="app.retos-calendario({reto: challenge.id_challenge})" ng-switch-when="1" class="button button-icon icon ion-chevron-right"></a>
-                              <ion-option-button class="button-positive"ng-click="share(item)">
-                                   + Info
-                              </ion-option-button>
-                              <ion-delete-button class="ion-minus-circled"ng-click="items.splice($index, 1)">
-                                   Eliminar
-                              </ion-delete-button>
+                              <p>{{challenge.start_at | date : 'mediumDate' }}</p>
+                              <a ui-sref="app.retos-resultados({reto: challenge.id_challenge})" ng-switch-when="3" class="button button-positive button-outline icon-right ion-chevron-right">Terminado</a>
+                              <a ui-sref="app.retos-invitacion({reto: challenge.id_challenge})" ng-switch-when="-1" class="button button-assertive button-outline icon-right ion-chevron-right">Pendiente</a>
+                              <a ui-sref="app.retos-calendario({reto: challenge.id_challenge})" ng-switch-when="1" class="button button-balanced button-outline icon-right ion-chevron-right">En curso</a>
+                              <ion-option-button class="button-outline button-assertive button-icon icon ion-minus-circled" ng-click="remove($index)"></ion-option-button>
                          </ion-item>
                     </ion-list>
+                    <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="10%"></ion-infinite-scroll>
                     <!--
                     <div class="item item-button-right" ng-repeat="challenge in challenges" ng-switch on="challenge.status">
                          {{challenge.name}}

@@ -19,6 +19,13 @@ angular.module('efectototal.controllers', [])
 		$scope.categories = categories;
 	});
 })
+.controller('TourCtrl', function($scope, $state){
+	$scope.slideHasChanged = function(index){
+		if(index == 3){
+			$state.go('login');
+		}
+	}
+})
 .controller('LoginCtrl', function($scope, $state, OpenFB, User) {
 	$scope.loading = false;
 	function registerAndLogin(data){
@@ -27,7 +34,6 @@ angular.module('efectototal.controllers', [])
 	}
 	function onSuccess(data){
 		User.create(data).then(function(data){
-			console.log('data:',data);
 			var birthday;
 			if(data.scope.birthday){
 				//birthday = new Date(data.scope.birthday).toISOString().substring(0, 10);
@@ -62,7 +68,7 @@ angular.module('efectototal.controllers', [])
 	}
 	$scope.facebookLogin = function () {
 		$scope.loading = true;
-		facebookConnectPlugin.login(['email','user_birthday','user_friends'],registerAndLogin,onError);
+		facebookConnectPlugin.login(['email','user_friends'],registerAndLogin,onError);
 	};
 })
 
@@ -215,27 +221,31 @@ angular.module('efectototal.controllers', [])
 	function onPause(){
 		video[0].removeEventListener('pause', onPause);
 		video[0].addEventListener('play', onPlay, false);
-		CaloricCounter.stop();
+		CaloricCounter.stop($scope);
 	}
 	function onPlay(){
 		if(firstPlay){
 			video[0].removeEventListener('play', onPlay);
 			video[0].pause();
 			firstPlay = false;
-			navigator.notification.alert('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm);
-			History.save({uid: id, data: $scope.videos[0].name, link: '#/app/categoria/'+$stateParams.cat, type: 1});
+			navigator.notification.confirm('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm, 'Contador', ['Comenzar','Cancelar']);
+			History.save({uid: id, data: $scope.videos[0].name, link: '#/app/categorias/'+$stateParams.cat, type: 1});
 		}else{
 			video[0].addEventListener('pause', onPause, false);
 			CaloricCounter.init($scope);
 		}
 	}
-	function onConfirm(){
-		CaloricCounter.init($scope);
-		video[0].addEventListener('pause', onPause, false);
-		video[0].play();
+	function onConfirm(buttonIndex){
+		if(buttonIndex == 1){
+			CaloricCounter.init($scope);
+			video[0].addEventListener('pause', onPause, false);
+			video[0].play();
+		}else{
+			video[0].play();
+		}
 	}
 	function onEnd(){
-		CaloricCounter.stop();
+		CaloricCounter.stop($scope);
 	}
 	Videos.byCategory($stateParams.cat).then(
 		function(data){
@@ -314,7 +324,7 @@ angular.module('efectototal.controllers', [])
 			if(list.selected){
 				onlist = true;
 				Playlist.add(id, selectedVideo, list.id_playlist);
-				History.save({uid: id, data: $scope.video.name, link: '#/app/video/'+$scope.video.id_video, type: 2});
+				History.save({uid: id, data: $scope.video.name, link: '#/app/videos/'+$scope.video.id_video, type: 2});
 			}else{
 				Playlist.remove(id, selectedVideo, list.id_playlist);
 			}
@@ -348,27 +358,31 @@ angular.module('efectototal.controllers', [])
 	function onPause(){
 		video[0].removeEventListener('pause', onPause);
 		video[0].addEventListener('play', onPlay, false);
-		CaloricCounter.stop();
+		CaloricCounter.stop($scope);
 	}
 	function onPlay(){
 		if(firstPlay){
 			video[0].removeEventListener('play', onPlay);
 			video[0].pause();
 			firstPlay = false;
-			navigator.notification.alert('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm);
-			History.save({uid: id, data: $scope.videos[0].name, link: '#/app/categoria/'+$stateParams.cat, type: 1});
+			navigator.notification.confirm('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm, 'Contador', ['Comenzar','Cancelar']);
+			History.save({uid: id, data: $scope.video.name, link: '#/app/videos/'+$stateParams.cat, type: 1});
 		}else{
 			video[0].addEventListener('pause', onPause, false);
 			CaloricCounter.init($scope);
 		}
 	}
-	function onConfirm(){
-		CaloricCounter.init($scope);
-		video[0].addEventListener('pause', onPause, false);
-		video[0].play();
+	function onConfirm(buttonIndex){
+		if(buttonIndex == 1){
+			CaloricCounter.init($scope);
+			video[0].addEventListener('pause', onPause, false);
+			video[0].play();
+		}else{
+			video[0].play();
+		}
 	}
 	function onEnd(){
-		CaloricCounter.stop();
+		CaloricCounter.stop($scope);
 	}
 	Videos.byId($stateParams.video).then(function(data){
 		$scope.video = data;
@@ -390,7 +404,8 @@ angular.module('efectototal.controllers', [])
 				Playlist.create(id, data.input1).then(function(data){
 					var length = data.length;
 					$scope.routines = data;
-					History.save({uid: id, data: $scope.routines[length - 1].name, link: "#app/rutinas-videos/"+$scope.routines[length - 1].id_playlist, type: 9});
+					History.save({uid: id, data: $scope.routines[length - 1].name, link: "#app/rutinas", type: 9});
+					//History.save({uid: id, data: $scope.routines[length - 1].name, link: "#app/rutinas-videos/"+$scope.routines[length - 1].id_playlist, type: 9});
 				},function(error){
 					navigator.notification.alert(error, onConfirm)
 				});
@@ -448,42 +463,86 @@ angular.module('efectototal.controllers', [])
 	video.css({display:"none"});
 })
 .controller('MiActividadCtrl', function($scope, $state, History){
-	var id = localStorage.getItem('id');
+	var id = localStorage.getItem('id'),
+		page = 0;
 	$scope.fbid = localStorage.getItem('fbid');
-	History.get(id).then(function(data){
-		for(a in data){
-			var activity = data[a];
-			if(activity.data.indexOf(',') > -1){
-				activity.data = activity.data.split(",");
-			}
-		}
-		$scope.activities = data;
-	});
-})
-.controller('MisRetosCtrl', function($scope, $state, Challenge){
-	var id = localStorage.getItem('id');
-	$scope.fbid = localStorage.getItem('fbid');
-	Challenge.user(id).then(function(data){
-		$scope.challenges = data;
-	});
-})
-.controller('NewsfeedCtrl', function($scope, $state, History){
-	$scope.fbid = localStorage.getItem('fbid');
-	facebookConnectPlugin.api('/me/?fields=friends',[],function(data){
-		var _i = 0, _results = [];
-		for(_i = 0; _i < data.friends.data.length; _i++){
-			_friend = data.friends.data[_i];
-			_results.push(_friend.id);
-		}
-		History.newsfeed(_results.toString()).then(function(data){
+	$scope.noMoreItemsAvailable = false;
+	$scope.activities = [];
+	$scope.loadMore = function(){
+		History.get(id, page).then(function(data){
+			page++;
 			for(a in data){
 				var activity = data[a];
 				if(activity.data.indexOf(',') > -1){
 					activity.data = activity.data.split(",");
 				}
 			}
-			$scope.activities = data;
+			$scope.activities = $scope.activities.concat(data);
+			$scope.$broadcast('scroll.infiniteScrollComplete');
+		},function(){
+			$scope.noMoreItemsAvailable = true;
+		});	
+	}
+	$scope.$on('stateChangeSuccess', function() {
+    	$scope.loadMore();
+	});
+})
+.controller('NewsfeedCtrl', function($scope, $state, History){
+	var page = 0;
+	$scope.fbid = localStorage.getItem('fbid');
+	$scope.noMoreItemsAvailable = false;
+	$scope.activities = [];
+	$scope.loadMore = function(){
+		facebookConnectPlugin.api('/me/?fields=friends',[],function(data){
+			var _i = 0, _results = [];
+			for(_i = 0; _i < data.friends.data.length; _i++){
+				_friend = data.friends.data[_i];
+				_results.push(_friend.id);
+			}
+			History.newsfeed(_results.toString(), page).then(function(data){
+				page++;
+				for(a in data){
+					var activity = data[a];
+					if(activity.data.indexOf(',') > -1){
+						activity.data = activity.data.split(",");
+					}
+				}
+				$scope.activities = $scope.activities.concat(data);
+				$scope.$broadcast('scroll.infiniteScrollComplete');
+			},function(){
+				$scope.noMoreItemsAvailable = true;
+			});
 		});
+	}
+	$scope.$on('stateChangeSuccess', function() {
+    	$scope.loadMore();
+	});
+})
+.controller('MisRetosCtrl', function($scope, $state, Challenge){
+	var id = localStorage.getItem('id'),
+		page = 0;
+	$scope.fbid = localStorage.getItem('fbid');
+	$scope.noMoreItemsAvailable = false;
+	$scope.challenges = [];
+	$scope.remove = function(index){
+		Challenge.update(id, $scope.challenges[index].id_challenge, 0).then(function(){
+			$scope.challenges.splice(index, 1);
+		});
+	}
+	$scope.loadMore = function(){
+		Challenge.user(id, page).then(function(data){
+			page++;
+			for(item in data){
+				data[item].start_at = new Date(data[item].start_at);
+			}
+			$scope.challenges = $scope.challenges.concat(data);
+			$scope.$broadcast('scroll.infiniteScrollComplete');
+		}, function(){
+			$scope.noMoreItemsAvailable = true;
+		});
+	}
+	$scope.$on('stateChangeSuccess', function() {
+    	$scope.loadMore();
 	});
 })
 .controller('ConfigCtrl', function($scope, $state){
@@ -500,7 +559,9 @@ angular.module('efectototal.controllers', [])
 		$state.go('login');
 	};
 })
-.controller('BlogCtrl', function($scope, $state, $sce, $ionicLoading, Blog) {
+.controller('BlogCtrl', function($scope, $state, $sce, Blog) {
+	var page = 1;
+	$scope.noMoreItemsAvailable = false;
 	$scope.posts = [];
 	$scope.renderTitle = function(title){
 		if(title) return title.replace(/&#8220;/,'"').replace(/&#8221;/,'"').replace(/&#8230;/,'...');
@@ -552,14 +613,20 @@ angular.module('efectototal.controllers', [])
 		return $sce.trustAsHtml(dateArr[2] + '<span>' + month + '</span>');
 	};
 	$scope.open = function(url){
-		window.open(url, '_system', 'location=no');
+		window.open(url, '_blank', 'location=no');
+		//window.open(url, '_system', 'location=no');
 	}
-	$ionicLoading.show({
-	  template: 'CARGANDO...'
-	});
-	Blog.posts().then(function(data){
-		$ionicLoading.hide();
-		$scope.posts = data;
+	$scope.loadMore = function(){
+		Blog.posts(page).then(function(data){
+			page++;
+			$scope.posts = $scope.posts.concat(data);
+			$scope.$broadcast('scroll.infiniteScrollComplete');
+		}, function(){
+			$scope.noMoreItemsAvailable = true;
+		});
+	}
+	$scope.$on('stateChangeSuccess', function() {
+    	$scope.loadMore();
 	});
 })
 .controller('ChallengeInitCtrl', function($scope, $state, $ionicModal, Challenge){
@@ -581,10 +648,11 @@ angular.module('efectototal.controllers', [])
 	});
 	$scope.cancel = function(){
 		$scope.modal.hide();
-		video.css({display:"block"});
 	}
 	$scope.selectFriends = function(){
-		facebookConnectPlugin.api('/me/?fields=friends',[],function(data){
+		//facebookConnectPlugin.api('/me/?fields=friends',[],function(data){
+		FB.api('/me/?fields=friends', function(data){
+			console.log(data);
 			$scope.friends = data.friends.data;
 			$scope.modal.show();
 		});
@@ -672,6 +740,11 @@ angular.module('efectototal.controllers', [])
 		data.current.total = _totalCurrent;
 	}
 	function getTotalContenders(data){
+		if(!data.contenders){
+			navigator.notification.alert('Nadie ha aceptado el reto aún.', function(){
+				$state.go('app.retos');
+			});
+		}
 		if(data.contenders && data.contenders.length > 0){
 			_length = data.contenders.length;
 			for(_i = 0; _i < _length; _i++){
@@ -747,6 +820,11 @@ angular.module('efectototal.controllers', [])
 	$scope.name = localStorage.getItem('name');
 	
 	Challenge.byId(id, $stateParams.reto).then(function(data){
+		if(!data.contenders){
+			navigator.notification.alert('El reto ha finalizado sin adversarios.', function(){
+				$state.go('app.retos');
+			});
+		}
 		$scope.challenge = data;
 		$scope.winner = data.current;
 		for(var contender in data.contenders){

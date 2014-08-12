@@ -29,9 +29,9 @@ angular.module('efectototal.services', [])
 		});
 		return deferred.promise;
 	}
-	var get = function(id){
+	var get = function(id, page){
 		var deferred = $q.defer();
-		api('/history/get', {uid: id},
+		api('/history/get', {uid: id, page: page},
 		function(response){
 			if(response.success){
 				deferred.resolve(response.data);
@@ -43,9 +43,9 @@ angular.module('efectototal.services', [])
 		});
 		return deferred.promise;
 	}
-	var newsfeed = function(friends){
+	var newsfeed = function(friends, page){
 		var deferred = $q.defer();
-		api('/history/newsfeed', {friends: friends},
+		api('/history/newsfeed', {friends: friends, page: page},
 		function(response){
 			if(response.success){
 				deferred.resolve(response.data);
@@ -247,9 +247,9 @@ angular.module('efectototal.services', [])
 		});
 		return deferred.promise;
 	}
-	var byUser = function(userID){
+	var byUser = function(userID, page){
 		var deferred = $q.defer();
-		api('/challenge/user', {id: userID},
+		api('/challenge/user', {id: userID, page: page},
 		function(response){
 			if(response.success){
 				deferred.resolve(response.data);
@@ -550,12 +550,14 @@ angular.module('efectototal.services', [])
 })
 .factory('Blog', function($rootScope, $http, $q){
 	var url = 'http://blog.efectototal.com';
-	var posts = function(){
+	var posts = function(page){
 		var deferred = $q.defer();
-		$http.get(url, {params: {json:1}})
+		$http.get(url, {params: {json: "get_recent_posts", count: 50, page: page}})
 		.success(function(response){
-			if(response.status === "ok"){
+			if(response.status === "ok" && response.posts.length > 0){
 				deferred.resolve(response.posts);
+			}else{
+				deferred.reject(response.count);
 			}
 		})
 		.error(function(response){
