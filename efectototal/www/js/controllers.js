@@ -22,7 +22,7 @@ angular.module('efectototal.controllers', [])
 .controller('TourCtrl', function($scope, $state){
 	$scope.slideHasChanged = function(index){
 		if(index == 3){
-			$state.go('login');
+			$state.go('app.perfil');
 		}
 	}
 })
@@ -224,8 +224,12 @@ angular.module('efectototal.controllers', [])
 		CaloricCounter.stop($scope);
 	}
 	function onPlay(){
+		video[0].addEventListener('pause', onPause, false);
+		CaloricCounter.init($scope);
+	}
+	function onInit(){
 		if(firstPlay){
-			video[0].removeEventListener('play', onPlay);
+			video[0].removeEventListener('click', onInit);
 			video[0].pause();
 			firstPlay = false;
 			navigator.notification.confirm('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm, 'Contador', ['Comenzar','Cancelar']);
@@ -249,10 +253,14 @@ angular.module('efectototal.controllers', [])
 	}
 	Videos.byCategory($stateParams.cat).then(
 		function(data){
-			video[0].addEventListener('play', onPlay, false);
+			video[0].addEventListener('click', onInit, false);
 			video[0].addEventListener('ended', onEnd, false);
 			$scope.videos = data;
-			video.attr("src", "http://efectototal.com/media/" + data[0].src);
+			if(navigator.userAgent.toLowerCase().indexOf('android') > -1){
+				video.attr("src", "http://efectototal.com/app/_mobile/media/" + data[0].src);
+			}else{
+				video.attr("src", "http://efectototal.com/media/" + data[0].src);
+			}
 			video.attr("poster", "http://efectototal.com/media/" + data[0].thumb2);
 		},
 		function(){
@@ -386,7 +394,11 @@ angular.module('efectototal.controllers', [])
 	}
 	Videos.byId($stateParams.video).then(function(data){
 		$scope.video = data;
-		video.attr("src", "http://efectototal.com/media/" + data.src);
+		if(navigator.userAgent.toLowerCase().indexOf('android') > -1){
+			video.attr("src", "http://efectototal.com/app/_mobile/media/" + data.src);
+		}else{
+			video.attr("src", "http://efectototal.com/media/" + data.src);
+		}
 		video.attr("poster", "http://efectototal.com/media/" + data.thumb2);
 		video[0].addEventListener('play', onPlay, false);
 		video[0].addEventListener('ended', onEnd, false);
@@ -435,7 +447,11 @@ angular.module('efectototal.controllers', [])
 	}
 	$scope.playAll = function(){
 		video.css({display:"block"});
-		video.attr("src", "http://efectototal.com/media/" + $scope.videos[0].src);
+		if(navigator.userAgent.toLowerCase().indexOf('android') > -1){
+			video.attr("src", "http://efectototal.com/app/_mobile/media/" + $scope.videos[0].src);
+		}else{
+			video.attr("src", "http://efectototal.com/media/" + $scope.videos[0].src);
+		}
 		video[0].addEventListener('ended', playNextVideo, false);
 		video[0].addEventListener('pause', onPause, false);
 		video[0].play();
@@ -446,7 +462,11 @@ angular.module('efectototal.controllers', [])
 		next++;
 		CaloricCounter.stop($scope);
 		if(next < $scope.videos.length){
-			video.attr("src", "http://efectototal.com/media/" + $scope.videos[next].src);
+			if(navigator.userAgent.toLowerCase().indexOf('android') > -1){
+				video.attr("src", "http://efectototal.com/app/_mobile/media/" + $scope.videos[next].src);
+			}else{
+				video.attr("src", "http://efectototal.com/media/" + $scope.videos[next].src);
+			}
 			CaloricCounter.init($scope);
 			video[0].play();
 		}else{

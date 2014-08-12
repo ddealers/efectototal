@@ -22,7 +22,7 @@ angular.module('efectototal.controllers', [])
 .controller('TourCtrl', function($scope, $state){
 	$scope.slideHasChanged = function(index){
 		if(index == 3){
-			$state.go('login');
+			$state.go('app.perfil');
 		}
 	}
 })
