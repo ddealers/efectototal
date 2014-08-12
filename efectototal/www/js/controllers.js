@@ -134,7 +134,8 @@ angular.module('efectototal.controllers', [])
 	var id = localStorage.getItem('id');
 	var video = angular.element(document.querySelector('#front-video'));
 	var selectedVideo = 0,
-		firstPlay = true;
+		firstPlay = true,
+		counter = false;
 
 	$scope.videos = [];
 	$scope.onlist = false;
@@ -224,32 +225,30 @@ angular.module('efectototal.controllers', [])
 		CaloricCounter.stop($scope);
 	}
 	function onPlay(){
+		video[0].removeEventListener('play', onPlay, false);
 		video[0].addEventListener('pause', onPause, false);
 		CaloricCounter.init($scope);
 	}
 	function onInit(){
-		if(firstPlay){
-			video[0].removeEventListener('click', onInit);
-			video[0].pause();
-			firstPlay = false;
-			navigator.notification.confirm('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm, 'Contador', ['Comenzar','Cancelar']);
-			History.save({uid: id, data: $scope.videos[0].name, link: '#/app/categorias/'+$stateParams.cat, type: 1});
-		}else{
-			video[0].addEventListener('pause', onPause, false);
-			CaloricCounter.init($scope);
-		}
+		video[0].removeEventListener('click', onInit);
+		video[0].addEventListener('play', onPlay, false);
+		video[0].pause();
+		firstPlay = false;
+		navigator.notification.confirm('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm, 'Contador', ['Comenzar','Cancelar']);
+		History.save({uid: id, data: $scope.videos[0].name, link: '#/app/categorias/'+$stateParams.cat, type: 1});
 	}
 	function onConfirm(buttonIndex){
 		if(buttonIndex == 1){
+			counter = true;
 			CaloricCounter.init($scope);
-			video[0].addEventListener('pause', onPause, false);
 			video[0].play();
 		}else{
+			counter = false;
 			video[0].play();
 		}
 	}
 	function onEnd(){
-		CaloricCounter.stop($scope);
+		if(counter) CaloricCounter.stop($scope);
 	}
 	Videos.byCategory($stateParams.cat).then(
 		function(data){
@@ -273,7 +272,8 @@ angular.module('efectototal.controllers', [])
 	var id = localStorage.getItem('id');
 	var video = angular.element(document.querySelector('#exercise-video'));
 	var selectedVideo = 0,
-		firstPlay = true;
+		firstPlay = true,
+		counter = false;
 	
 	$scope.onlist = false;
 
@@ -369,28 +369,28 @@ angular.module('efectototal.controllers', [])
 		CaloricCounter.stop($scope);
 	}
 	function onPlay(){
-		if(firstPlay){
-			video[0].removeEventListener('play', onPlay);
-			video[0].pause();
-			firstPlay = false;
-			navigator.notification.confirm('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm, 'Contador', ['Comenzar','Cancelar']);
-			History.save({uid: id, data: $scope.video.name, link: '#/app/videos/'+$stateParams.cat, type: 1});
-		}else{
-			video[0].addEventListener('pause', onPause, false);
-			CaloricCounter.init($scope);
-		}
+		video[0].removeEventListener('play', onPlay);
+		video[0].addEventListener('pause', onPause, false);
+		CaloricCounter.init($scope);	
+	}
+	function onInit(){
+		video[0].removeEventListener('click', onInit);
+		video[0].addEventListener('play', onPlay, false);
+		video[0].pause();
+		navigator.notification.confirm('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm, 'Contador', ['Comenzar','Cancelar']);
+		History.save({uid: id, data: $scope.video.name, link: '#/app/videos/'+$stateParams.cat, type: 1});
 	}
 	function onConfirm(buttonIndex){
 		if(buttonIndex == 1){
-			CaloricCounter.init($scope);
-			video[0].addEventListener('pause', onPause, false);
+			counter = true;
 			video[0].play();
 		}else{
+			counter = false;
 			video[0].play();
 		}
 	}
 	function onEnd(){
-		CaloricCounter.stop($scope);
+		if(counter) CaloricCounter.stop($scope);
 	}
 	Videos.byId($stateParams.video).then(function(data){
 		$scope.video = data;
@@ -400,7 +400,7 @@ angular.module('efectototal.controllers', [])
 			video.attr("src", "http://efectototal.com/media/" + data.src);
 		}
 		video.attr("poster", "http://efectototal.com/media/" + data.thumb2);
-		video[0].addEventListener('play', onPlay, false);
+		video[0].addEventListener('click', onInit, false);
 		video[0].addEventListener('ended', onEnd, false);
 	});
 })
