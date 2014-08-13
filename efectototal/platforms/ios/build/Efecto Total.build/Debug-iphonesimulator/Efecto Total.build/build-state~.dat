@@ -1,947 +1,0 @@
-TEfecto Total
-v6
-r1
-cCheck dependencies
-cProcessInfoPlistFile /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/Info.plist /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Efecto\ Total-Info.plist
-cPhaseScriptExecution Copy\ www\ directory /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Script-304B58A110DAC018002A0835.sh
-cCpResource Efecto\ Total/Resources/icons/icon-76.png build/emulator/Efecto\ Total.app/icon-76.png
-cCpResource Efecto\ Total/Resources/icons/icon-40@2x.png build/emulator/Efecto\ Total.app/icon-40@2x.png
-cCpResource Efecto\ Total/Resources/icons/icon-72.png build/emulator/Efecto\ Total.app/icon-72.png
-cCpResource Efecto\ Total/Resources/icons/icon.png build/emulator/Efecto\ Total.app/icon.png
-cCpResource Efecto\ Total/Resources/icons/icon@2x.png build/emulator/Efecto\ Total.app/icon@2x.png
-cCopyStringsFile /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/en.lproj/Localizable.strings Efecto\ Total/Resources/en.lproj/Localizable.strings
-cCompileXIB /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Classes/MainViewController.xib
-cCpResource Efecto\ Total/Resources/icons/icon-50.png build/emulator/Efecto\ Total.app/icon-50.png
-cCpResource Efecto\ Total/Resources/icons/icon-60@2x.png build/emulator/Efecto\ Total.app/icon-60@2x.png
-cCopyStringsFile /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/de.lproj/Localizable.strings Efecto\ Total/Resources/de.lproj/Localizable.strings
-cCpResource Efecto\ Total/Resources/icons/icon-small.png build/emulator/Efecto\ Total.app/icon-small.png
-cCpResource Efecto\ Total/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/Efecto\ Total.app/Default-Landscape@2x~ipad.png
-cCpResource Efecto\ Total/Resources/splash/Default-Landscape~ipad.png build/emulator/Efecto\ Total.app/Default-Landscape~ipad.png
-cCpResource Efecto\ Total/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/Efecto\ Total.app/Default-Portrait@2x~ipad.png
-cCpResource Efecto\ Total/Resources/icons/icon-small@2x.png build/emulator/Efecto\ Total.app/icon-small@2x.png
-cCpResource Efecto\ Total/Resources/splash/Default-Portrait~ipad.png build/emulator/Efecto\ Total.app/Default-Portrait~ipad.png
-cCpResource Efecto\ Total/Resources/icons/icon-40.png build/emulator/Efecto\ Total.app/icon-40.png
-cCpResource Efecto\ Total/Resources/splash/Default@2x~iphone.png build/emulator/Efecto\ Total.app/Default@2x~iphone.png
-cCpResource Efecto\ Total/Resources/icons/icon-60.png build/emulator/Efecto\ Total.app/icon-60.png
-cCpResource Efecto\ Total/Resources/splash/Default~iphone.png build/emulator/Efecto\ Total.app/Default~iphone.png
-cCpResource Efecto\ Total/Resources/icons/icon-50@2x.png build/emulator/Efecto\ Total.app/icon-50@2x.png
-cCpResource Efecto\ Total/Resources/splash/Default-568h@2x~iphone.png build/emulator/Efecto\ Total.app/Default-568h@2x~iphone.png
-cCpResource Efecto\ Total/Resources/icons/icon-76@2x.png build/emulator/Efecto\ Total.app/icon-76@2x.png
-cCpResource Efecto\ Total/Resources/icons/icon-72@2x.png build/emulator/Efecto\ Total.app/icon-72@2x.png
-cProcessPCH /var/folders/l3/4jz04cgx6ss23l8ymz5qqhlc0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Efecto\ Total-Prefix-fiuhfvlihsyzdubstjcsczalzqyj/Efecto\ Total-Prefix.pch.pch Efecto\ Total/Efecto\ Total-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/main.o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/AppDelegate.o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/MainViewController.o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/FacebookConnectPlugin.o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/Efecto\ Total normal i386
-cGenerateDSYMFile /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app.dSYM /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/Efecto\ Total
-cTouch /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Classes/AppDelegate.m
-c0000000053DB582300000000000013AF
-t1406883875
-s5039
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Classes/MainViewController.m
-c0000000053DB5823000000000000126D
-t1406883875
-s4717
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Classes/MainViewController.xib
-c0000000053DB58230000000000001759
-t1406883875
-s5977
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Efecto Total-Info.plist
-c0000000053DB58440000000000000BEE
-t1406883908
-s3054
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Efecto Total-Prefix.pch
-c0000000053DB582300000000000003C9
-t1406883875
-s969
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.m
-c0000000053DB58300000000000004F35
-t1406883888
-s20277
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/FacebookSDK
-c0000000053DB583000000000008796FC
-t1406883888
-s8886012
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/de.lproj/Localizable.strings
-c0000000053DB582300000000000004C0
-t1406883875
-s1216
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/en.lproj/Localizable.strings
-c0000000053DB582300000000000004AB
-t1406883875
-s1195
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/icons/icon-40.png
-c0000000053DB58230000000000000FF2
-t1406883875
-s4082
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/icons/icon-40@2x.png
-c0000000053DB58230000000000001CF3
-t1406883875
-s7411
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/icons/icon-50.png
-c0000000053DB5823000000000000130A
-t1406883875
-s4874
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/icons/icon-50@2x.png
-c0000000053DB5823000000000000258B
-t1406883875
-s9611
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/icons/icon-60.png
-c0000000053DB582300000000000016B3
-t1406883875
-s5811
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/icons/icon-60@2x.png
-c0000000053DB58230000000000002E94
-t1406883875
-s11924
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/icons/icon-72.png
-c0000000053DB58230000000000001350
-t1406883875
-s4944
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/icons/icon-72@2x.png
-c0000000053DB58230000000000002DBA
-t1406883875
-s11706
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/icons/icon-76.png
-c0000000053DB58230000000000001B71
-t1406883875
-s7025
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/icons/icon-76@2x.png
-c0000000053DB58230000000000003B9E
-t1406883875
-s15262
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/icons/icon-small.png
-c0000000053DB58230000000000000CDE
-t1406883875
-s3294
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/icons/icon-small@2x.png
-c0000000053DB582300000000000015E8
-t1406883875
-s5608
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/icons/icon.png
-c0000000053DB58230000000000000F3E
-t1406883875
-s3902
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/icons/icon@2x.png
-c0000000053DB58230000000000001EBD
-t1406883875
-s7869
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/splash/Default-568h@2x~iphone.png
-c0000000053DB582300000000000085B1
-t1406883875
-s34225
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/splash/Default-Landscape@2x~ipad.png
-c0000000053DB58230000000000033D0A
-t1406883875
-s212234
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/splash/Default-Landscape~ipad.png
-c0000000053DB582300000000000166A2
-t1406883875
-s91810
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/splash/Default-Portrait@2x~ipad.png
-c0000000053DB58230000000000033F7C
-t1406883875
-s212860
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/splash/Default-Portrait~ipad.png
-c0000000053DB58230000000000016641
-t1406883875
-s91713
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/splash/Default@2x~iphone.png
-c0000000053DB58230000000000007323
-t1406883875
-s29475
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Resources/splash/Default~iphone.png
-c0000000053DB5823000000000000289A
-t1406883875
-s10394
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/main.m
-c0000000053DB5823000000000000045E
-t1406883875
-s1118
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Objects-normal/i386/AppDelegate.o
-t1406883940
-s74100
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Objects-normal/i386/Efecto Total.LinkFileList
-c0000000053DB585D00000000000002E6
-t1406883933
-s742
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Objects-normal/i386/FacebookConnectPlugin.o
-t1406883940
-s110756
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Objects-normal/i386/MainViewController.o
-t1406883940
-s51680
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Objects-normal/i386/main.o
-t1406883940
-s3068
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Script-304B58A110DAC018002A0835.sh
-c0000000053DB585D000000000000002D
-t1406883933
-s45
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app
-t1406883942
-s1020
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app.dSYM
-t2
-s0
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/Default-568h@2x~iphone.png
-t1406883936
-s34225
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/Default-Landscape@2x~ipad.png
-t1406883936
-s212234
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/Default-Landscape~ipad.png
-t1406883936
-s91810
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/Default-Portrait@2x~ipad.png
-t1406883936
-s212860
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/Default-Portrait~ipad.png
-t1406883936
-s91713
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/Default@2x~iphone.png
-t1406883936
-s29475
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/Default~iphone.png
-t1406883936
-s10394
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/Efecto Total
-t1406883942
-s1074640
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/Info.plist
-t1406883934
-s1480
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/MainViewController.nib
-t1406883939
-s836
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/PkgInfo
-t2
-s0
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/de.lproj/Localizable.strings
-t1406883936
-s280
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/en.lproj/Localizable.strings
-t1406883936
-s166
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/icon-40.png
-t1406883936
-s4082
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/icon-40@2x.png
-t1406883936
-s7411
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/icon-50.png
-t1406883936
-s4874
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/icon-50@2x.png
-t1406883936
-s9611
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/icon-60.png
-t1406883936
-s5811
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/icon-60@2x.png
-t1406883936
-s11924
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/icon-72.png
-t1406883936
-s4944
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/icon-72@2x.png
-t1406883936
-s11706
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/icon-76.png
-t1406883936
-s7025
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/icon-76@2x.png
-t1406883936
-s15262
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/icon-small.png
-t1406883936
-s3294
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/icon-small@2x.png
-t1406883936
-s5608
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/icon.png
-t1406883935
-s3902
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/icon@2x.png
-t1406883936
-s7869
-
-N/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/libCordova.a
-c0000000053DB585D00000000000D3F80
-t1406883933
-s868224
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
-c0000000053119F8A0000000000000198
-t1393663882
-s408
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
-c00000000534F4FF800000000000003B4
-t1397706744
-s948
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
-c00000000534F5023000000000000019E
-t1397706787
-s414
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accounts.framework/Accounts
-c00000000534F502900000000000942B0
-t1397706793
-s606896
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AdSupport.framework/AdSupport
-c00000000534F502A0000000000008CC0
-t1397706794
-s36032
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
-c00000000534F502A0000000000059340
-t1397706794
-s365376
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
-c00000000534F502F0000000000904120
-t1397706799
-s9453856
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-c00000000534F50370000000000446820
-t1397706807
-s4483104
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
-c00000000534F503900000000000F1A80
-t1397706809
-s989824
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreMotion.framework/CoreMotion
-c00000000534F503B00000000001D2FF0
-t1397706811
-s1912816
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/MessageUI.framework/MessageUI
-c00000000534F504B00000000002E5520
-t1397706827
-s3036448
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
-c00000000534F504C00000000001BE790
-t1397706828
-s1828752
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Security.framework/Security
-c00000000534F5055000000000013FD70
-t1397706837
-s1310064
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Social.framework/Social
-c00000000534F50590000000000222210
-t1397706841
-s2236944
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libsqlite3.dylib
-c00000000534F50CC00000000001D35B0
-t1397706956
-s1914288
-
-N/var/folders/l3/4jz04cgx6ss23l8ymz5qqhlc0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Efecto Total-Prefix-fiuhfvlihsyzdubstjcsczalzqyj/Efecto Total-Prefix.pch.pch
-t1406883940
-s5377668
-
-CCheck dependencies
-r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies7a5345dd8f8bb941^8b8b37de8f8bb941^---0#1#1#--18"Check dependencies36"2CA98813-D232-403E-99D1-1D40D087715E-
-
-CCompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/AppDelegate.o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s428576740.483385
-e428576740.742020
-r1
-xCompileC
-xbuild/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Objects-normal/i386/AppDelegate.o
-x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Classes/AppDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Classes/AppDelegate.m
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Classes/AppDelegate.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Classes/MainViewController.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection125"Compile /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Classes/AppDelegate.m214"CompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/AppDelegate.o Efecto\ Total/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler4fea7be48f8bb941^cc0dbee48f8bb941^---0#0#1#-19%DVTDocumentLocation2@135"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto%20Total/Classes/AppDelegate.m0000000000000000^4684"CompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/AppDelegate.o Efecto\ Total/Classes/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-generated-files.hmap -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-own-target-headers.hmap -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-all-target-headers.hmap -iquote /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-project-headers.hmap -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/usr/local/lib/include -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/UninstalledProducts/include -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/DerivedSources/i386 -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/DerivedSources -F/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator -FEfecto\ Total/Plugins/com.phonegap.plugins.facebookconnect -include /var/folders/l3/4jz04cgx6ss23l8ymz5qqhlc0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Efecto\ Total-Prefix-fiuhfvlihsyzdubstjcsczalzqyj/Efecto\ Total-Prefix.pch -MMD -MT dependencies -MF /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/AppDelegate.dia -c /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Classes/AppDelegate.m -o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/AppDelegate.o36"A3943C44-5E88-4779-B99E-AFDCE686E14B-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/FacebookConnectPlugin.o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s428576740.484608
-e428576740.869269
-r1
-xCompileC
-xbuild/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Objects-normal/i386/FacebookConnectPlugin.o
-x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.m
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FacebookSDK.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBAccessTokenData.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBSession.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBAppCall.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBAppLinkData.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBDialogsData.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBAppEvents.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBCacheDescriptor.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBDialogs.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBOpenGraphActionShareDialogParams.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBDialogsParams.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBOpenGraphAction.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBGraphObject.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBShareDialogParams.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBShareDialogPhotoParams.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBError.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBErrorUtility.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBFrictionlessRecipientCache.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBRequest.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBOpenGraphObject.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBRequestConnection.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBWebDialogs.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBFriendPickerViewController.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBGraphUser.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBGraphPlace.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBGraphLocation.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBViewController.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBInsights.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBLoginView.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBNativeDialogs.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBPlacePickerViewController.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBProfilePictureView.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBSessionTokenCachingStrategy.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBSettings.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/FBUserSettingsViewController.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Headers/NSError+FBError.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDV.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection172"Compile /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.m271"CompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/FacebookConnectPlugin.o Efecto\ Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler4c347ce48f8bb941^f088dee48f8bb941^---0#0#1#-19%DVTDocumentLocation2@182"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto%20Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.m0000000000000000^4818"CompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/FacebookConnectPlugin.o Efecto\ Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-generated-files.hmap -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-own-target-headers.hmap -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-all-target-headers.hmap -iquote /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-project-headers.hmap -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/usr/local/lib/include -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/UninstalledProducts/include -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/DerivedSources/i386 -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/DerivedSources -F/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator -FEfecto\ Total/Plugins/com.phonegap.plugins.facebookconnect -include /var/folders/l3/4jz04cgx6ss23l8ymz5qqhlc0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Efecto\ Total-Prefix-fiuhfvlihsyzdubstjcsczalzqyj/Efecto\ Total-Prefix.pch -MMD -MT dependencies -MF /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/FacebookConnectPlugin.d --serialize-diagnostics /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/FacebookConnectPlugin.dia -c /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookConnectPlugin.m -o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/FacebookConnectPlugin.o36"94872DEA-AD98-4919-92DB-F3159506A6B0-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/MainViewController.o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s428576740.484023
-e428576740.706085
-r1
-xCompileC
-xbuild/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Objects-normal/i386/MainViewController.o
-x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Classes/MainViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Classes/MainViewController.m
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Classes/MainViewController.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection132"Compile /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Classes/MainViewController.m228"CompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/MainViewController.o Efecto\ Total/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler23137ce48f8bb941^fbe8b4e48f8bb941^---0#0#1#-19%DVTDocumentLocation2@142"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto%20Total/Classes/MainViewController.m0000000000000000^4726"CompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/MainViewController.o Efecto\ Total/Classes/MainViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-generated-files.hmap -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-own-target-headers.hmap -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-all-target-headers.hmap -iquote /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-project-headers.hmap -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/usr/local/lib/include -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/UninstalledProducts/include -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/DerivedSources/i386 -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/DerivedSources -F/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator -FEfecto\ Total/Plugins/com.phonegap.plugins.facebookconnect -include /var/folders/l3/4jz04cgx6ss23l8ymz5qqhlc0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Efecto\ Total-Prefix-fiuhfvlihsyzdubstjcsczalzqyj/Efecto\ Total-Prefix.pch -MMD -MT dependencies -MF /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/MainViewController.d --serialize-diagnostics /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/MainViewController.dia -c /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Classes/MainViewController.m -o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/MainViewController.o36"1DAD20D6-07E4-40B9-A3FC-915B361AB95D-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/main.o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s428576740.483379
-e428576740.643436
-r1
-xCompileC
-xbuild/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Objects-normal/i386/main.o
-x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/main.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/main.m
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"Compile /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/main.m192"CompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/main.o Efecto\ Total/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler36e87be48f8bb941^f0dba4e48f8bb941^---0#0#1#-19%DVTDocumentLocation2@120"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto%20Total/main.m0000000000000000^4626"CompileC build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/main.o Efecto\ Total/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-generated-files.hmap -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-own-target-headers.hmap -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-all-target-headers.hmap -iquote /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-project-headers.hmap -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/usr/local/lib/include -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/UninstalledProducts/include -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/DerivedSources/i386 -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/DerivedSources -F/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator -FEfecto\ Total/Plugins/com.phonegap.plugins.facebookconnect -include /var/folders/l3/4jz04cgx6ss23l8ymz5qqhlc0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Efecto\ Total-Prefix-fiuhfvlihsyzdubstjcsczalzqyj/Efecto\ Total-Prefix.pch -MMD -MT dependencies -MF /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/main.d --serialize-diagnostics /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/main.dia -c /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/main.m -o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/main.o36"B015CE2B-0F29-4E9A-9CF7-C16AAB444B84-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCompileXIB /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Classes/MainViewController.xib
-s428576736.053388
-e428576739.669048
-r1
-xCompileXIB
-x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Classes/MainViewController.xib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection136"Compiling /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Classes/MainViewController.xib55"CompileXIB Efecto\ Total/Classes/MainViewController.xib92cd0de08f8bb941^a148abe38f8bb941^---0#0#1#-19%DVTDocumentLocation2@144"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto%20Total/Classes/MainViewController.xib0000000000000000^1196"CompileXIB Efecto\ Total/Classes/MainViewController.xib    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 6.0 --output-format human-readable-text --compile /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/MainViewController.nib /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Classes/MainViewController.xib36"1240014A-42B0-4CBF-83FA-0B9025AC93B3-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCopyStringsFile /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/de.lproj/Localizable.strings Efecto\ Total/Resources/de.lproj/Localizable.strings
-s428576736.103061
-e428576736.331128
-r1
-xCopyStringsFile
-x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/de.lproj/Localizable.strings
-xEfecto Total/Resources/de.lproj/Localizable.strings
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy Efecto Total/Resources/de.lproj/Localizable.strings130"CopyStringsFile build/emulator/Efecto\ Total.app/de.lproj/Localizable.strings Efecto\ Total/Resources/de.lproj/Localizable.stringsa27f1ae08f8bb941^cac554e08f8bb941^---0#0#1#-19%DVTDocumentLocation2@152"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto%20Total/Resources/de.lproj/Localizable.strings0000000000000000^970"CopyStringsFile build/emulator/Efecto\ Total.app/de.lproj/Localizable.strings Efecto\ Total/Resources/de.lproj/Localizable.strings    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/de.lproj -- Efecto\ Total/Resources/de.lproj/Localizable.strings36"5E873C3E-8985-4AC5-A258-23C1261E79BB-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCopyStringsFile /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/en.lproj/Localizable.strings Efecto\ Total/Resources/en.lproj/Localizable.strings
-s428576736.053198
-e428576736.102476
-r1
-xCopyStringsFile
-x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/en.lproj/Localizable.strings
-xEfecto Total/Resources/en.lproj/Localizable.strings
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy Efecto Total/Resources/en.lproj/Localizable.strings130"CopyStringsFile build/emulator/Efecto\ Total.app/en.lproj/Localizable.strings Efecto\ Total/Resources/en.lproj/Localizable.stringse0bb0de08f8bb941^ea3c1ae08f8bb941^---0#0#1#-19%DVTDocumentLocation2@152"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto%20Total/Resources/en.lproj/Localizable.strings0000000000000000^970"CopyStringsFile build/emulator/Efecto\ Total.app/en.lproj/Localizable.strings Efecto\ Total/Resources/en.lproj/Localizable.strings    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/en.lproj -- Efecto\ Total/Resources/en.lproj/Localizable.strings36"413AAAB3-0315-47E5-B7BF-07F7EDF242E8-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/icons/icon-40.png build/emulator/Efecto\ Total.app/icon-40.png
-s428576736.334218
-e428576736.337016
-r1
-xCpResource
-xEfecto Total/Resources/icons/icon-40.png
-xbuild/emulator/Efecto Total.app/icon-40.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy build/emulator/Efecto Total.app/icon-40.png97"CpResource Efecto\ Total/Resources/icons/icon-40.png build/emulator/Efecto\ Total.app/icon-40.png58a855e08f8bb941^674756e08f8bb941^---0#0#1#-19%DVTDocumentLocation2@144"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/icon-40.png0038fcccdfffdf42^1019"CpResource Efecto\ Total/Resources/icons/icon-40.png build/emulator/Efecto\ Total.app/icon-40.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/icons/icon-40.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"1F0E2299-4DA1-4442-976C-890122A565CD-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/icons/icon-40@2x.png build/emulator/Efecto\ Total.app/icon-40@2x.png
-s428576735.914312
-e428576736.051937
-r1
-xCpResource
-xEfecto Total/Resources/icons/icon-40@2x.png
-xbuild/emulator/Efecto Total.app/icon-40@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/emulator/Efecto Total.app/icon-40@2x.png103"CpResource Efecto\ Total/Resources/icons/icon-40@2x.png build/emulator/Efecto\ Total.app/icon-40@2x.pngd82deadf8f8bb941^554c0de08f8bb941^---0#0#1#-19%DVTDocumentLocation2@147"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/icon-40@2x.png0038fcccdfffdf42^1028"CpResource Efecto\ Total/Resources/icons/icon-40@2x.png build/emulator/Efecto\ Total.app/icon-40@2x.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/icons/icon-40@2x.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"D3D8C6CC-DFF0-42CF-87C9-99EC545B951B-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/icons/icon-50.png build/emulator/Efecto\ Total.app/icon-50.png
-s428576736.054952
-e428576736.101801
-r1
-xCpResource
-xEfecto Total/Resources/icons/icon-50.png
-xbuild/emulator/Efecto Total.app/icon-50.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy build/emulator/Efecto Total.app/icon-50.png97"CpResource Efecto\ Total/Resources/icons/icon-50.png build/emulator/Efecto\ Total.app/icon-50.png842d0ee08f8bb941^0a131ae08f8bb941^---0#0#1#-19%DVTDocumentLocation2@144"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/icon-50.png0038fcccdfffdf42^1019"CpResource Efecto\ Total/Resources/icons/icon-50.png build/emulator/Efecto\ Total.app/icon-50.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/icons/icon-50.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"78FA0478-BBB5-4E3E-BAAE-F744B823210C-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/icons/icon-50@2x.png build/emulator/Efecto\ Total.app/icon-50@2x.png
-s428576736.542747
-e428576736.674661
-r1
-xCpResource
-xEfecto Total/Resources/icons/icon-50@2x.png
-xbuild/emulator/Efecto Total.app/icon-50@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/emulator/Efecto Total.app/icon-50@2x.png103"CpResource Efecto\ Total/Resources/icons/icon-50@2x.png build/emulator/Efecto\ Total.app/icon-50@2x.png520d8be08f8bb941^a2b7ace08f8bb941^---0#0#1#-19%DVTDocumentLocation2@147"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/icon-50@2x.png0038fcccdfffdf42^1028"CpResource Efecto\ Total/Resources/icons/icon-50@2x.png build/emulator/Efecto\ Total.app/icon-50@2x.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/icons/icon-50@2x.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"DE628825-F2A4-44F9-8225-CC424F272232-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/icons/icon-60.png build/emulator/Efecto\ Total.app/icon-60.png
-s428576736.337458
-e428576736.541278
-r1
-xCpResource
-xEfecto Total/Resources/icons/icon-60.png
-xbuild/emulator/Efecto Total.app/icon-60.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy build/emulator/Efecto Total.app/icon-60.png97"CpResource Efecto\ Total/Resources/icons/icon-60.png build/emulator/Efecto\ Total.app/icon-60.png207a56e08f8bb941^85998ae08f8bb941^---0#0#1#-19%DVTDocumentLocation2@144"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/icon-60.png0038fcccdfffdf42^1019"CpResource Efecto\ Total/Resources/icons/icon-60.png build/emulator/Efecto\ Total.app/icon-60.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/icons/icon-60.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"AE1D1875-8515-4969-87A8-350ED8BE8C5C-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/icons/icon-60@2x.png build/emulator/Efecto\ Total.app/icon-60@2x.png
-s428576736.055230
-e428576736.101803
-r1
-xCpResource
-xEfecto Total/Resources/icons/icon-60@2x.png
-xbuild/emulator/Efecto Total.app/icon-60@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/emulator/Efecto Total.app/icon-60@2x.png103"CpResource Efecto\ Total/Resources/icons/icon-60@2x.png build/emulator/Efecto\ Total.app/icon-60@2x.pngcd3b0ee08f8bb941^b1171ae08f8bb941^---0#0#1#-19%DVTDocumentLocation2@147"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/icon-60@2x.png0038fcccdfffdf42^1028"CpResource Efecto\ Total/Resources/icons/icon-60@2x.png build/emulator/Efecto\ Total.app/icon-60@2x.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/icons/icon-60@2x.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"EB56521E-D588-4599-88A1-09B3CA34ADA6-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/icons/icon-72.png build/emulator/Efecto\ Total.app/icon-72.png
-s428576735.914335
-e428576736.052667
-r1
-xCpResource
-xEfecto Total/Resources/icons/icon-72.png
-xbuild/emulator/Efecto Total.app/icon-72.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy build/emulator/Efecto Total.app/icon-72.png97"CpResource Efecto\ Total/Resources/icons/icon-72.png build/emulator/Efecto\ Total.app/icon-72.png272feadf8f8bb941^4e7c0de08f8bb941^---0#0#1#-19%DVTDocumentLocation2@144"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/icon-72.png0038fcccdfffdf42^1019"CpResource Efecto\ Total/Resources/icons/icon-72.png build/emulator/Efecto\ Total.app/icon-72.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/icons/icon-72.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"282FCEB1-44EC-4A16-B496-A98207CA2307-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/icons/icon-72@2x.png build/emulator/Efecto\ Total.app/icon-72@2x.png
-s428576736.675903
-e428576736.946947
-r1
-xCpResource
-xEfecto Total/Resources/icons/icon-72@2x.png
-xbuild/emulator/Efecto Total.app/icon-72@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/emulator/Efecto Total.app/icon-72@2x.png103"CpResource Efecto\ Total/Resources/icons/icon-72@2x.png build/emulator/Efecto\ Total.app/icon-72@2x.png2425ade08f8bb941^3f6ff2e08f8bb941^---0#0#1#-19%DVTDocumentLocation2@147"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/icon-72@2x.png0038fcccdfffdf42^1028"CpResource Efecto\ Total/Resources/icons/icon-72@2x.png build/emulator/Efecto\ Total.app/icon-72@2x.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/icons/icon-72@2x.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"6745B92A-9FE5-46A6-9DF7-04810E3E50FE-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/icons/icon-76.png build/emulator/Efecto\ Total.app/icon-76.png
-s428576735.914297
-e428576736.053695
-r1
-xCpResource
-xEfecto Total/Resources/icons/icon-76.png
-xbuild/emulator/Efecto Total.app/icon-76.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy build/emulator/Efecto Total.app/icon-76.png97"CpResource Efecto\ Total/Resources/icons/icon-76.png build/emulator/Efecto\ Total.app/icon-76.pngb62deadf8f8bb941^61c50de08f8bb941^---0#0#1#-19%DVTDocumentLocation2@144"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/icon-76.png0038fcccdfffdf42^1019"CpResource Efecto\ Total/Resources/icons/icon-76.png build/emulator/Efecto\ Total.app/icon-76.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/icons/icon-76.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"2D5529B0-A1A1-4BE4-8BC2-7BCAA6AB1204-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/icons/icon-76@2x.png build/emulator/Efecto\ Total.app/icon-76@2x.png
-s428576736.625932
-e428576736.750423
-r1
-xCpResource
-xEfecto Total/Resources/icons/icon-76@2x.png
-xbuild/emulator/Efecto Total.app/icon-76@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/emulator/Efecto Total.app/icon-76@2x.png103"CpResource Efecto\ Total/Resources/icons/icon-76@2x.png build/emulator/Efecto\ Total.app/icon-76@2x.pngf75aa0e08f8bb941^6c21c0e08f8bb941^---0#0#1#-19%DVTDocumentLocation2@147"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/icon-76@2x.png0038fcccdfffdf42^1028"CpResource Efecto\ Total/Resources/icons/icon-76@2x.png build/emulator/Efecto\ Total.app/icon-76@2x.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/icons/icon-76@2x.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"7E282729-0F27-4210-8553-4C23A378A450-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/icons/icon-small.png build/emulator/Efecto\ Total.app/icon-small.png
-s428576736.269594
-e428576736.272126
-r1
-xCpResource
-xEfecto Total/Resources/icons/icon-small.png
-xbuild/emulator/Efecto Total.app/icon-small.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Copy build/emulator/Efecto Total.app/icon-small.png103"CpResource Efecto\ Total/Resources/icons/icon-small.png build/emulator/Efecto\ Total.app/icon-small.pngfe2945e08f8bb941^61aa45e08f8bb941^---0#0#1#-19%DVTDocumentLocation2@147"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/icon-small.png0038fcccdfffdf42^1028"CpResource Efecto\ Total/Resources/icons/icon-small.png build/emulator/Efecto\ Total.app/icon-small.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/icons/icon-small.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"12608C52-2ADB-4C15-83B1-7A757D63D929-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/icons/icon-small@2x.png build/emulator/Efecto\ Total.app/icon-small@2x.png
-s428576736.332441
-e428576736.541235
-r1
-xCpResource
-xEfecto Total/Resources/icons/icon-small@2x.png
-xbuild/emulator/Efecto Total.app/icon-small@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy build/emulator/Efecto Total.app/icon-small@2x.png109"CpResource Efecto\ Total/Resources/icons/icon-small@2x.png build/emulator/Efecto\ Total.app/icon-small@2x.png7e3755e08f8bb941^4f968ae08f8bb941^---0#0#1#-19%DVTDocumentLocation2@150"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/icon-small@2x.png0038fcccdfffdf42^1037"CpResource Efecto\ Total/Resources/icons/icon-small@2x.png build/emulator/Efecto\ Total.app/icon-small@2x.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/icons/icon-small@2x.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"BC18FA7F-3E42-4003-87DC-DFDC548A3781-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/icons/icon.png build/emulator/Efecto\ Total.app/icon.png
-s428576735.914534
-e428576735.920448
-r1
-xCpResource
-xEfecto Total/Resources/icons/icon.png
-xbuild/emulator/Efecto Total.app/icon.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection45"Copy build/emulator/Efecto Total.app/icon.png91"CpResource Efecto\ Total/Resources/icons/icon.png build/emulator/Efecto\ Total.app/icon.png7e3aeadf8f8bb941^55a3ebdf8f8bb941^---0#0#1#-19%DVTDocumentLocation2@141"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/icon.png0038fcccdfffdf42^1010"CpResource Efecto\ Total/Resources/icons/icon.png build/emulator/Efecto\ Total.app/icon.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/icons/icon.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"F2FEEE1D-7385-4983-8873-B2A5B5DB1810-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/icons/icon@2x.png build/emulator/Efecto\ Total.app/icon@2x.png
-s428576735.921734
-e428576736.053684
-r1
-xCpResource
-xEfecto Total/Resources/icons/icon@2x.png
-xbuild/emulator/Efecto Total.app/icon@2x.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection48"Copy build/emulator/Efecto Total.app/icon@2x.png97"CpResource Efecto\ Total/Resources/icons/icon@2x.png build/emulator/Efecto\ Total.app/icon@2x.png4d15ecdf8f8bb941^40c10de08f8bb941^---0#0#1#-19%DVTDocumentLocation2@144"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/icon@2x.png0038fcccdfffdf42^1019"CpResource Efecto\ Total/Resources/icons/icon@2x.png build/emulator/Efecto\ Total.app/icon@2x.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/icons/icon@2x.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"78D68002-D09E-4233-8F5C-2A4B10DDB736-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/splash/Default-568h@2x~iphone.png build/emulator/Efecto\ Total.app/Default-568h@2x~iphone.png
-s428576736.542747
-e428576736.750422
-r1
-xCpResource
-xEfecto Total/Resources/splash/Default-568h@2x~iphone.png
-xbuild/emulator/Efecto Total.app/Default-568h@2x~iphone.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Copy build/emulator/Efecto Total.app/Default-568h@2x~iphone.png128"CpResource Efecto\ Total/Resources/splash/Default-568h@2x~iphone.png build/emulator/Efecto\ Total.app/Default-568h@2x~iphone.png020c8be08f8bb941^a41cc0e08f8bb941^---0#0#1#-19%DVTDocumentLocation2@159"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/Default-568h@2x~iphone.png0038fcccdfffdf42^1066"CpResource Efecto\ Total/Resources/splash/Default-568h@2x~iphone.png build/emulator/Efecto\ Total.app/Default-568h@2x~iphone.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/splash/Default-568h@2x~iphone.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"1D55D31A-9D04-444E-A780-64831724F168-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/Efecto\ Total.app/Default-Landscape@2x~ipad.png
-s428576736.269779
-e428576736.331900
-r1
-xCpResource
-xEfecto Total/Resources/splash/Default-Landscape@2x~ipad.png
-xbuild/emulator/Efecto Total.app/Default-Landscape@2x~ipad.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Copy build/emulator/Efecto Total.app/Default-Landscape@2x~ipad.png134"CpResource Efecto\ Total/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/Efecto\ Total.app/Default-Landscape@2x~ipad.pnged2945e08f8bb941^dbf754e08f8bb941^---0#0#1#-19%DVTDocumentLocation2@162"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/Default-Landscape@2x~ipad.png0038fcccdfffdf42^1075"CpResource Efecto\ Total/Resources/splash/Default-Landscape@2x~ipad.png build/emulator/Efecto\ Total.app/Default-Landscape@2x~ipad.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/splash/Default-Landscape@2x~ipad.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"5F1697FE-A144-4FB2-9199-61C408B3409A-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/splash/Default-Landscape~ipad.png build/emulator/Efecto\ Total.app/Default-Landscape~ipad.png
-s428576736.273419
-e428576736.275822
-r1
-xCpResource
-xEfecto Total/Resources/splash/Default-Landscape~ipad.png
-xbuild/emulator/Efecto Total.app/Default-Landscape~ipad.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Copy build/emulator/Efecto Total.app/Default-Landscape~ipad.png128"CpResource Efecto\ Total/Resources/splash/Default-Landscape~ipad.png build/emulator/Efecto\ Total.app/Default-Landscape~ipad.pngd21b46e08f8bb941^aa9c46e08f8bb941^---0#0#1#-19%DVTDocumentLocation2@159"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/Default-Landscape~ipad.png0038fcccdfffdf42^1066"CpResource Efecto\ Total/Resources/splash/Default-Landscape~ipad.png build/emulator/Efecto\ Total.app/Default-Landscape~ipad.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/splash/Default-Landscape~ipad.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"33920CD9-42BF-4B09-A2E0-36878CA83A62-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/Efecto\ Total.app/Default-Portrait@2x~ipad.png
-s428576736.277124
-e428576736.332999
-r1
-xCpResource
-xEfecto Total/Resources/splash/Default-Portrait@2x~ipad.png
-xbuild/emulator/Efecto Total.app/Default-Portrait@2x~ipad.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Copy build/emulator/Efecto Total.app/Default-Portrait@2x~ipad.png132"CpResource Efecto\ Total/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/Efecto\ Total.app/Default-Portrait@2x~ipad.pnga60d47e08f8bb941^354055e08f8bb941^---0#0#1#-19%DVTDocumentLocation2@161"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/Default-Portrait@2x~ipad.png0038fcccdfffdf42^1072"CpResource Efecto\ Total/Resources/splash/Default-Portrait@2x~ipad.png build/emulator/Efecto\ Total.app/Default-Portrait@2x~ipad.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/splash/Default-Portrait@2x~ipad.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"B755B62F-9478-411B-850B-26FC3AFB82FC-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/splash/Default-Portrait~ipad.png build/emulator/Efecto\ Total.app/Default-Portrait~ipad.png
-s428576736.332710
-e428576736.336039
-r1
-xCpResource
-xEfecto Total/Resources/splash/Default-Portrait~ipad.png
-xbuild/emulator/Efecto Total.app/Default-Portrait~ipad.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Copy build/emulator/Efecto Total.app/Default-Portrait~ipad.png126"CpResource Efecto\ Total/Resources/splash/Default-Portrait~ipad.png build/emulator/Efecto\ Total.app/Default-Portrait~ipad.pngcb4855e08f8bb941^1c0756e08f8bb941^---0#0#1#-19%DVTDocumentLocation2@158"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/Default-Portrait~ipad.png0038fcccdfffdf42^1063"CpResource Efecto\ Total/Resources/splash/Default-Portrait~ipad.png build/emulator/Efecto\ Total.app/Default-Portrait~ipad.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/splash/Default-Portrait~ipad.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"B11F62FF-DA44-4CEE-9A1F-6806C941F002-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/splash/Default@2x~iphone.png build/emulator/Efecto\ Total.app/Default@2x~iphone.png
-s428576736.337234
-e428576736.541235
-r1
-xCpResource
-xEfecto Total/Resources/splash/Default@2x~iphone.png
-xbuild/emulator/Efecto Total.app/Default@2x~iphone.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy build/emulator/Efecto Total.app/Default@2x~iphone.png118"CpResource Efecto\ Total/Resources/splash/Default@2x~iphone.png build/emulator/Efecto\ Total.app/Default@2x~iphone.pngbd7156e08f8bb941^04908ae08f8bb941^---0#0#1#-19%DVTDocumentLocation2@154"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/Default@2x~iphone.png0038fcccdfffdf42^1051"CpResource Efecto\ Total/Resources/splash/Default@2x~iphone.png build/emulator/Efecto\ Total.app/Default@2x~iphone.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/splash/Default@2x~iphone.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"7B2C7B9B-09F2-402B-804A-C7C4D9306259-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CCpResource Efecto\ Total/Resources/splash/Default~iphone.png build/emulator/Efecto\ Total.app/Default~iphone.png
-s428576736.542572
-e428576736.624613
-r1
-xCpResource
-xEfecto Total/Resources/splash/Default~iphone.png
-xbuild/emulator/Efecto Total.app/Default~iphone.png
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection55"Copy build/emulator/Efecto Total.app/Default~iphone.png112"CpResource Efecto\ Total/Resources/splash/Default~iphone.png build/emulator/Efecto\ Total.app/Default~iphone.png14048be08f8bb941^19e79fe08f8bb941^---0#0#1#-19%DVTDocumentLocation2@151"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app/Default~iphone.png0038fcccdfffdf42^1042"CpResource Efecto\ Total/Resources/splash/Default~iphone.png build/emulator/Efecto\ Total.app/Default~iphone.png    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Resources/splash/Default~iphone.png /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"6B6D9458-AC06-4CF6-AE66-6C5638EF86C1-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CGenerateDSYMFile /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app.dSYM /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/Efecto\ Total
-s428576742.455027
-e428576742.603183
-r1
-xGenerateDSYMFile
-x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app.dSYM
-x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/Efecto Total
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection128"Generate /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app.dSYM101"GenerateDSYMFile build/emulator/Efecto\ Total.app.dSYM build/emulator/Efecto\ Total.app/Efecto\ Total739f74e68f8bb941^226e9ae68f8bb941^---0#0#1#-19%DVTDocumentLocation2@137"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto%20Total.app.dSYM0038fcccdfffdf42^1024"GenerateDSYMFile build/emulator/Efecto\ Total.app.dSYM build/emulator/Efecto\ Total.app/Efecto\ Total    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/Efecto\ Total -o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app.dSYM36"A65235CB-5A56-48EB-8EE5-BF68DA6CFE9B-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CLd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/Efecto\ Total normal i386
-s428576740.956509
-e428576742.445676
-r1
-xLd
-x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/Efecto Total
-xnormal
-xi386
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Objects-normal/i386/Efecto Total.LinkFileList
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/libCordova.a
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/crt1.o
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Objects-normal/i386/main.o
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Objects-normal/i386/AppDelegate.o
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Objects-normal/i386/MainViewController.o
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Objects-normal/i386/FacebookConnectPlugin.o
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreMedia.framework/CoreMedia
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libSystem.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreLocation.framework/CoreLocation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Social.framework/Social
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/MessageUI.framework/MessageUI
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreMotion.framework/CoreMotion
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Plugins/com.phonegap.plugins.facebookconnect/FacebookSDK.framework/Versions/A/FacebookSDK
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libsqlite3.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accounts.framework/Accounts
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AdSupport.framework/AdSupport
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Security.framework/Security
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libobjc.dylib
-d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.ios.a
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/libAVFAudio.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_override.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcache_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcommonCrypto_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcorecrypto_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcompiler_rt_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcopyfile_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdispatch.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdyld_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libmacho_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libnotify_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libremovefile_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_blocks.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_c.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_info.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_m.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_network.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libunwind_sim.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libxpc.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_configuration.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_asl.dylib
-d/usr/lib/libSystem.B.dylib
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/host/libdyld.dylib
-d/usr/lib/system/libcache.dylib
-d/usr/lib/system/libcommonCrypto.dylib
-d/usr/lib/system/libcompiler_rt.dylib
-d/usr/lib/system/libcopyfile.dylib
-d/usr/lib/system/libdnsinfo.dylib
-d/usr/lib/system/libkeymgr.dylib
-d/usr/lib/system/liblaunch.dylib
-d/usr/lib/system/libmacho.dylib
-d/usr/lib/system/libquarantine.dylib
-d/usr/lib/system/libremovefile.dylib
-d/usr/lib/system/libsystem_blocks.dylib
-d/usr/lib/system/libsystem_c.dylib
-d/usr/lib/system/libsystem_dnssd.dylib
-d/usr/lib/system/libsystem_info.dylib
-d/usr/lib/system/libsystem_kernel.dylib
-d/usr/lib/system/libsystem_m.dylib
-d/usr/lib/system/libsystem_notify.dylib
-d/usr/lib/system/libsystem_sandbox.dylib
-d/usr/lib/system/libunc.dylib
-d/usr/lib/system/libunwind.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection132"Link /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/Efecto Total61"Ld build/emulator/Efecto\ Total.app/Efecto\ Total normal i3865706f5e48f8bb941^6a1872e68f8bb941^---0#0#1#--2552"Ld build/emulator/Efecto\ Total.app/Efecto\ Total normal i386    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export IPHONEOS_DEPLOYMENT_TARGET=6.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator -F/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator -FEfecto\ Total/Plugins/com.phonegap.plugins.facebookconnect -filelist /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/Efecto\ Total.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -weak_framework CoreFoundation -weak_framework UIKit -weak_framework AVFoundation -weak_framework CoreMedia -weak-lSystem -force_load /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/libCordova.a -ObjC -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=6.0 -framework AssetsLibrary /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/libCordova.a -framework CoreGraphics -framework MobileCoreServices -framework CoreLocation -weak_framework Social -weak_framework MessageUI -framework CoreMotion -weak_framework AudioToolbox -framework FacebookSDK -lsqlite3 -weak_framework Accounts -weak_framework AdSupport -weak_framework Security -Xlinker -dependency_info -Xlinker /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Objects-normal/i386/Efecto\ Total_dependency_info.dat -o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/Efecto\ Total36"DD40088A-C4BF-45C3-98A4-969AFC7081FE-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CPhaseScriptExecution Copy\ www\ directory /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Script-304B58A110DAC018002A0835.sh
-s428576734.331009
-e428576735.906023
-r1
-xPhaseScriptExecution
-xCopy www directory
-x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto Total.build/Debug-iphonesimulator/Efecto Total.build/Script-304B58A110DAC018002A0835.sh
-o
-oreal	0m1.481s
-ouser	0m0.286s
-osys	0m0.331s
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Run custom shell script 'Copy www directory'144"PhaseScriptExecution Copy\ www\ directory build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Script-304B58A110DAC018002A0835.sha94c55de8f8bb941^edf0e7df8f8bb941^-42"real	0m1.481suser	0m0.286ssys	0m0.331s3(21%IDEActivityLogMessage2@14"real	0m1.481s-428576735#1#14#-0#-----2@14"user	0m0.286s-428576735#15#14#-0#-----2@13"sys	0m0.331s-428576735#29#13#-0#-----0#0#1#--440"PhaseScriptExecution Copy\ www\ directory build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Script-304B58A110DAC018002A0835.sh    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    /bin/sh -c \"/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Script-304B58A110DAC018002A0835.sh\"36"87F89182-9C3F-465D-A23C-AAEB8923342E-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CProcessInfoPlistFile /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/Info.plist /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Efecto\ Total-Info.plist
-s428576734.287368
-e428576734.321880
-r1
-xProcessInfoPlistFile
-x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app/Info.plist
-x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Efecto Total-Info.plist
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"Process /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Efecto Total-Info.plist103"ProcessInfoPlistFile build/emulator/Efecto\ Total.app/Info.plist Efecto\ Total/Efecto\ Total-Info.plist28bb49de8f8bb941^c76752de8f8bb941^---0#0#1#-19%DVTDocumentLocation2@139"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto%20Total/Efecto%20Total-Info.plist0000000000000000^1151"ProcessInfoPlistFile build/emulator/Efecto\ Total.app/Info.plist Efecto\ Total/Efecto\ Total-Info.plist    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    builtin-infoPlistUtility /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Efecto\ Total-Info.plist -genpkginfo /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app/Info.plist36"BF84F222-5C90-4B45-9CF1-FF393AB12D1F-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CProcessPCH /var/folders/l3/4jz04cgx6ss23l8ymz5qqhlc0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Efecto\ Total-Prefix-fiuhfvlihsyzdubstjcsczalzqyj/Efecto\ Total-Prefix.pch.pch Efecto\ Total/Efecto\ Total-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s428576739.679183
-e428576740.474550
-r1
-xProcessPCH
-x/var/folders/l3/4jz04cgx6ss23l8ymz5qqhlc0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Efecto Total-Prefix-fiuhfvlihsyzdubstjcsczalzqyj/Efecto Total-Prefix.pch.pch
-xEfecto Total/Efecto Total-Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto Total/Efecto Total-Prefix.pch
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Precompile Efecto Total/Efecto Total-Prefix.pch314"ProcessPCH /var/folders/l3/4jz04cgx6ss23l8ymz5qqhlc0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Efecto\ Total-Prefix-fiuhfvlihsyzdubstjcsczalzqyj/Efecto\ Total-Prefix.pch.pch Efecto\ Total/Efecto\ Total-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler2d0baee38f8bb941^3d7c79e48f8bb941^---0#0#1#-19%DVTDocumentLocation2@139"file://localhost/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto%20Total/Efecto%20Total-Prefix.pch0000000000000000^4624"ProcessPCH /var/folders/l3/4jz04cgx6ss23l8ymz5qqhlc0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Efecto\ Total-Prefix-fiuhfvlihsyzdubstjcsczalzqyj/Efecto\ Total-Prefix.pch.pch Efecto\ Total/Efecto\ Total-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-generated-files.hmap -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-own-target-headers.hmap -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-all-target-headers.hmap -iquote /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/Efecto\ Total-project-headers.hmap -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/include -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/usr/local/lib/include -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/UninstalledProducts/include -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/DerivedSources/i386 -I/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/Efecto\ Total.build/Debug-iphonesimulator/Efecto\ Total.build/DerivedSources -F/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator -FEfecto\ Total/Plugins/com.phonegap.plugins.facebookconnect --serialize-diagnostics /var/folders/l3/4jz04cgx6ss23l8ymz5qqhlc0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Efecto\ Total-Prefix-fiuhfvlihsyzdubstjcsczalzqyj/Efecto\ Total-Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/l3/4jz04cgx6ss23l8ymz5qqhlc0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Efecto\ Total-Prefix-fiuhfvlihsyzdubstjcsczalzqyj/Efecto\ Total-Prefix.pch.d -c /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/Efecto\ Total/Efecto\ Total-Prefix.pch -o /var/folders/l3/4jz04cgx6ss23l8ymz5qqhlc0000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Efecto\ Total-Prefix-fiuhfvlihsyzdubstjcsczalzqyj/Efecto\ Total-Prefix.pch.pch36"3C328180-74C1-48A9-8B08-0BA9F621B121-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
-CTouch /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app
-s428576742.613678
-e428576742.641917
-r1
-xTouch
-x/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Touch /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto Total.app38"Touch build/emulator/Efecto\ Total.app603a9de68f8bb941^3255a4e68f8bb941^---0#0#1#--745"Touch build/emulator/Efecto\ Total.app    cd /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/opt/php54/bin:/Users/wenceslao/bin/Sencha/Cmd/3.1.2.342:/Applications/XAMPP/xamppfiles/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools:/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools"    /usr/bin/touch -c /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal/platforms/ios/build/emulator/Efecto\ Total.app36"1C975EA3-426B-4A0B-9EA2-C4C496FC3706-
-bA2FFCBC0-80ED-4374-8CD4-E896C816903C
-
