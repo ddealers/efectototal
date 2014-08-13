@@ -1,0 +1,90 @@
+<ion-view title="MI PERFIL">
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+	<ion-content class="has-header">
+		<div class="contenidoCalendario_retos">
+			<a href="#/app/perfil"><h1 class="encabezado"><i class="ion-arrow-left-b"></i>MIS RETOS</h1></a>
+			<div class="list card">
+				<div class="row"> 
+					<div class="col" >
+						<img ng-src="http://graph.facebook.com/{{challenge.current.fbid}}/picture?height=200&width=200" class="perfil">
+						<p class="jugador">{{challenge.current.first_name}}</p>
+					</div>
+				</div> 
+				<div class="row">
+					<div class="col">
+						<p class="versus">VS</p>
+					</div> 
+				</div>
+				<div class="row">	
+					<div ng-repeat="contender in challenge.contenders" class="col">
+						<img ng-src="http://graph.facebook.com/{{contender.fbid}}/picture?height=200&width=200" class="perfil">
+						<p class="jugador2">{{contender.first_name}}</p>
+					</div>
+				</div>
+				<!--
+				<div  class= "row text" > 
+					<div class= "col" >
+						<p class="quemadas">Calorias quemadas</p>
+					</div> 
+					<div class= "col" >
+						<p class="totales">Calorias totales</p>
+					</div>	
+				</div>
+				-->
+				<!--
+				<div class="fondo">
+					<div class="grises">
+						<p class="uno">278</p>
+						<img src="./img/lupa-gris.png" class="gris">
+					</div>
+					<div class="verdes">
+						<p class="dos">405</p>
+						<img src="./img/lupa-verde.png" class="verde">
+					</div>
+					<div class="rojos">
+						<p class="tres">1100</p>
+						<img src="./img/lupa-roja.png" class="roja">
+					</div>
+				</div> 
+				-->
+				<div class="fondo">
+					<div class="progress">
+						<progress-bar value="challenge.current.total" class="curr" max="challenge.challenge.calories"></progress-bar>
+						<progress-bar ng-repeat="contender in challenge.contenders" class="cont" value="contender.total" max="challenge.challenge.calories"></progress-bar>
+					</div>
+					<table>
+						<tr>
+							<td class="background"></td>
+							<td class="background"></td>
+							<td ng-repeat="i in [0,1,2,3,4]" ng-class="challenge.calendar[i]">{{i+1}}</td>
+						</tr>
+						<tr>
+							<td ng-repeat="i in [5,6,7,8,9,19,11]" ng-class="challenge.calendar[i]">{{i+1}}</td>
+						</tr>
+						<tr>
+							<td ng-repeat="i in [12,13,14,15,16,17,18]" ng-class="challenge.calendar[i]">{{i+1}}</td>
+						</tr>
+						<tr>
+							<td ng-repeat="i in [19,20,21,22,23,24,25]" ng-class="challenge.calendar[i]">{{i+1}}</td>
+						</tr>
+						<tr>
+							<td ng-repeat="i in [26,27,28,29,30]" ng-class="challenge.calendar[i]">{{i+1}}</td>
+							<td class="background"></td>
+							<td class="background"></td>
+						</tr>
+					</table>
+				</div>
+			</div>	
+		</div>
+	</ion-content>
+</ion-view>
+
+
+
+
+
+
+
+
