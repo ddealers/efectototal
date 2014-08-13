@@ -1,0 +1,57 @@
+<ion-view title="RUTINAS">
+     <ion-nav-buttons side="left">
+          <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+     </ion-nav-buttons>
+     <ion-content class="has-header">
+          <div class="contenidoVideos">
+               <div class="bar bar-energized">
+                    <a ng-click="goBack()"><h1 class="title"><i class="ion-arrow-left-b"></i>{{video.category_name}}</h1></a>
+               </div>
+               <div class="videoEjercicio">
+                    <video id="exercise-video"></video>
+               </div>
+               <div class="row">
+                    <div class="col col-50">
+                         <p class="text-1">{{video.name}}</p>
+                         <button class="info-title" ng-click="toggleLists(video.id_video)"><span> AGREGAR A MIS RUTINAS</span></button>
+                         <!--
+                         <button ng-show="!onlist" class="info-title" ng-click="toggleLists(video.id_video)"><span> AGREGAR A MIS RUTINAS</span></button>
+                         <button ng-show="onlist" class="info-title negative" ng-click="toggleLists(video.id_video)"><span> QUITAR DE MIS RUTINAS</span></button>
+                         <!--<a href="" class="masInfo">Información nutricional</a>-->
+                    </div>
+                    <div class="col">
+  	                    <p class="minutes">Duración <span class="tiempo">{{video.duration}}</span></p>
+                         <a ng-click="share('tw')"><img src="./img/share_twitter.png" class="redest"></a>
+                         <a ng-click="share('fb')"><img src="./img/share_facebook.png" class="redesf"></a>
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col">
+                         <p class="minutes">Ejercicio <span>{{video.cals}}</span></p>
+                    </div>
+                    <div class="col">
+                         <p class="minutes">Intensidad <span>{{video.type}}</span></p>
+                    </div>
+               </div>
+               <div class="row">
+                	<div class="col">
+                    	<p class="dificultad" ng-bind-html="video.raros"></p>
+                        <!--p class="entrene">Training Type +10</p>
+                        <p class="entrene">Difficulty +8</p>
+                        <p class="entrene">Difficulty +8</p-->
+                    </div>
+                </div>
+                <div class="row">
+                   	<div class="col">
+  	                	<p class="parraFo">{{video.desc}}</p>
+                    </div>
+            	</div>
+          		<div class="coment">
+               	<!--<p class="parrafo0">A Typical Class</p>-->
+               		<p class="parrafo1"><span class="num">1</span>{{video.ben1}}</p>
+               		<p class="parrafo1"><span class="num">2</span>{{video.ben2}}</p>
+               		<p class="parrafo1"><span class="num">3</span>{{video.ben3}}</p>
+          		</div>
+          	</div>
+     </ion-content>
+</ion-view>
