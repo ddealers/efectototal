@@ -402,6 +402,14 @@ h1.title{
 	color: #4a87ee;
 	width: 100%;
 }
+.blogDetail{
+	padding: 0 10px 20px;
+}
+.blogDetail button{
+	float: right;
+	margin: 5px 0;
+}
+
 /* -------------------------------------------------------------------------- CONTADOR DE CALORIAS*/
 .contenidoContador{
 	width: 95%;
@@ -444,6 +452,9 @@ h1.title{
 	font-weight: bold;
 	padding: 17px 0px 17px 0px;
 	text-align: center;
+}
+.contenidoContador p.progreso.small{
+	font-size: 15px;
 }
 .contenidoContador progress-bar{
 	display: block;
@@ -821,6 +832,9 @@ h1.title{
 }
 .contenidoIformacion td div{
 	text-align: center;
+}
+.contenidoIformacion video{
+	width: 100%;
 }
 /*
 .contenidoIformacion .card .item:last-child, .list-inset .item:last-child {
@@ -1653,7 +1667,7 @@ margin: 0px;
 
 .contenidoCalendario_retos div.progress{
 	background: linear-gradient(45deg, #3b679e 0%,#7db9e8 100%);
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #3b679e), color-stop(100%, #7db9e8))
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #3b679e), color-stop(100%, #7db9e8));
 	width: 85%;
 	margin: 20px auto;
 	-webkit-transform: skew(-25deg);

@@ -82,7 +82,12 @@ angular.module('efectototal.controllers', [])
 })
 
 .controller('ProfileInfoCtrl', function($scope, $filter, User){
-	var id = localStorage.getItem('id');
+	var id = localStorage.getItem('id'),
+		height = localStorage.getItem('height'),
+		weight = localStorage.getItem('weight');
+
+	height = (height == 'null') ? '' : height;
+	weight = (weight == 'null') ? '' : weight;
 	//var date = new Date(localStorage.getItem('birthday'));
 	//var birthday = $filter('date')(date, 'yyyy-MM-dd');
 	//console.log(localStorage.getItem('birthday'), birthday);
@@ -90,8 +95,8 @@ angular.module('efectototal.controllers', [])
 		name: localStorage.getItem('name'),
 		email: localStorage.getItem('email'),
 		birthday: localStorage.getItem('birthday'),
-		height: localStorage.getItem('height') || 0,
-		weight: localStorage.getItem('weight') || 0
+		height: height,
+		weight: weight
 	};
 	$scope.fbid = localStorage.getItem('fbid');
 	$scope.$watch('data.birthday', function(newValue, oldValue){
@@ -563,10 +568,32 @@ angular.module('efectototal.controllers', [])
 		$state.go('login');
 	};
 })
-.controller('BlogCtrl', function($scope, $state, $sce, Blog) {
+.controller('BlogCtrl', function($scope, $state, $sce, $ionicModal, $timeout, Blog) {
 	var page = 1;
 	$scope.noMoreItemsAvailable = false;
 	$scope.posts = [];
+	$ionicModal.fromTemplateUrl('templates/blog-detail.html', {
+		scope: $scope,
+		animation: 'slide-in-up'
+	}).then(function(modal) {
+		$scope.modal = modal;
+	});
+	$scope.close = function(){
+		$scope.modal.hide();
+	}
+	$scope.open = function(post){
+		$scope.post = post;
+		$scope.modal.show();
+		$timeout(function(){
+			anchor = angular.element(document.querySelector('.blogDetail a'));
+			anchor.bind('click', function(e){
+				e.preventDefault();
+				window.open(anchor.attr('href'), '_system', 'location=no');
+			});
+		}, 1000);
+		//window.open(post.url, '_blank', 'location=no');
+		//window.open(url, '_system', 'location=no');
+	}
 	$scope.renderTitle = function(title){
 		if(title) return title.replace(/&#8220;/,'"').replace(/&#8221;/,'"').replace(/&#8230;/,'...');
 	}
@@ -574,52 +601,50 @@ angular.module('efectototal.controllers', [])
 		return $sce.trustAsHtml(htmlCode);
 	};
 	$scope.parseDate = function(dateStr){
-		var dateArr = dateStr.split(/[- ]/);
-		var month = "";
-		switch(dateArr[1]){
-			case "01":
-			month = "ENE";
-			break;
-			case "02":
-			month = "FEB";
-			break;
-			case "03":
-			month = "MAR";
-			break;
-			case "04":
-			month = "ABR";
-			break;
-			case "05":
-			month = "MAY";
-			break;
-			case "06":
-			month = "JUN";
-			break;
-			case "07":
-			month = "JUL";
-			break;
-			case "08":
-			month = "AGO";
-			break;
-			case "09":
-			month = "SEP";
-			break;
-			case "10":
-			month = "OCT";
-			break;
-			case "11":
-			month = "NOV";
-			break;
-			case "12":
-			month = "DIC";
-			break;
+		if(dateStr){
+			var dateArr = dateStr.split(/[- ]/);
+			var month = "";
+			switch(dateArr[1]){
+				case "01":
+				month = "ENE";
+				break;
+				case "02":
+				month = "FEB";
+				break;
+				case "03":
+				month = "MAR";
+				break;
+				case "04":
+				month = "ABR";
+				break;
+				case "05":
+				month = "MAY";
+				break;
+				case "06":
+				month = "JUN";
+				break;
+				case "07":
+				month = "JUL";
+				break;
+				case "08":
+				month = "AGO";
+				break;
+				case "09":
+				month = "SEP";
+				break;
+				case "10":
+				month = "OCT";
+				break;
+				case "11":
+				month = "NOV";
+				break;
+				case "12":
+				month = "DIC";
+				break;
+			}
+			return $sce.trustAsHtml(dateArr[2] + '<span>' + month + '</span>');
 		}
-		return $sce.trustAsHtml(dateArr[2] + '<span>' + month + '</span>');
 	};
-	$scope.open = function(url){
-		window.open(url, '_blank', 'location=no');
-		//window.open(url, '_system', 'location=no');
-	}
 	$scope.loadMore = function(){
 		Blog.posts(page).then(function(data){
 			page++;
@@ -765,7 +790,9 @@ angular.module('efectototal.controllers', [])
 	function getWinnersByDate(data){
 		var _d;
 		var calories, umax, cmax;
-		var day, start = new Date(data.challenge.start_at);
+		var start_at = data.challenge.start_at.split(' '),
+			start_arr = start_at[0].split('-');
+		var day, start = new Date(start_arr[0],start_arr[1] - 1,start_arr[2]);//, start = new Date(data.challenge.start_at);
 		var calendar = [];
 		for(_d = 0; _d < 31; _d++){
 			if(_d < data.challenge.days){
