@@ -119,14 +119,13 @@ h1.title{
 	border: #aaa 1px solid;
 	margin: 5px auto;
 	padding: 20px;
-	height: 100%;
 }
 .contenidoPerfil a.item.miPerfil{
 	background: #e01026;
 	color: #FFF;
 }
 .contenidoPerfil .list-inset{
-	margin: 10px auto;
+	margin: -5px auto;
 	width: 75%;
 }
 .contenidoPerfil .item-image img.perfil:first-child, .item-image .list-img {
@@ -146,6 +145,9 @@ h1.title{
 	background: #e5e5e5;
 }
 /* -------------------------------------------------------------------------- PROFILE_ACTIVIDAD */
+.contenidoPerfil a.item.premio{
+	padding: 7px 0px 7px 0px;
+}
 .contenidoPerfil_actividad{
 	width: 95%;
 	background-color: #eee;
@@ -223,6 +225,10 @@ h1.title{
 	background-color: #eee;
 	border: #aaa 1px solid;
 	margin: 5px auto;
+}
+.contenidoRetos div.start{
+	padding: 5px 0px 5px 0px;
+	color: #1f2a84;
 }
 .contenidoRetos h1.encabezado{
 	color: #fff;
