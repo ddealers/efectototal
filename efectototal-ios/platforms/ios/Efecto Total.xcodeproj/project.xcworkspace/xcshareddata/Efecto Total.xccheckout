@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>39441274-CA71-4765-BA2B-FD9A2B10DB08</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Efecto Total</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AF537CAB84A169922EDF623BD35722A2933EF080</key>
+		<string>https://github.com/ddealers/efectototal.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>efectototal-ios/platforms/ios/Efecto Total.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AF537CAB84A169922EDF623BD35722A2933EF080</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ddealers/efectototal.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AF537CAB84A169922EDF623BD35722A2933EF080</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AF537CAB84A169922EDF623BD35722A2933EF080</string>
+			<key>IDESourceControlWCCName</key>
+			<string>efectototal</string>
+		</dict>
+	</array>
+</dict>
+</plist>

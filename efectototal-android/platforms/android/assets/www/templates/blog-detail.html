@@ -1,0 +1,22 @@
+<div class="modal">
+	<ion-header-bar>
+		<h1 class="title">BLOG</h1>
+	</ion-header-bar>
+	<ion-content class="blogDetail">
+		<button ng-click="close()" class="button button-outline icon-right ion-close button-stable">CERRAR</button>
+		<img class="full-image" ng-src="{{post.thumbnail_images.full.url}}">
+		<div class="item-2 item-avatar">
+			<p class="fecha" ng-bind-html="parseDate(post.date)"></p>
+			<h2 class="name">{{renderTitle(post.title_plain)}}</h2>
+			<div class="row">
+				<div class="col">
+					<p class="small">{{post.author.name}}</p>
+				</div>
+				<div class="col">
+					<p class="small">{{post.comments.length}} Comments</p>
+				</div>
+			</div>
+		</div>
+		<div class="content" ng-bind-html="renderHTML(post.content)"></div>
+	</ion-content>
+</div>
