@@ -188,6 +188,9 @@ h1.title{
 	font-weight: 500;
 	font-size: 15px;
 }
+.contenidoPerfil_actividad p img{
+	margin-right: 5px;
+}
 .contenidoPerfil_actividad article{
 	background: #f0f0f0;
 	height: 55px;

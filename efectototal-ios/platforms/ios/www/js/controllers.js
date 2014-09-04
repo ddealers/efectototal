@@ -43,7 +43,8 @@ angular.module('efectototal.controllers', [])
 			}
 			localStorage.setItem('name', data.scope.name);
 			localStorage.setItem('email', data.scope.email);
-			localStorage.setItem('birthday', birthday);
+			//localStorage.setItem('birthday', birthday);
+			localStorage.setItem('age', data.scope.age);
 			localStorage.setItem('weight', data.scope.address);
 			localStorage.setItem('height', data.scope.phone);
 			localStorage.setItem('fbid', data.scope.fbid);
@@ -72,13 +73,14 @@ angular.module('efectototal.controllers', [])
 	};
 })
 
-.controller('ProfileCtrl', function($scope, $stateParams){
+.controller('ProfileCtrl', function($scope, $stateParams, Challenge){
+	var id = localStorage.getItem('id');
 	if(!$stateParams.id){
 		$scope.fbid = localStorage.getItem('fbid');
-	}else{
-		console.log('another user');
-		//User.get()
 	}
+	Challenge.count(id).then(function(data){
+		$scope.challengeCount = data;
+	});
 })
 
 .controller('ProfileInfoCtrl', function($scope, $filter, User){
@@ -94,16 +96,24 @@ angular.module('efectototal.controllers', [])
 	$scope.data = {
 		name: localStorage.getItem('name'),
 		email: localStorage.getItem('email'),
-		birthday: localStorage.getItem('birthday'),
+		//birthday: localStorage.getItem('birthday'),
+		age: localStorage.getItem('age'),
 		height: height,
 		weight: weight
 	};
 	$scope.fbid = localStorage.getItem('fbid');
+	/*
 	$scope.$watch('data.birthday', function(newValue, oldValue){
 		birthday = new Date(newValue).toISOString().substring(0, 10);
 		$scope.getAge();
 		User.update(id, {birthday: $scope.data.birthday, age: $scope.age});
 		localStorage.setItem('birthday', birthday);
+	});
+	*/
+	$scope.$watch('data.age',function(newValue, oldValue){
+		$scope.getFCE();
+		User.update(id, {age: $scope.data.age});
+		localStorage.setItem('age', newValue);
 	});
 	$scope.$watch('data.height',function(newValue, oldValue){
 		$scope.getIMC();
@@ -117,6 +127,7 @@ angular.module('efectototal.controllers', [])
 		User.update(id, {address: $scope.data.weight});
 		localStorage.setItem('weight', newValue);
 	});
+	/*
 	$scope.getAge = function(){
 		var today = new Date();
 		$scope.birth = new Date($scope.data.birthday);
@@ -124,6 +135,13 @@ angular.module('efectototal.controllers', [])
 		if(today.getMonth() <= $scope.birth.getMonth() && today.getDate() < $scope.birth.getDate()){
 			$scope.age--;
 		}
+	}
+	*/
+	$scope.getFCE = function(){
+		var fcm = 220 - $scope.data.age,
+			fcr = 220 - $scope.data.age - 60;
+		$scope.fce = fcr * .60 + 60;
+
 	}
 	$scope.getIMC = function(){
 		$scope.IMC = $scope.data.weight / Math.pow($scope.data.height / 100,2);
@@ -755,7 +773,9 @@ angular.module('efectototal.controllers', [])
 		_length,
 		_contender,
 		id = localStorage.getItem('id');
-
+	$scope.gotoRoutines = function(){
+		$state.go('app.rutinas');
+	}
 	function getTotalCurrent(data){
 		_totalCurrent = 0;
 		if(data.current.calories && data.current.calories.length > 0){
@@ -765,6 +785,8 @@ angular.module('efectototal.controllers', [])
 			}
 		}
 		data.current.total = _totalCurrent;
+		data.current.left = data.current.total/data.challenge.calories*90;
+		data.current.left = data.current.left <= 90 ? data.current.left : 90;
 	}
 	function getTotalContenders(data){
 		if(!data.contenders){
@@ -784,6 +806,8 @@ angular.module('efectototal.controllers', [])
 					}
 				}
 				_contender.total = _totalContender;
+				_contender.left = _contender.total/data.challenge.calories*90;
+				_contender.left = _contender.left <= 90 ? _contender.left : 90;
 			}
 		}
 	}

@@ -246,9 +246,11 @@ angular.module('efectototal.controllers', [])
 		if(buttonIndex == 1){
 			video[0].addEventListener('play', onPlay, false);
 			counter = true;
+			//cordova.plugins.videoPlayer.play(video.attr('src'));
 			video[0].play();
 		}else{
 			counter = false;
+			//cordova.plugins.videoPlayer.play(video.attr('src'));
 			video[0].play();
 		}
 		if (video[0].requestFullscreen) {
@@ -402,9 +404,11 @@ angular.module('efectototal.controllers', [])
 		if(buttonIndex == 1){
 			video[0].addEventListener('play', onPlay, false);
 			counter = true;
+			//cordova.plugins.videoPlayer.play(video.attr('src'));
 			video[0].play();
 		}else{
 			counter = false;
+			//cordova.plugins.videoPlayer.play(video.attr('src'));
 			video[0].play();
 		}
 		if (video[0].requestFullscreen) {
@@ -605,7 +609,7 @@ angular.module('efectototal.controllers', [])
 		$state.go('login');
 	};
 })
-.controller('BlogCtrl', function($scope, $state, $sce, $ionicModal, Blog) {
+.controller('BlogCtrl', function($scope, $state, $sce, $ionicModal, $timeout, Blog) {
 	var page = 1;
 	$scope.noMoreItemsAvailable = false;
 	$scope.posts = [];
@@ -621,6 +625,13 @@ angular.module('efectototal.controllers', [])
 	$scope.open = function(post){
 		$scope.post = post;
 		$scope.modal.show();
+		$timeout(function(){
+			anchor = angular.element(document.querySelector('.blogDetail a'));
+			anchor.bind('click', function(e){
+				e.preventDefault();
+				window.open(anchor.attr('href'), '_system', 'location=no');
+			});
+		}, 2000);
 		//window.open(post.url, '_blank', 'location=no');
 		//window.open(url, '_system', 'location=no');
 	}
@@ -631,47 +642,49 @@ angular.module('efectototal.controllers', [])
 		return $sce.trustAsHtml(htmlCode);
 	};
 	$scope.parseDate = function(dateStr){
-		var dateArr = dateStr.split(/[- ]/);
-		var month = "";
-		switch(dateArr[1]){
-			case "01":
-			month = "ENE";
-			break;
-			case "02":
-			month = "FEB";
-			break;
-			case "03":
-			month = "MAR";
-			break;
-			case "04":
-			month = "ABR";
-			break;
-			case "05":
-			month = "MAY";
-			break;
-			case "06":
-			month = "JUN";
-			break;
-			case "07":
-			month = "JUL";
-			break;
-			case "08":
-			month = "AGO";
-			break;
-			case "09":
-			month = "SEP";
-			break;
-			case "10":
-			month = "OCT";
-			break;
-			case "11":
-			month = "NOV";
-			break;
-			case "12":
-			month = "DIC";
-			break;
+		if(dateStr){
+			var dateArr = dateStr.split(/[- ]/);
+			var month = "";
+			switch(dateArr[1]){
+				case "01":
+				month = "ENE";
+				break;
+				case "02":
+				month = "FEB";
+				break;
+				case "03":
+				month = "MAR";
+				break;
+				case "04":
+				month = "ABR";
+				break;
+				case "05":
+				month = "MAY";
+				break;
+				case "06":
+				month = "JUN";
+				break;
+				case "07":
+				month = "JUL";
+				break;
+				case "08":
+				month = "AGO";
+				break;
+				case "09":
+				month = "SEP";
+				break;
+				case "10":
+				month = "OCT";
+				break;
+				case "11":
+				month = "NOV";
+				break;
+				case "12":
+				month = "DIC";
+				break;
+			}
+			return $sce.trustAsHtml(dateArr[2] + '<span>' + month + '</span>');
 		}
-		return $sce.trustAsHtml(dateArr[2] + '<span>' + month + '</span>');
 	};
 	$scope.loadMore = function(){
 		Blog.posts(page).then(function(data){
@@ -794,6 +807,8 @@ angular.module('efectototal.controllers', [])
 			}
 		}
 		data.current.total = _totalCurrent;
+		data.current.left = data.current.total/data.challenge.calories*90;
+		data.current.left = data.current.left <= 90 ? data.current.left : 90;
 	}
 	function getTotalContenders(data){
 		if(!data.contenders){
@@ -813,6 +828,8 @@ angular.module('efectototal.controllers', [])
 					}
 				}
 				_contender.total = _totalContender;
+				_contender.left = _contender.total/data.challenge.calories*90;
+				_contender.left = _contender.left <= 90 ? _contender.left : 90;
 			}
 		}
 	}

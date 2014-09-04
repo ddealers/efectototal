@@ -70,7 +70,7 @@ h1.title{
 }
 .login div.boton-container{
 	border-top: 1px solid #DDD;
-	margin: -2px 0px 0px 15px;
+	margin: 0 auto;
 	width: 288px;
 	border-bottom: 1px solid #DDD;
 	position: relative;
@@ -187,6 +187,9 @@ h1.title{
 	color: #5177c8;
 	font-weight: 500;
 	font-size: 15px;
+}
+.contenidoPerfil_actividad p img{
+	margin-right: 5px;
 }
 .contenidoPerfil_actividad article{
 	background: #f0f0f0;
@@ -1191,7 +1194,6 @@ h1.title{
 	text-align: center;
 }
 .contenidoMis_retos p.versus{
-	margin: 50px 0px 0px -10px;
 	font-size: 44px;
 	color: #1f2a84;
 	font-weight: bold;
@@ -1575,19 +1577,92 @@ margin: 0px;
 	text-align: right;
 } 
 .contenidoCalendario_retos .perfil{
-	width: 50%;
+	width: 30%;
 }
 .contenidoCalendario_retos .card {
 	margin: 0px;
 }
+/*
 .contenidoCalendario_retos img.avatar{
 	margin: 0px 0px 0px -62px;
 }
 .contenidoCalendario_retos img.avatarRetador{
 	margin: 0px 0px 0px -21px;
 }
+*/
+.contenidoCalendario_retos .curr img{
+	border: #41b296 8px solid;
+}
+.contenidoCalendario_retos .curr p{
+	color: #41b296;
+}
+.contenidoCalendario_retos .cont img{
+	border: #aaa 8px solid;
+}
+.contenidoCalendario_retos .cont p{
+	color: #aaa;
+}
+.contenidoCalendario_retos .cont-0 img{
+	border: #f00 8px solid;
+}
+.contenidoCalendario_retos .cont-0 p{
+	color: #f00;
+}
+.contenidoCalendario_retos .cont-1 img{
+	border: #ff0 8px solid;
+}
+.contenidoCalendario_retos .cont-1 p{
+	color: #ff0;
+}
+.contenidoCalendario_retos .cont-2 img{
+	border: #0f0 8px solid;
+}
+.contenidoCalendario_retos .cont-2 p{
+	color: #0f0;
+}
+.contenidoCalendario_retos .cont-3 img{
+	border: #0ff 8px solid;
+}
+.contenidoCalendario_retos .cont-3 p{
+	color: #0ff;
+}
+.contenidoCalendario_retos .cont-4 img{
+	border: #00f 8px solid;
+}
+.contenidoCalendario_retos .cont-4 p{
+	color: #00f;
+}
+.contenidoCalendario_retos .cont-5 img{
+	border: #f0f 8px solid;
+}
+.contenidoCalendario_retos .cont-5 p{
+	color: #f0f;
+}
+.contenidoCalendario_retos .cont-6 img{
+	border: #808 8px solid;
+}
+.contenidoCalendario_retos .cont-6 p{
+	color: #808;
+}
+.contenidoCalendario_retos .cont-7 img{
+	border: #080 8px solid;
+}
+.contenidoCalendario_retos .cont-7 p{
+	color: #080;
+}
+.contenidoCalendario_retos .cont-8 img{
+	border: #008 8px solid;
+}
+.contenidoCalendario_retos .cont-8 p{
+	color: #008;
+}
+.contenidoCalendario_retos .cont-9 img{
+	border: #880 8px solid;
+}
+.contenidoCalendario_retos .cont-9 p{
+	color: #880;
+}
 .contenidoCalendario_retos p.versus{
-	margin: 50px 0px 0px -10px;
 	font-size: 44px;
 	color: #1f2a84;
 	font-weight: bold;
@@ -1596,6 +1671,7 @@ margin: 0px;
 	position: absolute;
 	left: 30px;
 }
+/*
 .contenidoCalendario_retos p.jugador{
 	font-size: 20px;
 	color: #41b296;
@@ -1606,6 +1682,7 @@ margin: 0px;
 	color: #444;
 	text-align: center;
 }
+*/
 .contenidoCalendario_retos div.col.espacio{
 	margin: 0px -39px 0px 0px;
 }
@@ -1615,6 +1692,7 @@ margin: 0px;
 .contenidoCalendario_retos div.col{
 	text-align: center;
 }
+/*
 .contenidoCalendario_retos p.totales{ 
 	position: absolute;
 	right: 18px;
@@ -1629,9 +1707,11 @@ margin: 0px;
 	position: relative;
 	padding-left: 24px;
 }
+*/
 .contenidoCalendario_retos div.row.text{
 	border-top: solid 1px #aaa;
 }
+/*
 .contenidoCalendario_retos div.grises{
 	position: relative;
 	float: left;
@@ -1647,6 +1727,7 @@ margin: 0px;
 	right: 15px;
 	top: 201px;
 }
+/*
 .contenidoCalendario_retos p.uno{
 	padding: 0px 0px 0px 3px;
 	color: #444;
@@ -1661,15 +1742,193 @@ margin: 0px;
 	color: #e01026;
 	padding-right: 7px;
 }
+*/
 .contenidoCalendario_retos div.fondo{
 	background: #f0f0f0;
+	position: relative;
 }
-
+.contenidoCalendario_retos .round{
+	background: #fff;
+	/* padding: 0px; */
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	float: right;
+	position: relative;
+}
+.contenidoCalendario_retos .round i{
+	position: absolute;
+	top: 8px;
+	left: -13px;
+}
+.contenidoCalendario_retos .round::after{
+	content: "";
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	position: absolute;
+	bottom: -7px;
+	left: 12px;
+}
+.contenidoCalendario_retos .markers{
+	position: relative;
+	height: 85px;
+}
+.contenidoCalendario_retos .quemadas{
+	position: absolute;
+	width: 90%;
+	left: 5%;
+	top: 0;
+}
+.contenidoCalendario_retos .quemadas h5{
+	color: #1f2a84;
+	margin: 0;
+}
+.contenidoCalendario_retos .quemadas p{
+	margin: 0;
+	text-align: center;
+}
+.contenidoCalendario_retos .quemadas .quem{
+	width: 40px;
+	display: block;
+	position: absolute;	
+	color: #aaa;
+}
+.contenidoCalendario_retos .quemadas .quem p{
+	background: #eee;
+}
+.contenidoCalendario_retos .quemadas .quem .round{
+	border: #aaa 3px solid;
+}
+.contenidoCalendario_retos .quemadas .quem-curr{
+	color: #41b296;
+	z-index: 1;
+}
+.contenidoCalendario_retos .quemadas .quem-curr .round{
+	border: #41b296 3px solid;
+}
+.contenidoCalendario_retos .quemadas .quem-curr .round::after{
+	border-top: 5px solid #41b296;	
+}
+.contenidoCalendario_retos .quemadas .quem-0{
+	color: #f00;
+}
+.contenidoCalendario_retos .quemadas .quem-0 .round{
+	border: #f00 3px solid;	
+}
+.contenidoCalendario_retos .quemadas .quem-0 .round::after{
+	border-top: 5px solid #f00;	
+}
+.contenidoCalendario_retos .quemadas .quem-1{
+	color: #ff0;
+}
+.contenidoCalendario_retos .quemadas .quem-1 .round{
+	border: #ff0 3px solid;	
+}
+.contenidoCalendario_retos .quemadas .quem-1 .round::after{
+	border-top: 5px solid #ff0;	
+}
+.contenidoCalendario_retos .quemadas .quem-2{
+	color: #0f0;
+}
+.contenidoCalendario_retos .quemadas .quem-2 .round{
+	border: #0f0 3px solid;	
+}
+.contenidoCalendario_retos .quemadas .quem-2 .round::after{
+	border-top: 5px solid #0f0;	
+}
+.contenidoCalendario_retos .quemadas .quem-3{
+	color: #0ff;
+}
+.contenidoCalendario_retos .quemadas .quem-3 .round{
+	border: #0ff 3px solid;	
+}
+.contenidoCalendario_retos .quemadas .quem-3 .round::after{
+	border-top: 5px solid #0ff;	
+}
+.contenidoCalendario_retos .quemadas .quem-4{
+	color: #00f;
+}
+.contenidoCalendario_retos .quemadas .quem-4 .round{
+	border: #00f 3px solid;	
+}
+.contenidoCalendario_retos .quemadas .quem-4 .round::after{
+	border-top: 5px solid #00f;	
+}
+.contenidoCalendario_retos .quemadas .quem-5{
+	color: #f0f;
+}
+.contenidoCalendario_retos .quemadas .quem-5 .round{
+	border: #f0f 3px solid;	
+}
+.contenidoCalendario_retos .quemadas .quem-5 .round::after{
+	border-top: 5px solid #f0f;	
+}
+.contenidoCalendario_retos .quemadas .quem-6 p{
+	color: #808;
+}
+.contenidoCalendario_retos .quemadas .quem-6 .round{
+	border: #808 3px solid;	
+}
+.contenidoCalendario_retos .quemadas .quem-6 .round::after{
+	border-top: 5px solid #808;	
+}
+.contenidoCalendario_retos .quemadas .quem-7 p{
+	color: #080;
+}
+.contenidoCalendario_retos .quemadas .quem-7 .round{
+	border: #080 3px solid;	
+}
+.contenidoCalendario_retos .quemadas .quem-7 .round::after{
+	border-top: 5px solid #080;	
+}
+.contenidoCalendario_retos .quemadas .quem-8 p{
+	color: #008;
+}
+.contenidoCalendario_retos .quemadas .quem-8 .round{
+	border: #008 3px solid;	
+}
+.contenidoCalendario_retos .quemadas .quem-8 .round::after{
+	border-top: 5px solid #008;	
+}
+.contenidoCalendario_retos .quemadas .quem-9 p{
+	color: #880;
+}
+.contenidoCalendario_retos .quemadas .quem-9 .round{
+	border: #880 3px solid;	
+}
+.contenidoCalendario_retos .quemadas .quem-9 .round::after{
+	border-top: 5px solid #880;	
+}
+.contenidoCalendario_retos div.totales{
+	position: absolute;
+	right: 5%;
+	top: 0;
+	text-align: right;
+	color: #f00;
+	/* overflow: hidden; */
+	/* padding-bottom: 10px; */
+	height: 90px;
+}
+.contenidoCalendario_retos div.totales h5{
+	color: #f00;
+	margin: 0;
+}
+.contenidoCalendario_retos div.totales p{
+	margin: 0;
+}
+.contenidoCalendario_retos div.totales .round{
+	border: #f00 3px solid;
+	margin-right: -13px;
+}
+.contenidoCalendario_retos div.totales .round::after{
+	border-top: 5px solid #f00;
+}
 .contenidoCalendario_retos div.progress{
+	clear: both;
 	background: linear-gradient(45deg, #3b679e 0%,#7db9e8 100%);
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #3b679e), color-stop(100%, #7db9e8));
 	width: 85%;
-	margin: 20px auto;
+	margin: 5px auto;
 	-webkit-transform: skew(-25deg);
 	box-shadow: 0px 0px 5px #999;
 	position: relative;

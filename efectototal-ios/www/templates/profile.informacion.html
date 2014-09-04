@@ -19,13 +19,15 @@
 						<span class="input-label">Email</span>
 						<input ng-model="data.email" type="email">
 					</label>
+					<!--
 					<label class="item item-input">
 						<span class="input-label">Nacimiento</span>
 						<input ng-model="data.birthday" type="date">
 					</label>
+					-->
 					<label class="item item-input">
 						<span class="input-label">Edad</span>
-						<p>{{age | number}}</p>
+						<input ng-model="data.age" type="text" pattern="\d*" placeholder="años">
 					</label>
 					<label class="item item-input">
 						<span class="input-label" >Altura</span>
@@ -42,6 +44,10 @@
 					<label class="item item-input">
 						<span class="input-label" >Peso Ideal</span>
 						<p>{{idealIMC | number:2}}</p>
+					</label>
+					<label class="item item-input">
+						<span class="input-label" >Frecuencia Cardiaca</span>
+						<p>{{fce | number:2}}</p>
 					</label>
 				</div>
 				<div class="card">
@@ -104,9 +110,9 @@
 							Prueba de condición física
 						</div>
 						<video preload="auto" src="http://efectototal.com/media/condicion.mp4"></video>
-						<p>Es muy importante antes de empezar con un programa de entrenamiento, consultar a su médico y realizarse una prueba de esfuerzo, para estar seguros, al someter mi cuerpo a un esfuerzo físico al que no estoy acostumbrado.<br /><br />
+						<!--<p>Es muy importante antes de empezar con un programa de entrenamiento, consultar a su médico y realizarse una prueba de esfuerzo, para estar seguros, al someter mi cuerpo a un esfuerzo físico al que no estoy acostumbrado.<br /><br />
 						Realiza ésta sencilla prueba de condición física y verás en qué nivel te encuentras.<br /><br />
-						Sube con pierna derecha un escalón de 15 cms de altura y junta los dos pies. Luego baja el pie derecho y junto el izquierdo abajo.  Repite subiendo y bajando con ritmo durante 3 min.  Toma tus pulsaciones inmediatamente y ve donde te encuentras.</p>
+						Sube con pierna derecha un escalón de 15 cms de altura y junta los dos pies. Luego baja el pie derecho y junto el izquierdo abajo.  Repite subiendo y bajando con ritmo durante 3 min.  Toma tus pulsaciones inmediatamente y ve donde te encuentras.</p>-->
 						<table>
 							<thead>
 								<tr>
@@ -154,6 +160,7 @@
 							</tbody>
 						</table>
 					</div>
+					<!--
 					<div class="item item-text-wrap">
 						<div class="item item-divider">
 							Fórmula de Karvonen
@@ -172,6 +179,7 @@
 							140 x .60 = 84 + 60 = 144<br />
 						</p>
 					</div>
+					-->
 				</div>
 			</div>
 		</div>

@@ -21,6 +21,7 @@ angular.module('efectototal.directives', [])
 		link: function(scope, elem, attrs){
 			scope.$watch('value', function(){
 				var width = parseFloat(scope.value)/parseFloat(scope.max)*95;
+				width = width <= 95 ? width : 95;
 				elem.css('width', width+'%');
 			});
 		}
