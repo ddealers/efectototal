@@ -135,7 +135,6 @@
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/README.md \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/templates \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/css/style.css \
-/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/css/style.styl \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/242_0572_01-c_1_1.mp4 \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/_foto-2.png \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/_foto-3.png \
@@ -162,6 +161,16 @@
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/foto_3.png \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/foto_4.png \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/i.png \
+/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/icon_01.png \
+/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/icon_02.png \
+/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/icon_03.png \
+/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/icon_04.png \
+/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/icon_05.png \
+/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/icon_06.png \
+/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/icon_07.png \
+/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/icon_08.png \
+/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/icon_09.png \
+/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/icon_10.png \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/iconF.png \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/inicio.jpg \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/img/ionic.png \
@@ -294,6 +303,7 @@
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/plugins/org.apache.cordova.statusbar/www/statusbar.js \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/plugins/org.apache.cordova.vibration/www \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/plugins/org.apache.cordova.vibration/www/vibration.js \
+/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/templates/blog-detail.html \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/templates/blog.html \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/templates/configuracion.html \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/assets/www/templates/contador.html \

@@ -7,9 +7,9 @@
 			<a href="#/app/perfil"><h1 class="encabezado"><i class="ion-arrow-left-b"></i>MIS RETOS</h1></a>
 			<div class="list card">
 				<div class="row"> 
-					<div class="col" >
+					<div class="col curr">
 						<img ng-src="http://graph.facebook.com/{{challenge.current.fbid}}/picture?height=200&width=200" class="perfil">
-						<p class="jugador">{{challenge.current.first_name}}</p>
+						<p>{{challenge.current.first_name}}</p>
 					</div>
 				</div> 
 				<div class="row">
@@ -18,9 +18,9 @@
 					</div> 
 				</div>
 				<div class="row">	
-					<div ng-repeat="contender in challenge.contenders" class="col">
+					<div ng-repeat="contender in challenge.contenders" class="col cont cont-{{$index}}">
 						<img ng-src="http://graph.facebook.com/{{contender.fbid}}/picture?height=200&width=200" class="perfil">
-						<p class="jugador2">{{contender.first_name}}</p>
+						<p>{{contender.first_name}}</p>
 					</div>
 				</div>
 				<!--
@@ -50,9 +50,27 @@
 				</div> 
 				-->
 				<div class="fondo">
+					<div class="markers">
+						<div class="totales">
+							<h5>Calorías totales</h5>
+							<p>{{challenge.challenge.calories}}</p>
+							<div class="round"><i class="icon flaticon-runner5"></i></div>
+						</div>
+						<div class="quemadas">
+							<h5>Calorías quemadas</h5>
+							<div style="left:{{challenge.current.left}}%" class="quem quem-curr">
+								<p>{{challenge.current.total}}</p>
+								<div class="round"><i class="icon flaticon-runner5"></i></div>
+							</div>
+							<div style="left:{{contender.left}}%" class="quem quem-{{$index}}" ng-repeat="contender in challenge.contenders">
+								<p>{{contender.total}}</p>
+								<div class="round"><i class="icon flaticon-runner5"></i></div>
+							</div>
+						</div>
+					</div>
 					<div class="progress">
 						<progress-bar value="challenge.current.total" class="curr" max="challenge.challenge.calories"></progress-bar>
-						<progress-bar ng-repeat="contender in challenge.contenders" class="cont" value="contender.total" max="challenge.challenge.calories"></progress-bar>
+						<progress-bar ng-repeat="contender in challenge.contenders" class="cont-{{$index}}" value="contender.total" max="challenge.challenge.calories"></progress-bar>
 					</div>
 					<table>
 						<tr>

@@ -247,6 +247,20 @@ angular.module('efectototal.services', [])
 		});
 		return deferred.promise;
 	}
+	var getCount = function(userID){
+		var deferred = $q.defer();
+		api('/challenge/count', {id: userID},
+		function(response){
+			if(response.success){
+				deferred.resolve(response.data);
+			}else{
+				deferred.reject(response.error);
+			}
+		},function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;
+	}
 	var byUser = function(userID, page){
 		var deferred = $q.defer();
 		api('/challenge/user', {id: userID, page: page},
@@ -278,6 +292,7 @@ angular.module('efectototal.services', [])
 	return {
 		create: create,
 		update: update,
+		count: getCount,
 		user: byUser,
 		byId: byId
 	}	
