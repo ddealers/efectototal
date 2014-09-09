@@ -64,7 +64,40 @@ h1.title{
 	background-color: #41b296;
 	color: #FFF;
 }
-/*.scroll-content{
+.icon-ef-level-0{
+	background: url(http://efectototal.com/app/_mobile/img/nv1.png) no-repeat center center;
+}
+.icon-ef-level-1{
+	background: url(http://efectototal.com/app/_mobile/img/nv2.png) no-repeat center center;
+}
+.icon-ef-level-2{
+	background: url(http://efectototal.com/app/_mobile/img/nv3.png) no-repeat center center;
+}
+.icon-ef-level-3{
+	background: url(http://efectototal.com/app/_mobile/img/nv4.png) no-repeat center center;
+}
+.icon-ef-level-4{
+	background: url(http://efectototal.com/app/_mobile/img/nv5.png) no-repeat center center;
+}
+.icon-ef-level-5{
+	background: url(http://efectototal.com/app/_mobile/img/nv6.png) no-repeat center center;
+}
+.icon-ef-level-6{
+	background: url(http://efectototal.com/app/_mobile/img/nv7.png) no-repeat center center;
+}
+.icon-ef-level-7{
+	background: url(http://efectototal.com/app/_mobile/img/nv8.png) no-repeat center center;
+}
+.icon-ef-level-8{
+	background: url(http://efectototal.com/app/_mobile/img/nv9.png) no-repeat center center;
+}
+.icon-ef-level-9{
+	background: url(http://efectototal.com/app/_mobile/img/nv10.png) no-repeat center center;
+}
+.icon-ef-level-10{
+	background: url(http://efectototal.com/app/_mobile/img/nv11.png) no-repeat center center;
+}
+/*.scroll-content{	
 	background: #eee;
 }*/				
 /* ----------------------------------------------------------------------- CONECTATE CON FACEBOOK */
@@ -144,10 +177,23 @@ h1.title{
 .contenidoPerfil .card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
 	background: #e5e5e5;
 }
-/* -------------------------------------------------------------------------- PROFILE_ACTIVIDAD */
+.contenidoPerfil .badge.badge-aqua{
+	top: 5px;
+}
 .contenidoPerfil a.item.premio{
 	padding: 7px 0px 7px 0px;
 }
+.contenidoPerfil div.stars{}
+.contenidoPerfil div.stars i{
+	width: 30px;
+	height: 30px;
+	display: block;
+	background-size: contain;
+	margin: 2px 0 0 6px;
+	float: left;
+}
+
+/* -------------------------------------------------------------------------- PROFILE_ACTIVIDAD */
 .contenidoPerfil_actividad{
 	width: 95%;
 	background-color: #eee;
@@ -226,9 +272,17 @@ h1.title{
 	border: #aaa 1px solid;
 	margin: 5px auto;
 }
-.contenidoRetos div.start{
-	padding: 5px 0px 5px 0px;
-	color: #1f2a84;
+.contenidoRetos div.stars{
+	width: 200px;
+	margin: 0 auto;
+}
+.contenidoRetos div.stars i{
+	width: 30px;
+	height: 30px;
+	display: block;
+	background-size: contain;
+	margin: 2px 0 0 6px;
+	float: left;
 }
 .contenidoRetos h1.encabezado{
 	color: #fff;
@@ -1982,6 +2036,12 @@ margin: 0px;
 }
 .contenidoCalendario_retos  div.list.card{
 	background: #f0f0f0;
+}
+.contenidoCalendario_retos td.init{
+	border-left: #1f2a84 2px solid;
+}
+.contenidoCalendario_retos td.end{
+	border-right: #f00 2px solid;
 }
 .contenidoCalendario_retos td.background{
 	background: #D1D1D1;

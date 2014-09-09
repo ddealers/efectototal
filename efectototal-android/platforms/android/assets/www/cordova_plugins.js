@@ -81,7 +81,7 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "com.phonegap.plugins.facebookconnect": "0.6.0",
+    "com.phonegap.plugins.facebookconnect": "0.7.1",
     "org.apache.cordova.statusbar": "0.1.6",
     "org.apache.cordova.device": "0.2.10",
     "com.ionic.keyboard": "1.0.2",

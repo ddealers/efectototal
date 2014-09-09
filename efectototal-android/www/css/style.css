@@ -60,7 +60,44 @@ h1.title{
 .submenu .item-content{
 	background: #eee;
 }
-/*.scroll-content{
+.badge.badge-aqua{
+	background-color: #41b296;
+	color: #FFF;
+}
+.icon-ef-level-0{
+	background: url(http://efectototal.com/app/_mobile/img/nv1.png) no-repeat center center;
+}
+.icon-ef-level-1{
+	background: url(http://efectototal.com/app/_mobile/img/nv2.png) no-repeat center center;
+}
+.icon-ef-level-2{
+	background: url(http://efectototal.com/app/_mobile/img/nv3.png) no-repeat center center;
+}
+.icon-ef-level-3{
+	background: url(http://efectototal.com/app/_mobile/img/nv4.png) no-repeat center center;
+}
+.icon-ef-level-4{
+	background: url(http://efectototal.com/app/_mobile/img/nv5.png) no-repeat center center;
+}
+.icon-ef-level-5{
+	background: url(http://efectototal.com/app/_mobile/img/nv6.png) no-repeat center center;
+}
+.icon-ef-level-6{
+	background: url(http://efectototal.com/app/_mobile/img/nv7.png) no-repeat center center;
+}
+.icon-ef-level-7{
+	background: url(http://efectototal.com/app/_mobile/img/nv8.png) no-repeat center center;
+}
+.icon-ef-level-8{
+	background: url(http://efectototal.com/app/_mobile/img/nv9.png) no-repeat center center;
+}
+.icon-ef-level-9{
+	background: url(http://efectototal.com/app/_mobile/img/nv10.png) no-repeat center center;
+}
+.icon-ef-level-10{
+	background: url(http://efectototal.com/app/_mobile/img/nv11.png) no-repeat center center;
+}
+/*.scroll-content{	
 	background: #eee;
 }*/				
 /* ----------------------------------------------------------------------- CONECTATE CON FACEBOOK */
@@ -115,14 +152,13 @@ h1.title{
 	border: #aaa 1px solid;
 	margin: 5px auto;
 	padding: 20px;
-	height: 100%;
 }
 .contenidoPerfil a.item.miPerfil{
 	background: #e01026;
 	color: #FFF;
 }
 .contenidoPerfil .list-inset{
-	margin: 10px auto;
+	margin: -5px auto;
 	width: 75%;
 }
 .contenidoPerfil .item-image img.perfil:first-child, .item-image .list-img {
@@ -141,6 +177,22 @@ h1.title{
 .contenidoPerfil .card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
 	background: #e5e5e5;
 }
+.contenidoPerfil .badge.badge-aqua{
+	top: 5px;
+}
+.contenidoPerfil a.item.premio{
+	padding: 7px 0px 7px 0px;
+}
+.contenidoPerfil div.stars{}
+.contenidoPerfil div.stars i{
+	width: 30px;
+	height: 30px;
+	display: block;
+	background-size: contain;
+	margin: 2px 0 0 6px;
+	float: left;
+}
+
 /* -------------------------------------------------------------------------- PROFILE_ACTIVIDAD */
 .contenidoPerfil_actividad{
 	width: 95%;
@@ -219,6 +271,18 @@ h1.title{
 	background-color: #eee;
 	border: #aaa 1px solid;
 	margin: 5px auto;
+}
+.contenidoRetos div.stars{
+	width: 200px;
+	margin: 0 auto;
+}
+.contenidoRetos div.stars i{
+	width: 30px;
+	height: 30px;
+	display: block;
+	background-size: contain;
+	margin: 2px 0 0 6px;
+	float: left;
 }
 .contenidoRetos h1.encabezado{
 	color: #fff;
@@ -1310,9 +1374,10 @@ margin: 0px;
 	margin: 0px 0px 0px -50px;
 }
 .contenidoResultados_retos p.versus{
-	margin: 50px 0px 0px -30px;
+	/*margin: 50px 0px 0px -30px;*/
 	font-size: 44px;
-	color: #444;
+	color: #1f2a84;
+	font-weight: bold;
 }
 .contenidoResultados_retos p.jugador{
 	font-size: 20px;
@@ -1603,10 +1668,10 @@ margin: 0px;
 	color: #aaa;
 }
 .contenidoCalendario_retos .cont-0 img{
-	border: #f00 8px solid;
+	border: #b00 8px solid;
 }
 .contenidoCalendario_retos .cont-0 p{
-	color: #f00;
+	color: #b00;
 }
 .contenidoCalendario_retos .cont-1 img{
 	border: #ff0 8px solid;
@@ -1810,13 +1875,13 @@ margin: 0px;
 	border-top: 5px solid #41b296;	
 }
 .contenidoCalendario_retos .quemadas .quem-0{
-	color: #f00;
+	color: #b00;
 }
 .contenidoCalendario_retos .quemadas .quem-0 .round{
-	border: #f00 3px solid;	
+	border: #b00 3px solid;	
 }
 .contenidoCalendario_retos .quemadas .quem-0 .round::after{
-	border-top: 5px solid #f00;	
+	border-top: 5px solid #b00;	
 }
 .contenidoCalendario_retos .quemadas .quem-1{
 	color: #ff0;
@@ -1957,6 +2022,10 @@ margin: 0px;
 .contenidoCalendario_retos progress::-webkit-progress-value {
 	background: #41b296;
 }
+.contenidoCalendario_retos .info-title{
+	display: block;
+	margin: 10px auto;
+}
 .contenidoCalendario_retos td{
 	border: solid 1px #aaa;
 	padding: 10px;
@@ -1967,6 +2036,12 @@ margin: 0px;
 }
 .contenidoCalendario_retos  div.list.card{
 	background: #f0f0f0;
+}
+.contenidoCalendario_retos td.init{
+	border-left: #1f2a84 2px solid;
+}
+.contenidoCalendario_retos td.end{
+	border-right: #f00 2px solid;
 }
 .contenidoCalendario_retos td.background{
 	background: #D1D1D1;

@@ -78,6 +78,6 @@
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/ant-build/classes/org/apache/cordova/statusbar/StatusBar$2.class \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/ant-build/classes/org/apache/cordova/statusbar/StatusBar.class \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/ant-build/classes/org/apache/cordova/vibration/Vibration.class \
-/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/ant-build/dexedLibs/classes-3c03c8cf3510203fd40de0873417cc22.jar \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/ant-build/dexedLibs/classes-f1560863e5893431da91af1b3a90cf6e.jar \
+/Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/ant-build/dexedLibs/classes-3c03c8cf3510203fd40de0873417cc22.jar \
 /Applications/XAMPP/xamppfiles/htdocs/myvoga/efectototal/efectototal-android/platforms/android/ant-build/dexedLibs/android-support-v4-9095ece046b955bff11a8b42147bbb08.jar \

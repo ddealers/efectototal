@@ -12,7 +12,13 @@
                          <a class="item miPerfil" href="#/app/informacion">MI PERFIL</a>
                          <a class="item" href="#/app/rutinas">MIS RUTINAS</a>
                          <a class="item" href="#/app/actividad">MI ACTIVIDAD</a>
-                         <a class="item" href="#/app/retos">MIS RETOS</a>
+                         <a class="item premio" href="#/app/retos">
+                              MIS RETOS
+                              <span class="badge badge-aqua">{{challengeCount}}</span>
+                              <div class="stars">
+                                   <i ng-repeat="i in challengeItems" ng-class="level"></i>
+                              </div>
+                         </a>
                     </div>
                </div>
           </div>     

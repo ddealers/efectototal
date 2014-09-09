@@ -8,12 +8,8 @@
                <div class="list card">
          	          <div class="item item-image">
      	              <img ng-src="http://graph.facebook.com/{{fbid}}/picture?height=200&width=200" class="perfil">
-                        <div class="start">
-                              <i class="ion-ios7-star"></i>
-                              <i class="ion-ios7-star"></i>
-                              <i class="ion-ios7-star"></i>
-                              <i class="ion-ios7-star"></i>
-                              <i class="ion-ios7-star"></i>
+                        <div class="stars">
+                              <i ng-repeat="i in challengeItems" ng-class="level"></i>
                          </div>
                     </div>
                </div>

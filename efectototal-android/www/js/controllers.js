@@ -72,13 +72,28 @@ angular.module('efectototal.controllers', [])
 	};
 })
 
-.controller('ProfileCtrl', function($scope, $stateParams){
+.controller('ProfileCtrl', function($scope, $stateParams, Challenge){
+	var id = localStorage.getItem('id');
 	if(!$stateParams.id){
 		$scope.fbid = localStorage.getItem('fbid');
-	}else{
-		console.log('another user');
-		//User.get()
 	}
+	Challenge.count(id).then(function(data){
+		$scope.challengeCount = data;
+	});
+	Challenge.won(id).then(function(data){
+		console.log(data);
+		var all = [], count, result;
+		if(data > 50) data = 50;
+		result = Math.floor(data/5);
+		count = data - result * 5;
+		if(data == result *  5) count = 5;
+		$scope.level = 'icon-ef-level-' + Math.floor(data/5);
+		for(var i = 0; i < count; i++){
+			all.push(i);
+		}
+		$scope.challengeItems = all;
+
+	});
 })
 
 .controller('ProfileInfoCtrl', function($scope, $filter, User){
@@ -591,6 +606,19 @@ angular.module('efectototal.controllers', [])
 			$scope.noMoreItemsAvailable = true;
 		});
 	}
+	Challenge.won(id).then(function(data){
+		console.log(data);
+		var all = [], count, result;
+		if(data > 50) data = 50;
+		result = Math.floor(data/5);
+		count = data - result * 5;
+		if(data == result *  5) count = 5;
+		$scope.level = 'icon-ef-level-' + Math.floor(data/5);
+		for(var i = 0; i < count; i++){
+			all.push(i);
+		}
+		$scope.challengeItems = all;
+	});
 	$scope.$on('stateChangeSuccess', function() {
     	$scope.loadMore();
 	});
@@ -722,6 +750,12 @@ angular.module('efectototal.controllers', [])
 	}
 	$scope.selectFriends = function(){
 		facebookConnectPlugin.api('/me/?fields=friends',[],function(data){
+			data.friends.data.push({name:'Sofía Álvarez', id: '1502846876598837'});
+			data.friends.data.push({name:'Valeria Sánchez', id: '898876896806662'});
+			data.friends.data.push({name:'Ana Carola Rodríguez', id: '359226750892474'});
+			data.friends.data.push({name:'Gerardo Rioseco', id: '908737122476769'});
+			data.friends.data.push({name:'Flor Escudero', id: '802458749795020'});
+			data.friends.data.push({name:'Rodrigo Mayén', id: '721472817889225'});
 			$scope.friends = data.friends.data;
 			$scope.modal.show();
 		});
@@ -797,7 +831,9 @@ angular.module('efectototal.controllers', [])
 		_length,
 		_contender,
 		id = localStorage.getItem('id');
-
+	$scope.gotoRoutines = function(){
+		$state.go('app.rutinas');
+	}
 	function getTotalCurrent(data){
 		_totalCurrent = 0;
 		if(data.current.calories && data.current.calories.length > 0){
@@ -838,14 +874,12 @@ angular.module('efectototal.controllers', [])
 		var calories, umax, cmax;
 		var start_at = data.challenge.start_at.split(' '),
 			start_arr = start_at[0].split('-');
-		console.log(start_arr);
 		var day, start = new Date(start_arr[0],start_arr[1] - 1,start_arr[2]);//, start = new Date(data.challenge.start_at);
 		var calendar = [];
 		for(_d = 0; _d < 31; _d++){
 			if(_d < data.challenge.days){
 				day = new Date(start.getTime() + _d * 24 * 60 * 60 * 1000);
 				dayStr = day.getFullYear()+"-"+zero(day.getMonth()+1)+"-"+zero(day.getDate());
-				console.log(start, day, dayStr);
 				for (var c in data.contenders){
 					calories = data.contenders[c].calories;
 					cmax = 0;
@@ -862,14 +896,27 @@ angular.module('efectototal.controllers', [])
 						umax = calories[cal].calories;
 					}
 				}
-				console.log(cmax, umax, parseFloat(cmax), parseFloat(umax));
 				if(parseFloat(cmax) > parseFloat(umax)){
-					calendar.push('contender');	
+					if(_d == 0){
+						calendar.push('contender init');
+					}else{
+						calendar.push('contender');	
+					}
 				}else if(parseFloat(cmax) == parseFloat(umax)){
-					calendar.push('draw');	
+					if(_d == 0){
+						calendar.push('draw init');
+					}else{
+						calendar.push('draw');	
+					}
 				}else{
-					calendar.push('current');
+					if(_d == 0){
+						calendar.push('current init');	
+					}else{
+						calendar.push('current');	
+					}
 				}
+			}else if(_d == data.challenge.days){
+				calendar.push('background end');
 			}else{
 				calendar.push('background');
 			}

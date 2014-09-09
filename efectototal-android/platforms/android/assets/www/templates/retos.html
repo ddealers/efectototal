@@ -8,6 +8,9 @@
                <div class="list card">
          	          <div class="item item-image">
      	              <img ng-src="http://graph.facebook.com/{{fbid}}/picture?height=200&width=200" class="perfil">
+                        <div class="stars">
+                              <i ng-repeat="i in challengeItems" ng-class="level"></i>
+                         </div>
                     </div>
                </div>
                <div class="list historial">

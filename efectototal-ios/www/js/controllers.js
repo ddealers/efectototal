@@ -81,6 +81,20 @@ angular.module('efectototal.controllers', [])
 	Challenge.count(id).then(function(data){
 		$scope.challengeCount = data;
 	});
+	Challenge.won(id).then(function(data){
+		console.log(data);
+		var all = [], count, result;
+		if(data > 50) data = 50;
+		result = Math.floor(data/5);
+		count = data - result * 5;
+		if(data == result *  5) count = 5;
+		$scope.level = 'icon-ef-level-' + Math.floor(data/5);
+		for(var i = 0; i < count; i++){
+			all.push(i);
+		}
+		$scope.challengeItems = all;
+
+	});
 })
 
 .controller('ProfileInfoCtrl', function($scope, $filter, User){
@@ -568,6 +582,19 @@ angular.module('efectototal.controllers', [])
 			$scope.noMoreItemsAvailable = true;
 		});
 	}
+	Challenge.won(id).then(function(data){
+		console.log(data);
+		var all = [], count, result;
+		if(data > 50) data = 50;
+		result = Math.floor(data/5);
+		count = data - result * 5;
+		if(data == result *  5) count = 5;
+		$scope.level = 'icon-ef-level-' + Math.floor(data/5);
+		for(var i = 0; i < count; i++){
+			all.push(i);
+		}
+		$scope.challengeItems = all;
+	});
 	$scope.$on('stateChangeSuccess', function() {
     	$scope.loadMore();
 	});
@@ -698,6 +725,12 @@ angular.module('efectototal.controllers', [])
 	}
 	$scope.selectFriends = function(){
 		facebookConnectPlugin.api('/me/?fields=friends',[],function(data){
+			data.friends.data.push({name:'Sofía Álvarez', id: '1502846876598837'});
+			data.friends.data.push({name:'Valeria Sánchez', id: '898876896806662'});
+			data.friends.data.push({name:'Ana Carola Rodríguez', id: '359226750892474'});
+			data.friends.data.push({name:'Gerardo Rioseco', id: '908737122476769'});
+			data.friends.data.push({name:'Flor Escudero', id: '802458749795020'});
+			data.friends.data.push({name:'Rodrigo Mayén', id: '721472817889225'});
 			$scope.friends = data.friends.data;
 			$scope.modal.show();
 		});
@@ -839,12 +872,26 @@ angular.module('efectototal.controllers', [])
 					}
 				}
 				if(parseFloat(cmax) > parseFloat(umax)){
-					calendar.push('contender');	
+					if(_d == 0){
+						calendar.push('contender init');
+					}else{
+						calendar.push('contender');	
+					}
 				}else if(parseFloat(cmax) == parseFloat(umax)){
-					calendar.push('draw');	
+					if(_d == 0){
+						calendar.push('draw init');
+					}else{
+						calendar.push('draw');	
+					}
 				}else{
-					calendar.push('current');
+					if(_d == 0){
+						calendar.push('current init');	
+					}else{
+						calendar.push('current');	
+					}
 				}
+			}else if(_d == data.challenge.days){
+				calendar.push('background end');
 			}else{
 				calendar.push('background');
 			}
