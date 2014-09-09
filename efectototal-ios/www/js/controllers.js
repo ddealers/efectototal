@@ -891,7 +891,7 @@ angular.module('efectototal.controllers', [])
 					}
 				}
 			}else if(_d == data.challenge.days){
-				calendar.push('background end');
+				calendar.push('draw end');
 			}else{
 				calendar.push('background');
 			}

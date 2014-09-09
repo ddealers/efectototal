@@ -28,6 +28,7 @@
                          <p ng-switch-when="8"><img ng-src="img/icon_08.png">Tu amigo {{activity.data}} se ha unido a Efecto Total. ¡Rétalo a ejercitarse!</p>
                          <p ng-switch-when="9"><img ng-src="img/icon_09.png">Has creado tu rutina "{{activity.data}}".</p>
                          <p ng-switch-when="10"><img ng-src="img/icon_10.png">Compartiste la noticia "{{activity.data}}" del blog de Efecto Total</p>
+                         <p class="date-activity">{{activity.created_at}}</p>
                          <a href="{{activity.link}}" ng-show="activity.link" class="button button-icon icon ion-chevron-right"></a>
                     </div>
                </ion-list>
