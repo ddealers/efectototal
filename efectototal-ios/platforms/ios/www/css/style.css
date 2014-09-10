@@ -1480,6 +1480,11 @@ margin: 0px;
 	color: #5177c8;
 	font-weight: 500;
 	font-size: 15px;
+	position: relative;
+	overflow: visible;
+	white-space: normal;
+	padding-left: 55px;
+	margin-top: -5px;
 }
 .contenidoNewsfeed{
 	margin: 0px 0px 10px 0px;
@@ -1487,6 +1492,9 @@ margin: 0px;
 .contenidoNewsfeed article{
 	background: #f0f0f0;
 	height: 55px;
+}
+.contenidoNewsfeed img.icon-image{
+	margin-left: -20px;
 }
 .contenidoNewsfeed div.list.card{
 	margin: 0px 10px 0px 10px;
