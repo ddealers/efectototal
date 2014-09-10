@@ -6,7 +6,7 @@ angular.module('efectototal.directives', [])
 			elem.on('click', function(e){
 				e.preventDefault();
 				console.log(attrs);
-				window.open(attrs.href, "_system");
+				window.open(attrs.href, '_system', 'location=yes');
 			});
 		}
 	}
