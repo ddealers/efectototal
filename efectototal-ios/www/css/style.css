@@ -182,6 +182,7 @@ h1.title{
 }
 .contenidoPerfil a.item.premio{
 	padding: 7px 0px 7px 0px;
+	height: 55px;
 }
 .contenidoPerfil div.stars{}
 .contenidoPerfil div.stars i{
