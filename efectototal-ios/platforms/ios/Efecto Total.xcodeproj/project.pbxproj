@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		0671CA3AA8BA4FC08A0CBEA5 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DAC6B3D594E649ABD9AC8 /* CDVInAppBrowser.m */; };
 		06F2BAF8A9E24E869ED51A72 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240FB1B99F40429B86268009 /* CoreMotion.framework */; };
