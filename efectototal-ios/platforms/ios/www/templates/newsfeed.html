@@ -20,16 +20,17 @@
 				<ion-list>
 					<div class="item item-button-right" ng-switch="activity.type" ng-repeat="activity in activities">
 						<img ng-src="http://graph.facebook.com/{{activity.fbid}}/picture?height=30&width=30">
-                         <p ng-switch-when="1"><img ng-src="img/icon_01.png">{{activity.first_name}} vió la rutina {{activity.data}}.</p>
-                         <p ng-switch-when="2"><img ng-src="img/icon_02.png">{{activity.first_name }} agregó a sus rutinas {{activity.data}}</p>
-                         <p ng-switch-when="3"><img ng-src="img/icon_03.png">{{activity.first_name }} quemó {{activity.data | number:2}} calorías.</p>
-                         <p ng-switch-when="4"><img ng-src="img/icon_04.png">{{activity.first_name }} está en un reto de calorías con {{activity.data[1]}}.</p>
-                         <p ng-switch-when="5"><img ng-src="img/icon_05.png">Rechazó el reto {{activity.data[0]}} contra {{activity.data[1]}}.</p>
-                         <p ng-switch-when="6"><img ng-src="img/icon_06.png">{{activity.first_name }} es el ganador de un reto. ¡Felicidades!</p>
-                         <p ng-switch-when="7"><img ng-src="img/icon_07.png">Ha perdido el reto {{activity.data[0]}} contra {{activity.data[1]}}. ¡Suerte en tu próximo reto!</p>
-                         <p ng-switch-when="8"><img ng-src="img/icon_08.png">Tu amigo {{activity.data}} se ha unido a Efecto Total. ¡Rétalo a ejercitarse!</p>
-                         <p ng-switch-when="9"><img ng-src="img/icon_09.png">{{activity.first_name }} ha creado una nueva rutina.</p>
-                         <p ng-switch-when="10"><img ng-src="img/icon_10.png">{{activity.first_name }} compartió la noticia "{{activity.data}}" del blog de Efecto Total</p>
+                         <p ng-switch-when="1"><img ng-src="img/icon_01.png" class="icon-image">{{activity.first_name}} vió la rutina {{activity.data}}.</p>
+                         <p ng-switch-when="2"><img ng-src="img/icon_02.png" class="icon-image">{{activity.first_name }} agregó a sus rutinas {{activity.data}}</p>
+                         <p ng-switch-when="3"><img ng-src="img/icon_03.png" class="icon-image">{{activity.first_name }} quemó {{activity.data | number:2}} calorías.</p>
+                         <p ng-switch-when="4"><img ng-src="img/icon_04.png" class="icon-image">{{activity.first_name }} está en un reto de calorías con {{activity.data[1]}}.</p>
+                         <p ng-switch-when="5"><img ng-src="img/icon_05.png" class="icon-image">Rechazó el reto {{activity.data[0]}} contra {{activity.data[1]}}.</p>
+                         <p ng-switch-when="6"><img ng-src="img/icon_06.png" class="icon-image">{{activity.first_name }} es el ganador de un reto. ¡Felicidades!</p>
+                         <p ng-switch-when="7"><img ng-src="img/icon_07.png" class="icon-image">Ha perdido el reto {{activity.data[0]}} contra {{activity.data[1]}}. ¡Suerte en tu próximo reto!</p>
+                         <p ng-switch-when="8"><img ng-src="img/icon_08.png" class="icon-image">Tu amigo {{activity.data}} se ha unido a Efecto Total. ¡Rétalo a ejercitarse!</p>
+                         <p ng-switch-when="9"><img ng-src="img/icon_09.png" class="icon-image">{{activity.first_name }} ha creado una nueva rutina.</p>
+                         <p ng-switch-when="10"><img ng-src="img/icon_10.png" class="icon-image">{{activity.first_name }} compartió la noticia "{{activity.data}}" del blog de Efecto Total</p>
+                         <p class="date-activity">{{activity.created_at}}</p>
                          <a href="{{activity.link}}" ng-show="activity.link" class="button button-icon icon ion-chevron-right"></a>
                     </div>
 				</ion-list>
