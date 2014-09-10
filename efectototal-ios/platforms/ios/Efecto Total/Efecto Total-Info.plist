@@ -34,6 +34,7 @@
           <string>fb470325759780426</string>
         </array>
       </dict>
+<<<<<<< HEAD
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
@@ -484,6 +485,8 @@
           <string>fb470325759780426</string>
         </array>
       </dict>
+=======
+>>>>>>> 733620a8ed96e2ea76cf3c86ec86a11192ab963f
     </array>
     <key>CFBundleVersion</key>
     <string>1.1.0</string>
