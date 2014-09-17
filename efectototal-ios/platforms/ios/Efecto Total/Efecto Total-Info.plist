@@ -64,9 +64,39 @@
           <string>fb470325759780426</string>
         </array>
       </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb470325759780426</string>
+        </array>
+      </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb470325759780426</string>
+        </array>
+      </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb470325759780426</string>
+        </array>
+      </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb470325759780426</string>
+        </array>
+      </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb470325759780426</string>
+        </array>
+      </dict>
     </array>
     <key>CFBundleVersion</key>
-    <string>1.0.10</string>
+    <string>1.0.11</string>
     <key>FacebookAppID</key>
     <string>470325759780426</string>
     <key>FacebookDisplayName</key>
