@@ -94,6 +94,7 @@
           <string>fb470325759780426</string>
         </array>
       </dict>
+<<<<<<< HEAD
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
@@ -199,6 +200,11 @@
     </array>
     <key>CFBundleVersion</key>
     <string>1.1.0</string>
+=======
+    </array>
+    <key>CFBundleVersion</key>
+    <string>1.0.11</string>
+>>>>>>> a86eb4e26ad906114707453a40f6daced96660f1
     <key>FacebookAppID</key>
     <string>470325759780426</string>
     <key>FacebookDisplayName</key>

@@ -932,6 +932,10 @@ angular.module('efectototal.controllers', [])
 				$scope.winner = data.contenders[contender];
 			}
 		}
+		if($scope.winner < data.calories){
+			$scope.winner.first_name == "No hay ganador en este reto";
+			$scope.winner.total == data.calories;
+		}
 		if($scope.winner.first_name == data.current.first_name){
 			History.save({uid: id, data: $scope.challenge.challenge.name+","+$scope.challenge.contenders[0].first_name, link: null, type: 6});
 		}else{

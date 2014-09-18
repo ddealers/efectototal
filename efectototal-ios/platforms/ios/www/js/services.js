@@ -72,6 +72,10 @@ angular.module('efectototal.services', [])
 	var counter, secs, mins, zero_secs, zero_mins;
 	var weight, calories = 0;
 
+	window.addEventListener('devicemotion', function (e) {
+    	e.preventDefault();
+	});
+
 	function onConfirm(){
 		$state.go('app.informacion');
 	}
