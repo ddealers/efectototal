@@ -154,8 +154,8 @@ h1.title{
 	padding: 20px;
 }
 .contenidoPerfil a.item.miPerfil{
-	background: #e01026;
-	color: #FFF;
+	background: #f0f0f0;
+	color: #919191;
 }
 .contenidoPerfil .list-inset{
 	margin: -5px auto;
@@ -173,6 +173,10 @@ h1.title{
 	text-align: center;
 	border: solid 1px #aaa;
 	padding: 17px 0px 18px 0px;
+}
+.contenidoPerfil a.item:active  {
+    background: #e01026;
+    color: #fff;
 }
 .contenidoPerfil .card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
 	background: #e5e5e5;
