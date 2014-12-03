@@ -1,17 +1,17 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/com.phonegap.plugins.facebookconnect/www/phonegap/plugin/facebookConnectPlugin/facebookConnectPlugin.js",
-        "id": "com.phonegap.plugins.facebookconnect.FacebookConnectPlugin",
+        "file": "plugins/com.ionic.keyboard/www/keyboard.js",
+        "id": "com.ionic.keyboard.keyboard",
         "clobbers": [
-            "window.facebookConnectPlugin"
+            "cordova.plugins.Keyboard"
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.statusbar/www/statusbar.js",
-        "id": "org.apache.cordova.statusbar.statusbar",
+        "file": "plugins/nl.x-services.plugins.socialsharing/www/SocialSharing.js",
+        "id": "nl.x-services.plugins.socialsharing.SocialSharing",
         "clobbers": [
-            "window.StatusBar"
+            "window.plugins.socialsharing"
         ]
     },
     {
@@ -22,10 +22,17 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/com.ionic.keyboard/www/keyboard.js",
-        "id": "com.ionic.keyboard.keyboard",
+        "file": "plugins/org.apache.cordova.device-motion/www/Acceleration.js",
+        "id": "org.apache.cordova.device-motion.Acceleration",
         "clobbers": [
-            "cordova.plugins.Keyboard"
+            "Acceleration"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.device-motion/www/accelerometer.js",
+        "id": "org.apache.cordova.device-motion.accelerometer",
+        "clobbers": [
+            "navigator.accelerometer"
         ]
     },
     {
@@ -50,6 +57,13 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/org.apache.cordova.statusbar/www/statusbar.js",
+        "id": "org.apache.cordova.statusbar.statusbar",
+        "clobbers": [
+            "window.StatusBar"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.vibration/www/vibration.js",
         "id": "org.apache.cordova.vibration.notification",
         "merges": [
@@ -57,40 +71,26 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.device-motion/www/Acceleration.js",
-        "id": "org.apache.cordova.device-motion.Acceleration",
+        "file": "plugins/com.phonegap.plugins.facebookconnect/www/phonegap/plugin/facebookConnectPlugin/facebookConnectPlugin.js",
+        "id": "com.phonegap.plugins.facebookconnect.FacebookConnectPlugin",
         "clobbers": [
-            "Acceleration"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.device-motion/www/accelerometer.js",
-        "id": "org.apache.cordova.device-motion.accelerometer",
-        "clobbers": [
-            "navigator.accelerometer"
-        ]
-    },
-    {
-        "file": "plugins/nl.x-services.plugins.socialsharing/www/SocialSharing.js",
-        "id": "nl.x-services.plugins.socialsharing.SocialSharing",
-        "clobbers": [
-            "window.plugins.socialsharing"
+            "facebookConnectPlugin"
         ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "com.phonegap.plugins.facebookconnect": "0.7.1",
-    "org.apache.cordova.statusbar": "0.1.6",
-    "org.apache.cordova.device": "0.2.10",
     "com.ionic.keyboard": "1.0.2",
+    "nl.x-services.plugins.socialsharing": "4.3.2",
     "org.apache.cordova.console": "0.2.9",
+    "org.apache.cordova.device": "0.2.10",
+    "org.apache.cordova.device-motion": "0.2.8",
     "org.apache.cordova.dialogs": "0.2.8",
     "org.apache.cordova.inappbrowser": "0.5.0",
+    "org.apache.cordova.statusbar": "0.1.6",
     "org.apache.cordova.vibration": "0.3.9",
-    "org.apache.cordova.device-motion": "0.2.8",
-    "nl.x-services.plugins.socialsharing": "4.3.2"
+    "com.phonegap.plugins.facebookconnect": "0.9.0"
 }
 // BOTTOM OF METADATA
 });

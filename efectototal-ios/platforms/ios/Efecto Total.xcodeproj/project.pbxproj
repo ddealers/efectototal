@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		0671CA3AA8BA4FC08A0CBEA5 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = E72DAC6B3D594E649ABD9AC8 /* CDVInAppBrowser.m */; };
 		06F2BAF8A9E24E869ED51A72 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240FB1B99F40429B86268009 /* CoreMotion.framework */; };
@@ -418,7 +419,7 @@
 				LastUpgradeCheck = 510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = 3X52S2234V;
+						DevelopmentTeam = 28W8C97UC2;
 					};
 				};
 			};
@@ -591,7 +592,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iOS Development: Sergio Albarran (DAPJ5H8ANK)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -620,6 +621,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "Efecto Total";
+				PROVISIONING_PROFILE = "e33f353a-fa51-4d1d-ab6c-7316f096e805";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -631,7 +633,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Social Network and Marketing Ideas S.A. de C.V. (28W8C97UC2)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -658,6 +660,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "Efecto Total";
+				PROVISIONING_PROFILE = "e33f353a-fa51-4d1d-ab6c-7316f096e805";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
