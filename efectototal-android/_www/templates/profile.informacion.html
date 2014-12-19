@@ -1,0 +1,186 @@
+<ion-view title="MI PERFIL">
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+	<ion-content class="has-header">
+		<div class="contenidoIformacion">
+			<a href="#/app/perfil"><h1 class="encabezado"><i class="ion-arrow-left-b"></i>MI INFORMACIÓN</h1></a>
+			<div class="list card">
+				<div class="item item-image">
+					<img ng-src="http://graph.facebook.com/{{fbid}}/picture?height=200&width=200" class="perfil">
+				</div>
+				<div class="info-title"><span>Mi información</span></div>
+				<div class="list">
+					<label class="item item-input">
+						<span class="input-label">Nombre</span>
+						<input ng-model="data.name" type="text">
+					</label>
+					<label class="item item-input">
+						<span class="input-label">Email</span>
+						<input ng-model="data.email" type="email">
+					</label>
+					<!--
+					<label class="item item-input">
+						<span class="input-label">Nacimiento</span>
+						<input ng-model="data.birthday" type="date">
+					</label>
+					-->
+					<label class="item item-input">
+						<span class="input-label">Edad</span>
+						<input ng-model="data.age" type="text" pattern="\d*" placeholder="años">
+					</label>
+					<label class="item item-input">
+						<span class="input-label" >Altura</span>
+						<input ng-model="data.height" type="text" pattern="\d*" placeholder="cm">
+					</label>
+					<label class="item item-input" >
+						<span class="input-label" >Peso</span>
+						<input ng-model="data.weight" type="text" pattern="\d*" placeholder="kg">
+					</label>
+					<label class="item item-input">
+						<span class="input-label" >IMC</span>
+						<p ng-class="{low: IMC < 18.5, normal: IMC >= 18.5 && IMC <= 24.99, over: IMC >= 25 && IMC < 30, oversize: IMC >= 30}">{{IMC | number:2}}</p>
+					</label>
+					<label class="item item-input">
+						<span class="input-label" >Peso Ideal</span>
+						<p>{{idealIMC | number:2}}</p>
+					</label>
+					<label class="item item-input">
+						<span class="input-label" >Frecuencia Cardiaca</span>
+						<p>{{fce | number:2}}</p>
+					</label>
+				</div>
+				<div class="card">
+					<div class="item item-text-wrap">
+						<div class="item item-divider">
+							Información IMC
+						</div>
+						El peso del cuerpo humano se compone de :<br />
+						Peso Magro y Peso en Grasa <br />
+						El Peso Magro comprende los huesos, músculos, nervios, tejidos y órganos, que nos permiten vivir bien si los cuidamos.<br />
+						El Peso en Grasa o tejido adiposo es la energía guardada por el cuerpo, que debe utilizar para su correcto funcionamiento y actividad. Si esta energía no es utilizada, el cuerpo la irá almacenando.<br />
+						Necesitamos entre un 3% y un 6% de grasa corporal en el hombre y entre el 8% y el 12% en las mujeres. Si no hacemos ejercicio y consumimos más alimentos de los que necesitamos, estaremos creando depósitos de grasa bajo la piel y alrededor de ciertos órganos... ¡Nos volveremos obesas u obesos con el tiempo!<br />
+						El índice de Masa Corporal (IMC) indica el porcentaje de sobre peso (grasa en exceso) de nuestro cuerpo.<br />
+						Cuando obtengas el IMC en "Mi Perfil", revisa la siguiente tabla para conocer tu estado actual.
+					</div>
+					<div class="item item-text-wrap">
+						<div class="item item-divider">
+							Información IMC ideal
+						</div>
+						<table>
+							<thead>
+								<tr>
+									<th>ÍNDICE MASA CORPORAL</th>
+									<th>CLASIFICACIÓN</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>18.5 - 24.9</td>
+									<td>Normal</td>
+								</tr>
+								<tr>
+									<td>25 - 29.9</td>
+									<td>Sobrepeso u Obesidad Tipo I</td>
+								</tr>
+								<tr>
+									<td>30 - 34.9</td>
+									<td>Obesidad Tipo II</td>
+								</tr>
+								<tr>
+									<td>35 - 39.9</td>
+									<td>Obesidad Tipo III*</td>
+								</tr>
+								<tr>
+									<td>Más de 40</td>
+									<td>Obesidad Tipo IV*</td>
+								</tr>
+							</tbody>
+						</table>
+						<small>*(Checa con tu médico tu programa de ejercicio, comienza poco a poco.)</small>
+					</div>
+					<div class="item item-text-wrap">
+						<div class="item item-divider">
+							Información Frecuencia Cardiaca de Entrenamiento
+						</div>
+						<video preload="auto" src="http://efectototal.com/media/frecuencia.mp4"></video>
+					</div>
+					<div class="item item-text-wrap">
+						<div class="item item-divider">
+							Prueba de condición física
+						</div>
+						<video preload="auto" src="http://efectototal.com/media/condicion.mp4"></video>
+						<!--<p>Es muy importante antes de empezar con un programa de entrenamiento, consultar a su médico y realizarse una prueba de esfuerzo, para estar seguros, al someter mi cuerpo a un esfuerzo físico al que no estoy acostumbrado.<br /><br />
+						Realiza ésta sencilla prueba de condición física y verás en qué nivel te encuentras.<br /><br />
+						Sube con pierna derecha un escalón de 15 cms de altura y junta los dos pies. Luego baja el pie derecho y junto el izquierdo abajo.  Repite subiendo y bajando con ritmo durante 3 min.  Toma tus pulsaciones inmediatamente y ve donde te encuentras.</p>-->
+						<table>
+							<thead>
+								<tr>
+									<td></td>
+									<td>HOMBRES</td>
+									<td>MUJERES</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div>
+											EXCELENTE<br />
+											MUY BUENO<br />
+											BUENO<br />
+											PROMEDIO<br />
+											PROMEDIO MALO<br />
+											SUFICIENTE<br />
+											MALO<br />
+										</div>
+									</td>
+									<td>
+										<div>
+											81-90<br />
+											99-102<br />
+											103-112<br />
+											120-121<br />
+											123-125<br />
+											127-130<br />
+											136-138<br />
+										</div>
+									</td>
+									<td>
+										<div>
+											79-84<br />
+											90-97<br />
+											106-109<br />
+											118-119<br />
+											122-124<br />
+											129-134<br />
+											137-145<br />
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!--
+					<div class="item item-text-wrap">
+						<div class="item item-divider">
+							Fórmula de Karvonen
+						</div>
+						<p>Para calcular tu frecuencia cardiaca, utiliza la fórmula de Karvonen.<br />
+							220-edad=Frecuencia cardiaca máxima<br />
+							220-edad-Frecuencia cardiaca en reposo= FC residual<br />
+							FC residual X % intensidad + FC en reposo = FC de entrenamiento<br />
+							*220= latidos por minuto de un feto<br />
+						</p> 
+						<p>
+							Ejemplo:<br />
+							Persona de 20 años y una FC rep de 60 buscando entrenar a un 60% de FCmax.<br />
+							220 - 20 = 200<br />
+							200 - 60 = 140<br />
+							140 x .60 = 84 + 60 = 144<br />
+						</p>
+					</div>
+					-->
+				</div>
+			</div>
+		</div>
+  </ion-content>

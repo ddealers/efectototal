@@ -6,7 +6,11 @@ angular.module('efectototal.directives', [])
 			elem.on('click', function(e){
 				e.preventDefault();
 				console.log(attrs);
-				window.open(attrs.href, "_system");
+				if(attrs.fbid){
+					window.open('fb://profile/'+attrs.fbid, '_system', 'location=yes');	
+				}else{
+					window.open(attrs.href, '_system', 'location=yes');	
+				}
 			});
 		}
 	}

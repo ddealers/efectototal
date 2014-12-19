@@ -1,0 +1,47 @@
+<ion-view title="CONTADOR DE CALORÍAS">
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+	<ion-content class="has-header">
+	<div class="contenidoContador">
+		<h1 class="encabezado">{{name}}</h1>
+		<div class="item item-image">
+			<img ng-src="http://graph.facebook.com/{{fbid}}/picture?height=200&width=200" class="perfil">
+        </div>
+		<div class="contenidoCal">
+			<div class="row">
+				<div class="col">
+					<p class="progreso small">Tiempo</p>
+					<p class="progreso">{{mins}}:{{secs}}</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col left">
+					<p class="caloriasMenos">Calorías quemadas</p>
+					<p class="inicioContador">{{calories | number:2}}</p>
+					<img src="./img/lupa-verde.png" class="lupa-verde">
+				</div>
+				<div class="col right">
+					<p class="caloriasTotales">Calorías totales</p>
+					<p class="finContador">{{total | number:2}}</p>
+					<img src="./img/lupa-roja.png" class="lupa-rojo">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="info-title">
+						<progress-bar value="calories" max="max"></progress-bar>
+					</div>
+					<!--<progress value="{{calories}}" max="{{max}}"></progress>-->
+					<button ng-click="toggleCounter()" class="info-title"><span>{{action}}</span></button>
+				</div>
+			</div>
+		</div>
+		<div>
+			<ul class="list">
+				<li class="item item-divider">HISTORIAL DEL TOTAL DE CALORÍAS POR DÍA</li>
+				<li class="item" ng-repeat="item in historial">Has quemado {{item.calories | number:2}} calorías. {{item.date | date:'mediumDate'}}</li>
+			</ul>
+	 	</div>
+	</ion-content>
+</ion-view>
