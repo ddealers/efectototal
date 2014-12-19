@@ -231,4 +231,3 @@ angular.module('efectototal', ['ionic', 'openfb', 'efectototal.controllers', 'ef
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/perfil');
 });
-
