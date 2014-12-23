@@ -27,7 +27,7 @@
                               <a ui-sref="app.retos-invitacion({reto: challenge.id_challenge})" ng-switch-when="-1" class="button button-assertive button-outline icon-right ion-chevron-right">Pendiente</a>
                               <a ui-sref="app.retos-calendario({reto: challenge.id_challenge})" ng-switch-when="2" class="button button-assertive button-outline icon-right ion-chevron-right">Pendiente</a>
                               <a ui-sref="app.retos-calendario({reto: challenge.id_challenge})" ng-switch-when="1" class="button button-balanced button-outline icon-right ion-chevron-right">En curso</a>
-                              <ion-option-button class="button-outline button-assertive button-icon icon ion-minus-circled" ng-click="remove($index)"></ion-option-button>
+                              <ion-option-button class="button-outline button-icon icon ion-minus-circled" ng-click="remove($index)"> Eliminar</ion-option-button>
                          </ion-item>
                     </ion-list>
                     <ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="loadMore()" distance="10%"></ion-infinite-scroll>

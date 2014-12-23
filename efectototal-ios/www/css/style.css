@@ -666,7 +666,24 @@ p.date-activity{
 	float: left;
 }
 .contenidoVideos div.videoEjercicio{
-
+	position: relative;
+}
+.contenidoVideos div.videoEjercicio button{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 100px;
+	height: 60px;
+	background: none;
+	border: none;
+	font-size: 45px;
+	text-shadow: black 3px 3px 5px;
+	color: white;
+	font-weight: bold;
+	opacity: 0.8;
 }
 .contenidoVideos video{
 	width: 100%;

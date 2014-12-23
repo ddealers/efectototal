@@ -12,7 +12,24 @@
           </div>
           <article>
                <p class="subtitulo">LISTAS DE RUTINAS</p>
-          </article>      
+          </article> 
+          <div class="list historial">
+               <div class="item item-button-right">
+                    Crear una nueva rutina
+                    <a ng-click="create()" class="button button-icon icon ion-plus-circled"></a>
+               </div> 
+               <ion-list can-swipe="true">
+                    <ion-item ng-repeat="routine in routines" class="item-thumbnail-left">
+                         <h2>{{routine.name}}</h2>
+                         <a ui-sref="app.rutinas-videos({routine: routine.id_playlist})" class="button button-icon icon ion-chevron-right"></a>
+                         <!--button ng-click="goto(routine.id_playlist)" class="button button-outline button-stable">
+                              <i class="ion-chevron-right"></i>
+                         </button-->
+                         <ion-option-button class="button-outline button-icon icon ion-minus-circled" ng-click="remove($index)"> Eliminar</ion-option-button>
+                    </ion-item>
+               </ion-list>
+          </div>
+          <!--     
           <div class="list historial">
                <div class="item item-button-right">
                     Crear una nueva lista
@@ -25,7 +42,8 @@
                	<button ng-click="goto(routine.id_playlist)" class="button button-outline button-stable">
                	    <i class="ion-chevron-right"></i>
                	</button>
+                    <ion-option-button class="button-outline button-assertive button-icon icon ion-minus-circled" ng-click="remove($index)"></ion-option-button>
                </div>
-          </div>
+          </div-->
      </ion-content>
 </ion-view>

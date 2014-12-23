@@ -154,8 +154,8 @@ h1.title{
 	padding: 20px;
 }
 .contenidoPerfil a.item.miPerfil{
-	background: #e01026;
-	color: #FFF;
+	background: #f0f0f0;
+	color: #919191;
 }
 .contenidoPerfil .list-inset{
 	margin: -5px auto;
@@ -174,6 +174,10 @@ h1.title{
 	border: solid 1px #aaa;
 	padding: 17px 0px 18px 0px;
 }
+.contenidoPerfil a.item:active  {
+    background: #e01026;
+    color: #fff;
+}
 .contenidoPerfil .card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
 	background: #e5e5e5;
 }
@@ -182,11 +186,12 @@ h1.title{
 }
 .contenidoPerfil a.item.premio{
 	padding: 7px 0px 7px 0px;
+	height: 55px;
 }
 .contenidoPerfil div.stars{}
 .contenidoPerfil div.stars i{
 	width: 30px;
-	height: 30px;
+	height: 25px;
 	display: block;
 	background-size: contain;
 	margin: 2px 0 0 6px;
@@ -199,6 +204,11 @@ h1.title{
 	background-color: #eee;
 	border: #aaa 1px solid;
 	margin: 5px auto;
+}
+p.date-activity{
+	color: #5a5a5a !important;
+	bottom: 5px;
+	font-size: 11px !important;
 }
 .contenidoPerfil_actividad h1.encabezado{
 	color: #fff;
@@ -239,9 +249,15 @@ h1.title{
 	color: #5177c8;
 	font-weight: 500;
 	font-size: 15px;
+	overflow: visible;
+	white-space: normal;
+	position: relative;
+	padding-left: 20px;
+	margin-top: -8px;
 }
 .contenidoPerfil_actividad p img{
-	margin-right: 5px;
+	position: absolute;
+	left: -10px;
 }
 .contenidoPerfil_actividad article{
 	background: #f0f0f0;
@@ -256,9 +272,11 @@ h1.title{
 	border: solid 1px #aaa;
 	background: #f0f0f0;
 	font-size: 12px; 
+	height: 65px;
 }
 .contenidoPerfil_actividad .card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
 	background: #d4d3d3; 
+	height: auto;
 }
 .contenidoPerfil_actividad .card .historial .item:first-child{
 	background: #f0f0f0;
@@ -355,7 +373,12 @@ h1.title{
 .contenidoRetos .item{
 	border: solid 1px #aaa;
 	background: #f0f0f0;
-	font-size: 15px; 
+	font-size: 19px; 
+}
+.contenidoRetos ion-item ion-option-button.button-outline{
+	background: #f00;
+	color: #fff;
+	padding-top: 10px;
 }
 .contenidoRetos .card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
 	background: #d4d3d3; 
@@ -643,7 +666,24 @@ h1.title{
 	float: left;
 }
 .contenidoVideos div.videoEjercicio{
-
+	position: relative;
+}
+.contenidoVideos div.videoEjercicio button{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 100px;
+	height: 60px;
+	background: none;
+	border: none;
+	font-size: 45px;
+	text-shadow: black 3px 3px 5px;
+	color: white;
+	font-weight: bold;
+	opacity: 0.8;
 }
 .contenidoVideos video{
 	width: 100%;
@@ -710,6 +750,13 @@ h1.title{
 	color: #000;
 	font-size: 13px;
 	line-height: 16px;
+}
+.contenidoVideos p.pcalorias{
+	color: #000;
+	font-size: 14px;
+	line-height: 16px;
+	font-style: italic;
+	font-weight: bold;
 }
 .contenidoVideos p.parrafo0{
 	color: #000;
@@ -1467,6 +1514,11 @@ margin: 0px;
 	color: #5177c8;
 	font-weight: 500;
 	font-size: 15px;
+	position: relative;
+	overflow: visible;
+	white-space: normal;
+	padding-left: 55px;
+	margin-top: -5px;
 }
 .contenidoNewsfeed{
 	margin: 0px 0px 10px 0px;
@@ -1474,6 +1526,9 @@ margin: 0px;
 .contenidoNewsfeed article{
 	background: #f0f0f0;
 	height: 55px;
+}
+.contenidoNewsfeed img.icon-image{
+	margin-left: -20px;
 }
 .contenidoNewsfeed div.list.card{
 	margin: 0px 10px 0px 10px;
@@ -1570,8 +1625,27 @@ margin: 0px;
 */
 .contenidoRutinas .item {
 	border: solid 1px #aaa;
-	background: #f0f0f0;
-	font-size: 15px;
+	background: #fff;
+	font-size: 19px;
+	min-height: 60px;
+}
+.contenidoRutinas ion-item ion-option-button.button-outline{
+	background: #f00;
+	color: #fff;
+	padding-top: 10px;
+}
+.contenidoRutinas h2{
+	font-size: 20px;
+	font-family: "Dosis";
+	color: #444;
+	position: absolute;
+	left: 15px;
+	text-transform: capitalize;
+}
+.contenidoRutinas a.button{
+	position: absolute;
+	right: 5px;
+	top: 7px;
 }
 .contenidoRutinas a.item.item-avatar{
 	margin-bottom: 5px;
@@ -1668,10 +1742,10 @@ margin: 0px;
 	color: #aaa;
 }
 .contenidoCalendario_retos .cont-0 img{
-	border: #b00 8px solid;
+	border: #FFBB00 8px solid;
 }
 .contenidoCalendario_retos .cont-0 p{
-	color: #b00;
+	color: #FFBB00;
 }
 .contenidoCalendario_retos .cont-1 img{
 	border: #ff0 8px solid;
@@ -1875,13 +1949,13 @@ margin: 0px;
 	border-top: 5px solid #41b296;	
 }
 .contenidoCalendario_retos .quemadas .quem-0{
-	color: #b00;
+	color: #FFBB00;
 }
 .contenidoCalendario_retos .quemadas .quem-0 .round{
-	border: #b00 3px solid;	
+	border: #FFBB00 3px solid;	
 }
 .contenidoCalendario_retos .quemadas .quem-0 .round::after{
-	border-top: 5px solid #b00;	
+	border-top: 5px solid #FFBB00;	
 }
 .contenidoCalendario_retos .quemadas .quem-1{
 	color: #ff0;
@@ -1890,7 +1964,7 @@ margin: 0px;
 	border: #ff0 3px solid;	
 }
 .contenidoCalendario_retos .quemadas .quem-1 .round::after{
-	border-top: 5px solid #ff0;	
+	border-top: 5px solid #FFBB00;	
 }
 .contenidoCalendario_retos .quemadas .quem-2{
 	color: #0f0;
@@ -2037,12 +2111,12 @@ margin: 0px;
 .contenidoCalendario_retos  div.list.card{
 	background: #f0f0f0;
 }
-.contenidoCalendario_retos td.init{
+/*.contenidoCalendario_retos td.init{
 	border-left: #1f2a84 2px solid;
 }
 .contenidoCalendario_retos td.end{
 	border-right: #f00 2px solid;
-}
+}*/
 .contenidoCalendario_retos td.background{
 	background: #D1D1D1;
 }
@@ -2050,7 +2124,7 @@ margin: 0px;
 	background: #EEE;
 }
 .contenidoCalendario_retos td.contender{
-	background: #e01026;
+	background: #FFBB00;
 }
 .contenidoCalendario_retos td.current{
 	background: #41b296;

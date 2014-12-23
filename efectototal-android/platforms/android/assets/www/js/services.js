@@ -143,6 +143,105 @@ angular.module('efectototal.services', [])
 		stop: stop
 	}
 })
+.factory('VideoCaloricCounter', function($rootScope, $state, $interval, User){
+	var id = localStorage.getItem('id'), 
+		weight = localStorage.getItem('weight'),
+		active = false;
+	var _acceleration, 
+		change = false;
+	var counter, secs, mins, zero_secs, zero_mins;
+	var weight, calories = 0;
+
+	window.addEventListener('devicemotion', function (e) {
+    	e.preventDefault();
+	});
+
+	function onConfirm(){
+		$state.go('app.informacion');
+	}
+	function setMinSecs(){
+		if(secs >= 60){
+			mins++;
+			secs = 0;
+		}
+		zero_secs = zero(secs);
+		zero_mins = zero(mins);
+	}
+	function zero(num){
+		if(num.toString().length < 2){
+			return '0'+num;
+		}else{
+			return num.toString();
+		}
+	}
+	function getCurrentAcceleration(){
+		navigator.accelerometer.getCurrentAcceleration(setCaloricCount, onError);
+	}
+	function setCaloricCount(acceleration){
+		var currAcc, prevAcc;
+		if(!_acceleration){
+			_acceleration = acceleration;
+		}
+		currAcc = Math.sqrt(Math.pow(acceleration.x,2)+Math.pow(acceleration.y,2)+Math.pow(acceleration.z,2));
+		prevAcc = Math.sqrt(Math.pow(_acceleration.x,2)+Math.pow(_acceleration.y,2)+Math.pow(_acceleration.z,2));
+		if(currAcc > prevAcc + 1 || currAcc < prevAcc - 1){
+			change = true;
+			_acceleration = acceleration;
+		}
+		if(change){
+			calories += 0.023 * weight * 2.2 / 60;
+			change = false;
+		}
+	}
+	function onError(error){
+		console.log(error);
+	}
+	function getSecs(time){
+		console.log(time);
+		var timevals = time.split(':'),
+			secsbymins = parseInt(timevals[0]) * 60,
+			secs = parseInt(timevals[1]);
+		console.log(timevals, secsbymins, secs);
+		return secsbymins+secs;
+	}
+	var init = function(scope){
+		weight = localStorage.getItem('weight');
+		if(!weight || weight <= 0){
+			navigator.notification.alert('Necesitas introducir tu peso correcto antes de comenzar a utilizar el contador de calorías', onConfirm);
+		}else{
+			counter = $interval(function(){
+				secs++;
+				setMinSecs();
+				console.log(secs, mins);
+				//getCurrentAcceleration();
+				scope.$emit('CaloricCounter.COUNT', calories, zero_secs, zero_mins);
+			},1000);
+			calories = 0;
+			secs = 0;
+			mins = 0;
+		}
+	}
+	var stop = function(scope){
+		console.log('stop');
+		console.log(angular.isDefined(counter));
+		if (angular.isDefined(counter)) {
+			$interval.cancel(counter);
+			counter = undefined;
+			total = getSecs(scope.video.duration);
+			done = getSecs(mins+':'+secs);
+			calories = parseInt(done / total * parseInt(scope.video.calorias_quemadas));
+			User.setCalories(id, calories).then(function(data){
+				scope.$emit('CaloricCounter.REFRESH', data);
+			});
+		}
+		return calories;
+	}
+	return {
+		active: active,
+		init: init,
+		stop: stop
+	}
+})
 /*
 .factory('CaloricCounter', function($rootScope, $state, $interval, User){
 	var id = localStorage.getItem('id'), 
@@ -341,6 +440,20 @@ angular.module('efectototal.services', [])
 		});
 		return deferred.promise;
 	}
+	var del = function(id){
+		var deferred = $q.defer();
+		api('/playlist/delete', {playlist: id},
+		function(response){
+			if(response.success){
+				deferred.resolve(response.data);
+			}else{
+				deferred.reject(response.error);
+			}
+		},function(response){
+			deferred.reject(response);
+		});
+		return deferred.promise;
+	}
 	var add = function(user, video, playlist){
 		var deferred = $q.defer();
 		api('/playlist/add', {user: user, video: video, playlist: playlist},
@@ -386,6 +499,7 @@ angular.module('efectototal.services', [])
 	return {
 		create: create,
 		add: add,
+		del: del,
 		remove: remove,
 		videos: getVideos
 	}

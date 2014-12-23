@@ -2,7 +2,7 @@
 	<ion-nav-buttons side="left">
 		<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
 	</ion-nav-buttons>
-	<ion-content class="has-header">
+	<ion-content class="has-header" overflow-scroll="true">
 		<div class="contenidoVideosCatego">
 			<div class="bar bar-energized">
 				<h1 class="title">RUTINAS</h1>
@@ -32,7 +32,12 @@
 					</ion-scroll>
 				</div>
 				<div class="col col-67">
-					<video controls="controls" id="front-video" class="videos2"></video>
+					<video id="front-video" class="videos2"></video>
+					<!--videogular vg-player-ready="onPlayerReady" vg-update-state="onUpdateState" vg-theme="videofile.theme">
+                    	<vg-video vg-src="videofile.sources"><vg-video>
+                    	<vg-overlay-play></vg-overlay-play>
+                    	<vg-poster-image vg-url="videofile.plugins.poster"></vg-poster-image>
+                    </videogular-->
 					<button class="info-title" ng-click="toggleLists(videos[0].id_video)"><span> AGREGAR A MIS RUTINAS</span></button>
 					<!--
 					<button ng-show="!onlist" class="info-title" ng-click="toggleLists(videos[0].id_video)"><span> AGREGAR A MIS RUTINAS</span></button>

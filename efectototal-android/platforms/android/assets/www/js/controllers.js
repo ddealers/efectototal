@@ -43,7 +43,8 @@ angular.module('efectototal.controllers', [])
 			}
 			localStorage.setItem('name', data.scope.name);
 			localStorage.setItem('email', data.scope.email);
-			localStorage.setItem('birthday', birthday);
+			//localStorage.setItem('birthday', birthday);
+			localStorage.setItem('age', data.scope.age);
 			localStorage.setItem('weight', data.scope.address);
 			localStorage.setItem('height', data.scope.phone);
 			localStorage.setItem('fbid', data.scope.fbid);
@@ -97,9 +98,9 @@ angular.module('efectototal.controllers', [])
 })
 
 .controller('ProfileInfoCtrl', function($scope, $filter, User){
-	var id = localStorage.getItem('id');
-	height = localStorage.getItem('height'),
-	weight = localStorage.getItem('weight');
+	var id = localStorage.getItem('id'),
+		height = localStorage.getItem('height'),
+		weight = localStorage.getItem('weight');
 
 	height = (height == 'null') ? '' : height;
 	weight = (weight == 'null') ? '' : weight;
@@ -109,16 +110,24 @@ angular.module('efectototal.controllers', [])
 	$scope.data = {
 		name: localStorage.getItem('name'),
 		email: localStorage.getItem('email'),
-		birthday: localStorage.getItem('birthday'),
+		//birthday: localStorage.getItem('birthday'),
+		age: localStorage.getItem('age'),
 		height: height,
 		weight: weight
 	};
 	$scope.fbid = localStorage.getItem('fbid');
+	/*
 	$scope.$watch('data.birthday', function(newValue, oldValue){
 		birthday = new Date(newValue).toISOString().substring(0, 10);
 		$scope.getAge();
 		User.update(id, {birthday: $scope.data.birthday, age: $scope.age});
 		localStorage.setItem('birthday', birthday);
+	});
+	*/
+	$scope.$watch('data.age',function(newValue, oldValue){
+		$scope.getFCE();
+		User.update(id, {age: $scope.data.age});
+		localStorage.setItem('age', newValue);
 	});
 	$scope.$watch('data.height',function(newValue, oldValue){
 		$scope.getIMC();
@@ -132,6 +141,7 @@ angular.module('efectototal.controllers', [])
 		User.update(id, {address: $scope.data.weight});
 		localStorage.setItem('weight', newValue);
 	});
+	/*
 	$scope.getAge = function(){
 		var today = new Date();
 		$scope.birth = new Date($scope.data.birthday);
@@ -139,6 +149,13 @@ angular.module('efectototal.controllers', [])
 		if(today.getMonth() <= $scope.birth.getMonth() && today.getDate() < $scope.birth.getDate()){
 			$scope.age--;
 		}
+	}
+	*/
+	$scope.getFCE = function(){
+		var fcm = 220 - $scope.data.age,
+			fcr = 220 - $scope.data.age - 60;
+		$scope.fce = fcr * .60 + 60;
+
 	}
 	$scope.getIMC = function(){
 		$scope.IMC = $scope.data.weight / Math.pow($scope.data.height / 100,2);
@@ -150,14 +167,16 @@ angular.module('efectototal.controllers', [])
 	$scope.getIMC();
 	$scope.getIdealWeight();
 })
-.controller('CategoriesCtrl', function($scope, $state, $stateParams, $ionicModal, History, Playlist, CaloricCounter, Videos, User){
+.controller('CategoriesCtrl', function($scope, $state, $stateParams, $ionicModal, History, Playlist, VideoCaloricCounter, Videos, User){
 	var id = localStorage.getItem('id');
 	var video = angular.element(document.querySelector('#front-video'));
 	var selectedVideo = 0,
 		counter = false;
+		//videoAPI = null;
 
 	$scope.videos = [];
 	$scope.onlist = false;
+	//$scope.videofile = {};
 
 	$ionicModal.fromTemplateUrl('templates/select-playlist.html', {
 		scope: $scope,
@@ -243,55 +262,45 @@ angular.module('efectototal.controllers', [])
 	function onPause(){
 		video[0].removeEventListener('pause', onPause);
 		video[0].addEventListener('play', onPlay, false);
-		CaloricCounter.stop($scope);
+		VideoCaloricCounter.stop($scope);
 	}
 	function onPlay(){
 		video[0].removeEventListener('play', onPlay, false);
 		video[0].addEventListener('pause', onPause, false);
-		CaloricCounter.init($scope);
+		VideoCaloricCounter.init($scope);
 	}
 	function onInit(){
+		/*
 		video[0].removeEventListener('play', onInit);
-		video[0].pause();
-		firstPlay = false;
-		navigator.notification.confirm('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm, 'Contador', ['Comenzar','Cancelar']);
+		if($scope.video.calorias_quemadas > 0) {
+			video[0].pause();
+			navigator.notification.confirm('Comenzar a contar calorías aproximadas. Todas tus calorías se contarán para tus retos.', onConfirm, 'Contador', ['Comenzar','Cancelar']);
+		}else{
+			counter = false;
+			//video[0].play();	
+		}
+		*/
 		History.save({uid: id, data: $scope.videos[0].name, link: '#/app/categorias/'+$stateParams.cat, type: 1});
+	}
+	function onEnd(){
+		if(counter) VideoCaloricCounter.stop($scope);
 	}
 	function onConfirm(buttonIndex){
 		if(buttonIndex == 1){
 			video[0].addEventListener('play', onPlay, false);
 			counter = true;
-			//cordova.plugins.videoPlayer.play(video.attr('src'));
 			video[0].play();
 		}else{
 			counter = false;
-			//cordova.plugins.videoPlayer.play(video.attr('src'));
 			video[0].play();
 		}
-		if (video[0].requestFullscreen) {
-		  video[0].requestFullscreen();
-		} else if (video[0].msRequestFullscreen) {
-		  video[0].msRequestFullscreen();
-		} else if (video[0].mozRequestFullScreen) {
-		  video[0].mozRequestFullScreen();
-		} else if (video[0].webkitRequestFullscreen) {
-		  video[0].webkitRequestFullscreen();
-		}
-		document.addEventListener("webkitfullscreenchange", function () {
-			if(!document.webkitIsFullScreen){
-				video[0].pause();
-			}
-		}, false);
-	}
-	function onEnd(){
-		if(counter) CaloricCounter.stop($scope);
 	}
 	Videos.byCategory($stateParams.cat).then(
 		function(data){
-			video[0].addEventListener('play', onInit, false);
-			video[0].addEventListener('ended', onEnd, false);
+			//video[0].addEventListener('play', onInit, false);
+			//video[0].addEventListener('ended', onEnd, false);
 			$scope.videos = data;
-			video.attr("src", "http://efectototal.com/app/_mobile/media/" + data[0].src);
+			video.attr("src", "http://efectototal.com/media/" + data[0].src);
 			video.attr("poster", "http://efectototal.com/media/" + data[0].thumb2);
 		},
 		function(){
@@ -300,13 +309,13 @@ angular.module('efectototal.controllers', [])
 		});
 	});
 })
-.controller('VideoCtrl', function($scope, $state, $stateParams, $interval, $ionicModal, $ionicNavBarDelegate, History, Playlist, CaloricCounter, Videos, User){
+.controller('VideoCtrl', function($scope, $sce, $state, $stateParams, $interval, $ionicModal, $ionicNavBarDelegate, $ionicPlatform, History, Playlist, VideoCaloricCounter, Videos, User){
 	var id = localStorage.getItem('id');
 	var video = angular.element(document.querySelector('#exercise-video'));
 	var selectedVideo = 0,
 		counter = false;
-	
 	$scope.onlist = false;
+	$scope.videoState = 'ion-play';
 
 	$ionicModal.fromTemplateUrl('templates/select-playlist.html', {
 		scope: $scope,
@@ -316,6 +325,9 @@ angular.module('efectototal.controllers', [])
 	});
 
 	$scope.goBack = function(){
+		if(counter) {
+			VideoCaloricCounter.stop($scope);
+		}
 		$ionicNavBarDelegate.back();
 	}
 	$scope.share = function(sm){
@@ -372,7 +384,7 @@ angular.module('efectototal.controllers', [])
 		}
 		if(onlist){
 			$scope.onlist = true;
-			navigator.notification.alert('Esta rutina fue agregada a tus  rutinas exitosamente.', null);
+			navigator.notification.alert('Esta rutina fue agregada a tus rutinas exitosamente.', null);
 		}
 		$scope.modal.hide();
 		video.css({display:"block"});
@@ -396,55 +408,70 @@ angular.module('efectototal.controllers', [])
 		}
 	});
 	*/
+	$ionicPlatform.onHardwareBackButton(function(){
+		if(counter) {
+			VideoCaloricCounter.stop($scope);
+		}
+	});
 	function onPause(){
 		video[0].removeEventListener('pause', onPause);
 		video[0].addEventListener('play', onPlay, false);
-		CaloricCounter.stop($scope);
+		if(counter) {
+			var calories = VideoCaloricCounter.stop($scope);
+			if(calories > 0) navigator.notification.alert('Haz quemado '+calories+' calorías aproximadamente.');
+		}
 	}
 	function onPlay(){
 		video[0].removeEventListener('play', onPlay);
 		video[0].addEventListener('pause', onPause, false);
-		CaloricCounter.init($scope);	
+		VideoCaloricCounter.init($scope);	
 	}
 	function onInit(){
 		video[0].removeEventListener('play', onInit);
-		video[0].pause();
-		navigator.notification.confirm('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm, 'Contador', ['Comenzar','Cancelar']);
+		//$scope.pause();
+		if($scope.video.calorias_quemadas > 0) {
+			navigator.notification.confirm('Comenzar a contar calorías aproximadas. Todas tus calorías se contarán para tus retos.', onConfirm, 'Contador', ['Comenzar','Cancelar']);
+		}else{
+			counter = false;
+		}
 		History.save({uid: id, data: $scope.video.name, link: '#/app/videos/'+$stateParams.cat, type: 1});
 	}
 	function onEnd(){
-		if(counter) CaloricCounter.stop($scope);
+		if(counter) {
+			var calories = VideoCaloricCounter.stop($scope);
+			if(calories > 0 ) navigator.notification.alert('Haz quemado '+calories+' calorías aproximadamente.');
+		}
 	}
 	function onConfirm(buttonIndex){
 		if(buttonIndex == 1){
 			video[0].addEventListener('play', onPlay, false);
 			counter = true;
-			//cordova.plugins.videoPlayer.play(video.attr('src'));
-			video[0].play();
+			$scope.play();
 		}else{
 			counter = false;
-			//cordova.plugins.videoPlayer.play(video.attr('src'));
-			video[0].play();
+			$scope.play();
 		}
-		if (video[0].requestFullscreen) {
-		  video[0].requestFullscreen();
-		} else if (video[0].msRequestFullscreen) {
-		  video[0].msRequestFullscreen();
-		} else if (video[0].mozRequestFullScreen) {
-		  video[0].mozRequestFullScreen();
-		} else if (video[0].webkitRequestFullscreen) {
-		  video[0].webkitRequestFullscreen();
+	}
+	$scope.togglePlay = function(){
+		if(video[0].paused){
+			$scope.play();
+		}else{
+			$scope.pause();
 		}
-		document.addEventListener("webkitfullscreenchange", function () {
-			if(!document.webkitIsFullScreen){
-				video[0].pause();
-			}
-		}, false);
+	}
+	$scope.play = function(){
+		video[0].play();
+		$scope.videoState = '';
+	}
+	$scope.pause = function(){
+		video[0].pause();
+		$scope.videoState = 'ion-play';
 	}
 	Videos.byId($stateParams.video).then(function(data){
 		$scope.video = data;
-		video.attr("src", "http://efectototal.com/app/_mobile/media/" + data.src);
+		video.attr("src", "http://efectototal.com/media/" + data.src);
 		video.attr("poster", "http://efectototal.com/media/" + data.thumb2);
+		video[0].load();
 		video[0].addEventListener('play', onInit, false);
 		video[0].addEventListener('ended', onEnd, false);
 	});
@@ -454,6 +481,11 @@ angular.module('efectototal.controllers', [])
 	$scope.fbid = localStorage.getItem('fbid');
 	$scope.goto = function(routine){
 		$state.go('app.rutinas-videos',{routine:routine});
+	}
+	$scope.remove = function(index){
+		Playlist.del($scope.routines[index].id_playlist).then(function(){
+			$scope.routines.splice(index, 1);
+		});
 	}
 	$scope.create = function(){
 		navigator.notification.prompt("Nombre de la rutina", function(data){
@@ -476,7 +508,7 @@ angular.module('efectototal.controllers', [])
 		$scope.routines = data;
 	});
 })
-.controller('RutinasVideosCtrl', function($scope, $state, $stateParams, CaloricCounter, User, Playlist){
+.controller('RutinasVideosCtrl', function($scope, $state, $stateParams, VideoCaloricCounter, User, Playlist){
 	var id = localStorage.getItem('id'),
 		rid = $stateParams.routine;
 	var video = angular.element(document.querySelector('#all-video')),
@@ -492,34 +524,26 @@ angular.module('efectototal.controllers', [])
 	}
 	$scope.playAll = function(){
 		video.css({display:"block"});
-		if(navigator.userAgent.toLowerCase().indexOf('android') > -1){
-			video.attr("src", "http://efectototal.com/app/_mobile/media/" + $scope.videos[0].src);
-		}else{
-			video.attr("src", "http://efectototal.com/media/" + $scope.videos[0].src);
-		}
+		video.attr("src", "http://efectototal.com/media/" + $scope.videos[0].src);
 		video[0].addEventListener('ended', playNextVideo, false);
 		video[0].addEventListener('pause', onPause, false);
 		video[0].play();
-		CaloricCounter.init($scope);
+		VideoCaloricCounter.init($scope);
 		//History.save({uid: id, text: 'Has visto la rutina '+$scope.video.name, link: '#/app/video/'+$scope.video.id_video, type: 1});
 	}
 	function playNextVideo(){
 		next++;
-		CaloricCounter.stop($scope);
+		VideoCaloricCounter.stop($scope);
 		if(next < $scope.videos.length){
-			if(navigator.userAgent.toLowerCase().indexOf('android') > -1){
-				video.attr("src", "http://efectototal.com/app/_mobile/media/" + $scope.videos[next].src);
-			}else{
-				video.attr("src", "http://efectototal.com/media/" + $scope.videos[next].src);
-			}
-			CaloricCounter.init($scope);
+			video.attr("src", "http://efectototal.com/media/" + $scope.videos[next].src);
+			VideoCaloricCounter.init($scope);
 			video[0].play();
 		}else{
 			video.css({display:"none"});
 		}
 	}
 	function onPause(){
-		CaloricCounter.stop();
+		VideoCaloricCounter.stop();
 		video.css({display:"none"});
 	}
 	Playlist.videos(rid).then(function(data){
@@ -568,8 +592,12 @@ angular.module('efectototal.controllers', [])
 				page++;
 				for(a in data){
 					var activity = data[a];
-					if(activity.data.indexOf(',') > -1){
+					console.log(data, activity, activity.data);
+					if(activity.data && activity.data.indexOf(',') > -1){
 						activity.data = activity.data.split(",");
+					}else if(activity.type == null){
+						activity.data = activity.first_name;
+						activity.type = '8';
 					}
 				}
 				$scope.activities = $scope.activities.concat(data);
@@ -624,6 +652,9 @@ angular.module('efectototal.controllers', [])
 	});
 })
 .controller('ConfigCtrl', function($scope, $state){
+	$scope.gotoTour = function(){
+		$state.go('app.tour');
+	}
 	$scope.openPrivacy = function(){
 		window.open('media/privacy.pdf', '_blank', 'location=no');
 	}
@@ -659,7 +690,7 @@ angular.module('efectototal.controllers', [])
 				e.preventDefault();
 				window.open(anchor.attr('href'), '_system', 'location=no');
 			});
-		}, 2000);
+		}, 1000);
 		//window.open(post.url, '_blank', 'location=no');
 		//window.open(url, '_system', 'location=no');
 	}
@@ -716,7 +747,6 @@ angular.module('efectototal.controllers', [])
 	};
 	$scope.loadMore = function(){
 		Blog.posts(page).then(function(data){
-			console.log(data);
 			page++;
 			$scope.posts = $scope.posts.concat(data);
 			$scope.$broadcast('scroll.infiniteScrollComplete');
@@ -916,7 +946,7 @@ angular.module('efectototal.controllers', [])
 					}
 				}
 			}else if(_d == data.challenge.days){
-				calendar.push('background end');
+				calendar.push('draw end');
 			}else{
 				calendar.push('background');
 			}
@@ -957,10 +987,15 @@ angular.module('efectototal.controllers', [])
 				$scope.winner = data.contenders[contender];
 			}
 		}
-		if($scope.winner.first_name == data.current.first_name){
-			History.save({uid: id, data: $scope.challenge.challenge.name+","+$scope.challenge.contenders[0].first_name, link: null, type: 6});
+		if($scope.winner.total < data.calories){
+			$scope.winner.first_name = "No hay ganador en este reto";
+			$scope.winner.total = data.calories;
 		}else{
-			History.save({uid: id, data: $scope.challenge.challenge.name+","+$scope.challenge.contenders[0].first_name, link: null, type: 7});
+			if($scope.winner.first_name == data.current.first_name){
+				History.save({uid: id, data: $scope.challenge.challenge.name+","+$scope.challenge.contenders[0].first_name, link: null, type: 6});
+			}else{
+				History.save({uid: id, data: $scope.challenge.challenge.name+","+$scope.challenge.contenders[0].first_name, link: null, type: 7});
+			}
 		}
 	});
 })

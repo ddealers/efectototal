@@ -172,9 +172,11 @@ angular.module('efectototal.controllers', [])
 	var video = angular.element(document.querySelector('#front-video'));
 	var selectedVideo = 0,
 		counter = false;
+		//videoAPI = null;
 
 	$scope.videos = [];
 	$scope.onlist = false;
+	//$scope.videofile = {};
 
 	$ionicModal.fromTemplateUrl('templates/select-playlist.html', {
 		scope: $scope,
@@ -268,10 +270,20 @@ angular.module('efectototal.controllers', [])
 		VideoCaloricCounter.init($scope);
 	}
 	function onInit(){
+		/*
 		video[0].removeEventListener('play', onInit);
-		video[0].pause();
-		navigator.notification.confirm('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm, 'Contador', ['Comenzar','Cancelar']);
+		if($scope.video.calorias_quemadas > 0) {
+			video[0].pause();
+			navigator.notification.confirm('Comenzar a contar calorías aproximadas. Todas tus calorías se contarán para tus retos.', onConfirm, 'Contador', ['Comenzar','Cancelar']);
+		}else{
+			counter = false;
+			//video[0].play();	
+		}
+		*/
 		History.save({uid: id, data: $scope.videos[0].name, link: '#/app/categorias/'+$stateParams.cat, type: 1});
+	}
+	function onEnd(){
+		if(counter) VideoCaloricCounter.stop($scope);
 	}
 	function onConfirm(buttonIndex){
 		if(buttonIndex == 1){
@@ -283,13 +295,10 @@ angular.module('efectototal.controllers', [])
 			video[0].play();
 		}
 	}
-	function onEnd(){
-		if(counter) VideoCaloricCounter.stop($scope);
-	}
 	Videos.byCategory($stateParams.cat).then(
 		function(data){
-			video[0].addEventListener('play', onInit, false);
-			video[0].addEventListener('ended', onEnd, false);
+			//video[0].addEventListener('play', onInit, false);
+			//video[0].addEventListener('ended', onEnd, false);
 			$scope.videos = data;
 			video.attr("src", "http://efectototal.com/media/" + data[0].src);
 			video.attr("poster", "http://efectototal.com/media/" + data[0].thumb2);
@@ -300,13 +309,13 @@ angular.module('efectototal.controllers', [])
 		});
 	});
 })
-.controller('VideoCtrl', function($scope, $state, $stateParams, $interval, $ionicModal, $ionicNavBarDelegate, History, Playlist, VideoCaloricCounter, Videos, User){
+.controller('VideoCtrl', function($scope, $sce, $state, $stateParams, $interval, $ionicModal, $ionicNavBarDelegate, $ionicPlatform, History, Playlist, VideoCaloricCounter, Videos, User){
 	var id = localStorage.getItem('id');
 	var video = angular.element(document.querySelector('#exercise-video'));
 	var selectedVideo = 0,
 		counter = false;
-	
 	$scope.onlist = false;
+	$scope.videoState = 'ion-play';
 
 	$ionicModal.fromTemplateUrl('templates/select-playlist.html', {
 		scope: $scope,
@@ -316,6 +325,9 @@ angular.module('efectototal.controllers', [])
 	});
 
 	$scope.goBack = function(){
+		if(counter) {
+			VideoCaloricCounter.stop($scope);
+		}
 		$ionicNavBarDelegate.back();
 	}
 	$scope.share = function(sm){
@@ -396,11 +408,18 @@ angular.module('efectototal.controllers', [])
 		}
 	});
 	*/
+	$ionicPlatform.onHardwareBackButton(function(){
+		if(counter) {
+			VideoCaloricCounter.stop($scope);
+		}
+	});
 	function onPause(){
 		video[0].removeEventListener('pause', onPause);
 		video[0].addEventListener('play', onPlay, false);
-		var calories = VideoCaloricCounter.stop($scope);
-		if(calories > 0) navigator.notification.alert('Haz quemado '+calories+' calorías aproximadamente.');
+		if(counter) {
+			var calories = VideoCaloricCounter.stop($scope);
+			if(calories > 0) navigator.notification.alert('Haz quemado '+calories+' calorías aproximadamente.');
+		}
 	}
 	function onPlay(){
 		video[0].removeEventListener('play', onPlay);
@@ -409,13 +428,11 @@ angular.module('efectototal.controllers', [])
 	}
 	function onInit(){
 		video[0].removeEventListener('play', onInit);
-		video[0].pause();
-		//navigator.notification.confirm('Comenzar a contar calorías. Todas tus calorías se contarán para tus retos.', onConfirm, 'Contador', ['Comenzar','Cancelar']);
+		//$scope.pause();
 		if($scope.video.calorias_quemadas > 0) {
 			navigator.notification.confirm('Comenzar a contar calorías aproximadas. Todas tus calorías se contarán para tus retos.', onConfirm, 'Contador', ['Comenzar','Cancelar']);
 		}else{
 			counter = false;
-			video[0].play();	
 		}
 		History.save({uid: id, data: $scope.video.name, link: '#/app/videos/'+$stateParams.cat, type: 1});
 	}
@@ -429,16 +446,32 @@ angular.module('efectototal.controllers', [])
 		if(buttonIndex == 1){
 			video[0].addEventListener('play', onPlay, false);
 			counter = true;
-			video[0].play();
+			$scope.play();
 		}else{
 			counter = false;
-			video[0].play();
+			$scope.play();
 		}
+	}
+	$scope.togglePlay = function(){
+		if(video[0].paused){
+			$scope.play();
+		}else{
+			$scope.pause();
+		}
+	}
+	$scope.play = function(){
+		video[0].play();
+		$scope.videoState = '';
+	}
+	$scope.pause = function(){
+		video[0].pause();
+		$scope.videoState = 'ion-play';
 	}
 	Videos.byId($stateParams.video).then(function(data){
 		$scope.video = data;
 		video.attr("src", "http://efectototal.com/media/" + data.src);
 		video.attr("poster", "http://efectototal.com/media/" + data.thumb2);
+		video[0].load();
 		video[0].addEventListener('play', onInit, false);
 		video[0].addEventListener('ended', onEnd, false);
 	});

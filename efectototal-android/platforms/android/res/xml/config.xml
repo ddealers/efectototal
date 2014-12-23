@@ -1,19 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.efectototal.main" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.efectototal.main" version="1.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
-    <name>Efecto Total</name>
-    <description>
-        ...
-    </description>
-    <author email="be@digitaldealers.mx" href="http://digitaldealers.mx/">
-      Digital Dealers Dev Team
-    </author>
-    <content src="index.html" />
-    <access origin="*" />
-    <preference name="webviewbounce" value="false" />
-    <preference name="UIWebViewBounce" value="false" />
-    <preference name="DisallowOverscroll" value="true" />
-    <preference name="BackupWebStorage" value="none" />
     <feature name="Keyboard">
         <param name="android-package" value="com.ionic.keyboard.IonicKeyboard" />
         <param name="onload" value="true" />
@@ -47,4 +34,17 @@
     <access origin="https://api.facebook.com" />
     <access origin="https://*.fbcdn.net" />
     <access origin="https://*.akamaihd.net" />
+    <name>Efecto Total</name>
+    <description>
+        ...
+    </description>
+    <author email="be@digitaldealers.mx" href="http://digitaldealers.mx/">
+      Digital Dealers Dev Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="BackupWebStorage" value="none" />
 </widget>

@@ -373,7 +373,12 @@ p.date-activity{
 .contenidoRetos .item{
 	border: solid 1px #aaa;
 	background: #f0f0f0;
-	font-size: 15px; 
+	font-size: 19px; 
+}
+.contenidoRetos ion-item ion-option-button.button-outline{
+	background: #f00;
+	color: #fff;
+	padding-top: 10px;
 }
 .contenidoRetos .card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
 	background: #d4d3d3; 
@@ -661,7 +666,24 @@ p.date-activity{
 	float: left;
 }
 .contenidoVideos div.videoEjercicio{
-
+	position: relative;
+}
+.contenidoVideos div.videoEjercicio button{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 100px;
+	height: 60px;
+	background: none;
+	border: none;
+	font-size: 45px;
+	text-shadow: black 3px 3px 5px;
+	color: white;
+	font-weight: bold;
+	opacity: 0.8;
 }
 .contenidoVideos video{
 	width: 100%;
@@ -728,6 +750,13 @@ p.date-activity{
 	color: #000;
 	font-size: 13px;
 	line-height: 16px;
+}
+.contenidoVideos p.pcalorias{
+	color: #000;
+	font-size: 14px;
+	line-height: 16px;
+	font-style: italic;
+	font-weight: bold;
 }
 .contenidoVideos p.parrafo0{
 	color: #000;
@@ -1596,8 +1625,27 @@ margin: 0px;
 */
 .contenidoRutinas .item {
 	border: solid 1px #aaa;
-	background: #f0f0f0;
-	font-size: 15px;
+	background: #fff;
+	font-size: 19px;
+	min-height: 60px;
+}
+.contenidoRutinas ion-item ion-option-button.button-outline{
+	background: #f00;
+	color: #fff;
+	padding-top: 10px;
+}
+.contenidoRutinas h2{
+	font-size: 20px;
+	font-family: "Dosis";
+	color: #444;
+	position: absolute;
+	left: 15px;
+	text-transform: capitalize;
+}
+.contenidoRutinas a.button{
+	position: absolute;
+	right: 5px;
+	top: 7px;
 }
 .contenidoRutinas a.item.item-avatar{
 	margin-bottom: 5px;

@@ -2,14 +2,19 @@
      <ion-nav-buttons side="left">
           <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
      </ion-nav-buttons>
-     <ion-content class="has-header">
+     <ion-content class="has-header" overflow-scroll="true">
           <div class="contenidoVideos">
                <div class="bar bar-energized">
                     <a ng-click="goBack()"><h1 class="title"><i class="ion-arrow-left-b"></i>{{video.category_name}}</h1></a>
                </div>
                <div class="videoEjercicio">
-                    <!--<a class="button button-icon icon icon-play" ng-click="onInit()"></a>-->
                     <video id="exercise-video"></video>
+                    <button type="button" ng-class="videoState" ng-click="togglePlay()"></button>
+                    <!--videogular vg-player-ready="onPlayerReady" vg-update-state="onUpdateState" vg-theme="videofile.theme">
+                      <vg-video vg-src="videofile.sources"><vg-video>
+                      <vg-overlay-play></vg-overlay-play>
+                      <vg-poster-image vg-url="videofile.plugins.poster"></vg-poster-image>
+                    </videogular-->
                </div>
                <div class="row">
                     <div class="col col-50">
@@ -21,7 +26,7 @@
                          <!--<a href="" class="masInfo">Información nutricional</a>-->
                     </div>
                     <div class="col">
-  	                    <p class="minutes">Duración <span class="tiempo">{{video.duration}}</span></p>
+                        <p class="minutes">Duración <span class="tiempo">{{video.duration}}</span></p>
                          <a ng-click="share('tw')"><img src="./img/share_twitter.png" class="redest"></a>
                          <a ng-click="share('fb')"><img src="./img/share_facebook.png" class="redesf"></a>
                     </div>
@@ -35,24 +40,25 @@
                     </div>
                </div>
                <div class="row">
-                	<div class="col">
-                    	<p class="dificultad" ng-bind-html="video.raros"></p>
+                  <div class="col">
+                      <p class="dificultad" ng-bind-html="video.raros"></p>
                         <!--p class="entrene">Training Type +10</p>
                         <p class="entrene">Difficulty +8</p>
                         <p class="entrene">Difficulty +8</p-->
                     </div>
                 </div>
                 <div class="row">
-                   	<div class="col">
-  	                	<p class="parraFo">{{video.desc}}</p>
+                    <div class="col">
+                      <p class="parraFo">{{video.desc}}</p>
+                      <p ng-show="video.calorias_quemadas > 0" class="pcalorias">Al hacer esta rutina completa en promedio se queman {{video.calorias_quemadas}} calorías aproximadamente.</p>
                     </div>
-            	</div>
-          		<div class="coment">
-               	<!--<p class="parrafo0">A Typical Class</p>-->
-               		<p class="parrafo1"><span class="num">1</span>{{video.ben1}}</p>
-               		<p class="parrafo1"><span class="num">2</span>{{video.ben2}}</p>
-               		<p class="parrafo1"><span class="num">3</span>{{video.ben3}}</p>
-          		</div>
-          	</div>
+              </div>
+              <div class="coment">
+                <!--<p class="parrafo0">A Typical Class</p>-->
+                  <p class="parrafo1"><span class="num">1</span>{{video.ben1}}</p>
+                  <p class="parrafo1"><span class="num">2</span>{{video.ben2}}</p>
+                  <p class="parrafo1"><span class="num">3</span>{{video.ben3}}</p>
+              </div>
+            </div>
      </ion-content>
 </ion-view>
